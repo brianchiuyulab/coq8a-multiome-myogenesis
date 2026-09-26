@@ -1,0 +1,8 @@
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+*.h5
+*.2bit
+*fragments.tsv.gz
+*fragments.tsv.gz.tbi
+gencode*.gtf.gz
