@@ -7,9 +7,10 @@ import matplotlib
 
 matplotlib.use("Agg")
 import matplotlib.pyplot as plt
-from matplotlib.patches import Rectangle
 import numpy as np
 import pandas as pd
+
+from tss_story_figure import make_story_figure
 
 BLUE = "#2166ac"
 RED = "#b2182b"
@@ -18,12 +19,6 @@ INK = "#202935"
 GRAY = "#687582"
 LIGHT = "#e5e9ed"
 LIBRARIES = ["GSM6339597", "GSM6339599", "GSM6339601", "GSM6339603"]
-LIB_LABEL = {
-    "GSM6339597": "Line 1 · stem",
-    "GSM6339599": "Line 1 · differentiated",
-    "GSM6339601": "Line 2 · stem",
-    "GSM6339603": "Line 2 · differentiated",
-}
 
 
 def style():
@@ -68,144 +63,8 @@ def label(ax, letter, title):
 
 
 def figure_one(t, out):
-    """One question per axis: is the high/low programme shift in RNA and ATAC?"""
-    by_library = pd.read_csv(t / "programme_effects_by_library.tsv", sep="\t")
-    pooled = pd.read_csv(t / "programme_effects_pooled.tsv", sep="\t")
-    pairs = pd.read_csv(t / "matched_pairs.tsv.gz", sep="\t")
-    pairs = pairs[(pairs.gate == "TSS_ge_3") & (pairs.contrast == "2plus_vs_1")]
-    sizes = pairs.groupby("gsm").size()
-    fig = plt.figure(figsize=(11.8, 7.5))
-    grid = fig.add_gridspec(2, 2, height_ratios=[0.72, 1.28], hspace=0.35, wspace=0.35)
-    ax = fig.add_subplot(grid[0, :])
-    ax.axis("off")
-    label(ax, "A", "Four libraries, paired within each library")
-    for index, gsm in enumerate(LIBRARIES):
-        left = 0.01 + index * 0.25
-        ax.add_patch(
-            Rectangle(
-                (left, 0.38),
-                0.235,
-                0.37,
-                transform=ax.transAxes,
-                facecolor=["#e9eef4", "#f5ebdf", "#eaf1e9", "#f1e9f0"][index],
-                edgecolor=LIGHT,
-            )
-        )
-        stage = "stem" if index % 2 == 0 else "differentiated"
-        line = "Line 1" if index < 2 else "Line 2"
-        ax.text(
-            left + 0.117,
-            0.565,
-            f"{line} · {stage}\n{sizes[gsm]} matched pairs",
-            ha="center",
-            va="center",
-            transform=ax.transAxes,
-            fontsize=9,
-        )
-    ax.text(
-        0.5,
-        0.14,
-        "Same nucleus: RNA + ATAC  |  COQ8A ≥2 versus 1 UMI  |  TSS enrichment ≥3",
-        transform=ax.transAxes,
-        ha="center",
-        va="center",
-        fontsize=9,
-        color=GRAY,
-    )
-
-    for panel, modality, color, scale in [
-        (fig.add_subplot(grid[1, 0]), "RNA", RED, 1),
-        (fig.add_subplot(grid[1, 1]), "ATAC", BLUE, 100),
-    ]:
-        subset = (
-            by_library[
-                (by_library.gate == "TSS_ge_3")
-                & (by_library.contrast == "2plus_vs_1")
-                & (by_library.modality == modality)
-                & (by_library.programme == "Hallmark_myogenesis")
-            ]
-            .set_index("gsm")
-            .loc[LIBRARIES]
-        )
-        all_row = pooled[
-            (pooled.gate == "TSS_ge_3")
-            & (pooled.contrast == "2plus_vs_1")
-            & (pooled.modality == modality)
-            & (pooled.programme == "Hallmark_myogenesis")
-        ].iloc[0]
-        for index, row in enumerate(subset.itertuples()):
-            y = 4 - index
-            panel.plot(
-                [scale * row.ci_low, scale * row.ci_high], [y, y], color=color, lw=1.7
-            )
-            panel.scatter(scale * row.difference, y, s=42, color=color, zorder=3)
-        panel.axhline(0.5, color=LIGHT, lw=0.8)
-        panel.plot(
-            [scale * all_row.ci_low, scale * all_row.ci_high],
-            [0, 0],
-            color=INK,
-            lw=2.3,
-        )
-        panel.scatter(
-            scale * all_row.difference, 0, s=68, marker="D", color=INK, zorder=4
-        )
-        panel.axvline(0, color=GRAY, ls="--", lw=0.9)
-        panel.set_yticks(
-            [4, 3, 2, 1, 0],
-            [
-                f"L1 stem · {sizes[LIBRARIES[0]]}",
-                f"L1 diff · {sizes[LIBRARIES[1]]}",
-                f"L2 stem · {sizes[LIBRARIES[2]]}",
-                f"L2 diff · {sizes[LIBRARIES[3]]}",
-                "All pairs · 958",
-            ],
-            fontsize=8,
-        )
-        panel.set_ylim(-0.65, 4.7)
-        panel.grid(axis="x", color=LIGHT, lw=0.5)
-        panel.set_axisbelow(True)
-        panel.set_xlabel(
-            "High − low: mean log-normalized RNA"
-            if modality == "RNA"
-            else "High − low: open fraction (percentage points)"
-        )
-        panel.set_title(
-            (
-                "B  Muscle programme RNA"
-                if modality == "RNA"
-                else "C  Nearby chromatin accessibility"
-            ),
-            loc="left",
-            fontweight="bold",
-            fontsize=11,
-        )
-        panel.text(
-            0.98,
-            0.97,
-            f"Hallmark Myogenesis · 198 genes\npooled q={all_row.q_4_programmes:.3f}; "
-            f"{all_row.positive_libraries}/4 libraries positive",
-            transform=panel.transAxes,
-            ha="right",
-            va="top",
-            fontsize=8,
-            color=GRAY,
-        )
-    fig.suptitle(
-        "Does higher COQ8A accompany a more open myogenesis programme?",
-        fontsize=15,
-        fontweight="bold",
-        y=1.02,
-    )
-    fig.text(
-        0.5,
-        -0.02,
-        "221 Hallmark + Reactome genes define the complete nearby-region search in Figure 2. "
-        "Intervals and q values describe nucleus pairs; biological sources n=2.",
-        ha="center",
-        fontsize=8,
-        color=GRAY,
-    )
-    save(fig, out / "Figure_1_global_discovery")
+    """Show fixed 221-gene search, TSS fragments, and exploratory MYOD1 nomination."""
+    make_story_figure(t, out / "Figure_1_global_discovery")
 
 
 def supplementary_myod1(t, out):

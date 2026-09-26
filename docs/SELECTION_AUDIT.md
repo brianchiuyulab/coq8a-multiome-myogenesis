@@ -20,6 +20,8 @@ The search uses hg38 canonical chromosomes, anchor-peak width 200–2000 bp, bla
 
 Of the 7,132 candidate peaks, **6,871** have at least 20 pooled open observations in the primary matched nuclei and receive a paired-test BH q value. The other 261 remain in the output table with no q value. All 221 gene-region summaries and all 6,871 eligible peaks are shown in the primary results before ranking a target. None has ATAC q<0.05.
 
+The Figure 1 TSS-aligned heatmap uses all 221 genes and one GENCODE gene-feature TSS per gene. Its ±5-kb fragment profiles are a descriptive view and do not filter, rank or test the ±100-kb candidate peaks. Heatmap rows are sorted on pooled high+low TSS signal, so their order cannot select a COQ8A-high effect. The exploratory ranking below the heatmap uses the separate full candidate peak/link tables.
+
 ## Exploratory MYOD1 follow-up
 
 MYOD1 was nominated only after the complete search. Its 32 nearby candidate peaks narrow to 19 corresponding peaks present in all four libraries. Among all tested peak–RNA links, 10 MYOD1 peaks meet the positive-link, q<0.05, four-evaluable-library rule when links are learned at TSS≥3. Five of these have normalized maximum MRF PWM score <0.95. Repeating link learning at TSS≥2 yields 11 positive four-library links and **six** below that score cutoff.

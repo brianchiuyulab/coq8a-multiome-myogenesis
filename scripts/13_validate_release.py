@@ -101,6 +101,22 @@ def check_six_region_effect(tables: Path) -> tuple[int, float]:
     return len(detail), fold
 
 
+def check_tss_profile(tables: Path) -> float:
+    profile = pd.read_csv(tables / "tss_fragment_profile_221.tsv.gz", sep="\t")
+    genes = pd.read_csv(tables / "gene_search_space.tsv", sep="\t")
+    if len(profile) != 22_100 or set(profile.gene) != set(genes.gene):
+        raise ValueError("TSS profile must cover all 221 fixed-set genes x 100 bins")
+    if profile.groupby("gene").size().ne(100).any():
+        raise ValueError("TSS profile has incomplete gene windows")
+    if not profile.n_high.eq(958).all() or not profile.n_low.eq(958).all():
+        raise ValueError("TSS profile does not use the 958 primary matched pairs")
+    if profile[["high_cuts", "low_cuts"]].lt(0).any().any():
+        raise ValueError("TSS fragment counts must be nonnegative")
+    if profile.groupby("gene").bin_start_bp.nunique().ne(100).any():
+        raise ValueError("TSS profile has duplicated bin positions")
+    return profile.high_cuts.sum() / profile.low_cuts.sum()
+
+
 def main() -> None:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--tables", type=Path, required=True)
@@ -109,6 +125,7 @@ def main() -> None:
     n_pairs = check_pairs(args.tables)
     n_genes, n_peaks, n_significant = check_primary(args.tables)
     n_extreme, fold = check_six_region_effect(args.tables)
+    tss_ratio = check_tss_profile(args.tables)
     figures = [
         args.figures / "main/Figure_1_global_discovery.pdf",
         args.figures / "main/Figure_2_Global_ATAC_Scan.pdf",
@@ -120,7 +137,8 @@ def main() -> None:
         raise FileNotFoundError(f"Missing figures: {missing}")
     print(
         f"Validated {n_pairs} primary pairs, {n_genes} genes, {n_peaks} tested peaks "
-        f"({n_significant} FDR-positive); six-region fold {fold:.3f} in {n_extreme} pairs."
+        f"({n_significant} FDR-positive); six-region fold {fold:.3f} in {n_extreme} pairs; "
+        f"221-gene TSS-cut ratio {tss_ratio:.4f}."
     )
 
 
