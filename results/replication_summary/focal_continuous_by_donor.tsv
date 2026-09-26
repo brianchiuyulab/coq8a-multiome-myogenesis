@@ -1,0 +1,513 @@
+celltype	time	donor	model	peak	n_nuclei	r	eligibility	n_covariates	n_COQ_detected
+Fast	Post	E	technical	chr1-211133720-211134678	1492	0.0234960401656365	minimum_3_events	NA	NA
+Fast	Post	E	technical	chr16-1311478-1312392	1492	0.0130670357708319	minimum_3_events	NA	NA
+Fast	Post	E	technical	chr3-8733222-8734203	1492	0.007071795225679	minimum_3_events	NA	NA
+Fast	Post	E	technical_state	chr1-211133720-211134678	1492	0.024016854782547	minimum_3_events	NA	NA
+Fast	Post	E	technical_state	chr16-1311478-1312392	1492	0.0132608394635309	minimum_3_events	NA	NA
+Fast	Post	E	technical_state	chr3-8733222-8734203	1492	0.0074955812410828	minimum_3_events	NA	NA
+Fast	Post	G	technical	chr1-211133720-211134678	779	-0.0383883364526028	minimum_3_events	NA	NA
+Fast	Post	G	technical	chr16-1311478-1312392	779	0.0280879184396295	minimum_3_events	NA	NA
+Fast	Post	G	technical	chr3-8733222-8734203	779	0.0043095697368256	minimum_3_events	NA	NA
+Fast	Post	G	technical_state	chr1-211133720-211134678	779	-0.0325649445722313	minimum_3_events	NA	NA
+Fast	Post	G	technical_state	chr16-1311478-1312392	779	0.0295096039213275	minimum_3_events	NA	NA
+Fast	Post	G	technical_state	chr3-8733222-8734203	779	0.0023586562519019	minimum_3_events	NA	NA
+Fast	Post	I	technical	chr1-211133720-211134678	1443	0.0617352139142316	minimum_3_events	NA	NA
+Fast	Post	I	technical	chr16-1311478-1312392	1443	0.0642675201650847	minimum_3_events	NA	NA
+Fast	Post	I	technical	chr3-8733222-8734203	1443	-0.0375479588297224	minimum_3_events	NA	NA
+Fast	Post	I	technical_state	chr1-211133720-211134678	1443	0.062005399407537	minimum_3_events	NA	NA
+Fast	Post	I	technical_state	chr16-1311478-1312392	1443	0.0645375610307762	minimum_3_events	NA	NA
+Fast	Post	I	technical_state	chr3-8733222-8734203	1443	-0.0374926922293403	minimum_3_events	NA	NA
+Fast	Post	J	technical	chr1-211133720-211134678	645	0.0484301750728118	minimum_3_events	NA	NA
+Fast	Post	J	technical	chr16-1311478-1312392	645	0.0453486236121916	minimum_3_events	NA	NA
+Fast	Post	J	technical	chr3-8733222-8734203	645	-0.0252054120854384	minimum_3_events	NA	NA
+Fast	Post	J	technical_state	chr1-211133720-211134678	645	0.0481873927456895	minimum_3_events	NA	NA
+Fast	Post	J	technical_state	chr16-1311478-1312392	645	0.0455109499677132	minimum_3_events	NA	NA
+Fast	Post	J	technical_state	chr3-8733222-8734203	645	-0.0252903563297292	minimum_3_events	NA	NA
+Fast	Post	L	technical	chr1-211133720-211134678	111	0.0257215793388402	minimum_3_events	NA	NA
+Fast	Post	L	technical	chr16-1311478-1312392	111	0.117323876655041	minimum_3_events	NA	NA
+Fast	Post	L	technical	chr3-8733222-8734203	111	0.0906190710224769	minimum_3_events	NA	NA
+Fast	Post	L	technical_state	chr1-211133720-211134678	111	0.0257234531678463	minimum_3_events	NA	NA
+Fast	Post	L	technical_state	chr16-1311478-1312392	111	0.1173456626848555	minimum_3_events	NA	NA
+Fast	Post	L	technical_state	chr3-8733222-8734203	111	0.0906938738190861	minimum_3_events	NA	NA
+Fast	Post	N	technical	chr1-211133720-211134678	359	0.0291651888864818	minimum_3_events	NA	NA
+Fast	Post	N	technical	chr16-1311478-1312392	359	0.1037449204762372	minimum_3_events	NA	NA
+Fast	Post	N	technical	chr3-8733222-8734203	359	-0.0642478110982946	minimum_3_events	NA	NA
+Fast	Post	N	technical_state	chr1-211133720-211134678	359	0.0289868885671241	minimum_3_events	NA	NA
+Fast	Post	N	technical_state	chr16-1311478-1312392	359	0.103932938041348	minimum_3_events	NA	NA
+Fast	Post	N	technical_state	chr3-8733222-8734203	359	-0.0638448565075823	minimum_3_events	NA	NA
+Fast	Pre	E	technical	chr1-211133720-211134678	1645	-0.0426293997258819	minimum_3_events	NA	NA
+Fast	Pre	E	technical	chr16-1311478-1312392	1645	0.0008544413253318	minimum_3_events	NA	NA
+Fast	Pre	E	technical	chr3-8733222-8734203	1645	0.0103213384885505	minimum_3_events	NA	NA
+Fast	Pre	E	technical_state	chr1-211133720-211134678	1645	-0.0422488748863802	minimum_3_events	NA	NA
+Fast	Pre	E	technical_state	chr16-1311478-1312392	1645	0.0017898031558702	minimum_3_events	NA	NA
+Fast	Pre	E	technical_state	chr3-8733222-8734203	1645	0.011741537836356	minimum_3_events	NA	NA
+Fast	Pre	G	technical	chr1-211133720-211134678	556	0.0117368106382429	minimum_3_events	NA	NA
+Fast	Pre	G	technical	chr16-1311478-1312392	556	0.0171459818608863	minimum_3_events	NA	NA
+Fast	Pre	G	technical	chr3-8733222-8734203	556	-0.0599785021648903	minimum_3_events	NA	NA
+Fast	Pre	G	technical_state	chr1-211133720-211134678	556	0.0084432376455357	minimum_3_events	NA	NA
+Fast	Pre	G	technical_state	chr16-1311478-1312392	556	0.0244714044488259	minimum_3_events	NA	NA
+Fast	Pre	G	technical_state	chr3-8733222-8734203	556	-0.0598962244838769	minimum_3_events	NA	NA
+Fast	Pre	I	technical	chr1-211133720-211134678	1820	-0.0046850418606384	minimum_3_events	NA	NA
+Fast	Pre	I	technical	chr16-1311478-1312392	1820	-0.0125622354551002	minimum_3_events	NA	NA
+Fast	Pre	I	technical	chr3-8733222-8734203	1820	-0.0088199317095212	minimum_3_events	NA	NA
+Fast	Pre	I	technical_state	chr1-211133720-211134678	1820	-0.0051590865571123	minimum_3_events	NA	NA
+Fast	Pre	I	technical_state	chr16-1311478-1312392	1820	-0.0131081605030993	minimum_3_events	NA	NA
+Fast	Pre	I	technical_state	chr3-8733222-8734203	1820	-0.0088682518721954	minimum_3_events	NA	NA
+Fast	Pre	J	technical	chr1-211133720-211134678	2893	0.0162034480784613	minimum_3_events	NA	NA
+Fast	Pre	J	technical	chr16-1311478-1312392	2893	0.0090059899889082	minimum_3_events	NA	NA
+Fast	Pre	J	technical	chr3-8733222-8734203	2893	0.0180386355963547	minimum_3_events	NA	NA
+Fast	Pre	J	technical_state	chr1-211133720-211134678	2893	0.0170002627023768	minimum_3_events	NA	NA
+Fast	Pre	J	technical_state	chr16-1311478-1312392	2893	0.0089335961119301	minimum_3_events	NA	NA
+Fast	Pre	J	technical_state	chr3-8733222-8734203	2893	0.0175854097525123	minimum_3_events	NA	NA
+Fast	Pre	L	technical	chr16-1311478-1312392	71	-0.0851139720552402	minimum_3_events	NA	NA
+Fast	Pre	L	technical	chr3-8733222-8734203	71	-0.0653833330781585	minimum_3_events	NA	NA
+Fast	Pre	L	technical_state	chr16-1311478-1312392	71	-0.0782543365960565	minimum_3_events	NA	NA
+Fast	Pre	L	technical_state	chr3-8733222-8734203	71	-0.0683532432160304	minimum_3_events	NA	NA
+Fast	Pre	N	technical	chr1-211133720-211134678	1750	0.0337541747111875	minimum_3_events	NA	NA
+Fast	Pre	N	technical	chr16-1311478-1312392	1750	-0.0147000903683084	minimum_3_events	NA	NA
+Fast	Pre	N	technical	chr3-8733222-8734203	1750	0.01039723474676	minimum_3_events	NA	NA
+Fast	Pre	N	technical_state	chr1-211133720-211134678	1750	0.0345863819259127	minimum_3_events	NA	NA
+Fast	Pre	N	technical_state	chr16-1311478-1312392	1750	-0.0149876913560259	minimum_3_events	NA	NA
+Fast	Pre	N	technical_state	chr3-8733222-8734203	1750	0.0088469370661365	minimum_3_events	NA	NA
+Intermediate	Post	E	technical	chr1-211133720-211134678	110	0.0313760647674137	minimum_3_events	NA	NA
+Intermediate	Post	E	technical	chr16-1311478-1312392	110	-0.0471178552656282	minimum_3_events	NA	NA
+Intermediate	Post	E	technical	chr3-8733222-8734203	110	-0.1061644849962702	minimum_3_events	NA	NA
+Intermediate	Post	E	technical_state	chr1-211133720-211134678	110	0.0321457129488416	minimum_3_events	NA	NA
+Intermediate	Post	E	technical_state	chr16-1311478-1312392	110	-0.0115330151935632	minimum_3_events	NA	NA
+Intermediate	Post	E	technical_state	chr3-8733222-8734203	110	-0.0920137182360753	minimum_3_events	NA	NA
+Intermediate	Post	G	technical	chr1-211133720-211134678	64	-0.0625684517922569	minimum_3_events	NA	NA
+Intermediate	Post	G	technical	chr16-1311478-1312392	64	0.156962342425333	minimum_3_events	NA	NA
+Intermediate	Post	G	technical	chr3-8733222-8734203	64	-0.1474463516444845	minimum_3_events	NA	NA
+Intermediate	Post	G	technical_state	chr1-211133720-211134678	64	-0.0623906206604739	minimum_3_events	NA	NA
+Intermediate	Post	G	technical_state	chr16-1311478-1312392	64	0.1552673951102647	minimum_3_events	NA	NA
+Intermediate	Post	G	technical_state	chr3-8733222-8734203	64	-0.234588582043453	minimum_3_events	NA	NA
+Intermediate	Post	I	technical	chr3-8733222-8734203	63	0.1800555751867265	minimum_3_events	NA	NA
+Intermediate	Post	I	technical_state	chr3-8733222-8734203	63	0.1786854224643733	minimum_3_events	NA	NA
+Intermediate	Post	J	technical	chr1-211133720-211134678	42	0.0898306558245383	minimum_3_events	NA	NA
+Intermediate	Post	J	technical	chr3-8733222-8734203	42	-0.1020727308755815	minimum_3_events	NA	NA
+Intermediate	Post	J	technical_state	chr1-211133720-211134678	42	0.0941057408619483	minimum_3_events	NA	NA
+Intermediate	Post	J	technical_state	chr3-8733222-8734203	42	-0.1014379527348935	minimum_3_events	NA	NA
+Intermediate	Post	N	technical	chr3-8733222-8734203	26	0.344921801441723	minimum_3_events	NA	NA
+Intermediate	Post	N	technical_state	chr3-8733222-8734203	26	0.3526907730072404	minimum_3_events	NA	NA
+Intermediate	Pre	E	technical	chr1-211133720-211134678	256	-0.0780790691757619	minimum_3_events	NA	NA
+Intermediate	Pre	E	technical	chr16-1311478-1312392	256	0.0403500548540652	minimum_3_events	NA	NA
+Intermediate	Pre	E	technical	chr3-8733222-8734203	256	-0.0497877405511671	minimum_3_events	NA	NA
+Intermediate	Pre	E	technical_state	chr1-211133720-211134678	256	-0.0769228354488163	minimum_3_events	NA	NA
+Intermediate	Pre	E	technical_state	chr16-1311478-1312392	256	0.0407696944555942	minimum_3_events	NA	NA
+Intermediate	Pre	E	technical_state	chr3-8733222-8734203	256	-0.0470223712991965	minimum_3_events	NA	NA
+Intermediate	Pre	G	technical	chr1-211133720-211134678	44	0.3076104260205327	minimum_3_events	NA	NA
+Intermediate	Pre	G	technical	chr3-8733222-8734203	44	-0.0835519116314413	minimum_3_events	NA	NA
+Intermediate	Pre	G	technical_state	chr1-211133720-211134678	44	0.3320715201739446	minimum_3_events	NA	NA
+Intermediate	Pre	G	technical_state	chr3-8733222-8734203	44	-0.1131306982687007	minimum_3_events	NA	NA
+Intermediate	Pre	I	technical	chr1-211133720-211134678	177	0.0584981316546604	minimum_3_events	NA	NA
+Intermediate	Pre	I	technical	chr16-1311478-1312392	177	-0.0996503250406939	minimum_3_events	NA	NA
+Intermediate	Pre	I	technical	chr3-8733222-8734203	177	-0.0984026670460712	minimum_3_events	NA	NA
+Intermediate	Pre	I	technical_state	chr1-211133720-211134678	177	0.057623156920389	minimum_3_events	NA	NA
+Intermediate	Pre	I	technical_state	chr16-1311478-1312392	177	-0.1019908043795226	minimum_3_events	NA	NA
+Intermediate	Pre	I	technical_state	chr3-8733222-8734203	177	-0.0959906308778636	minimum_3_events	NA	NA
+Intermediate	Pre	J	technical	chr1-211133720-211134678	366	0.0216926205341563	minimum_3_events	NA	NA
+Intermediate	Pre	J	technical	chr16-1311478-1312392	366	-0.0081192904150411	minimum_3_events	NA	NA
+Intermediate	Pre	J	technical	chr3-8733222-8734203	366	0.0045683181946034	minimum_3_events	NA	NA
+Intermediate	Pre	J	technical_state	chr1-211133720-211134678	366	0.0221049152316359	minimum_3_events	NA	NA
+Intermediate	Pre	J	technical_state	chr16-1311478-1312392	366	0.0015037350676156	minimum_3_events	NA	NA
+Intermediate	Pre	J	technical_state	chr3-8733222-8734203	366	0.0014745490864131	minimum_3_events	NA	NA
+Intermediate	Pre	N	technical	chr1-211133720-211134678	186	-0.1322615724165163	minimum_3_events	NA	NA
+Intermediate	Pre	N	technical	chr16-1311478-1312392	186	-0.1023891174755447	minimum_3_events	NA	NA
+Intermediate	Pre	N	technical	chr3-8733222-8734203	186	0.0440523081251189	minimum_3_events	NA	NA
+Intermediate	Pre	N	technical_state	chr1-211133720-211134678	186	-0.1318260958556076	minimum_3_events	NA	NA
+Intermediate	Pre	N	technical_state	chr16-1311478-1312392	186	-0.1035375904371503	minimum_3_events	NA	NA
+Intermediate	Pre	N	technical_state	chr3-8733222-8734203	186	0.0452500971683441	minimum_3_events	NA	NA
+Satellite Cells	Post	E	technical	chr1-211133720-211134678	179	0.1037998050680881	minimum_3_events	NA	NA
+Satellite Cells	Post	E	technical	chr16-1311478-1312392	179	-0.0542283345581145	minimum_3_events	NA	NA
+Satellite Cells	Post	E	technical	chr3-8733222-8734203	179	0.0042597563395514	minimum_3_events	NA	NA
+Satellite Cells	Post	E	technical_state	chr1-211133720-211134678	179	0.0976435071145454	minimum_3_events	NA	NA
+Satellite Cells	Post	E	technical_state	chr16-1311478-1312392	179	-0.0598628243438724	minimum_3_events	NA	NA
+Satellite Cells	Post	E	technical_state	chr3-8733222-8734203	179	0.0045093676516184	minimum_3_events	NA	NA
+Satellite Cells	Post	G	technical	chr1-211133720-211134678	116	-0.0804310056087523	minimum_3_events	NA	NA
+Satellite Cells	Post	G	technical	chr16-1311478-1312392	116	0.1096844170710423	minimum_3_events	NA	NA
+Satellite Cells	Post	G	technical	chr3-8733222-8734203	116	0.0149546255435548	minimum_3_events	NA	NA
+Satellite Cells	Post	G	technical_state	chr1-211133720-211134678	116	-0.0418862346477237	minimum_3_events	NA	NA
+Satellite Cells	Post	G	technical_state	chr16-1311478-1312392	116	0.0277082392081943	minimum_3_events	NA	NA
+Satellite Cells	Post	G	technical_state	chr3-8733222-8734203	116	8.896795418137535e-05	minimum_3_events	NA	NA
+Satellite Cells	Post	I	technical	chr3-8733222-8734203	95	-0.024400190964471	minimum_3_events	NA	NA
+Satellite Cells	Post	I	technical_state	chr3-8733222-8734203	95	-0.0232566851151666	minimum_3_events	NA	NA
+Satellite Cells	Post	J	technical	chr1-211133720-211134678	70	0.2241618389384098	minimum_3_events	NA	NA
+Satellite Cells	Post	J	technical	chr16-1311478-1312392	70	0.2094597733632501	minimum_3_events	NA	NA
+Satellite Cells	Post	J	technical	chr3-8733222-8734203	70	0.1088929174131499	minimum_3_events	NA	NA
+Satellite Cells	Post	J	technical_state	chr1-211133720-211134678	70	0.2214619608738788	minimum_3_events	NA	NA
+Satellite Cells	Post	J	technical_state	chr16-1311478-1312392	70	0.2002605889827304	minimum_3_events	NA	NA
+Satellite Cells	Post	J	technical_state	chr3-8733222-8734203	70	0.1012086855420759	minimum_3_events	NA	NA
+Satellite Cells	Post	L	technical	chr3-8733222-8734203	20	-0.1026610478984083	minimum_3_events	NA	NA
+Satellite Cells	Post	L	technical_state	chr3-8733222-8734203	20	-0.096623381697327	minimum_3_events	NA	NA
+Satellite Cells	Post	N	technical	chr1-211133720-211134678	38	-0.1674618142311565	minimum_3_events	NA	NA
+Satellite Cells	Post	N	technical	chr16-1311478-1312392	38	-0.1572353853989865	minimum_3_events	NA	NA
+Satellite Cells	Post	N	technical	chr3-8733222-8734203	38	0.0689281262675234	minimum_3_events	NA	NA
+Satellite Cells	Post	N	technical_state	chr1-211133720-211134678	38	-0.1677224750971348	minimum_3_events	NA	NA
+Satellite Cells	Post	N	technical_state	chr16-1311478-1312392	38	-0.1572668960497565	minimum_3_events	NA	NA
+Satellite Cells	Post	N	technical_state	chr3-8733222-8734203	38	0.0771616394151797	minimum_3_events	NA	NA
+Satellite Cells	Pre	E	technical	chr1-211133720-211134678	255	-0.1027427334330049	minimum_3_events	NA	NA
+Satellite Cells	Pre	E	technical	chr16-1311478-1312392	255	0.0528651584978356	minimum_3_events	NA	NA
+Satellite Cells	Pre	E	technical	chr3-8733222-8734203	255	0.0541711403404232	minimum_3_events	NA	NA
+Satellite Cells	Pre	E	technical_state	chr1-211133720-211134678	255	-0.1034552332518285	minimum_3_events	NA	NA
+Satellite Cells	Pre	E	technical_state	chr16-1311478-1312392	255	0.0525675769275435	minimum_3_events	NA	NA
+Satellite Cells	Pre	E	technical_state	chr3-8733222-8734203	255	0.0548798672418757	minimum_3_events	NA	NA
+Satellite Cells	Pre	G	technical	chr3-8733222-8734203	49	0.0937427241980565	minimum_3_events	NA	NA
+Satellite Cells	Pre	G	technical_state	chr3-8733222-8734203	49	0.0962081148463887	minimum_3_events	NA	NA
+Satellite Cells	Pre	I	technical	chr1-211133720-211134678	148	0.0992812906986315	minimum_3_events	NA	NA
+Satellite Cells	Pre	I	technical	chr16-1311478-1312392	148	0.0844110146798515	minimum_3_events	NA	NA
+Satellite Cells	Pre	I	technical	chr3-8733222-8734203	148	0.0136072906664891	minimum_3_events	NA	NA
+Satellite Cells	Pre	I	technical_state	chr1-211133720-211134678	148	0.0951952689681414	minimum_3_events	NA	NA
+Satellite Cells	Pre	I	technical_state	chr16-1311478-1312392	148	0.0801752856227605	minimum_3_events	NA	NA
+Satellite Cells	Pre	I	technical_state	chr3-8733222-8734203	148	0.0074238438403062	minimum_3_events	NA	NA
+Satellite Cells	Pre	J	technical	chr1-211133720-211134678	363	-0.0681754319785503	minimum_3_events	NA	NA
+Satellite Cells	Pre	J	technical	chr16-1311478-1312392	363	-0.0815903959025469	minimum_3_events	NA	NA
+Satellite Cells	Pre	J	technical	chr3-8733222-8734203	363	0.0336652114474037	minimum_3_events	NA	NA
+Satellite Cells	Pre	J	technical_state	chr1-211133720-211134678	363	-0.06942731116122	minimum_3_events	NA	NA
+Satellite Cells	Pre	J	technical_state	chr16-1311478-1312392	363	-0.0815096342248445	minimum_3_events	NA	NA
+Satellite Cells	Pre	J	technical_state	chr3-8733222-8734203	363	0.0251502896434839	minimum_3_events	NA	NA
+Satellite Cells	Pre	N	technical	chr1-211133720-211134678	157	0.0476526488207458	minimum_3_events	NA	NA
+Satellite Cells	Pre	N	technical	chr16-1311478-1312392	157	-0.0084526564732701	minimum_3_events	NA	NA
+Satellite Cells	Pre	N	technical	chr3-8733222-8734203	157	0.0769858152536199	minimum_3_events	NA	NA
+Satellite Cells	Pre	N	technical_state	chr1-211133720-211134678	157	0.0351043692764131	minimum_3_events	NA	NA
+Satellite Cells	Pre	N	technical_state	chr16-1311478-1312392	157	-0.0220099388269004	minimum_3_events	NA	NA
+Satellite Cells	Pre	N	technical_state	chr3-8733222-8734203	157	0.0810880566731183	minimum_3_events	NA	NA
+Slow	Post	E	technical	chr1-211133720-211134678	684	-0.0571274358784743	minimum_3_events	NA	NA
+Slow	Post	E	technical	chr16-1311478-1312392	684	-0.069217714852874	minimum_3_events	NA	NA
+Slow	Post	E	technical	chr3-8733222-8734203	684	0.0531967298401214	minimum_3_events	NA	NA
+Slow	Post	E	technical_state	chr1-211133720-211134678	684	-0.056457649629033	minimum_3_events	NA	NA
+Slow	Post	E	technical_state	chr16-1311478-1312392	684	-0.0690171315819865	minimum_3_events	NA	NA
+Slow	Post	E	technical_state	chr3-8733222-8734203	684	0.0535961262947926	minimum_3_events	NA	NA
+Slow	Post	G	technical	chr1-211133720-211134678	846	-0.032906008739725	minimum_3_events	NA	NA
+Slow	Post	G	technical	chr16-1311478-1312392	846	0.0195228855381651	minimum_3_events	NA	NA
+Slow	Post	G	technical	chr3-8733222-8734203	846	-0.0497163553978575	minimum_3_events	NA	NA
+Slow	Post	G	technical_state	chr1-211133720-211134678	846	-0.0331360240540911	minimum_3_events	NA	NA
+Slow	Post	G	technical_state	chr16-1311478-1312392	846	0.0193123209302104	minimum_3_events	NA	NA
+Slow	Post	G	technical_state	chr3-8733222-8734203	846	-0.0504387854098193	minimum_3_events	NA	NA
+Slow	Post	I	technical	chr1-211133720-211134678	754	-0.056095573699626	minimum_3_events	NA	NA
+Slow	Post	I	technical	chr16-1311478-1312392	754	-0.0207903201297778	minimum_3_events	NA	NA
+Slow	Post	I	technical	chr3-8733222-8734203	754	0.0513117133811064	minimum_3_events	NA	NA
+Slow	Post	I	technical_state	chr1-211133720-211134678	754	-0.0549294754673918	minimum_3_events	NA	NA
+Slow	Post	I	technical_state	chr16-1311478-1312392	754	-0.0205563734692064	minimum_3_events	NA	NA
+Slow	Post	I	technical_state	chr3-8733222-8734203	754	0.0512892582295848	minimum_3_events	NA	NA
+Slow	Post	J	technical	chr1-211133720-211134678	590	0.0040723391727848	minimum_3_events	NA	NA
+Slow	Post	J	technical	chr16-1311478-1312392	590	-0.0103663179283045	minimum_3_events	NA	NA
+Slow	Post	J	technical	chr3-8733222-8734203	590	0.0430603135971813	minimum_3_events	NA	NA
+Slow	Post	J	technical_state	chr1-211133720-211134678	590	0.0038454800689853	minimum_3_events	NA	NA
+Slow	Post	J	technical_state	chr16-1311478-1312392	590	-0.0102287999774384	minimum_3_events	NA	NA
+Slow	Post	J	technical_state	chr3-8733222-8734203	590	0.0425022747557184	minimum_3_events	NA	NA
+Slow	Post	L	technical	chr1-211133720-211134678	64	-0.1715581492780896	minimum_3_events	NA	NA
+Slow	Post	L	technical	chr16-1311478-1312392	64	0.0113778237181927	minimum_3_events	NA	NA
+Slow	Post	L	technical	chr3-8733222-8734203	64	0.238856090374475	minimum_3_events	NA	NA
+Slow	Post	L	technical_state	chr1-211133720-211134678	64	-0.1941618435319979	minimum_3_events	NA	NA
+Slow	Post	L	technical_state	chr16-1311478-1312392	64	0.0026743182428563	minimum_3_events	NA	NA
+Slow	Post	L	technical_state	chr3-8733222-8734203	64	0.2437576097840508	minimum_3_events	NA	NA
+Slow	Post	N	technical	chr1-211133720-211134678	174	-0.0821256764564023	minimum_3_events	NA	NA
+Slow	Post	N	technical	chr16-1311478-1312392	174	0.1072355880263158	minimum_3_events	NA	NA
+Slow	Post	N	technical	chr3-8733222-8734203	174	-0.0918286149521621	minimum_3_events	NA	NA
+Slow	Post	N	technical_state	chr1-211133720-211134678	174	-0.0861095720100655	minimum_3_events	NA	NA
+Slow	Post	N	technical_state	chr16-1311478-1312392	174	0.1074586091867385	minimum_3_events	NA	NA
+Slow	Post	N	technical_state	chr3-8733222-8734203	174	-0.0901919202536832	minimum_3_events	NA	NA
+Slow	Pre	E	technical	chr1-211133720-211134678	2494	0.0146010624928136	minimum_3_events	NA	NA
+Slow	Pre	E	technical	chr16-1311478-1312392	2494	-0.0114207162423735	minimum_3_events	NA	NA
+Slow	Pre	E	technical	chr3-8733222-8734203	2494	-0.01979154711441	minimum_3_events	NA	NA
+Slow	Pre	E	technical_state	chr1-211133720-211134678	2494	0.0146593733630401	minimum_3_events	NA	NA
+Slow	Pre	E	technical_state	chr16-1311478-1312392	2494	-0.011330077120775	minimum_3_events	NA	NA
+Slow	Pre	E	technical_state	chr3-8733222-8734203	2494	-0.0197763152754169	minimum_3_events	NA	NA
+Slow	Pre	G	technical	chr1-211133720-211134678	282	0.0340525461751149	minimum_3_events	NA	NA
+Slow	Pre	G	technical	chr16-1311478-1312392	282	-0.0945278948069165	minimum_3_events	NA	NA
+Slow	Pre	G	technical	chr3-8733222-8734203	282	-0.0469813669617472	minimum_3_events	NA	NA
+Slow	Pre	G	technical_state	chr1-211133720-211134678	282	0.0338071526693311	minimum_3_events	NA	NA
+Slow	Pre	G	technical_state	chr16-1311478-1312392	282	-0.0943056635243442	minimum_3_events	NA	NA
+Slow	Pre	G	technical_state	chr3-8733222-8734203	282	-0.046215600299404	minimum_3_events	NA	NA
+Slow	Pre	I	technical	chr1-211133720-211134678	1499	-0.0106303100214053	minimum_3_events	NA	NA
+Slow	Pre	I	technical	chr16-1311478-1312392	1499	-0.0313144150833546	minimum_3_events	NA	NA
+Slow	Pre	I	technical	chr3-8733222-8734203	1499	0.0004961690238369	minimum_3_events	NA	NA
+Slow	Pre	I	technical_state	chr1-211133720-211134678	1499	-0.0106605187247205	minimum_3_events	NA	NA
+Slow	Pre	I	technical_state	chr16-1311478-1312392	1499	-0.0315290136256044	minimum_3_events	NA	NA
+Slow	Pre	I	technical_state	chr3-8733222-8734203	1499	-0.0001367624008443	minimum_3_events	NA	NA
+Slow	Pre	J	technical	chr1-211133720-211134678	1668	-0.0254998287239074	minimum_3_events	NA	NA
+Slow	Pre	J	technical	chr16-1311478-1312392	1668	-0.0286025313940661	minimum_3_events	NA	NA
+Slow	Pre	J	technical	chr3-8733222-8734203	1668	0.0338989762411269	minimum_3_events	NA	NA
+Slow	Pre	J	technical_state	chr1-211133720-211134678	1668	-0.0256104480665843	minimum_3_events	NA	NA
+Slow	Pre	J	technical_state	chr16-1311478-1312392	1668	-0.0294143367796805	minimum_3_events	NA	NA
+Slow	Pre	J	technical_state	chr3-8733222-8734203	1668	0.0325516271000557	minimum_3_events	NA	NA
+Slow	Pre	L	technical	chr16-1311478-1312392	17	0.5021051741284012	minimum_3_events	NA	NA
+Slow	Pre	L	technical	chr3-8733222-8734203	17	-0.0740922909955327	minimum_3_events	NA	NA
+Slow	Pre	L	technical_state	chr16-1311478-1312392	17	0.4330152361603494	minimum_3_events	NA	NA
+Slow	Pre	L	technical_state	chr3-8733222-8734203	17	-0.0179904931532017	minimum_3_events	NA	NA
+Slow	Pre	N	technical	chr1-211133720-211134678	1372	-0.0164519065012197	minimum_3_events	NA	NA
+Slow	Pre	N	technical	chr16-1311478-1312392	1372	-0.0205392089866383	minimum_3_events	NA	NA
+Slow	Pre	N	technical	chr3-8733222-8734203	1372	0.000619302875233	minimum_3_events	NA	NA
+Slow	Pre	N	technical_state	chr1-211133720-211134678	1372	-0.017639173964024	minimum_3_events	NA	NA
+Slow	Pre	N	technical_state	chr16-1311478-1312392	1372	-0.0209311065247931	minimum_3_events	NA	NA
+Slow	Pre	N	technical_state	chr3-8733222-8734203	1372	2.1604150146782084e-05	minimum_3_events	NA	NA
+Fast	Post	E	technical	chr1-211133720-211134678	1492	0.0234960401656365	minimum_1_event	4.0	634.0
+Fast	Post	E	technical	chr16-1311478-1312392	1492	0.0130670357708319	minimum_1_event	4.0	634.0
+Fast	Post	E	technical	chr3-8733222-8734203	1492	0.007071795225679	minimum_1_event	4.0	634.0
+Fast	Post	E	technical_state	chr1-211133720-211134678	1492	0.024016854782547	minimum_1_event	5.0	634.0
+Fast	Post	E	technical_state	chr16-1311478-1312392	1492	0.0132608394635309	minimum_1_event	5.0	634.0
+Fast	Post	E	technical_state	chr3-8733222-8734203	1492	0.0074955812410828	minimum_1_event	5.0	634.0
+Fast	Post	G	technical	chr1-211133720-211134678	779	-0.0383883364526028	minimum_1_event	4.0	199.0
+Fast	Post	G	technical	chr16-1311478-1312392	779	0.0280879184396295	minimum_1_event	4.0	199.0
+Fast	Post	G	technical	chr3-8733222-8734203	779	0.0043095697368256	minimum_1_event	4.0	199.0
+Fast	Post	G	technical_state	chr1-211133720-211134678	779	-0.0325649445722314	minimum_1_event	5.0	199.0
+Fast	Post	G	technical_state	chr16-1311478-1312392	779	0.0295096039213275	minimum_1_event	5.0	199.0
+Fast	Post	G	technical_state	chr3-8733222-8734203	779	0.002358656251902	minimum_1_event	5.0	199.0
+Fast	Post	I	technical	chr1-211133720-211134678	1443	0.0617352139142316	minimum_1_event	4.0	535.0
+Fast	Post	I	technical	chr16-1311478-1312392	1443	0.0642675201650847	minimum_1_event	4.0	535.0
+Fast	Post	I	technical	chr3-8733222-8734203	1443	-0.0375479588297224	minimum_1_event	4.0	535.0
+Fast	Post	I	technical_state	chr1-211133720-211134678	1443	0.0620053994075371	minimum_1_event	5.0	535.0
+Fast	Post	I	technical_state	chr16-1311478-1312392	1443	0.0645375610307762	minimum_1_event	5.0	535.0
+Fast	Post	I	technical_state	chr3-8733222-8734203	1443	-0.0374926922293402	minimum_1_event	5.0	535.0
+Fast	Post	J	technical	chr1-211133720-211134678	645	0.0484301750728118	minimum_1_event	4.0	175.0
+Fast	Post	J	technical	chr16-1311478-1312392	645	0.0453486236121916	minimum_1_event	4.0	175.0
+Fast	Post	J	technical	chr3-8733222-8734203	645	-0.0252054120854384	minimum_1_event	4.0	175.0
+Fast	Post	J	technical_state	chr1-211133720-211134678	645	0.0481873927456895	minimum_1_event	5.0	175.0
+Fast	Post	J	technical_state	chr16-1311478-1312392	645	0.0455109499677132	minimum_1_event	5.0	175.0
+Fast	Post	J	technical_state	chr3-8733222-8734203	645	-0.0252903563297293	minimum_1_event	5.0	175.0
+Fast	Post	L	technical	chr1-211133720-211134678	111	0.0257215793388402	minimum_1_event	4.0	71.0
+Fast	Post	L	technical	chr16-1311478-1312392	111	0.117323876655041	minimum_1_event	4.0	71.0
+Fast	Post	L	technical	chr3-8733222-8734203	111	0.0906190710224769	minimum_1_event	4.0	71.0
+Fast	Post	L	technical_state	chr1-211133720-211134678	111	0.0257234531678462	minimum_1_event	5.0	71.0
+Fast	Post	L	technical_state	chr16-1311478-1312392	111	0.1173456626848555	minimum_1_event	5.0	71.0
+Fast	Post	L	technical_state	chr3-8733222-8734203	111	0.090693873819086	minimum_1_event	5.0	71.0
+Fast	Post	N	technical	chr1-211133720-211134678	359	0.0291651888864818	minimum_1_event	4.0	187.0
+Fast	Post	N	technical	chr16-1311478-1312392	359	0.1037449204762372	minimum_1_event	4.0	187.0
+Fast	Post	N	technical	chr3-8733222-8734203	359	-0.0642478110982946	minimum_1_event	4.0	187.0
+Fast	Post	N	technical_state	chr1-211133720-211134678	359	0.0289868885671242	minimum_1_event	5.0	187.0
+Fast	Post	N	technical_state	chr16-1311478-1312392	359	0.1039329380413481	minimum_1_event	5.0	187.0
+Fast	Post	N	technical_state	chr3-8733222-8734203	359	-0.0638448565075823	minimum_1_event	5.0	187.0
+Fast	Pre	E	technical	chr1-211133720-211134678	1645	-0.0426293997258819	minimum_1_event	4.0	840.0
+Fast	Pre	E	technical	chr16-1311478-1312392	1645	0.0008544413253318	minimum_1_event	4.0	840.0
+Fast	Pre	E	technical	chr3-8733222-8734203	1645	0.0103213384885505	minimum_1_event	4.0	840.0
+Fast	Pre	E	technical_state	chr1-211133720-211134678	1645	-0.0422488748863802	minimum_1_event	5.0	840.0
+Fast	Pre	E	technical_state	chr16-1311478-1312392	1645	0.0017898031558702	minimum_1_event	5.0	840.0
+Fast	Pre	E	technical_state	chr3-8733222-8734203	1645	0.011741537836356	minimum_1_event	5.0	840.0
+Fast	Pre	G	technical	chr1-211133720-211134678	556	0.0117368106382429	minimum_1_event	4.0	338.0
+Fast	Pre	G	technical	chr16-1311478-1312392	556	0.0171459818608863	minimum_1_event	4.0	338.0
+Fast	Pre	G	technical	chr3-8733222-8734203	556	-0.0599785021648903	minimum_1_event	4.0	338.0
+Fast	Pre	G	technical_state	chr1-211133720-211134678	556	0.0084432376455357	minimum_1_event	5.0	338.0
+Fast	Pre	G	technical_state	chr16-1311478-1312392	556	0.0244714044488259	minimum_1_event	5.0	338.0
+Fast	Pre	G	technical_state	chr3-8733222-8734203	556	-0.0598962244838769	minimum_1_event	5.0	338.0
+Fast	Pre	I	technical	chr1-211133720-211134678	1820	-0.0046850418606384	minimum_1_event	4.0	1143.0
+Fast	Pre	I	technical	chr16-1311478-1312392	1820	-0.0125622354551002	minimum_1_event	4.0	1143.0
+Fast	Pre	I	technical	chr3-8733222-8734203	1820	-0.0088199317095212	minimum_1_event	4.0	1143.0
+Fast	Pre	I	technical_state	chr1-211133720-211134678	1820	-0.0051590865571123	minimum_1_event	5.0	1143.0
+Fast	Pre	I	technical_state	chr16-1311478-1312392	1820	-0.0131081605030993	minimum_1_event	5.0	1143.0
+Fast	Pre	I	technical_state	chr3-8733222-8734203	1820	-0.0088682518721955	minimum_1_event	5.0	1143.0
+Fast	Pre	J	technical	chr1-211133720-211134678	2893	0.0162034480784613	minimum_1_event	4.0	1576.0
+Fast	Pre	J	technical	chr16-1311478-1312392	2893	0.0090059899889082	minimum_1_event	4.0	1576.0
+Fast	Pre	J	technical	chr3-8733222-8734203	2893	0.0180386355963547	minimum_1_event	4.0	1576.0
+Fast	Pre	J	technical_state	chr1-211133720-211134678	2893	0.0170002627023768	minimum_1_event	5.0	1576.0
+Fast	Pre	J	technical_state	chr16-1311478-1312392	2893	0.0089335961119301	minimum_1_event	5.0	1576.0
+Fast	Pre	J	technical_state	chr3-8733222-8734203	2893	0.0175854097525123	minimum_1_event	5.0	1576.0
+Fast	Pre	L	technical	chr1-211133720-211134678	71	0.2970267934991638	minimum_1_event	4.0	48.0
+Fast	Pre	L	technical	chr16-1311478-1312392	71	-0.0851139720552402	minimum_1_event	4.0	48.0
+Fast	Pre	L	technical	chr3-8733222-8734203	71	-0.0653833330781585	minimum_1_event	4.0	48.0
+Fast	Pre	L	technical_state	chr1-211133720-211134678	71	0.297869927104669	minimum_1_event	5.0	48.0
+Fast	Pre	L	technical_state	chr16-1311478-1312392	71	-0.0782543365960567	minimum_1_event	5.0	48.0
+Fast	Pre	L	technical_state	chr3-8733222-8734203	71	-0.0683532432160304	minimum_1_event	5.0	48.0
+Fast	Pre	N	technical	chr1-211133720-211134678	1750	0.0337541747111875	minimum_1_event	4.0	844.0
+Fast	Pre	N	technical	chr16-1311478-1312392	1750	-0.0147000903683084	minimum_1_event	4.0	844.0
+Fast	Pre	N	technical	chr3-8733222-8734203	1750	0.01039723474676	minimum_1_event	4.0	844.0
+Fast	Pre	N	technical_state	chr1-211133720-211134678	1750	0.0345863819259127	minimum_1_event	5.0	844.0
+Fast	Pre	N	technical_state	chr16-1311478-1312392	1750	-0.0149876913560259	minimum_1_event	5.0	844.0
+Fast	Pre	N	technical_state	chr3-8733222-8734203	1750	0.0088469370661365	minimum_1_event	5.0	844.0
+Intermediate	Post	E	technical	chr1-211133720-211134678	110	0.0313760647674137	minimum_1_event	4.0	72.0
+Intermediate	Post	E	technical	chr16-1311478-1312392	110	-0.0471178552656282	minimum_1_event	4.0	72.0
+Intermediate	Post	E	technical	chr3-8733222-8734203	110	-0.1061644849962702	minimum_1_event	4.0	72.0
+Intermediate	Post	E	technical_state	chr1-211133720-211134678	110	0.0321457129488417	minimum_1_event	5.0	72.0
+Intermediate	Post	E	technical_state	chr16-1311478-1312392	110	-0.0115330151935631	minimum_1_event	5.0	72.0
+Intermediate	Post	E	technical_state	chr3-8733222-8734203	110	-0.0920137182360754	minimum_1_event	5.0	72.0
+Intermediate	Post	G	technical	chr1-211133720-211134678	64	-0.0625684517922569	minimum_1_event	4.0	46.0
+Intermediate	Post	G	technical	chr16-1311478-1312392	64	0.156962342425333	minimum_1_event	4.0	46.0
+Intermediate	Post	G	technical	chr3-8733222-8734203	64	-0.1474463516444845	minimum_1_event	4.0	46.0
+Intermediate	Post	G	technical_state	chr1-211133720-211134678	64	-0.0623906206604738	minimum_1_event	5.0	46.0
+Intermediate	Post	G	technical_state	chr16-1311478-1312392	64	0.1552673951102646	minimum_1_event	5.0	46.0
+Intermediate	Post	G	technical_state	chr3-8733222-8734203	64	-0.2345885820434529	minimum_1_event	5.0	46.0
+Intermediate	Post	I	technical	chr16-1311478-1312392	63	0.0213298291217839	minimum_1_event	4.0	42.0
+Intermediate	Post	I	technical	chr3-8733222-8734203	63	0.1800555751867265	minimum_1_event	4.0	42.0
+Intermediate	Post	I	technical_state	chr16-1311478-1312392	63	0.029224913141151	minimum_1_event	5.0	42.0
+Intermediate	Post	I	technical_state	chr3-8733222-8734203	63	0.1786854224643733	minimum_1_event	5.0	42.0
+Intermediate	Post	J	technical	chr1-211133720-211134678	42	0.0898306558245383	minimum_1_event	4.0	28.0
+Intermediate	Post	J	technical	chr16-1311478-1312392	42	0.083965674051211	minimum_1_event	4.0	28.0
+Intermediate	Post	J	technical	chr3-8733222-8734203	42	-0.1020727308755815	minimum_1_event	4.0	28.0
+Intermediate	Post	J	technical_state	chr1-211133720-211134678	42	0.0941057408619481	minimum_1_event	5.0	28.0
+Intermediate	Post	J	technical_state	chr16-1311478-1312392	42	0.0916269252367181	minimum_1_event	5.0	28.0
+Intermediate	Post	J	technical_state	chr3-8733222-8734203	42	-0.1014379527348933	minimum_1_event	5.0	28.0
+Intermediate	Post	N	technical	chr1-211133720-211134678	26	0.0628253001954469	minimum_1_event	4.0	17.0
+Intermediate	Post	N	technical	chr16-1311478-1312392	26	-0.0238810832062241	minimum_1_event	4.0	17.0
+Intermediate	Post	N	technical	chr3-8733222-8734203	26	0.344921801441723	minimum_1_event	4.0	17.0
+Intermediate	Post	N	technical_state	chr1-211133720-211134678	26	0.0878953264758144	minimum_1_event	5.0	17.0
+Intermediate	Post	N	technical_state	chr16-1311478-1312392	26	-0.0318852551801615	minimum_1_event	5.0	17.0
+Intermediate	Post	N	technical_state	chr3-8733222-8734203	26	0.35269077300724	minimum_1_event	5.0	17.0
+Intermediate	Pre	E	technical	chr1-211133720-211134678	256	-0.0780790691757619	minimum_1_event	4.0	173.0
+Intermediate	Pre	E	technical	chr16-1311478-1312392	256	0.0403500548540652	minimum_1_event	4.0	173.0
+Intermediate	Pre	E	technical	chr3-8733222-8734203	256	-0.0497877405511671	minimum_1_event	4.0	173.0
+Intermediate	Pre	E	technical_state	chr1-211133720-211134678	256	-0.0769228354488164	minimum_1_event	5.0	173.0
+Intermediate	Pre	E	technical_state	chr16-1311478-1312392	256	0.0407696944555941	minimum_1_event	5.0	173.0
+Intermediate	Pre	E	technical_state	chr3-8733222-8734203	256	-0.0470223712991965	minimum_1_event	5.0	173.0
+Intermediate	Pre	G	technical	chr1-211133720-211134678	44	0.3076104260205327	minimum_1_event	4.0	35.0
+Intermediate	Pre	G	technical	chr16-1311478-1312392	44	-0.2606786418121216	minimum_1_event	4.0	35.0
+Intermediate	Pre	G	technical	chr3-8733222-8734203	44	-0.0835519116314413	minimum_1_event	4.0	35.0
+Intermediate	Pre	G	technical_state	chr1-211133720-211134678	44	0.3320715201739446	minimum_1_event	5.0	35.0
+Intermediate	Pre	G	technical_state	chr16-1311478-1312392	44	-0.2462097664021972	minimum_1_event	5.0	35.0
+Intermediate	Pre	G	technical_state	chr3-8733222-8734203	44	-0.1131306982687005	minimum_1_event	5.0	35.0
+Intermediate	Pre	I	technical	chr1-211133720-211134678	177	0.0584981316546604	minimum_1_event	4.0	129.0
+Intermediate	Pre	I	technical	chr16-1311478-1312392	177	-0.0996503250406939	minimum_1_event	4.0	129.0
+Intermediate	Pre	I	technical	chr3-8733222-8734203	177	-0.0984026670460712	minimum_1_event	4.0	129.0
+Intermediate	Pre	I	technical_state	chr1-211133720-211134678	177	0.057623156920389	minimum_1_event	5.0	129.0
+Intermediate	Pre	I	technical_state	chr16-1311478-1312392	177	-0.1019908043795227	minimum_1_event	5.0	129.0
+Intermediate	Pre	I	technical_state	chr3-8733222-8734203	177	-0.0959906308778636	minimum_1_event	5.0	129.0
+Intermediate	Pre	J	technical	chr1-211133720-211134678	366	0.0216926205341563	minimum_1_event	4.0	272.0
+Intermediate	Pre	J	technical	chr16-1311478-1312392	366	-0.0081192904150411	minimum_1_event	4.0	272.0
+Intermediate	Pre	J	technical	chr3-8733222-8734203	366	0.0045683181946034	minimum_1_event	4.0	272.0
+Intermediate	Pre	J	technical_state	chr1-211133720-211134678	366	0.0221049152316359	minimum_1_event	5.0	272.0
+Intermediate	Pre	J	technical_state	chr16-1311478-1312392	366	0.0015037350676156	minimum_1_event	5.0	272.0
+Intermediate	Pre	J	technical_state	chr3-8733222-8734203	366	0.0014745490864131	minimum_1_event	5.0	272.0
+Intermediate	Pre	N	technical	chr1-211133720-211134678	186	-0.1322615724165163	minimum_1_event	4.0	131.0
+Intermediate	Pre	N	technical	chr16-1311478-1312392	186	-0.1023891174755447	minimum_1_event	4.0	131.0
+Intermediate	Pre	N	technical	chr3-8733222-8734203	186	0.0440523081251189	minimum_1_event	4.0	131.0
+Intermediate	Pre	N	technical_state	chr1-211133720-211134678	186	-0.1318260958556075	minimum_1_event	5.0	131.0
+Intermediate	Pre	N	technical_state	chr16-1311478-1312392	186	-0.1035375904371503	minimum_1_event	5.0	131.0
+Intermediate	Pre	N	technical_state	chr3-8733222-8734203	186	0.0452500971683441	minimum_1_event	5.0	131.0
+Satellite Cells	Post	E	technical	chr1-211133720-211134678	179	0.1037998050680881	minimum_1_event	4.0	30.0
+Satellite Cells	Post	E	technical	chr16-1311478-1312392	179	-0.0542283345581145	minimum_1_event	4.0	30.0
+Satellite Cells	Post	E	technical	chr3-8733222-8734203	179	0.0042597563395514	minimum_1_event	4.0	30.0
+Satellite Cells	Post	E	technical_state	chr1-211133720-211134678	179	0.0976435071145454	minimum_1_event	5.0	30.0
+Satellite Cells	Post	E	technical_state	chr16-1311478-1312392	179	-0.0598628243438723	minimum_1_event	5.0	30.0
+Satellite Cells	Post	E	technical_state	chr3-8733222-8734203	179	0.0045093676516184	minimum_1_event	5.0	30.0
+Satellite Cells	Post	G	technical	chr1-211133720-211134678	116	-0.0804310056087523	minimum_1_event	4.0	27.0
+Satellite Cells	Post	G	technical	chr16-1311478-1312392	116	0.1096844170710423	minimum_1_event	4.0	27.0
+Satellite Cells	Post	G	technical	chr3-8733222-8734203	116	0.0149546255435548	minimum_1_event	4.0	27.0
+Satellite Cells	Post	G	technical_state	chr1-211133720-211134678	116	-0.0418862346477236	minimum_1_event	5.0	27.0
+Satellite Cells	Post	G	technical_state	chr16-1311478-1312392	116	0.0277082392081942	minimum_1_event	5.0	27.0
+Satellite Cells	Post	G	technical_state	chr3-8733222-8734203	116	8.896795418135705e-05	minimum_1_event	5.0	27.0
+Satellite Cells	Post	I	technical	chr1-211133720-211134678	95	0.0060258153656235	minimum_1_event	4.0	14.0
+Satellite Cells	Post	I	technical	chr16-1311478-1312392	95	-0.0838875471336416	minimum_1_event	4.0	14.0
+Satellite Cells	Post	I	technical	chr3-8733222-8734203	95	-0.024400190964471	minimum_1_event	4.0	14.0
+Satellite Cells	Post	I	technical_state	chr1-211133720-211134678	95	0.0045553183924222	minimum_1_event	5.0	14.0
+Satellite Cells	Post	I	technical_state	chr16-1311478-1312392	95	-0.0826599956587437	minimum_1_event	5.0	14.0
+Satellite Cells	Post	I	technical_state	chr3-8733222-8734203	95	-0.0232566851151666	minimum_1_event	5.0	14.0
+Satellite Cells	Post	J	technical	chr1-211133720-211134678	70	0.2241618389384098	minimum_1_event	4.0	11.0
+Satellite Cells	Post	J	technical	chr16-1311478-1312392	70	0.2094597733632501	minimum_1_event	4.0	11.0
+Satellite Cells	Post	J	technical	chr3-8733222-8734203	70	0.1088929174131499	minimum_1_event	4.0	11.0
+Satellite Cells	Post	J	technical_state	chr1-211133720-211134678	70	0.2214619608738786	minimum_1_event	5.0	11.0
+Satellite Cells	Post	J	technical_state	chr16-1311478-1312392	70	0.2002605889827305	minimum_1_event	5.0	11.0
+Satellite Cells	Post	J	technical_state	chr3-8733222-8734203	70	0.1012086855420759	minimum_1_event	5.0	11.0
+Satellite Cells	Post	L	technical	chr1-211133720-211134678	20	0.33627902755138	minimum_1_event	4.0	5.0
+Satellite Cells	Post	L	technical	chr16-1311478-1312392	20	0.33627902755138	minimum_1_event	4.0	5.0
+Satellite Cells	Post	L	technical	chr3-8733222-8734203	20	-0.1026610478984083	minimum_1_event	4.0	5.0
+Satellite Cells	Post	L	technical_state	chr1-211133720-211134678	20	0.3554499022035282	minimum_1_event	5.0	5.0
+Satellite Cells	Post	L	technical_state	chr16-1311478-1312392	20	0.3554499022035282	minimum_1_event	5.0	5.0
+Satellite Cells	Post	L	technical_state	chr3-8733222-8734203	20	-0.096623381697327	minimum_1_event	5.0	5.0
+Satellite Cells	Post	N	technical	chr1-211133720-211134678	38	-0.1674618142311565	minimum_1_event	4.0	7.0
+Satellite Cells	Post	N	technical	chr16-1311478-1312392	38	-0.1572353853989865	minimum_1_event	4.0	7.0
+Satellite Cells	Post	N	technical	chr3-8733222-8734203	38	0.0689281262675234	minimum_1_event	4.0	7.0
+Satellite Cells	Post	N	technical_state	chr1-211133720-211134678	38	-0.1677224750971347	minimum_1_event	5.0	7.0
+Satellite Cells	Post	N	technical_state	chr16-1311478-1312392	38	-0.1572668960497565	minimum_1_event	5.0	7.0
+Satellite Cells	Post	N	technical_state	chr3-8733222-8734203	38	0.0771616394151797	minimum_1_event	5.0	7.0
+Satellite Cells	Pre	E	technical	chr1-211133720-211134678	255	-0.1027427334330049	minimum_1_event	4.0	35.0
+Satellite Cells	Pre	E	technical	chr16-1311478-1312392	255	0.0528651584978356	minimum_1_event	4.0	35.0
+Satellite Cells	Pre	E	technical	chr3-8733222-8734203	255	0.0541711403404232	minimum_1_event	4.0	35.0
+Satellite Cells	Pre	E	technical_state	chr1-211133720-211134678	255	-0.1034552332518286	minimum_1_event	5.0	35.0
+Satellite Cells	Pre	E	technical_state	chr16-1311478-1312392	255	0.0525675769275436	minimum_1_event	5.0	35.0
+Satellite Cells	Pre	E	technical_state	chr3-8733222-8734203	255	0.0548798672418757	minimum_1_event	5.0	35.0
+Satellite Cells	Pre	G	technical	chr1-211133720-211134678	49	-0.1242266616289155	minimum_1_event	4.0	6.0
+Satellite Cells	Pre	G	technical	chr16-1311478-1312392	49	0.0185568051242503	minimum_1_event	4.0	6.0
+Satellite Cells	Pre	G	technical	chr3-8733222-8734203	49	0.0937427241980565	minimum_1_event	4.0	6.0
+Satellite Cells	Pre	G	technical_state	chr1-211133720-211134678	49	-0.1374175296714897	minimum_1_event	5.0	6.0
+Satellite Cells	Pre	G	technical_state	chr16-1311478-1312392	49	0.0164813535163499	minimum_1_event	5.0	6.0
+Satellite Cells	Pre	G	technical_state	chr3-8733222-8734203	49	0.0962081148463888	minimum_1_event	5.0	6.0
+Satellite Cells	Pre	I	technical	chr1-211133720-211134678	148	0.0992812906986315	minimum_1_event	4.0	20.0
+Satellite Cells	Pre	I	technical	chr16-1311478-1312392	148	0.0844110146798515	minimum_1_event	4.0	20.0
+Satellite Cells	Pre	I	technical	chr3-8733222-8734203	148	0.0136072906664891	minimum_1_event	4.0	20.0
+Satellite Cells	Pre	I	technical_state	chr1-211133720-211134678	148	0.0951952689681413	minimum_1_event	5.0	20.0
+Satellite Cells	Pre	I	technical_state	chr16-1311478-1312392	148	0.0801752856227605	minimum_1_event	5.0	20.0
+Satellite Cells	Pre	I	technical_state	chr3-8733222-8734203	148	0.0074238438403062	minimum_1_event	5.0	20.0
+Satellite Cells	Pre	J	technical	chr1-211133720-211134678	363	-0.0681754319785503	minimum_1_event	4.0	75.0
+Satellite Cells	Pre	J	technical	chr16-1311478-1312392	363	-0.0815903959025469	minimum_1_event	4.0	75.0
+Satellite Cells	Pre	J	technical	chr3-8733222-8734203	363	0.0336652114474037	minimum_1_event	4.0	75.0
+Satellite Cells	Pre	J	technical_state	chr1-211133720-211134678	363	-0.0694273111612201	minimum_1_event	5.0	75.0
+Satellite Cells	Pre	J	technical_state	chr16-1311478-1312392	363	-0.0815096342248445	minimum_1_event	5.0	75.0
+Satellite Cells	Pre	J	technical_state	chr3-8733222-8734203	363	0.0251502896434839	minimum_1_event	5.0	75.0
+Satellite Cells	Pre	L	technical	chr16-1311478-1312392	12	-0.2587818565541405	minimum_1_event	4.0	2.0
+Satellite Cells	Pre	L	technical	chr3-8733222-8734203	12	-0.2027022062049762	minimum_1_event	4.0	2.0
+Satellite Cells	Pre	L	technical_state	chr16-1311478-1312392	12	-0.3996529862757589	minimum_1_event	5.0	2.0
+Satellite Cells	Pre	L	technical_state	chr3-8733222-8734203	12	-0.1045899356799519	minimum_1_event	5.0	2.0
+Satellite Cells	Pre	N	technical	chr1-211133720-211134678	157	0.0476526488207458	minimum_1_event	4.0	31.0
+Satellite Cells	Pre	N	technical	chr16-1311478-1312392	157	-0.0084526564732701	minimum_1_event	4.0	31.0
+Satellite Cells	Pre	N	technical	chr3-8733222-8734203	157	0.0769858152536199	minimum_1_event	4.0	31.0
+Satellite Cells	Pre	N	technical_state	chr1-211133720-211134678	157	0.0351043692764131	minimum_1_event	5.0	31.0
+Satellite Cells	Pre	N	technical_state	chr16-1311478-1312392	157	-0.0220099388269004	minimum_1_event	5.0	31.0
+Satellite Cells	Pre	N	technical_state	chr3-8733222-8734203	157	0.0810880566731183	minimum_1_event	5.0	31.0
+Slow	Post	E	technical	chr1-211133720-211134678	684	-0.0571274358784743	minimum_1_event	4.0	426.0
+Slow	Post	E	technical	chr16-1311478-1312392	684	-0.069217714852874	minimum_1_event	4.0	426.0
+Slow	Post	E	technical	chr3-8733222-8734203	684	0.0531967298401214	minimum_1_event	4.0	426.0
+Slow	Post	E	technical_state	chr1-211133720-211134678	684	-0.0564576496290331	minimum_1_event	5.0	426.0
+Slow	Post	E	technical_state	chr16-1311478-1312392	684	-0.0690171315819865	minimum_1_event	5.0	426.0
+Slow	Post	E	technical_state	chr3-8733222-8734203	684	0.0535961262947925	minimum_1_event	5.0	426.0
+Slow	Post	G	technical	chr1-211133720-211134678	846	-0.032906008739725	minimum_1_event	4.0	430.0
+Slow	Post	G	technical	chr16-1311478-1312392	846	0.0195228855381651	minimum_1_event	4.0	430.0
+Slow	Post	G	technical	chr3-8733222-8734203	846	-0.0497163553978575	minimum_1_event	4.0	430.0
+Slow	Post	G	technical_state	chr1-211133720-211134678	846	-0.0331360240540911	minimum_1_event	5.0	430.0
+Slow	Post	G	technical_state	chr16-1311478-1312392	846	0.0193123209302104	minimum_1_event	5.0	430.0
+Slow	Post	G	technical_state	chr3-8733222-8734203	846	-0.0504387854098192	minimum_1_event	5.0	430.0
+Slow	Post	I	technical	chr1-211133720-211134678	754	-0.056095573699626	minimum_1_event	4.0	416.0
+Slow	Post	I	technical	chr16-1311478-1312392	754	-0.0207903201297778	minimum_1_event	4.0	416.0
+Slow	Post	I	technical	chr3-8733222-8734203	754	0.0513117133811064	minimum_1_event	4.0	416.0
+Slow	Post	I	technical_state	chr1-211133720-211134678	754	-0.0549294754673918	minimum_1_event	5.0	416.0
+Slow	Post	I	technical_state	chr16-1311478-1312392	754	-0.0205563734692064	minimum_1_event	5.0	416.0
+Slow	Post	I	technical_state	chr3-8733222-8734203	754	0.0512892582295849	minimum_1_event	5.0	416.0
+Slow	Post	J	technical	chr1-211133720-211134678	590	0.0040723391727848	minimum_1_event	4.0	357.0
+Slow	Post	J	technical	chr16-1311478-1312392	590	-0.0103663179283045	minimum_1_event	4.0	357.0
+Slow	Post	J	technical	chr3-8733222-8734203	590	0.0430603135971813	minimum_1_event	4.0	357.0
+Slow	Post	J	technical_state	chr1-211133720-211134678	590	0.0038454800689853	minimum_1_event	5.0	357.0
+Slow	Post	J	technical_state	chr16-1311478-1312392	590	-0.0102287999774384	minimum_1_event	5.0	357.0
+Slow	Post	J	technical_state	chr3-8733222-8734203	590	0.0425022747557184	minimum_1_event	5.0	357.0
+Slow	Post	L	technical	chr1-211133720-211134678	64	-0.1715581492780896	minimum_1_event	4.0	57.0
+Slow	Post	L	technical	chr16-1311478-1312392	64	0.0113778237181927	minimum_1_event	4.0	57.0
+Slow	Post	L	technical	chr3-8733222-8734203	64	0.238856090374475	minimum_1_event	4.0	57.0
+Slow	Post	L	technical_state	chr1-211133720-211134678	64	-0.1941618435319981	minimum_1_event	5.0	57.0
+Slow	Post	L	technical_state	chr16-1311478-1312392	64	0.0026743182428563	minimum_1_event	5.0	57.0
+Slow	Post	L	technical_state	chr3-8733222-8734203	64	0.2437576097840509	minimum_1_event	5.0	57.0
+Slow	Post	N	technical	chr1-211133720-211134678	174	-0.0821256764564023	minimum_1_event	4.0	117.0
+Slow	Post	N	technical	chr16-1311478-1312392	174	0.1072355880263158	minimum_1_event	4.0	117.0
+Slow	Post	N	technical	chr3-8733222-8734203	174	-0.0918286149521621	minimum_1_event	4.0	117.0
+Slow	Post	N	technical_state	chr1-211133720-211134678	174	-0.0861095720100654	minimum_1_event	5.0	117.0
+Slow	Post	N	technical_state	chr16-1311478-1312392	174	0.1074586091867385	minimum_1_event	5.0	117.0
+Slow	Post	N	technical_state	chr3-8733222-8734203	174	-0.0901919202536833	minimum_1_event	5.0	117.0
+Slow	Pre	E	technical	chr1-211133720-211134678	2494	0.0146010624928136	minimum_1_event	4.0	1457.0
+Slow	Pre	E	technical	chr16-1311478-1312392	2494	-0.0114207162423735	minimum_1_event	4.0	1457.0
+Slow	Pre	E	technical	chr3-8733222-8734203	2494	-0.01979154711441	minimum_1_event	4.0	1457.0
+Slow	Pre	E	technical_state	chr1-211133720-211134678	2494	0.01465937336304	minimum_1_event	5.0	1457.0
+Slow	Pre	E	technical_state	chr16-1311478-1312392	2494	-0.011330077120775	minimum_1_event	5.0	1457.0
+Slow	Pre	E	technical_state	chr3-8733222-8734203	2494	-0.0197763152754169	minimum_1_event	5.0	1457.0
+Slow	Pre	G	technical	chr1-211133720-211134678	282	0.0340525461751149	minimum_1_event	4.0	196.0
+Slow	Pre	G	technical	chr16-1311478-1312392	282	-0.0945278948069165	minimum_1_event	4.0	196.0
+Slow	Pre	G	technical	chr3-8733222-8734203	282	-0.0469813669617472	minimum_1_event	4.0	196.0
+Slow	Pre	G	technical_state	chr1-211133720-211134678	282	0.0338071526693311	minimum_1_event	5.0	196.0
+Slow	Pre	G	technical_state	chr16-1311478-1312392	282	-0.0943056635243442	minimum_1_event	5.0	196.0
+Slow	Pre	G	technical_state	chr3-8733222-8734203	282	-0.046215600299404	minimum_1_event	5.0	196.0
+Slow	Pre	I	technical	chr1-211133720-211134678	1499	-0.0106303100214053	minimum_1_event	4.0	1087.0
+Slow	Pre	I	technical	chr16-1311478-1312392	1499	-0.0313144150833546	minimum_1_event	4.0	1087.0
+Slow	Pre	I	technical	chr3-8733222-8734203	1499	0.0004961690238369	minimum_1_event	4.0	1087.0
+Slow	Pre	I	technical_state	chr1-211133720-211134678	1499	-0.0106605187247205	minimum_1_event	5.0	1087.0
+Slow	Pre	I	technical_state	chr16-1311478-1312392	1499	-0.0315290136256044	minimum_1_event	5.0	1087.0
+Slow	Pre	I	technical_state	chr3-8733222-8734203	1499	-0.0001367624008443	minimum_1_event	5.0	1087.0
+Slow	Pre	J	technical	chr1-211133720-211134678	1668	-0.0254998287239074	minimum_1_event	4.0	1200.0
+Slow	Pre	J	technical	chr16-1311478-1312392	1668	-0.0286025313940661	minimum_1_event	4.0	1200.0
+Slow	Pre	J	technical	chr3-8733222-8734203	1668	0.0338989762411269	minimum_1_event	4.0	1200.0
+Slow	Pre	J	technical_state	chr1-211133720-211134678	1668	-0.0256104480665843	minimum_1_event	5.0	1200.0
+Slow	Pre	J	technical_state	chr16-1311478-1312392	1668	-0.0294143367796805	minimum_1_event	5.0	1200.0
+Slow	Pre	J	technical_state	chr3-8733222-8734203	1668	0.0325516271000557	minimum_1_event	5.0	1200.0
+Slow	Pre	L	technical	chr16-1311478-1312392	17	0.5021051741284012	minimum_1_event	4.0	14.0
+Slow	Pre	L	technical	chr3-8733222-8734203	17	-0.0740922909955327	minimum_1_event	4.0	14.0
+Slow	Pre	L	technical_state	chr16-1311478-1312392	17	0.4330152361603494	minimum_1_event	5.0	14.0
+Slow	Pre	L	technical_state	chr3-8733222-8734203	17	-0.0179904931532018	minimum_1_event	5.0	14.0
+Slow	Pre	N	technical	chr1-211133720-211134678	1372	-0.0164519065012197	minimum_1_event	4.0	834.0
+Slow	Pre	N	technical	chr16-1311478-1312392	1372	-0.0205392089866383	minimum_1_event	4.0	834.0
+Slow	Pre	N	technical	chr3-8733222-8734203	1372	0.000619302875233	minimum_1_event	4.0	834.0
+Slow	Pre	N	technical_state	chr1-211133720-211134678	1372	-0.017639173964024	minimum_1_event	5.0	834.0
+Slow	Pre	N	technical_state	chr16-1311478-1312392	1372	-0.0209311065247931	minimum_1_event	5.0	834.0
+Slow	Pre	N	technical_state	chr3-8733222-8734203	1372	2.160415014676992e-05	minimum_1_event	5.0	834.0

@@ -82,3 +82,12 @@ The uniform evidence table includes every original peak-gene neighborhood pair;
 the R inspector preserves author labels and checks same-nucleus barcode identity.
 Commands and proposed inference units are specified in
 `docs/CANDIDATE_PROVENANCE_AND_REPLICATION_PLAN.md`.
+
+## GSE240061 sensitivity and CAV3 follow-up
+
+Scripts 64–71 export genome-wide ATAC counts, enumerate external scopes and
+448 settings, fit donor QL models, calculate detection and continuous links,
+stress-test selected effects, and generate figures. Full commands and Methods
+are in [the replication report](REPLICATION_ANALYSIS_AND_RESULTS.md).
+`python scripts/71_summarize_replication.py` rebuilds these new figures from
+committed results; the historical `run_paper.py` figure suite is separate.

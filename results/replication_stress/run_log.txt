@@ -1,0 +1,19 @@
+During startup - Warning messages:
+1: Setting LC_COLLATE=C.UTF-8 failed 
+2: Setting LC_CTYPE=C.UTF-8 failed 
+3: Setting LC_MONETARY=C.UTF-8 failed 
+4: Setting LC_TIME=C.UTF-8 failed 
+C296 complete
+C297 complete
+C298 complete
+C299 complete
+C300 complete
+C301 complete
+C302 complete
+C303 complete
+C324 complete
+C328 complete
+C197 complete
+C198 complete
+C199 complete
+C169 complete

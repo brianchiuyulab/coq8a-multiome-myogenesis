@@ -1,5 +1,18 @@
 # COQ8A-associated chromatin accessibility during myogenesis
 
+## Completed CAV3 and GSE240061 exploration — 2026-09-27
+
+The new [analysis and results](docs/REPLICATION_ANALYSIS_AND_RESULTS.md) include 288 external-scope comparisons,
+448 replication settings, donor-level statistics, model stress tests and figures.
+GSE240061 differential accessibility has now been analyzed. The sections below
+retain the preceding analysis and its specific settings.
+
+New figures: [external CAV3 scope](figures/replication/Figure_1_CAV3_functional_scope.png),
+[CAV3 sensitivity heatmap](figures/replication/Figure_2_CAV3_sensitivity.png),
+[six-donor follow-up](figures/replication/Figure_3_CAV3_donor_followup.png),
+[distal candidate](figures/replication/Supplement_distal_candidate.png).
+Regenerate with `python scripts/71_summarize_replication.py`.
+
 Reproducible analysis of paired human RNA/ATAC measurements at regions defined
 by an independent myoblast differentiation time course.
 

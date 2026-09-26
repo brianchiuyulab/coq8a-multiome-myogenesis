@@ -1,0 +1,10 @@
+{
+  "configurations": 448,
+  "ATAC_estimable": 393,
+  "RNA_estimable": 393,
+  "CAV3_count_estimable": 358,
+  "CAV3_positive_nominal": 9,
+  "CAV3_positive_nominal_matched": 0,
+  "CAV3_q01_fusion_positive": 5,
+  "checks": "Selected BH families and old exact FC/q reconciled; full pseudobulk sums verified in scripts 66/67."
+}

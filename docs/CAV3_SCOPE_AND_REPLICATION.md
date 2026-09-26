@@ -1,5 +1,12 @@
 # CAV3 prioritization and independent replication design
 
+## Completed CAV3 and GSE240061 exploration — 2026-09-27
+
+The new [analysis and results](REPLICATION_ANALYSIS_AND_RESULTS.md) include 288 external-scope comparisons,
+448 replication settings, donor-level statistics, model stress tests and figures.
+GSE240061 differential accessibility has now been analyzed. The sections below
+retain the preceding analysis and its specific settings.
+
 ## Fixed target comparison
 
 The target dataset is GSE208248: two donor-derived human muscle cell lines,

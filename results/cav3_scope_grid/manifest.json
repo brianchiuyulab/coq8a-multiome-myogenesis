@@ -1,0 +1,43 @@
+{
+  "gene_sets": [
+    "Myogenesis221",
+    "Differentiation",
+    "Fusion",
+    "Negative_regulation",
+    "Positive_regulation",
+    "Differentiation_or_fusion"
+  ],
+  "distances_bp": [
+    500,
+    2000,
+    100000
+  ],
+  "external_annotations": [
+    "All",
+    "HSMM",
+    "MYOD_bound_HSMM",
+    "Muscle_selective"
+  ],
+  "settings": [
+    {
+      "gate": "TSS_ge_2",
+      "contrast": "2plus_vs_1"
+    },
+    {
+      "gate": "TSS_ge_2",
+      "contrast": "3plus_vs_1"
+    },
+    {
+      "gate": "TSS_ge_3",
+      "contrast": "2plus_vs_1"
+    },
+    {
+      "gate": "TSS_ge_3",
+      "contrast": "3plus_vs_1"
+    }
+  ],
+  "n_scope_comparisons": 288,
+  "selection": "Retrospective sensitivity exploration; all external subsets tested and retained; no one-gene CAV3-only family",
+  "q_definition": "BH across all distinct member peaks within each setting; not across sensitivity settings",
+  "biological_sources": 2
+}

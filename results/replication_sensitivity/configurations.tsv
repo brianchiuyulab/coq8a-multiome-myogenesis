@@ -1,0 +1,449 @@
+config	celltype	time	qc	rule	caliper	n_donors	n_high	n_low
+C000	Satellite Cells	Pre	author	2plus_vs_1	none	5	38	129
+C001	Satellite Cells	Pre	author	2plus_vs_1	0.1	3	12	12
+C002	Satellite Cells	Pre	author	2plus_vs_1	0.2	4	17	17
+C003	Satellite Cells	Pre	author	2plus_vs_1	0.3	4	21	21
+C004	Satellite Cells	Pre	author	3plus_vs_1	none	4	16	124
+C005	Satellite Cells	Pre	author	3plus_vs_1	0.1	1	3	3
+C006	Satellite Cells	Pre	author	3plus_vs_1	0.2	1	4	4
+C007	Satellite Cells	Pre	author	3plus_vs_1	0.3	3	6	6
+C008	Satellite Cells	Pre	author	4plus_vs_1	none	3	4	97
+C009	Satellite Cells	Pre	author	4plus_vs_1	0.1	1	1	1
+C010	Satellite Cells	Pre	author	4plus_vs_1	0.2	1	1	1
+C011	Satellite Cells	Pre	author	4plus_vs_1	0.3	1	1	1
+C012	Satellite Cells	Pre	author	3plus_vs_1to2	none	4	16	145
+C013	Satellite Cells	Pre	author	3plus_vs_1to2	0.1	1	3	3
+C014	Satellite Cells	Pre	author	3plus_vs_1to2	0.2	1	4	4
+C015	Satellite Cells	Pre	author	3plus_vs_1to2	0.3	3	7	7
+C016	Satellite Cells	Pre	author	positive_q25	none	6	44	44
+C017	Satellite Cells	Pre	author	positive_q25	0.1	1	2	2
+C018	Satellite Cells	Pre	author	positive_q25	0.2	1	3	3
+C019	Satellite Cells	Pre	author	positive_q25	0.3	1	5	5
+C020	Satellite Cells	Pre	author	positive_q33	none	6	57	58
+C021	Satellite Cells	Pre	author	positive_q33	0.1	1	4	4
+C022	Satellite Cells	Pre	author	positive_q33	0.2	1	6	6
+C023	Satellite Cells	Pre	author	positive_q33	0.3	3	11	11
+C024	Satellite Cells	Pre	author	detected_vs_zero	none	6	169	815
+C025	Satellite Cells	Pre	author	detected_vs_zero	0.1	6	112	112
+C026	Satellite Cells	Pre	author	detected_vs_zero	0.2	6	137	137
+C027	Satellite Cells	Pre	author	detected_vs_zero	0.3	6	145	145
+C028	Satellite Cells	Pre	trim95	2plus_vs_1	none	3	20	77
+C029	Satellite Cells	Pre	trim95	2plus_vs_1	0.1	3	10	10
+C030	Satellite Cells	Pre	trim95	2plus_vs_1	0.2	3	13	13
+C031	Satellite Cells	Pre	trim95	2plus_vs_1	0.3	3	15	15
+C032	Satellite Cells	Pre	trim95	3plus_vs_1	none	3	5	77
+C033	Satellite Cells	Pre	trim95	3plus_vs_1	0.1	1	1	1
+C034	Satellite Cells	Pre	trim95	3plus_vs_1	0.2	1	2	2
+C035	Satellite Cells	Pre	trim95	3plus_vs_1	0.3	1	2	2
+C036	Satellite Cells	Pre	trim95	4plus_vs_1	none	1	1	45
+C037	Satellite Cells	Pre	trim95	4plus_vs_1	0.1	0	0	0
+C038	Satellite Cells	Pre	trim95	4plus_vs_1	0.2	1	1	1
+C039	Satellite Cells	Pre	trim95	4plus_vs_1	0.3	1	1	1
+C040	Satellite Cells	Pre	trim95	3plus_vs_1to2	none	3	5	92
+C041	Satellite Cells	Pre	trim95	3plus_vs_1to2	0.1	1	1	1
+C042	Satellite Cells	Pre	trim95	3plus_vs_1to2	0.2	1	2	2
+C043	Satellite Cells	Pre	trim95	3plus_vs_1to2	0.3	1	2	2
+C044	Satellite Cells	Pre	trim95	positive_q25	none	6	34	34
+C045	Satellite Cells	Pre	trim95	positive_q25	0.1	1	2	2
+C046	Satellite Cells	Pre	trim95	positive_q25	0.2	1	4	4
+C047	Satellite Cells	Pre	trim95	positive_q25	0.3	2	6	6
+C048	Satellite Cells	Pre	trim95	positive_q33	none	6	44	44
+C049	Satellite Cells	Pre	trim95	positive_q33	0.1	2	4	4
+C050	Satellite Cells	Pre	trim95	positive_q33	0.2	2	7	7
+C051	Satellite Cells	Pre	trim95	positive_q33	0.3	3	11	11
+C052	Satellite Cells	Pre	trim95	detected_vs_zero	none	6	125	774
+C053	Satellite Cells	Pre	trim95	detected_vs_zero	0.1	6	102	102
+C054	Satellite Cells	Pre	trim95	detected_vs_zero	0.2	6	119	119
+C055	Satellite Cells	Pre	trim95	detected_vs_zero	0.3	6	122	122
+C056	Satellite Cells	Post	author	2plus_vs_1	none	6	29	65
+C057	Satellite Cells	Post	author	2plus_vs_1	0.1	3	4	4
+C058	Satellite Cells	Post	author	2plus_vs_1	0.2	4	11	11
+C059	Satellite Cells	Post	author	2plus_vs_1	0.3	6	16	16
+C060	Satellite Cells	Post	author	3plus_vs_1	none	5	11	59
+C061	Satellite Cells	Post	author	3plus_vs_1	0.1	1	1	1
+C062	Satellite Cells	Post	author	3plus_vs_1	0.2	3	4	4
+C063	Satellite Cells	Post	author	3plus_vs_1	0.3	5	6	6
+C064	Satellite Cells	Post	author	4plus_vs_1	none	3	4	41
+C065	Satellite Cells	Post	author	4plus_vs_1	0.1	1	1	1
+C066	Satellite Cells	Post	author	4plus_vs_1	0.2	1	1	1
+C067	Satellite Cells	Post	author	4plus_vs_1	0.3	1	1	1
+C068	Satellite Cells	Post	author	3plus_vs_1to2	none	5	11	76
+C069	Satellite Cells	Post	author	3plus_vs_1to2	0.1	1	1	1
+C070	Satellite Cells	Post	author	3plus_vs_1to2	0.2	3	4	4
+C071	Satellite Cells	Post	author	3plus_vs_1to2	0.3	5	6	6
+C072	Satellite Cells	Post	author	positive_q25	none	6	26	26
+C073	Satellite Cells	Post	author	positive_q25	0.1	1	1	1
+C074	Satellite Cells	Post	author	positive_q25	0.2	1	1	1
+C075	Satellite Cells	Post	author	positive_q25	0.3	2	2	2
+C076	Satellite Cells	Post	author	positive_q33	none	6	33	33
+C077	Satellite Cells	Post	author	positive_q33	0.1	2	2	2
+C078	Satellite Cells	Post	author	positive_q33	0.2	4	5	5
+C079	Satellite Cells	Post	author	positive_q33	0.3	6	8	8
+C080	Satellite Cells	Post	author	detected_vs_zero	none	6	94	424
+C081	Satellite Cells	Post	author	detected_vs_zero	0.1	6	48	48
+C082	Satellite Cells	Post	author	detected_vs_zero	0.2	6	70	70
+C083	Satellite Cells	Post	author	detected_vs_zero	0.3	6	77	77
+C084	Satellite Cells	Post	trim95	2plus_vs_1	none	6	19	54
+C085	Satellite Cells	Post	trim95	2plus_vs_1	0.1	3	3	3
+C086	Satellite Cells	Post	trim95	2plus_vs_1	0.2	3	8	8
+C087	Satellite Cells	Post	trim95	2plus_vs_1	0.3	5	11	11
+C088	Satellite Cells	Post	trim95	3plus_vs_1	none	5	6	49
+C089	Satellite Cells	Post	trim95	3plus_vs_1	0.1	1	1	1
+C090	Satellite Cells	Post	trim95	3plus_vs_1	0.2	3	3	3
+C091	Satellite Cells	Post	trim95	3plus_vs_1	0.3	4	4	4
+C092	Satellite Cells	Post	trim95	4plus_vs_1	none	2	2	15
+C093	Satellite Cells	Post	trim95	4plus_vs_1	0.1	1	1	1
+C094	Satellite Cells	Post	trim95	4plus_vs_1	0.2	1	1	1
+C095	Satellite Cells	Post	trim95	4plus_vs_1	0.3	1	1	1
+C096	Satellite Cells	Post	trim95	3plus_vs_1to2	none	5	6	61
+C097	Satellite Cells	Post	trim95	3plus_vs_1to2	0.1	1	1	1
+C098	Satellite Cells	Post	trim95	3plus_vs_1to2	0.2	3	3	3
+C099	Satellite Cells	Post	trim95	3plus_vs_1to2	0.3	4	4	4
+C100	Satellite Cells	Post	trim95	positive_q25	none	6	21	21
+C101	Satellite Cells	Post	trim95	positive_q25	0.1	1	1	1
+C102	Satellite Cells	Post	trim95	positive_q25	0.2	2	2	2
+C103	Satellite Cells	Post	trim95	positive_q25	0.3	4	4	4
+C104	Satellite Cells	Post	trim95	positive_q33	none	6	26	26
+C105	Satellite Cells	Post	trim95	positive_q33	0.1	1	1	1
+C106	Satellite Cells	Post	trim95	positive_q33	0.2	3	4	4
+C107	Satellite Cells	Post	trim95	positive_q33	0.3	4	7	7
+C108	Satellite Cells	Post	trim95	detected_vs_zero	none	6	73	401
+C109	Satellite Cells	Post	trim95	detected_vs_zero	0.1	6	47	47
+C110	Satellite Cells	Post	trim95	detected_vs_zero	0.2	6	64	64
+C111	Satellite Cells	Post	trim95	detected_vs_zero	0.3	6	70	70
+C112	Fast	Pre	author	2plus_vs_1	none	6	2240	2549
+C113	Fast	Pre	author	2plus_vs_1	0.1	6	1707	1707
+C114	Fast	Pre	author	2plus_vs_1	0.2	6	1886	1886
+C115	Fast	Pre	author	2plus_vs_1	0.3	6	1937	1937
+C116	Fast	Pre	author	3plus_vs_1	none	6	1045	2549
+C117	Fast	Pre	author	3plus_vs_1	0.1	6	846	846
+C118	Fast	Pre	author	3plus_vs_1	0.2	6	945	945
+C119	Fast	Pre	author	3plus_vs_1	0.3	6	978	978
+C120	Fast	Pre	author	4plus_vs_1	none	6	464	2549
+C121	Fast	Pre	author	4plus_vs_1	0.1	6	374	374
+C122	Fast	Pre	author	4plus_vs_1	0.2	6	424	424
+C123	Fast	Pre	author	4plus_vs_1	0.3	6	446	446
+C124	Fast	Pre	author	3plus_vs_1to2	none	6	1045	3744
+C125	Fast	Pre	author	3plus_vs_1to2	0.1	6	930	930
+C126	Fast	Pre	author	3plus_vs_1to2	0.2	6	1004	1004
+C127	Fast	Pre	author	3plus_vs_1to2	0.3	6	1028	1028
+C128	Fast	Pre	author	positive_q25	none	6	1198	1199
+C129	Fast	Pre	author	positive_q25	0.1	6	469	469
+C130	Fast	Pre	author	positive_q25	0.2	6	658	658
+C131	Fast	Pre	author	positive_q25	0.3	6	794	794
+C132	Fast	Pre	author	positive_q33	none	6	1597	1598
+C133	Fast	Pre	author	positive_q33	0.1	6	888	888
+C134	Fast	Pre	author	positive_q33	0.2	6	1083	1083
+C135	Fast	Pre	author	positive_q33	0.3	6	1168	1168
+C136	Fast	Pre	author	detected_vs_zero	none	6	4789	3946
+C137	Fast	Pre	author	detected_vs_zero	0.1	6	3254	3254
+C138	Fast	Pre	author	detected_vs_zero	0.2	6	3417	3417
+C139	Fast	Pre	author	detected_vs_zero	0.3	6	3457	3457
+C140	Fast	Pre	trim95	2plus_vs_1	none	6	1912	2380
+C141	Fast	Pre	trim95	2plus_vs_1	0.1	6	1586	1586
+C142	Fast	Pre	trim95	2plus_vs_1	0.2	6	1717	1717
+C143	Fast	Pre	trim95	2plus_vs_1	0.3	6	1750	1750
+C144	Fast	Pre	trim95	3plus_vs_1	none	6	831	2380
+C145	Fast	Pre	trim95	3plus_vs_1	0.1	6	756	756
+C146	Fast	Pre	trim95	3plus_vs_1	0.2	6	810	810
+C147	Fast	Pre	trim95	3plus_vs_1	0.3	6	821	821
+C148	Fast	Pre	trim95	4plus_vs_1	none	6	339	2380
+C149	Fast	Pre	trim95	4plus_vs_1	0.1	6	315	315
+C150	Fast	Pre	trim95	4plus_vs_1	0.2	6	332	332
+C151	Fast	Pre	trim95	4plus_vs_1	0.3	6	336	336
+C152	Fast	Pre	trim95	3plus_vs_1to2	none	6	831	3461
+C153	Fast	Pre	trim95	3plus_vs_1to2	0.1	6	796	796
+C154	Fast	Pre	trim95	3plus_vs_1to2	0.2	6	821	821
+C155	Fast	Pre	trim95	3plus_vs_1to2	0.3	6	828	828
+C156	Fast	Pre	trim95	positive_q25	none	6	1078	1077
+C157	Fast	Pre	trim95	positive_q25	0.1	6	448	448
+C158	Fast	Pre	trim95	positive_q25	0.2	6	612	612
+C159	Fast	Pre	trim95	positive_q25	0.3	6	734	734
+C160	Fast	Pre	trim95	positive_q33	none	6	1431	1432
+C161	Fast	Pre	trim95	positive_q33	0.1	6	837	837
+C162	Fast	Pre	trim95	positive_q33	0.2	6	1003	1003
+C163	Fast	Pre	trim95	positive_q33	0.3	6	1090	1090
+C164	Fast	Pre	trim95	detected_vs_zero	none	6	4292	3781
+C165	Fast	Pre	trim95	detected_vs_zero	0.1	6	3113	3113
+C166	Fast	Pre	trim95	detected_vs_zero	0.2	6	3261	3261
+C167	Fast	Pre	trim95	detected_vs_zero	0.3	6	3298	3298
+C168	Fast	Post	author	2plus_vs_1	none	6	635	1166
+C169	Fast	Post	author	2plus_vs_1	0.1	6	485	485
+C170	Fast	Post	author	2plus_vs_1	0.2	6	567	567
+C171	Fast	Post	author	2plus_vs_1	0.3	6	586	586
+C172	Fast	Post	author	3plus_vs_1	none	6	200	1166
+C173	Fast	Post	author	3plus_vs_1	0.1	6	149	149
+C174	Fast	Post	author	3plus_vs_1	0.2	6	175	175
+C175	Fast	Post	author	3plus_vs_1	0.3	6	180	180
+C176	Fast	Post	author	4plus_vs_1	none	6	69	1166
+C177	Fast	Post	author	4plus_vs_1	0.1	6	45	45
+C178	Fast	Post	author	4plus_vs_1	0.2	6	57	57
+C179	Fast	Post	author	4plus_vs_1	0.3	6	61	61
+C180	Fast	Post	author	3plus_vs_1to2	none	6	200	1601
+C181	Fast	Post	author	3plus_vs_1to2	0.1	6	159	159
+C182	Fast	Post	author	3plus_vs_1to2	0.2	6	187	187
+C183	Fast	Post	author	3plus_vs_1to2	0.3	6	192	192
+C184	Fast	Post	author	positive_q25	none	6	452	452
+C185	Fast	Post	author	positive_q25	0.1	6	125	125
+C186	Fast	Post	author	positive_q25	0.2	6	190	190
+C187	Fast	Post	author	positive_q25	0.3	6	251	251
+C188	Fast	Post	author	positive_q33	none	6	600	604
+C189	Fast	Post	author	positive_q33	0.1	6	237	237
+C190	Fast	Post	author	positive_q33	0.2	6	324	324
+C191	Fast	Post	author	positive_q33	0.3	6	373	373
+C192	Fast	Post	author	detected_vs_zero	none	6	1801	3028
+C193	Fast	Post	author	detected_vs_zero	0.1	6	1488	1488
+C194	Fast	Post	author	detected_vs_zero	0.2	6	1626	1626
+C195	Fast	Post	author	detected_vs_zero	0.3	6	1667	1667
+C196	Fast	Post	trim95	2plus_vs_1	none	6	536	1048
+C197	Fast	Post	trim95	2plus_vs_1	0.1	6	435	435
+C198	Fast	Post	trim95	2plus_vs_1	0.2	6	490	490
+C199	Fast	Post	trim95	2plus_vs_1	0.3	6	506	506
+C200	Fast	Post	trim95	3plus_vs_1	none	6	159	1048
+C201	Fast	Post	trim95	3plus_vs_1	0.1	6	135	135
+C202	Fast	Post	trim95	3plus_vs_1	0.2	6	146	146
+C203	Fast	Post	trim95	3plus_vs_1	0.3	6	150	150
+C204	Fast	Post	trim95	4plus_vs_1	none	6	53	1048
+C205	Fast	Post	trim95	4plus_vs_1	0.1	6	41	41
+C206	Fast	Post	trim95	4plus_vs_1	0.2	6	48	48
+C207	Fast	Post	trim95	4plus_vs_1	0.3	6	50	50
+C208	Fast	Post	trim95	3plus_vs_1to2	none	6	159	1425
+C209	Fast	Post	trim95	3plus_vs_1to2	0.1	6	140	140
+C210	Fast	Post	trim95	3plus_vs_1to2	0.2	6	155	155
+C211	Fast	Post	trim95	3plus_vs_1to2	0.3	6	159	159
+C212	Fast	Post	trim95	positive_q25	none	6	399	399
+C213	Fast	Post	trim95	positive_q25	0.1	6	123	123
+C214	Fast	Post	trim95	positive_q25	0.2	6	190	190
+C215	Fast	Post	trim95	positive_q25	0.3	6	241	241
+C216	Fast	Post	trim95	positive_q33	none	6	528	530
+C217	Fast	Post	trim95	positive_q33	0.1	6	239	239
+C218	Fast	Post	trim95	positive_q33	0.2	6	304	304
+C219	Fast	Post	trim95	positive_q33	0.3	6	357	357
+C220	Fast	Post	trim95	detected_vs_zero	none	6	1584	2839
+C221	Fast	Post	trim95	detected_vs_zero	0.1	6	1394	1394
+C222	Fast	Post	trim95	detected_vs_zero	0.2	6	1486	1486
+C223	Fast	Post	trim95	detected_vs_zero	0.3	6	1501	1501
+C224	Slow	Pre	author	2plus_vs_1	none	6	2744	2044
+C225	Slow	Pre	author	2plus_vs_1	0.1	5	1630	1630
+C226	Slow	Pre	author	2plus_vs_1	0.2	6	1780	1780
+C227	Slow	Pre	author	2plus_vs_1	0.3	6	1832	1832
+C228	Slow	Pre	author	3plus_vs_1	none	6	1446	2044
+C229	Slow	Pre	author	3plus_vs_1	0.1	5	1006	1006
+C230	Slow	Pre	author	3plus_vs_1	0.2	5	1129	1129
+C231	Slow	Pre	author	3plus_vs_1	0.3	6	1188	1188
+C232	Slow	Pre	author	4plus_vs_1	none	6	743	2044
+C233	Slow	Pre	author	4plus_vs_1	0.1	5	531	531
+C234	Slow	Pre	author	4plus_vs_1	0.2	5	612	612
+C235	Slow	Pre	author	4plus_vs_1	0.3	5	655	655
+C236	Slow	Pre	author	3plus_vs_1to2	none	6	1446	3342
+C237	Slow	Pre	author	3plus_vs_1to2	0.1	5	1225	1225
+C238	Slow	Pre	author	3plus_vs_1to2	0.2	6	1328	1328
+C239	Slow	Pre	author	3plus_vs_1to2	0.3	6	1379	1379
+C240	Slow	Pre	author	positive_q25	none	6	1199	1199
+C241	Slow	Pre	author	positive_q25	0.1	5	577	577
+C242	Slow	Pre	author	positive_q25	0.2	6	738	738
+C243	Slow	Pre	author	positive_q25	0.3	6	848	848
+C244	Slow	Pre	author	positive_q33	none	6	1597	1599
+C245	Slow	Pre	author	positive_q33	0.1	5	1007	1007
+C246	Slow	Pre	author	positive_q33	0.2	6	1175	1175
+C247	Slow	Pre	author	positive_q33	0.3	6	1247	1247
+C248	Slow	Pre	author	detected_vs_zero	none	6	4788	2544
+C249	Slow	Pre	author	detected_vs_zero	0.1	5	2263	2263
+C250	Slow	Pre	author	detected_vs_zero	0.2	6	2380	2380
+C251	Slow	Pre	author	detected_vs_zero	0.3	6	2409	2409
+C252	Slow	Pre	trim95	2plus_vs_1	none	6	2339	1945
+C253	Slow	Pre	trim95	2plus_vs_1	0.1	5	1545	1545
+C254	Slow	Pre	trim95	2plus_vs_1	0.2	6	1685	1685
+C255	Slow	Pre	trim95	2plus_vs_1	0.3	6	1731	1731
+C256	Slow	Pre	trim95	3plus_vs_1	none	6	1154	1945
+C257	Slow	Pre	trim95	3plus_vs_1	0.1	5	928	928
+C258	Slow	Pre	trim95	3plus_vs_1	0.2	5	1031	1031
+C259	Slow	Pre	trim95	3plus_vs_1	0.3	6	1065	1065
+C260	Slow	Pre	trim95	4plus_vs_1	none	6	550	1945
+C261	Slow	Pre	trim95	4plus_vs_1	0.1	5	472	472
+C262	Slow	Pre	trim95	4plus_vs_1	0.2	5	529	529
+C263	Slow	Pre	trim95	4plus_vs_1	0.3	5	543	543
+C264	Slow	Pre	trim95	3plus_vs_1to2	none	6	1154	3130
+C265	Slow	Pre	trim95	3plus_vs_1to2	0.1	5	1068	1068
+C266	Slow	Pre	trim95	3plus_vs_1to2	0.2	6	1135	1135
+C267	Slow	Pre	trim95	3plus_vs_1to2	0.3	6	1149	1149
+C268	Slow	Pre	trim95	positive_q25	none	6	1073	1073
+C269	Slow	Pre	trim95	positive_q25	0.1	5	544	544
+C270	Slow	Pre	trim95	positive_q25	0.2	6	680	680
+C271	Slow	Pre	trim95	positive_q25	0.3	6	783	783
+C272	Slow	Pre	trim95	positive_q33	none	6	1429	1431
+C273	Slow	Pre	trim95	positive_q33	0.1	5	921	921
+C274	Slow	Pre	trim95	positive_q33	0.2	6	1081	1081
+C275	Slow	Pre	trim95	positive_q33	0.3	6	1154	1154
+C276	Slow	Pre	trim95	detected_vs_zero	none	6	4284	2461
+C277	Slow	Pre	trim95	detected_vs_zero	0.1	5	2190	2190
+C278	Slow	Pre	trim95	detected_vs_zero	0.2	6	2300	2300
+C279	Slow	Pre	trim95	detected_vs_zero	0.3	6	2328	2328
+C280	Slow	Post	author	2plus_vs_1	none	6	877	926
+C281	Slow	Post	author	2plus_vs_1	0.1	6	607	607
+C282	Slow	Post	author	2plus_vs_1	0.2	6	730	730
+C283	Slow	Post	author	2plus_vs_1	0.3	6	756	756
+C284	Slow	Post	author	3plus_vs_1	none	6	408	926
+C285	Slow	Post	author	3plus_vs_1	0.1	6	307	307
+C286	Slow	Post	author	3plus_vs_1	0.2	6	360	360
+C287	Slow	Post	author	3plus_vs_1	0.3	6	372	372
+C288	Slow	Post	author	4plus_vs_1	none	6	177	926
+C289	Slow	Post	author	4plus_vs_1	0.1	6	130	130
+C290	Slow	Post	author	4plus_vs_1	0.2	6	149	149
+C291	Slow	Post	author	4plus_vs_1	0.3	6	155	155
+C292	Slow	Post	author	3plus_vs_1to2	none	6	408	1395
+C293	Slow	Post	author	3plus_vs_1to2	0.1	6	333	333
+C294	Slow	Post	author	3plus_vs_1to2	0.2	6	371	371
+C295	Slow	Post	author	3plus_vs_1to2	0.3	6	385	385
+C296	Slow	Post	author	positive_q25	none	6	454	454
+C297	Slow	Post	author	positive_q25	0.1	6	176	176
+C298	Slow	Post	author	positive_q25	0.2	6	257	257
+C299	Slow	Post	author	positive_q25	0.3	6	318	318
+C300	Slow	Post	author	positive_q33	none	6	601	602
+C301	Slow	Post	author	positive_q33	0.1	6	312	312
+C302	Slow	Post	author	positive_q33	0.2	6	404	404
+C303	Slow	Post	author	positive_q33	0.3	6	458	458
+C304	Slow	Post	author	detected_vs_zero	none	6	1803	1309
+C305	Slow	Post	author	detected_vs_zero	0.1	6	994	994
+C306	Slow	Post	author	detected_vs_zero	0.2	6	1140	1140
+C307	Slow	Post	author	detected_vs_zero	0.3	6	1180	1180
+C308	Slow	Post	trim95	2plus_vs_1	none	6	752	843
+C309	Slow	Post	trim95	2plus_vs_1	0.1	6	557	557
+C310	Slow	Post	trim95	2plus_vs_1	0.2	6	662	662
+C311	Slow	Post	trim95	2plus_vs_1	0.3	6	680	680
+C312	Slow	Post	trim95	3plus_vs_1	none	6	338	843
+C313	Slow	Post	trim95	3plus_vs_1	0.1	6	282	282
+C314	Slow	Post	trim95	3plus_vs_1	0.2	6	318	318
+C315	Slow	Post	trim95	3plus_vs_1	0.3	6	325	325
+C316	Slow	Post	trim95	4plus_vs_1	none	6	136	843
+C317	Slow	Post	trim95	4plus_vs_1	0.1	6	116	116
+C318	Slow	Post	trim95	4plus_vs_1	0.2	6	127	127
+C319	Slow	Post	trim95	4plus_vs_1	0.3	6	130	130
+C320	Slow	Post	trim95	3plus_vs_1to2	none	6	338	1257
+C321	Slow	Post	trim95	3plus_vs_1to2	0.1	6	303	303
+C322	Slow	Post	trim95	3plus_vs_1to2	0.2	6	325	325
+C323	Slow	Post	trim95	3plus_vs_1to2	0.3	6	331	331
+C324	Slow	Post	trim95	positive_q25	none	6	401	401
+C325	Slow	Post	trim95	positive_q25	0.1	6	171	171
+C326	Slow	Post	trim95	positive_q25	0.2	6	238	238
+C327	Slow	Post	trim95	positive_q25	0.3	6	296	296
+C328	Slow	Post	trim95	positive_q33	none	6	532	535
+C329	Slow	Post	trim95	positive_q33	0.1	6	314	314
+C330	Slow	Post	trim95	positive_q33	0.2	6	393	393
+C331	Slow	Post	trim95	positive_q33	0.3	6	441	441
+C332	Slow	Post	trim95	detected_vs_zero	none	6	1595	1243
+C333	Slow	Post	trim95	detected_vs_zero	0.1	6	942	942
+C334	Slow	Post	trim95	detected_vs_zero	0.2	6	1077	1077
+C335	Slow	Post	trim95	detected_vs_zero	0.3	6	1114	1114
+C336	Intermediate	Pre	author	2plus_vs_1	none	6	460	284
+C337	Intermediate	Pre	author	2plus_vs_1	0.1	5	151	151
+C338	Intermediate	Pre	author	2plus_vs_1	0.2	5	210	210
+C339	Intermediate	Pre	author	2plus_vs_1	0.3	5	239	239
+C340	Intermediate	Pre	author	3plus_vs_1	none	6	280	284
+C341	Intermediate	Pre	author	3plus_vs_1	0.1	5	94	94
+C342	Intermediate	Pre	author	3plus_vs_1	0.2	5	132	132
+C343	Intermediate	Pre	author	3plus_vs_1	0.3	5	156	156
+C344	Intermediate	Pre	author	4plus_vs_1	none	6	169	284
+C345	Intermediate	Pre	author	4plus_vs_1	0.1	5	54	54
+C346	Intermediate	Pre	author	4plus_vs_1	0.2	5	80	80
+C347	Intermediate	Pre	author	4plus_vs_1	0.3	5	98	98
+C348	Intermediate	Pre	author	3plus_vs_1to2	none	6	280	464
+C349	Intermediate	Pre	author	3plus_vs_1to2	0.1	5	133	133
+C350	Intermediate	Pre	author	3plus_vs_1to2	0.2	5	171	171
+C351	Intermediate	Pre	author	3plus_vs_1to2	0.3	5	200	200
+C352	Intermediate	Pre	author	positive_q25	none	6	188	188
+C353	Intermediate	Pre	author	positive_q25	0.1	5	65	65
+C354	Intermediate	Pre	author	positive_q25	0.2	5	98	98
+C355	Intermediate	Pre	author	positive_q25	0.3	5	126	126
+C356	Intermediate	Pre	author	positive_q33	none	6	250	250
+C357	Intermediate	Pre	author	positive_q33	0.1	5	100	100
+C358	Intermediate	Pre	author	positive_q33	0.2	5	149	149
+C359	Intermediate	Pre	author	positive_q33	0.3	5	179	179
+C360	Intermediate	Pre	author	detected_vs_zero	none	5	740	289
+C361	Intermediate	Pre	author	detected_vs_zero	0.1	5	200	200
+C362	Intermediate	Pre	author	detected_vs_zero	0.2	5	247	247
+C363	Intermediate	Pre	author	detected_vs_zero	0.3	5	261	261
+C364	Intermediate	Pre	trim95	2plus_vs_1	none	6	390	270
+C365	Intermediate	Pre	trim95	2plus_vs_1	0.1	5	143	143
+C366	Intermediate	Pre	trim95	2plus_vs_1	0.2	5	201	201
+C367	Intermediate	Pre	trim95	2plus_vs_1	0.3	5	228	228
+C368	Intermediate	Pre	trim95	3plus_vs_1	none	6	218	270
+C369	Intermediate	Pre	trim95	3plus_vs_1	0.1	5	86	86
+C370	Intermediate	Pre	trim95	3plus_vs_1	0.2	5	124	124
+C371	Intermediate	Pre	trim95	3plus_vs_1	0.3	5	144	144
+C372	Intermediate	Pre	trim95	4plus_vs_1	none	6	124	270
+C373	Intermediate	Pre	trim95	4plus_vs_1	0.1	5	50	50
+C374	Intermediate	Pre	trim95	4plus_vs_1	0.2	5	74	74
+C375	Intermediate	Pre	trim95	4plus_vs_1	0.3	5	89	89
+C376	Intermediate	Pre	trim95	3plus_vs_1to2	none	6	218	442
+C377	Intermediate	Pre	trim95	3plus_vs_1to2	0.1	5	120	120
+C378	Intermediate	Pre	trim95	3plus_vs_1to2	0.2	5	156	156
+C379	Intermediate	Pre	trim95	3plus_vs_1to2	0.3	5	181	181
+C380	Intermediate	Pre	trim95	positive_q25	none	6	168	168
+C381	Intermediate	Pre	trim95	positive_q25	0.1	5	59	59
+C382	Intermediate	Pre	trim95	positive_q25	0.2	5	93	93
+C383	Intermediate	Pre	trim95	positive_q25	0.3	5	115	115
+C384	Intermediate	Pre	trim95	positive_q33	none	6	220	221
+C385	Intermediate	Pre	trim95	positive_q33	0.1	5	90	90
+C386	Intermediate	Pre	trim95	positive_q33	0.2	5	138	138
+C387	Intermediate	Pre	trim95	positive_q33	0.3	5	162	162
+C388	Intermediate	Pre	trim95	detected_vs_zero	none	5	657	283
+C389	Intermediate	Pre	trim95	detected_vs_zero	0.1	5	195	195
+C390	Intermediate	Pre	trim95	detected_vs_zero	0.2	5	241	241
+C391	Intermediate	Pre	trim95	detected_vs_zero	0.3	5	255	255
+C392	Intermediate	Post	author	2plus_vs_1	none	5	116	89
+C393	Intermediate	Post	author	2plus_vs_1	0.1	4	20	20
+C394	Intermediate	Post	author	2plus_vs_1	0.2	5	45	45
+C395	Intermediate	Post	author	2plus_vs_1	0.3	5	60	60
+C396	Intermediate	Post	author	3plus_vs_1	none	5	53	89
+C397	Intermediate	Post	author	3plus_vs_1	0.1	4	8	8
+C398	Intermediate	Post	author	3plus_vs_1	0.2	5	18	18
+C399	Intermediate	Post	author	3plus_vs_1	0.3	5	29	29
+C400	Intermediate	Post	author	4plus_vs_1	none	4	28	64
+C401	Intermediate	Post	author	4plus_vs_1	0.1	2	4	4
+C402	Intermediate	Post	author	4plus_vs_1	0.2	3	8	8
+C403	Intermediate	Post	author	4plus_vs_1	0.3	4	15	15
+C404	Intermediate	Post	author	3plus_vs_1to2	none	5	53	152
+C405	Intermediate	Post	author	3plus_vs_1to2	0.1	4	10	10
+C406	Intermediate	Post	author	3plus_vs_1to2	0.2	5	28	28
+C407	Intermediate	Post	author	3plus_vs_1to2	0.3	5	35	35
+C408	Intermediate	Post	author	positive_q25	none	6	55	55
+C409	Intermediate	Post	author	positive_q25	0.1	3	3	3
+C410	Intermediate	Post	author	positive_q25	0.2	5	12	12
+C411	Intermediate	Post	author	positive_q25	0.3	5	20	20
+C412	Intermediate	Post	author	positive_q33	none	6	71	74
+C413	Intermediate	Post	author	positive_q33	0.1	4	8	8
+C414	Intermediate	Post	author	positive_q33	0.2	5	22	22
+C415	Intermediate	Post	author	positive_q33	0.3	6	32	32
+C416	Intermediate	Post	author	detected_vs_zero	none	5	205	100
+C417	Intermediate	Post	author	detected_vs_zero	0.1	5	38	38
+C418	Intermediate	Post	author	detected_vs_zero	0.2	5	68	68
+C419	Intermediate	Post	author	detected_vs_zero	0.3	5	83	83
+C420	Intermediate	Post	trim95	2plus_vs_1	none	5	94	82
+C421	Intermediate	Post	trim95	2plus_vs_1	0.1	3	18	18
+C422	Intermediate	Post	trim95	2plus_vs_1	0.2	5	41	41
+C423	Intermediate	Post	trim95	2plus_vs_1	0.3	5	54	54
+C424	Intermediate	Post	trim95	3plus_vs_1	none	5	36	82
+C425	Intermediate	Post	trim95	3plus_vs_1	0.1	3	7	7
+C426	Intermediate	Post	trim95	3plus_vs_1	0.2	5	16	16
+C427	Intermediate	Post	trim95	3plus_vs_1	0.3	5	25	25
+C428	Intermediate	Post	trim95	4plus_vs_1	none	4	20	59
+C429	Intermediate	Post	trim95	4plus_vs_1	0.1	2	4	4
+C430	Intermediate	Post	trim95	4plus_vs_1	0.2	3	8	8
+C431	Intermediate	Post	trim95	4plus_vs_1	0.3	4	14	14
+C432	Intermediate	Post	trim95	3plus_vs_1to2	none	5	36	140
+C433	Intermediate	Post	trim95	3plus_vs_1to2	0.1	3	9	9
+C434	Intermediate	Post	trim95	3plus_vs_1to2	0.2	5	24	24
+C435	Intermediate	Post	trim95	3plus_vs_1to2	0.3	5	29	29
+C436	Intermediate	Post	trim95	positive_q25	none	6	49	50
+C437	Intermediate	Post	trim95	positive_q25	0.1	3	4	4
+C438	Intermediate	Post	trim95	positive_q25	0.2	4	12	12
+C439	Intermediate	Post	trim95	positive_q25	0.3	5	19	19
+C440	Intermediate	Post	trim95	positive_q33	none	6	62	63
+C441	Intermediate	Post	trim95	positive_q33	0.1	3	9	9
+C442	Intermediate	Post	trim95	positive_q33	0.2	4	20	20
+C443	Intermediate	Post	trim95	positive_q33	0.3	6	30	30
+C444	Intermediate	Post	trim95	detected_vs_zero	none	5	176	96
+C445	Intermediate	Post	trim95	detected_vs_zero	0.1	5	36	36
+C446	Intermediate	Post	trim95	detected_vs_zero	0.2	5	64	64
+C447	Intermediate	Post	trim95	detected_vs_zero	0.3	5	78	78

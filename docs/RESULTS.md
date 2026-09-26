@@ -1,5 +1,12 @@
 # Results
 
+## Completed CAV3 and GSE240061 exploration — 2026-09-27
+
+The new [analysis and results](REPLICATION_ANALYSIS_AND_RESULTS.md) include 288 external-scope comparisons,
+448 replication settings, donor-level statistics, model stress tests and figures.
+GSE240061 differential accessibility has now been analyzed. The sections below
+retain the preceding analysis and its specific settings.
+
 ## Analysis population
 
 The main comparison uses COQ8A RNA ≥3 versus 1 UMI, TSS enrichment ≥3, and

@@ -1,0 +1,36 @@
+{
+  "celltypes": [
+    "Satellite Cells",
+    "Fast",
+    "Slow",
+    "Intermediate"
+  ],
+  "times": [
+    "Pre",
+    "Post"
+  ],
+  "QC": [
+    "author retained",
+    "within sample/celltype 95th-percentile depth caps"
+  ],
+  "rules": [
+    "2plus_vs_1",
+    "3plus_vs_1",
+    "4plus_vs_1",
+    "3plus_vs_1to2",
+    "positive_q25",
+    "positive_q33",
+    "detected_vs_zero"
+  ],
+  "calipers": [
+    "none",
+    0.1,
+    0.2,
+    0.3
+  ],
+  "n_configurations": 448,
+  "TSS_sensitivity": "not available in author object; not claimed",
+  "feature_basis": "all author ATAC peaks for normalization; reciprocal-50%-overlap candidate scopes for reporting",
+  "primary_anchor": "author QC; 3plus_vs_1; caliper .10; Pre, each celltype separately",
+  "statistics": "donor-blocked edgeR QL for >=2 usable donors; no donor dropping based on outcomes"
+}
