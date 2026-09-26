@@ -1,7 +1,8 @@
-"""Figure 2: complete primary ATAC test families and exploratory gene ranking.
+"""Figure 2: parallel complete screens for both COQ8A count thresholds.
 
-Panels A and B display every eligible primary test. Panels C and D show the
-subsequent same-data integration and ranking, not independent confirmation.
+The same fixed 221-gene search and QC rules are applied to both contrasts.
+Locus analyses follow these full screens; the stronger-count subset is not
+presented as independent replication of the broader contrast.
 """
 
 from pathlib import Path
@@ -14,46 +15,67 @@ import pandas as pd
 INK = "#202935"
 MUTED = "#687582"
 PALE = "#adb9c6"
+BLUE = "#2166ac"
 RED = "#b2182b"
 GRID = "#e3e8ed"
 GATE = "TSS_ge_3"
-CONTRAST = "2plus_vs_1"
+CONTRASTS = ("2plus_vs_1", "3plus_vs_1")
 
 
-def load_primary(tables: Path):
+def read_screen(
+    tables: Path, contrast: str
+) -> tuple[pd.DataFrame, pd.DataFrame, pd.DataFrame]:
     peaks = pd.read_csv(tables / "candidate_peak_effects_pooled.tsv.gz", sep="\t")
     peaks = peaks[
         (peaks.gate == GATE)
-        & (peaks.contrast == CONTRAST)
+        & (peaks.contrast == contrast)
         & peaks.q_candidate_peaks.notna()
     ].copy()
     genes = pd.read_csv(tables / "gene_effects_pooled.tsv", sep="\t")
     genes = genes[
-        (genes.gate == GATE) & (genes.contrast == CONTRAST) & (genes.modality == "ATAC")
+        (genes.gate == GATE) & (genes.contrast == contrast) & (genes.modality == "ATAC")
     ].copy()
-    rna = pd.read_csv(tables / "gene_effects_pooled.tsv", sep="\t")
-    rna = rna[
-        (rna.gate == GATE) & (rna.contrast == CONTRAST) & (rna.modality == "RNA")
-    ].copy()
-    ranking = pd.read_csv(tables / "candidate_gene_ranking.tsv", sep="\t")
-    if (
-        len(peaks) != 6_871
-        or len(genes) != 221
-        or len(rna) != 221
-        or len(ranking) != 221
-    ):
-        raise ValueError(
-            "Primary screening or ranking table has incomplete test families"
-        )
-    if set(genes.gene) != set(ranking.gene):
-        raise ValueError("Ranked genes differ from the 221 primary gene regions")
-    if peaks.q_candidate_peaks.lt(0.05).any() or genes.q_221.lt(0.05).any():
-        raise ValueError("Figure caption assumes no primary ATAC FDR-positive result")
-    return peaks, genes, rna, ranking
+    ranking = pd.read_csv(tables / f"candidate_gene_ranking_{contrast}.tsv", sep="\t")
+    expected_peaks = 6_871 if contrast == "2plus_vs_1" else 3_731
+    if len(peaks) != expected_peaks or len(genes) != 221 or len(ranking) != 221:
+        raise ValueError(f"Incomplete fixed-gene screen for {contrast}")
+    if set(genes.gene) != set(ranking.gene) or genes.q_221.lt(0.05).any():
+        raise ValueError(f"Unexpected gene family or FDR result for {contrast}")
+    return peaks, genes, ranking
+
+
+def plot_peak_family(ax, peaks: pd.DataFrame, label: str, n_pairs: int) -> None:
+    ax.scatter(
+        peaks.delta_pp,
+        -np.log10(peaks.p_pair_binomial.clip(lower=1e-300)),
+        s=5,
+        alpha=0.40,
+        color=PALE,
+        rasterized=True,
+    )
+    ax.axvline(0, color=MUTED, lw=0.8, ls="--")
+    ax.set_title(
+        f"{label}  {len(peaks):,} eligible peaks; {n_pairs} matched pairs",
+        loc="left",
+        fontsize=10.5,
+        fontweight="bold",
+    )
+    ax.set_xlabel("High - low opening (percentage points)")
+    ax.set_ylabel("-log10 nominal paired p")
+    ax.text(
+        0.02,
+        0.97,
+        f"Whole-peak-family minimum BH q = {peaks.q_candidate_peaks.min():.3f}",
+        transform=ax.transAxes,
+        va="top",
+        color=MUTED,
+        fontsize=8.1,
+    )
 
 
 def make_figure(tables: Path, out: Path) -> None:
-    peaks, genes, rna, ranking = load_primary(tables)
+    low_peaks, low_genes, low_rank = read_screen(tables, CONTRASTS[0])
+    high_peaks, high_genes, high_rank = read_screen(tables, CONTRASTS[1])
     plt.rcParams.update(
         {"pdf.fonttype": 42, "ps.fonttype": 42, "font.family": "DejaVu Sans"}
     )
@@ -61,16 +83,16 @@ def make_figure(tables: Path, out: Path) -> None:
     grid = fig.add_gridspec(
         2,
         2,
-        height_ratios=[1.05, 0.95],
-        hspace=0.53,
-        wspace=0.35,
+        height_ratios=[1, 1],
+        hspace=0.55,
+        wspace=0.34,
         left=0.09,
         right=0.97,
-        top=0.86,
-        bottom=0.12,
+        top=0.85,
+        bottom=0.13,
     )
     fig.suptitle(
-        "Myogenesis-space screen and candidate nomination",
+        "Complete 221-gene screens at both COQ8A thresholds",
         x=0.09,
         y=0.965,
         ha="left",
@@ -80,145 +102,107 @@ def make_figure(tables: Path, out: Path) -> None:
     )
     fig.text(
         0.09,
-        0.917,
-        "COQ8A >=2 versus 1 UMI  |  TSS enrichment >=3  |  958 within-library matched pairs",
+        0.916,
+        "Same four libraries, same TSS >=3 QC and search space | low group = 1 RNA UMI",
         fontsize=9.5,
         color=MUTED,
     )
 
-    ax = fig.add_subplot(grid[0, 0])
-    ax.scatter(
-        peaks.delta_pp,
-        -np.log10(peaks.p_pair_binomial.clip(lower=1e-300)),
-        s=5,
-        alpha=0.38,
-        color=PALE,
-        rasterized=True,
+    plot_peak_family(
+        fig.add_subplot(grid[0, 0]), low_peaks, "A  COQ8A >=2 vs 1 UMI", 958
     )
-    ax.axvline(0, color=MUTED, lw=0.85, ls="--")
-    ax.set_xlabel("Peak opening difference (percentage points)")
-    ax.set_ylabel("-log10 paired peak p")
-    ax.set_title(
-        "A  All 6,871 eligible peaks", loc="left", fontweight="bold", fontsize=11
-    )
-    ax.text(
-        0.02,
-        0.97,
-        f"Minimum BH q = {peaks.q_candidate_peaks.min():.3f}; 0 peaks at q<0.05",
-        transform=ax.transAxes,
-        va="top",
-        color=MUTED,
-        fontsize=8.5,
-    )
-
-    ax = fig.add_subplot(grid[0, 1])
-    ax.scatter(
-        100 * genes.difference,
-        -np.log10(genes.p_pair.clip(lower=1e-300)),
-        s=22,
-        alpha=0.65,
-        color=PALE,
-    )
-    myod = genes.set_index("gene").loc["MYOD1"]
-    ax.scatter(
-        100 * myod.difference,
-        -np.log10(myod.p_pair),
-        s=70,
-        color=RED,
-        zorder=3,
-    )
-    ax.annotate(
-        f"MYOD1\nq={myod.q_221:.3f}",
-        (100 * myod.difference, -np.log10(myod.p_pair)),
-        xytext=(10, 7),
-        textcoords="offset points",
-        fontsize=8.5,
-        color=RED,
-    )
-    ax.axvline(0, color=MUTED, lw=0.85, ls="--")
-    ax.set_xlabel("Gene-region ATAC difference (percentage points)")
-    ax.set_ylabel("-log10 paired gene-region p")
-    ax.set_title("B  All 221 gene regions", loc="left", fontweight="bold", fontsize=11)
-    ax.text(
-        0.02,
-        0.97,
-        f"Minimum BH q = {genes.q_221.min():.3f}; 0 regions at q<0.05",
-        transform=ax.transAxes,
-        va="top",
-        color=MUTED,
-        fontsize=8.5,
+    plot_peak_family(
+        fig.add_subplot(grid[0, 1]), high_peaks, "B  COQ8A >=3 vs 1 UMI", 201
     )
 
     ax = fig.add_subplot(grid[1, 0])
     effects = (
-        rna[["gene", "difference"]]
-        .rename(columns={"difference": "rna_delta"})
+        low_genes[["gene", "difference", "q_221"]]
+        .rename(columns={"difference": "delta_2", "q_221": "q_2"})
         .merge(
-            genes[["gene", "difference"]].rename(columns={"difference": "atac_delta"}),
+            high_genes[["gene", "difference", "q_221"]].rename(
+                columns={"difference": "delta_3", "q_221": "q_3"}
+            ),
             on="gene",
             validate="one_to_one",
         )
     )
     ax.scatter(
-        effects.rna_delta, 100 * effects.atac_delta, s=19, alpha=0.65, color=PALE
+        100 * effects.delta_2, 100 * effects.delta_3, s=23, color=PALE, alpha=0.70
     )
-    myod_effect = effects.set_index("gene").loc["MYOD1"]
-    ax.scatter(
-        myod_effect.rna_delta, 100 * myod_effect.atac_delta, s=70, color=RED, zorder=3
-    )
-    ax.annotate(
-        "MYOD1",
-        (myod_effect.rna_delta, 100 * myod_effect.atac_delta),
-        xytext=(8, 8),
-        textcoords="offset points",
-        fontsize=8.5,
-        color=RED,
-    )
+    for gene, color, offset in (("MYOD1", RED, (8, 6)), ("CKB", BLUE, (8, -12))):
+        row = effects.set_index("gene").loc[gene]
+        ax.scatter(100 * row.delta_2, 100 * row.delta_3, s=72, color=color, zorder=3)
+        ax.annotate(
+            gene,
+            (100 * row.delta_2, 100 * row.delta_3),
+            xytext=offset,
+            textcoords="offset points",
+            color=color,
+            fontsize=8.5,
+        )
     ax.axhline(0, color=MUTED, lw=0.8, ls="--")
     ax.axvline(0, color=MUTED, lw=0.8, ls="--")
-    ax.set_xlabel("Gene RNA difference (log1p CP10K)")
-    ax.set_ylabel("Nearby ATAC difference (percentage points)")
     ax.set_title(
-        "C  RNA and ATAC effects for all 221 genes",
+        "C  All 221 gene-region ATAC effects",
         loc="left",
+        fontsize=10.5,
         fontweight="bold",
-        fontsize=11,
+    )
+    ax.set_xlabel(">=2 vs 1 difference (percentage points)")
+    ax.set_ylabel(">=3 vs 1 difference (percentage points)")
+    ax.text(
+        0.02,
+        0.97,
+        f"Whole-gene-family minimum BH q: {effects.q_2.min():.3f} / {effects.q_3.min():.3f}",
+        transform=ax.transAxes,
+        va="top",
+        fontsize=8.1,
+        color=MUTED,
     )
 
     ax = fig.add_subplot(grid[1, 1])
-    shown = ranking.head(10).iloc[::-1].copy()
-    colours = [RED if gene == "MYOD1" else PALE for gene in shown.gene]
-    ax.barh(shown.gene, shown.n_linked_coq_3of4, height=0.7, color=colours)
-    for index, row in enumerate(shown.itertuples()):
-        ax.text(
-            row.n_linked_coq_3of4 + 0.08,
-            index,
-            str(row.n_linked_coq_3of4),
-            va="center",
-            fontsize=8,
-            color=INK,
+    rank = (
+        low_rank[["gene", "n_linked_coq_3of4"]]
+        .rename(columns={"n_linked_coq_3of4": "links_2"})
+        .merge(
+            high_rank[["gene", "n_linked_coq_3of4"]].rename(
+                columns={"n_linked_coq_3of4": "links_3"}
+            ),
+            on="gene",
+            validate="one_to_one",
         )
-    ax.set_xlim(0, max(shown.n_linked_coq_3of4) + 0.65)
-    ax.set_xlabel("Positive RNA links with ATAC rise in >=3/4 libraries (count)")
-    ax.set_title(
-        "D  Exploratory ranking - top 10 of 221",
-        loc="left",
-        fontweight="bold",
-        fontsize=11,
     )
+    rank["max_links"] = rank[["links_2", "links_3"]].max(axis=1)
+    shown = rank.sort_values(
+        ["max_links", "links_3", "gene"], ascending=[False, False, True]
+    ).head(10)
+    shown = shown.iloc[::-1]
+    y = np.arange(len(shown))
+    ax.barh(y - 0.19, shown.links_2, height=0.34, color=BLUE, label=">=2 vs 1")
+    ax.barh(y + 0.19, shown.links_3, height=0.34, color=RED, label=">=3 vs 1")
+    ax.set_yticks(y, shown.gene)
+    ax.set_xlim(0, 5.7)
+    ax.set_xlabel("Linked peaks with ATAC rise in >=3/4 libraries (count)")
+    ax.set_title(
+        "D  Exploratory ranking across both contrasts",
+        loc="left",
+        fontsize=10.5,
+        fontweight="bold",
+    )
+    ax.legend(frameon=False, fontsize=7.7, loc="lower right")
     ax.grid(axis="x", color=GRID, lw=0.7)
     ax.set_axisbelow(True)
-    ax.tick_params(axis="y", labelsize=8)
     for panel in fig.axes:
         panel.spines["top"].set_visible(False)
         panel.spines["right"].set_visible(False)
     fig.text(
         0.09,
-        0.038,
-        "A-B: complete test families; points show nominal paired p and labels show whole-family BH q.  "
-        "C-D: same-data integration and nomination for Figure 3. Full 221-row ranking is released; source lines n=2.",
+        0.035,
+        "A-C: complete test families at each count threshold. D: same-data ranking; RNA links learned in >=2 vs 1 nuclei. "
+        "MYOD1 ranks 1st / 2nd; the >=3 MYOD1 locus effect is examined in Figure 3.",
+        fontsize=7.8,
         color=MUTED,
-        fontsize=8,
     )
     out.parent.mkdir(parents=True, exist_ok=True)
     fig.savefig(

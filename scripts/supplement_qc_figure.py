@@ -16,9 +16,9 @@ LIBRARIES = ["GSM6339597", "GSM6339599", "GSM6339601", "GSM6339603"]
 def make_figure(tables: Path, out: Path) -> None:
     qc = pd.read_csv(tables / "qc_nuclei.tsv.gz", sep="\t")
     pairs = pd.read_csv(tables / "matched_pairs.tsv.gz", sep="\t")
-    pairs = pairs[(pairs.gate == "TSS_ge_3") & (pairs.contrast == "2plus_vs_1")]
-    if len(pairs) != 958:
-        raise ValueError("QC supplement must use the 958 primary matched pairs")
+    pairs = pairs[(pairs.gate == "TSS_ge_3") & (pairs.contrast == "3plus_vs_1")]
+    if len(pairs) != 201:
+        raise ValueError("QC supplement must use the 201 main-contrast matched pairs")
     plt.rcParams.update(
         {"pdf.fonttype": 42, "ps.fonttype": 42, "font.family": "DejaVu Sans"}
     )

@@ -43,16 +43,16 @@ def read_profile(tables: Path):
     )
     low = grid["low_cuts"].loc[order].to_numpy(dtype=float)
     high = grid["high_cuts"].loc[order].to_numpy(dtype=float)
-    return order, low / 958, high / 958
+    return order, low / 201, high / 201
 
 
 def make_figure(tables: Path, out: Path) -> None:
     order, low, high = read_profile(tables)
     pairs = pd.read_csv(tables / "matched_pairs.tsv.gz", sep="\t")
-    pairs = pairs[(pairs.gate == "TSS_ge_3") & (pairs.contrast == "2plus_vs_1")]
+    pairs = pairs[(pairs.gate == "TSS_ge_3") & (pairs.contrast == "3plus_vs_1")]
     sizes = pairs.groupby("gsm").size().reindex(LIBRARIES)
-    if sizes.isna().any() or int(sizes.sum()) != 958:
-        raise ValueError("Expected 958 primary within-library matched pairs")
+    if sizes.isna().any() or int(sizes.sum()) != 201:
+        raise ValueError("Expected 201 main-contrast within-library matched pairs")
     ratio = high.sum() / low.sum()
     low = gaussian_filter1d(low, sigma=1, axis=1, mode="nearest")
     high = gaussian_filter1d(high, sigma=1, axis=1, mode="nearest")
@@ -85,7 +85,7 @@ def make_figure(tables: Path, out: Path) -> None:
     fig.text(
         0.095,
         0.93,
-        "Two source lines, four RNA/ATAC libraries | COQ8A >=2 versus 1 UMI | ATAC TSS QC >=3",
+        "Two source lines, four RNA/ATAC libraries | COQ8A >=3 versus 1 UMI | ATAC TSS QC >=3",
         fontsize=9.5,
         color=MUTED,
     )

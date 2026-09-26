@@ -1,4 +1,4 @@
-"""Summarize the fixed primary 221-gene, TSS>=3, COQ8A>=2-vs-1 scan.
+"""Summarize the fixed 221-gene, TSS>=3, COQ8A>=3-vs-1 scan.
 
 This runs before interpreting any MYOD1 subset. It reads the complete tested
 families and records whether any ATAC result survives the stated FDR rule.
@@ -14,17 +14,17 @@ def main():
     p.add_argument("--tables", type=Path, required=True)
     a = p.parse_args()
     genes = pd.read_csv(a.tables / "gene_effects_pooled.tsv", sep="\t")
-    genes = genes[(genes.gate == "TSS_ge_3") & (genes.contrast == "2plus_vs_1")]
+    genes = genes[(genes.gate == "TSS_ge_3") & (genes.contrast == "3plus_vs_1")]
     peaks = pd.read_csv(a.tables / "candidate_peak_effects_pooled.tsv.gz", sep="\t")
-    peaks = peaks[(peaks.gate == "TSS_ge_3") & (peaks.contrast == "2plus_vs_1")]
+    peaks = peaks[(peaks.gate == "TSS_ge_3") & (peaks.contrast == "3plus_vs_1")]
     tested_peaks = peaks[peaks.q_candidate_peaks.notna()]
     programme = pd.read_csv(a.tables / "programme_effects_pooled.tsv", sep="\t")
-    programme = programme[(programme.gate == "TSS_ge_3") & (programme.contrast == "2plus_vs_1")]
+    programme = programme[(programme.gate == "TSS_ge_3") & (programme.contrast == "3plus_vs_1")]
     atac = genes[genes.modality == "ATAC"]
     rna = genes[genes.modality == "RNA"]
     rows = [
         ("primary_gate", "TSS_ge_3"),
-        ("primary_contrast", "2plus_vs_1"),
+        ("primary_contrast", "3plus_vs_1"),
         ("n_candidate_genes", len(atac)),
         ("n_atac_gene_regions_q_lt_0_05", int((atac.q_221 < 0.05).sum())),
         ("min_atac_gene_region_q", atac.q_221.min()),

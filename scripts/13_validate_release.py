@@ -8,7 +8,7 @@ import pandas as pd
 
 
 PRIMARY_GATE = "TSS_ge_3"
-PRIMARY_CONTRAST = "2plus_vs_1"
+PRIMARY_CONTRAST = "3plus_vs_1"
 SIX_REGION_SET = "positive_link_nonMRF_tss2_6"
 
 
@@ -75,6 +75,26 @@ def check_primary(tables: Path) -> tuple[int, int, int]:
     return len(atac_genes), len(tested), expected["n_candidate_peaks_q_lt_0_05"]
 
 
+def check_parallel_screen(tables: Path) -> None:
+    genes = pd.read_csv(tables / "gene_effects_pooled.tsv", sep="\t")
+    peaks = pd.read_csv(tables / "candidate_peak_effects_pooled.tsv.gz", sep="\t")
+    for contrast, n_eligible in (("2plus_vs_1", 6871), ("3plus_vs_1", 3731)):
+        atac = genes[
+            (genes.gate == PRIMARY_GATE)
+            & (genes.contrast == contrast)
+            & (genes.modality == "ATAC")
+        ]
+        eligible = peaks[
+            (peaks.gate == PRIMARY_GATE)
+            & (peaks.contrast == contrast)
+            & peaks.q_candidate_peaks.notna()
+        ]
+        if len(atac) != 221 or len(eligible) != n_eligible:
+            raise ValueError(f"Incomplete 221-gene / peak family for {contrast}")
+        if atac.q_221.lt(0.05).any() or eligible.q_candidate_peaks.lt(0.05).any():
+            raise ValueError(f"Figure 2 FDR summary disagrees with {contrast} tables")
+
+
 def check_six_region_effect(tables: Path) -> tuple[int, float]:
     detail = pd.read_csv(tables / "myod1_locus_pair_scores.tsv.gz", sep="\t")
     detail = detail[
@@ -108,8 +128,8 @@ def check_tss_profile(tables: Path) -> float:
         raise ValueError("TSS profile must cover all 221 fixed-set genes x 100 bins")
     if profile.groupby("gene").size().ne(100).any():
         raise ValueError("TSS profile has incomplete gene windows")
-    if not profile.n_high.eq(958).all() or not profile.n_low.eq(958).all():
-        raise ValueError("TSS profile does not use the 958 primary matched pairs")
+    if not profile.n_high.eq(201).all() or not profile.n_low.eq(201).all():
+        raise ValueError("TSS profile does not use the 201 main-contrast matched pairs")
     if profile[["high_cuts", "low_cuts"]].lt(0).any().any():
         raise ValueError("TSS fragment counts must be nonnegative")
     if profile.groupby("gene").bin_start_bp.nunique().ne(100).any():
@@ -118,11 +138,17 @@ def check_tss_profile(tables: Path) -> float:
 
 
 def check_ranking(tables: Path) -> None:
-    ranking = pd.read_csv(tables / "candidate_gene_ranking.tsv", sep="\t")
-    if len(ranking) != 221 or ranking.gene.duplicated().any():
-        raise ValueError("Exploratory ranking must contain each of the 221 genes once")
-    if ranking.iloc[0].gene != "MYOD1" or int(ranking.iloc[0].n_linked_coq_3of4) != 5:
-        raise ValueError("MYOD1 nomination differs from the versioned analysis")
+    for contrast, leaders in (
+        ("2plus_vs_1", ("MYOD1",)),
+        ("3plus_vs_1", ("CKB", "MYOD1")),
+    ):
+        ranking = pd.read_csv(
+            tables / f"candidate_gene_ranking_{contrast}.tsv", sep="\t"
+        )
+        if len(ranking) != 221 or ranking.gene.duplicated().any():
+            raise ValueError(f"{contrast} ranking must contain each gene once")
+        if tuple(ranking.gene.head(len(leaders))) != leaders:
+            raise ValueError(f"Unexpected exploratory leaders for {contrast}")
 
 
 def main() -> None:
@@ -132,6 +158,7 @@ def main() -> None:
     args = parser.parse_args()
     n_pairs = check_pairs(args.tables)
     n_genes, n_peaks, n_significant = check_primary(args.tables)
+    check_parallel_screen(args.tables)
     n_extreme, fold = check_six_region_effect(args.tables)
     tss_ratio = check_tss_profile(args.tables)
     check_ranking(args.tables)
@@ -145,7 +172,7 @@ def main() -> None:
     if missing:
         raise FileNotFoundError(f"Missing figures: {missing}")
     print(
-        f"Validated {n_pairs} primary pairs, {n_genes} genes, {n_peaks} tested peaks "
+        f"Validated {n_pairs} main-contrast pairs, {n_genes} genes, {n_peaks} tested peaks "
         f"({n_significant} FDR-positive); six-region fold {fold:.3f} in {n_extreme} pairs; "
         f"221-gene TSS-cut ratio {tss_ratio:.4f}."
     )

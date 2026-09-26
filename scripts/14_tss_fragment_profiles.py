@@ -1,6 +1,6 @@
 """Tabulate TSS-aligned ATAC insertion profiles for the fixed 221-gene set.
 
-This visual analysis uses the *same* primary matched nuclei as the peak tests,
+This visual analysis uses the *same* COQ8A >=3 versus 1 matched nuclei as the main peak tests,
 but fetches deduplicated fragments directly rather than plotting 10x peak calls.
 It is descriptive and does not participate in gene or peak nomination.
 
@@ -61,7 +61,7 @@ def matched_barcodes(path: Path) -> dict[str, dict[str, int]]:
     counts = defaultdict(int)
     with gzip.open(path, "rt") as stream:
         for row in csv.DictReader(stream, delimiter="\t"):
-            if row["gate"] != "TSS_ge_3" or row["contrast"] != "2plus_vs_1":
+            if row["gate"] != "TSS_ge_3" or row["contrast"] != "3plus_vs_1":
                 continue
             gsm = row["gsm"]
             for group, field in ((1, "high_barcode"), (0, "low_barcode")):
@@ -70,8 +70,8 @@ def matched_barcodes(path: Path) -> dict[str, dict[str, int]]:
                     raise ValueError(f"Reused matched barcode: {gsm} {barcode}")
                 result[gsm][barcode] = group
                 counts[gsm, group] += 1
-    if set(result) != set(FRAGMENT_GSM) or sum(counts[gsm, 1] for gsm in result) != 958:
-        raise ValueError("Expected the four libraries and 958 primary pairs")
+    if set(result) != set(FRAGMENT_GSM) or sum(counts[gsm, 1] for gsm in result) != 201:
+        raise ValueError("Expected the four libraries and 201 main-contrast pairs")
     for gsm in result:
         if counts[gsm, 1] != counts[gsm, 0]:
             raise ValueError(f"Unequal matched groups in {gsm}")
@@ -142,8 +142,8 @@ def main() -> None:
                             -HALF_WINDOW + (index + 1) * BIN_WIDTH,
                             counts[gene, 1][index],
                             counts[gene, 0][index],
-                            958,
-                            958,
+                            201,
+                            201,
                         ]
                     )
     print(f"Wrote {len(selected)} genes x {N_BINS} bins: {args.out}", flush=True)

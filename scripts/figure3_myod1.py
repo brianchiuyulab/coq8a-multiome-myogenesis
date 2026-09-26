@@ -24,7 +24,7 @@ def load_locus(tables: Path):
         (candidates.gene == "MYOD1") & (candidates.n_libraries == 4)
     ]
     effects = pd.read_csv(tables / "candidate_peak_effects_pooled.tsv.gz", sep="\t")
-    effects = effects[(effects.gate == "TSS_ge_3") & (effects.contrast == "2plus_vs_1")]
+    effects = effects[(effects.gate == "TSS_ge_3") & (effects.contrast == "3plus_vs_1")]
     links = pd.read_csv(tables / "peak_gene_links_tss2.tsv", sep="\t")
     links = links[
         (links.gene == "MYOD1")

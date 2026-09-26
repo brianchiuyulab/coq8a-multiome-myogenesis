@@ -4,9 +4,9 @@ Reproducible reanalysis of [GSE208248](https://www.ncbi.nlm.nih.gov/geo/query/ac
 
 ## Analysis sequence
 
-The biological search space is the measured union of MSigDB Hallmark and Reactome Myogenesis (**221 genes**). The pipeline first applies joint nucleus QC, matches COQ8A ≥2 UMI nuclei to 1 UMI nuclei within each library on RNA and ATAC depth, and tests every eligible gene region and candidate peak. The primary gate is TSS enrichment ≥3. The complete primary test families are saved before any locus is ranked.
+The biological search space is the measured union of MSigDB Hallmark and Reactome Myogenesis (**221 genes**). Two COQ8A count contrasts are analysed **in parallel through the complete 221-gene screen**, each matching nuclei within library on RNA and ATAC depth after joint QC at TSS enrichment ≥3: ≥2 versus 1 RNA UMI has 958 pairs and 6,871 eligible peaks; ≥3 versus 1 has 201 pairs and 3,731. The stronger contrast is used for the focal six-peak MYOD1 effect, with its full-screen result displayed beside the broader contrast.
 
-The subsequent peak–RNA linkage and MYOD1 analyses are exploratory. Link discovery at TSS≥2 and TSS≥3, stronger COQ8A-count contrasts, and RNA doublet-score exclusions are reported as sensitivity analyses, with no BH correction across the sensitivity settings. The six-peak MYOD1 ratio of **1.280** is reproducible under its stated TSS≥2 link-discovery / TSS≥3 effect-test setting; it is not the result of the primary 221-gene ATAC scan.
+The subsequent peak–RNA linkage and MYOD1 analyses are exploratory. Links are learned in the more numerous ≥2-versus-1 nuclei at TSS≥3 and TSS≥2; their ATAC direction is assessed **separately at both count thresholds** in two labelled full 221-gene rankings. MYOD1 ranks first under ≥2; under ≥3, CKB ranks first and MYOD1 second. The six-peak MYOD1 ratio of **1.280** uses TSS≥2 link discovery and ≥3-versus-1 effect testing at TSS≥3. Region/count thresholds and RNA doublet-score exclusions are sensitivity analyses, with no BH correction across those settings.
 
 ## Reproduction
 
@@ -31,13 +31,13 @@ python scripts/14_tss_fragment_profiles.py \
 python scripts/12_make_figures.py --tables results/tables --figures figures
 ```
 
-`scripts/13_validate_release.py` checks pair identities and gates, the full primary test-family summary, the 221-gene TSS profile shape and group sizes, and the six-region fold against pair-level data. GitHub Actions runs these checks on the released tables.
+`scripts/13_validate_release.py` checks pair identities and gates, the focal full-test-family summary, both complete 221-gene rankings, the TSS profile shape and group sizes, and the six-region fold against pair-level data. GitHub Actions runs these checks on the released tables.
 
 | Figure | Purpose |
 |---|---|
 | [Figure 1](figures/main/Figure_1_Multiome_and_TSS.pdf) | Four-library comparison and TSS-aligned ATAC fragment profiles for all 221 genes |
-| [Figure 2](figures/main/Figure_2_Global_Screen_and_Ranking.pdf) | Complete peak and gene-region tests, joint RNA/ATAC effects, and same-data candidate ranking |
+| [Figure 2](figures/main/Figure_2_Global_Screen_and_Ranking.pdf) | Both complete peak and 221-gene region screens, with separately labelled same-data rankings |
 | [Figure 3](figures/main/Figure_3_MYOD1_Locus_and_Sensitivity.pdf) | MYOD1 locus, region-set and contrast sensitivity, library effects and doublet-score challenge |
 | [Supplementary QC](figures/supplement/Supplementary_Figure_QC.pdf) | TSS enrichment and matched-depth balance |
 
-The primary analysis shows an RNA myogenesis association, but no ATAC gene region or candidate peak passes its full-family BH q < 0.05 threshold. This observational dataset contains two independent source lines; paired-nucleus p values describe within-dataset associations and do not establish COQ8A-driven chromatin opening.
+Both complete contrasts show an RNA myogenesis association, but no ATAC gene region or candidate peak passes its corresponding full-family BH q < 0.05 threshold. This observational dataset contains two independent source lines; paired-nucleus p values describe within-dataset associations and do not establish COQ8A-driven chromatin opening.
