@@ -299,7 +299,7 @@ def analyze(a):
     for _, g in result.groupby(["population", "model", "detection_fraction"]):
         ok = g.p.notna()
         result.loc[g.index[ok], "q"] = multipletests(g.loc[ok, "p"], method="fdr_bh")[1]
-    result.to_csv(a.out / "correlations_combined.tsv", sep="\t", index=False)
+    result.to_csv(a.out / "correlations_combined.tsv", sep="\t", index=False, na_rep="NA")
     old = pd.read_csv(
         a.root / "results/temporal/dynamic_cis_links.tsv", sep="\t"
     ).query("gate=='TSS_ge_3' and contrast=='3plus_vs_1'")
