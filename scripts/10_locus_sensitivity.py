@@ -10,7 +10,6 @@ from pathlib import Path
 import h5py
 import numpy as np
 import pandas as pd
-from statsmodels.stats.multitest import multipletests
 
 from multiome_core import h5_for, paired_stats, read_barcodes
 
@@ -137,7 +136,6 @@ def main():
             }
         )
     summary = pd.DataFrame(summary)
-    summary["q_20_exploratory"] = multipletests(summary.p_pair, method="fdr_bh")[1]
     summary.to_csv(a.tables / "myod1_locus_summary.tsv", sep="\t", index=False)
     print(summary.to_string(index=False))
 

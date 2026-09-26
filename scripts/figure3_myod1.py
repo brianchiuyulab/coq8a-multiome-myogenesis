@@ -88,7 +88,7 @@ def make_figure(tables: Path, out: Path) -> None:
         0.09,
         0.913,
         f"Six selected peaks: {primary.high_open_pct:.2f}% vs {primary.low_open_pct:.2f}% open, "
-        f"ratio {primary.fold_open:.2f}x in {int(primary.n_pairs)} pairs; 20-setting q={primary.q_20_exploratory:.3f}. "
+        f"ratio {primary.fold_open:.2f}x in {int(primary.n_pairs)} pairs; paired p={primary.p_pair:.3f}. "
         "In B: blue >=2 UMI, red >=3 UMI.",
         color=MUTED,
         fontsize=9.5,
