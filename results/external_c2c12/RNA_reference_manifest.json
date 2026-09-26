@@ -1,0 +1,13 @@
+{
+  "accession": "GSE224489",
+  "url": "https://ftp.ncbi.nlm.nih.gov/geo/series/GSE224nnn/GSE224489/suppl/GSE224489_C2C12_differentiation_all_samples_reads_count.txt.gz",
+  "sha256": "82f5c87faf5af8a87711b8e804b7ed94ad6387cbb78993285f8dd33a2435c66c",
+  "input_rows": 49089,
+  "tested_rows_after_total_count_ge10": 19992,
+  "samples": 18,
+  "RNA_samples_per_time": 3,
+  "contrast_reference": "GM (0 h)",
+  "normalization": "DESeq2 median-ratio size factors",
+  "design": "~time_h",
+  "p_adjustment": "BH within each time-vs-GM gene family; DESeq2 independent filtering"
+}

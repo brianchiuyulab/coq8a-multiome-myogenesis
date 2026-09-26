@@ -100,6 +100,10 @@ definitions are in [Methods](docs/METHODS.md).
   audit, external cell-context selectivity, and region-level tests without a MYOD
   occupancy filter. [Broad results](results/enhancer_regions) and
   [selective-region results](results/enhancer_selective_regions).
+- [Candidate expansion and external datasets](docs/CANDIDATE_EXPANSION_AND_EXTERNAL_DATA.md):
+  source-level comparisons, independent C2C12 RNA/ATAC reference, and additional
+  dataset inventory. [Candidate evidence](results/candidate_comparison) and
+  [external C2C12 results](results/external_c2c12).
 - [Methods](docs/METHODS.md): samples, preprocessing, thresholds, matching, statistics and provenance.
 - [Figure legends](docs/FIGURE_LEGENDS.md): panel definitions, signal units and statistical families.
 - [Results](docs/RESULTS.md): current numerical findings.

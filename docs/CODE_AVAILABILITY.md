@@ -64,5 +64,11 @@ regional tests, and source-level summaries) and
 independent selectivity annotation, and fixed-set tests). Reproduction commands
 and inference scopes are in `docs/ENHANCER_REGION_EXPLORATION.md`.
 
+The independent C2C12 reference uses `scripts/56_external_c2c12_timecourse.R`
+(DESeq2 across 18 RNA samples), `scripts/57_external_mouse_peak_annotation.py`
+(streaming hg38-to-mm10 chain mapping and external ATAC annotation), and
+`scripts/58_compare_candidate_evidence.py` (public candidate evidence tables).
+Reproduction instructions are in `docs/CANDIDATE_EXPANSION_AND_EXTERNAL_DATA.md`.
+
 The GitHub Actions workflow regenerates figures and runs these checks. This
 does not execute the full multi-gigabyte input pipeline on every commit.

@@ -1,0 +1,22 @@
+{
+  "assembly": "mm10, verified in GSM7025063 metadata",
+  "hg38_inputs": 5097,
+  "unique_consistent_mappings": 1367,
+  "conditions": "GM and DM60h; author merged-replicate broad peak calls",
+  "mapping_rule": "Unique start, midpoint and end-1 on same chain/strand; span ratio 0.5 to 2",
+  "interpretation": "Peak-call overlap, not a quantitative accessibility fold change or a paired-nucleus assay",
+  "sources": [
+    {
+      "file": "hg38ToMm10.over.chain.gz",
+      "sha256": "5493fa0c90d5bf56ea64a2787ebafbc49f7fc33b682b6db17b6d3a4bcb939339"
+    },
+    {
+      "file": "GSE224489_C2C12_DM60h_ATAC_peaks.broadPeak.gz",
+      "sha256": "9b38e5c174a4e98fc40a18e3dae06f52a44eba1f1558ce42c2d038f34cd7e10a"
+    },
+    {
+      "file": "GSE224489_C2C12_GM_ATAC_peaks.broadPeak.gz",
+      "sha256": "63f07d997c2d95c93ceeb0a9d4c91cb16a419c1108d9904546008b7da7b27dc4"
+    }
+  ]
+}
