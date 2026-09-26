@@ -1,8 +1,7 @@
 """Join public candidate neighborhoods to an existing private RNA result table.
 
 No RNA model is refit. Contrasts and original genome-wide FDRs are retained.
-Use a private output directory: these combined results must not be published
-unless the owner has separately authorized release of the RNA experiment.
+Combined results are written to a private directory outside the public repository.
 """
 
 import argparse
@@ -18,6 +17,9 @@ def main():
     parser.add_argument("--rna-contrasts", type=Path, required=True)
     parser.add_argument("--out", type=Path, required=True)
     args = parser.parse_args()
+    repository = Path(__file__).resolve().parents[1]
+    if args.out.resolve().is_relative_to(repository):
+        parser.error("--out must be outside the public repository")
     args.out.mkdir(parents=True, exist_ok=True)
     evidence = pd.read_csv(args.evidence, sep="\t")
     rna = pd.read_csv(args.rna_contrasts)

@@ -1,61 +1,412 @@
-# Methods and provenance
+# Methods: COQ8A-associated accessibility at myogenic regions
 
-For the complete current temporal/functional workflow, including sample-size
-inventories and the distinction between union and intersection, see
-[Current analysis design](CURRENT_ANALYSIS_DESIGN.md). The sections below also
-document the original broad and six-peak exploratory analyses.
+## 1. Objective and design
 
-## Study and inputs
+We ask whether COQ8A-high nuclei exhibit altered accessibility at regions that
+change during human myoblast differentiation, and whether nearby genes show
+concordant RNA associations. This is an exploratory secondary analysis of
+processed public data. It contains no COQ8A perturbation experiment.
 
-This is a retrospective, exploratory analysis of [GSE208248](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE208248), following the [source publication](https://pmc.ncbi.nlm.nih.gov/articles/PMC10123345/). Four same-nucleus RNA/ATAC libraries were used: GSM6339597 (line 1 stem), GSM6339599 (line 1 differentiated), GSM6339601 (line 2 stem), GSM6339603 (line 2 differentiated). The matching ATAC fragment accessions are GSM6339598, GSM6339600, GSM6339602, GSM6339604. Libraries are conditions from **two** source lines; they are not four independent human donors. This analysis never merges nuclei across libraries for matching.
+The analysis uses three distinct information sources:
 
-The 221-gene search universe is the measured union of [MSigDB Hallmark Myogenesis](https://www.gsea-msigdb.org/gsea/msigdb/human/geneset/HALLMARK_MYOGENESIS.html) (198 of 200 genes measured here) and [Reactome Myogenesis](https://www.gsea-msigdb.org/gsea/msigdb/human/geneset/REACTOME_MYOGENESIS.html) (29 measured genes), with six genes in both sets. `reference/myogenesis_221_gene_sources.tsv` records exact membership. The two Hallmark genes absent from the input RNA matrix are DENND2B and MYL11. This biological scope was defined for the final analysis; it is not a genome-wide all-pathway screen or a preregistered hypothesis test. Named MRF and MEF2 locus summaries are contextual secondary views and do not restrict region discovery. The full selection audit is in [`SELECTION_AUDIT.md`](SELECTION_AUDIT.md).
+1. MSigDB Hallmark/Reactome and GO annotations define biological scope.
+2. GSE109828 defines region dynamics using experimentally recorded times.
+3. GSE208248 provides paired RNA/ATAC measurements for COQ8A association tests.
 
-## 1. Joint nucleus QC and matching
+Private C2C12 passage/time RNA results provide a separate biological comparison.
+They are not used to define public temporal classes and are not COQ8A OE/KD
+contrasts. Their sample-level data are not distributed in this repository.
 
-`01_extract_nuclei.py` reads each 10x filtered H5 matrix and barcode metrics. Its COQ8A, total RNA UMI and open-peak counts were extracted for all 41,622 filtered barcodes. `00_fragment_qc_reference.py` computes fragment-based TSS enrichment, nucleosome-free/mononucleosomal fragment ratio, and blacklist fraction. The TSS score uses per-base insertions within ±500 bp of GENCODE v48 gene TSS, divided by the per-base signal in the two outer 100-bp flanks of a ±1 kb window. This is a documented Signac-style geometry, implemented here directly rather than by Signac. Blacklist is ENCODE hg38 v2. FRiP is 10x peak-region fragments / ATAC fragments.
+The analysis is retrospective and exploratory. External memberships are
+computed without target COQ8A effect values; choices developed during
+exploration are not described as prospective preregistration.
 
-`02_qc_and_matching.py` requires at least 500 RNA UMI and 500 open ATAC peaks, removes the top 5% of either depth within each library, then requires FRiP≥0.25, nucleosome signal<4, blacklist fraction<0.05. TSS≥3 is the main QC gate and TSS≥2 is a sensitivity gate. The **two complete-screen contrasts** are COQ8A ≥2 versus exactly 1 RNA UMI and ≥3 versus exactly 1; the stronger contrast is the focal six-peak effect test. COQ8A-zero nuclei are excluded because zero is ambiguous under sparse detection. Within each library and condition, high and low nuclei are matched 1:1 without replacement on log1p RNA UMI and log1p open-peak counts, with each coordinate difference ≤0.10. Matching is independent of tested gene and peak outcomes. The ≥2 set has 958 pairs (211/326/296/125 across the four libraries); the ≥3 set has **201 pairs** (46/74/58/23). Both complete TSS≥3 gene and peak screens appear in Figure 2; the TSS≥2 gate and the other combinations remain in the sensitivity tables.
+## 2. Biological universe: union versus intersection
 
-## 2. Label-blind region search
+The measured union includes 198 Hallmark Myogenesis genes and 29 Reactome
+Myogenesis genes, with six shared genes: 198 + 29 - 6 = 221. Hallmark has 200
+listed genes; DENND2B and MYL11 are absent from the target RNA feature matrix.
+Exact frozen membership is `reference/myogenesis_221_gene_sources.tsv`.
 
-`03_define_regions.py` restricts peaks to canonical hg38 chromosomes and width 200–2000 bp, removes blacklist-overlapping peaks, and maps library peaks one-to-one to the first library's peak coordinates using at least 50% reciprocal overlap. The matching implementation examines every interval capable of overlapping an anchor peak. Candidate regions are within ±100 kb of **any protein-coding GENCODE v48 transcript TSS** for a gene in the 221-gene universe and observed in ≥3 of four libraries. This yields 7,699 candidate peak–gene pairs representing 7,132 distinct anchor peaks. A stricter all-four-library common set is used for the gene-level accessibility summary. A nearby peak is a *candidate* regulatory region, not a proven enhancer for that gene. Neither MRF motifs nor COQ8A outcome is used to enter this search space.
+The intersection is MAPK12, MEF2A, MEF2C, MEF2D, MYF6 and MYOG. It has 146 common
+candidate peaks, including eight early-opening and six closing dynamic peaks,
+with no middle/late peaks under the frozen external definitions. These counts
+are an inventory, not a newly fitted intersection association analysis.
 
-## 3. Broad RNA and ATAC tests
+CSRP3 and CAV3 are Hallmark-only members; MYOD1 is a Reactome-only member.
+Consequently the intersection does not include them as nominated genes.
+Union and intersection represent different biological scopes, not different
+degrees of statistical validity. Union is appropriate for broad myogenesis;
+intersection asks about functions jointly represented in both particular lists.
+Changing to the intersection requires distinct analysis outputs and cannot
+inherit the union's FC or q values.
 
-`04_gene_programme_effects.py` uses RNA log1p(count / total RNA UMI × 10,000). For each gene, the ATAC value is the fraction of its all-four-library common nearby peaks open in a nucleus. Programme values average available gene values within the stated set. It reports paired high-minus-low means, 95% pair-level t intervals and two-sided one-sample paired t p values, plus number of libraries with a positive effect. BH q values are computed separately across 221 gene-level tests and across four programme summaries, for each gate/count/modality. These p and q values describe nucleus-level association; they do **not** supply independent-source inference with only two source lines.
+## 3. Target multiome: GSE208248
 
-## 4. Peaks, links, motifs and ranking
+[GEO](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE208248) and the
+[source paper](https://pmc.ncbi.nlm.nih.gov/articles/PMC10123345/) describe
+human skeletal-muscle stem cell lines RH-hMuSC-1 and RH-hMuSC-2, each sampled
+before and after differentiation. The paper identifies their origins as a
+56-year-old male's tibialis anterior and a 62-year-old male's anterior thigh,
+respectively. They are not a young-versus-old comparison.
 
-`05_peak_effects.py` evaluates all candidate peaks. For each contrast, peaks with fewer than 20 total open observations across high and low matched nuclei are reported with no q value; **6,871** under ≥2 and **3,731** under ≥3 form separate BH-adjusted peak families. This pooled prevalence filter does not use the direction of the COQ8A difference. `06_primary_decision.py` records the focal ≥3 complete 221-gene and peak-family results before any target ranking; Figure 2 also plots the complete ≥2 families directly from the unfiltered result tables.
+GEO describes expansion for six passages and seven days of differentiation,
+with 5% FBS replaced by 2% horse serum in the culture medium. The deposited
+sample protocols contain the complete growth-factor/inhibitor medium recipe.
+We use the four untreated culture/differentiation multiome libraries, not the
+paper's separate cancer-conditioned-medium RNA experiments.
 
-`07_peak_gene_links.py` learns peak–RNA associations from the more numerous **≥2-versus-1 nuclei** at TSS≥3 and repeats link discovery at TSS≥2. Within each library, it correlates binary peak accessibility with normalized RNA after residualizing both on an intercept, COQ8A group, log RNA depth and log ATAC depth. A peak must be open in ≥10 matched nuclei and a gene expressed in ≥20. Fisher-z values are weighted across ≥3 evaluable libraries and BH corrected across all 4,925 evaluable candidate links at TSS≥3 or 5,054 at TSS≥2. This link-learning contrast differs from the ≥3-versus-1 focal effect test and is explicitly labelled in Figure 2. A peak-to-gene *association* is not a causal or physical link. JASPAR 2024 MRF/MEF2 PWM scores are attached after this screen for interpretation. The published [`peak_gene_links.tsv`](../results/tables/peak_gene_links.tsv) and [`peak_gene_links_tss2.tsv`](../results/tables/peak_gene_links_tss2.tsv) contain every tested link at each gate.
+The 10x Multiome assay pairs RNA and ATAC through the same nucleus barcode.
+The eight GEO assay accessions represent four paired multiome libraries, not
+eight biological samples. Barcodes are scoped by library; identical barcode
+strings from different libraries do not identify the same nucleus.
 
-`08_candidate_ranking.py` combines positive same-data RNA links learned at ≥2 versus 1 with the ATAC direction **separately for ≥2-versus-1 and ≥3-versus-1**. It writes a complete, explicitly labelled 221-gene ranking for each contrast. MYOD1 ranks first under ≥2 and second under ≥3; CKB ranks first under ≥3. These rankings are exploratory and use overlapping nuclei. MYOD1 is followed because it is a myogenic regulator, not because it is universally the highest global score. `09_link_gate_reconciliation.py` records peak-level support at both link-discovery QC gates.
+| Line | Condition | H5/RNA accession | ATAC fragment accession | Input filtered barcodes | Main QC-pass nuclei | Main matched pairs |
+|---|---|---|---|---:|---:|---:|
+| 1 | Undifferentiated | GSM6339597 | GSM6339598 | 8,346 | 7,535 | 46 |
+| 1 | Differentiated, day 7 | GSM6339599 | GSM6339600 | 9,221 | 8,216 | 74 |
+| 2 | Undifferentiated | GSM6339601 | GSM6339602 | 10,659 | 9,346 | 58 |
+| 2 | Differentiated, day 7 | GSM6339603 | GSM6339604 | 13,396 | 7,880 | 23 |
+| Total | | | | 41,622 | 32,977 | 201 |
 
-## 5. Region and QC sensitivity
+Biological source N is two donor-derived lines, library N is four, and the main
+association sample comprises 201 high/low pairs (402 distinct nuclei).
 
-`10_locus_sensitivity.py` measures MYOD1 in five region sets: all 32 nearby candidates, 19 four-library common peaks, 10 peaks with positive RNA links under TSS≥3, five of those with normalized maximum MRF PWM score <0.95, and **six** with the same score cutoff after repeating link discovery at TSS≥2. The <0.95 score threshold is an exploratory descriptive filter, not a calibrated test for motif absence. The five region sets are crossed with TSS≥2/≥3 for the *effect test* and COQ8A≥2/≥3 vs 1 UMI: 20 sensitivity settings. Their fold changes, absolute differences, library directions and nominal paired p values are reported to examine stability; the 20 settings are **not** a multiple-discovery family and no BH correction is applied across them. The TSS≥2-linked six-peak set is evaluated on the **same TSS≥3 201 pairs** as the five-peak set for the 1.280 versus 1.241 comparison. Here `fold_open` = aggregate high open fraction / aggregate low open fraction; `delta_pp` = 100 × their absolute difference. Linked subsets were learned using overlapping nuclei, so nominal p values are descriptive rather than independent confirmation. `11_doublet_sensitivity.py` fixes the matched-pair IDs and removes pairs involving nuclei in the top 0, 1, 2.5, 5 and 10% within-library RNA Scrublet score tail. This is a robustness probe, not complete ATAC doublet calling.
+### Starting files and preprocessing boundary
 
-## 6. Figures
+We start from author-deposited `filtered_feature_bc_matrix.h5`, barcode metrics
+and indexed ATAC fragment files. We do not rerun alignment or peak calling from
+FASTQ. The target reference genome is GRCh38; the deposited metadata identify
+the 10x ARC GRCh38-2020-A-2.0.0 reference. GEO uses inconsistent pipeline naming
+(`cellranger-atac v2.0` and ARC outputs); we therefore identify the actual
+processed inputs/checksums rather than claim a independently verified aligner
+execution. `docs/input_sha256.csv` records target source-file hashes.
 
-`14_tss_fragment_profiles.py` independently tabulates ATAC insertions at ±5 kb from one GENCODE v48 gene-feature TSS per fixed-set gene in the same **201 focal matched pairs**. It uses four indexed 10x fragment files, deduplicates by counting each fragment row once, uses the already Tn5-adjusted Cell Ranger fragment endpoints without an additional offset, reverses minus-strand genes, and emits 100-bp bins separately for high and low nuclei. It does not enter candidate nomination or peak testing. `12_make_figures.py` reads the committed tabulation; the TSS heatmaps and average curves use 100-bp Gaussian smoothing solely for display. Both groups use the same absolute colour scale, and gene order depends only on pooled TSS intensity. The all-window high/low insertion ratio is a descriptive TSS-profile readout, distinct from the six-peak open-nucleus ratio. This layout is analogous to the TSS-aligned metaplots and gene-row heatmaps in [Martini et al. (Nature, 2026)](https://doi.org/10.1038/s41586-026-10791-2), while the underlying signal here is **ATAC fragments**, not their H3K27ac ChIP signal.
+No Harmony correction, new clustering, trajectory inference or transfer of HMA
+annotations enters the current comparisons. Association values derive from
+counts and matching within each original library/condition.
 
-Figure 1 shows the four-library focal comparison and all-gene TSS-fragment context. Figure 2 shows **both complete peak families**, all 221 gene-region effects under both COQ8A count contrasts, and both same-data candidate rankings. Figure 3 shows the MYOD1 locus under ≥3 and the threshold/QC sensitivities. The ≥3 local six-peak result is not presented as a continuation of an unshown ≥2-only global screen. `12_make_figures.py` produces vector PDF and PNG from the analysis tables. The one-command `run_all.py` pipeline copies the versioned TSS profile into a new output tree, or rebuilds it from indexed fragments when `--fragments-dir` is supplied. Published [single-cell ATAC analysis guidance](https://www.nature.com/articles/s41467-024-53089-5) motivates retaining complete test families and explicit quality gates.
+## 4. Joint nucleus QC and COQ8A grouping
 
-## Regenerating optional reference tables
+Apply the following fixed QC to the paired nucleus:
 
-The small barcode-indexed reference tables are committed so `run_all.py` does not need multi-gigabyte fragments or hg38 2bit. To regenerate them, obtain indexed ATAC fragments and hg38 2bit. `00_prepare_reference.py` derives barcode and TSS reference inputs from the public H5 extraction and GTF. The generated tables were checked against the committed files: the barcode tables match exactly; the 20,044 TSS coordinate sets match exactly, with only a different row order. The fragment script also requires `hg38-blacklist.v2.bed.gz` in `reference/`:
+- RNA UMI >=500 and number of detected ATAC peaks >=500.
+- Remove nuclei above the within-library 95th percentile of either depth;
+  percentiles are calculated after both lower-depth requirements.
+- FRiP >=0.25, using 10x peak-region fragments / ATAC fragments.
+- Nucleosome signal <4, defined as fragments with lengths [147,294) bp divided
+  by fragments shorter than 147 bp.
+- ENCODE hg38 v2 blacklist fragment fraction <0.05.
+- TSS enrichment >=3 in the main analysis; >=2 in the sensitivity analysis.
 
-```powershell
-python -m pip install -r requirements_reference.txt
-python scripts/01_extract_nuclei.py --h5-root C:\path\to\GSE208248_processed --out results\tables\nuclei.tsv.gz
-python scripts/00_prepare_reference.py --nuclei results\tables\nuclei.tsv.gz --gtf C:\path\to\gencode.v48.annotation.gtf.gz --out reference
-python scripts/00_fragment_qc_reference.py GSM6339598 tss --reference-root reference --fragment-root C:\path\to\fragments --out-root reference\fragment_qc
-python scripts/00_fragment_qc_reference.py GSM6339598 nuc --reference-root reference --fragment-root C:\path\to\fragments --out-root reference\fragment_qc
-python scripts/00_fragment_qc_reference.py GSM6339598 blacklist --reference-root reference --fragment-root C:\path\to\fragments --out-root reference\fragment_qc
-python scripts/scrublet_provenance.py --h5-root C:\path\to\GSE208248_processed --barcodes reference\gse208248_qc_barcodes.tsv --out reference\rna_scrublet_qc.tsv.gz
-python scripts/motif_score_provenance.py --consensus results\tables\consensus_peak_map.tsv.gz --matrices reference\jaspar2024_mrf_mef2_matrices.json --genome-2bit C:\path\to\hg38.2bit --out reference\jaspar2024_peak_scores.tsv.gz
+The custom TSS implementation uses GENCODE v48 protein-coding gene TSSs.
+Central insertion density is measured within +/-500 bp (1,001 bp); background
+is the combined 200 bp at distances 901-1,000 bp on either side. A nucleus
+with no flank insertions receives the pooled flank-density estimate for its
+library. Fragment positions in this QC script are start and end-1. This exact
+custom implementation, rather than a named package default, defines the
+archived QC scores. See `00_fragment_qc_reference.py`.
+
+Mitochondrial RNA fraction, detected-gene count and Scrublet tail exclusions
+are evaluated as additional sensitivities in `25_temporal_rna_qc.py`. They
+are not baseline filters; comprehensive doublet removal is not part of this
+baseline.
+
+COQ8A-high is raw RNA UMI >=3; low is exactly 1. Zero-count nuclei are outside
+this specific comparison. The high >=2 definition is retained as a sensitivity.
+These are raw UMI thresholds, not normalized RNA values or expression quantiles.
+
+Match high to low 1:1 without replacement within each library, requiring
+absolute differences <=0.10 in both log1p(total RNA UMI) and log1p(open ATAC
+peak count). The implementation searches up to 100 nearest low-group nuclei
+in Euclidean log-depth space, processes high nuclei from largest nearest-low
+distance downward, and accepts the first unused candidate within both calipers.
+The paired barcode table is the reproducibility record.
+
+| TSS threshold | High versus low COQ8A UMI | Pairs |
+|---|---|---:|
+| >=3 | >=3 versus 1 | 201 |
+| >=2 | >=3 versus 1 | 212 |
+| >=3 | >=2 versus 1 | 958 |
+| >=2 | >=2 versus 1 | 1,020 |
+
+All locus, RNA and functional-module comparisons retain their own stated
+setting consistently. Matching never pairs an undifferentiated nucleus to a
+differentiated nucleus, or one line to the other line.
+
+## 5. Origin of the 5,097 common candidate peaks
+
+These peaks come from GSE208248, not from MSigDB or GSE109828.
+
+1. Extract author-called peak coordinates from each target H5 feature list.
+2. Anchor on GSM6339597. Match regions from each other library one-to-one with
+   at least 50% reciprocal interval overlap, using `03_define_regions.py`.
+3. Retain anchor intervals on canonical chromosomes, 200-2,000 bp wide and
+   outside the ENCODE blacklist.
+4. Find intervals whose midpoint is within 100 kb of any protein-coding
+   transcript TSS for a gene in the fixed 221-gene universe (GENCODE v48).
+5. Retain regions represented in all four library peak catalogs, and count
+   each anchor interval once even if it is near multiple genes.
+
+The resulting universe contains 5,097 distinct regions. "Common" means a
+corresponding interval exists in each library's catalog. It does not mean every
+nucleus is accessible there, or that any COQ8A difference is significant.
+Genomic proximity nominates potential targets; it does not establish regulatory
+links. The broader >=3-library candidate catalog contains 7,132 distinct peaks.
+The temporal and functional analyses use the all-four-library subset.
+
+## 6. External timing reference: GSE109828
+
+[Pliner et al., Molecular Cell 2018](https://doi.org/10.1016/j.molcel.2018.06.044)
+used human skeletal muscle myoblasts (HSMM), Lonza CC-2580, lot 257130, derived
+from a healthy 17-year-old female quadriceps biopsy. Cells were used within
+five passages of purchase and grown in SKGM-2. At approximately 80-90%
+confluence, differentiation was induced by switching to alpha-MEM with 2%
+horse serum. The selected datasets contain no COQ8A perturbation.
+
+We use only the two sci-ATAC experiments listed in the
+[author's data inventory](https://cole-trapnell-lab.github.io/cicero-release/data/).
+Other GEO entries, including bulk ATAC/CRISPR experiments, are not included.
+The selected sci-ATAC data are not same-nucleus RNA/ATAC multiome measurements.
+
+| Experiment | GEO accession | Hours after serum switch | Input cells | Retained cells in our primary QC |
+|---|---|---:|---:|---:|
+| 1 | GSM2970930 | 0 | 1,674 | 808 |
+| 1 | GSM2970930 | 24 | 1,574 | 995 |
+| 1 | GSM2970930 | 48 | 1,762 | 1,049 |
+| 1 | GSM2970930 | 72 | 1,501 | 904 |
+| 2 | GSM2970931 | 0 | 2,971 | 1,645 |
+| 2 | GSM2970931 | 72 | 3,885 | 2,866 |
+
+There are 13,367 input cells and 8,267 retained cells, two experiments from the
+same source lot, and one donor source. Experiment 2 checks the 0-to-72-hour
+direction; it cannot independently estimate the 24/48-hour onset.
+
+### External processing and coordinate alignment
+
+Use the author's sparse counts and barcode-to-time metadata, originally mapped
+to hg19. GEO documents Bowtie2 v2.2.3 mapping, per-cell duplicate removal and
+MACS2 v2.1.1 peak calling. These upstream operations are not rerun here.
+
+Require >=1,000 accessible sites per cell and accessibility at a promoter of
+at least one of MYOG, MYOD1, DMD, TNNT1, MYH1, MYH3 or TPM2. Our promoter
+definition uses all annotated transcript TSSs +/-2 kb; +/-1 kb is a sensitivity.
+The resulting cell counts are our reconstruction, not the paper's published
+pseudotime cell subset.
+
+Lift target hg38 intervals to hg19 with the UCSC chain, requiring unique,
+concordant endpoint/midpoint mapping and <=5% length change. 5,095 of 5,097
+pass. Select the external interval with greatest minimum reciprocal overlap;
+ties use overlap length and coordinate. Require >=50% overlap in both
+directions; 25% is a mapping sensitivity. Require external accessibility in
+>=1% and >=10 retained cells. This yields 3,324 eligible mapped target peaks.
+
+Within each experiment, divide retained cells into five pooled open-site-depth
+quantiles. At each time, calculate binary accessibility rates within depth
+strata and standardize to the pooled stratum weights, retaining strata present
+at every time. Rates remain unsmoothed. Jeffreys-smoothed binomial rates are
+used only to stabilize variance estimates at boundaries.
+
+## 7. Defining early, middle, late and closing regions
+
+In experiment 1, a 3-df Wald test compares accessibility at 24/48/72 hours
+against 0 hours, accounting for the shared baseline covariance. BH adjustment
+is across 4,580 eligible external intervals among the 4,710 overlapping
+intervals prepared for this analysis, before the final 50% target mapping cut.
+
+An opening region requires external q <0.05, increased 72-versus-0-hour
+accessibility in both experiments, and sufficient detection in experiment 2.
+A closing region requires corresponding decreases in both experiments.
+
+For opening regions, calculate the first time that accessibility crosses half
+the observed rise from baseline to the maximum of 24/48/72-hour values, using
+linear interpolation between sampled times. This is actual-time interpolation,
+not pseudotime and not a claim of exact molecular activation time.
+
+| Temporal class | Definition | Target peaks |
+|---|---|---:|
+| Early | Half-rise <=24 hours | 191 |
+| Middle | Half-rise >24 and <=48 hours | 34 |
+| Late | Half-rise >48 hours | 4 |
+| Closing | Significant dynamic profile, decreased endpoints in both experiments | 181 |
+| All dynamic | All four nonoverlapping peak classes | 410 |
+
+These labels use no target COQ8A effects. Opening/closing describe the external
+differentiation experiment; either class can show increased or decreased
+accessibility in the target COQ8A-high comparison. Genes can have peaks in more
+than one class. Memberships are saved before target-effect testing.
+
+## 8. Functional subset definition
+
+Intersect the 221 genes with the complete external GO sets for myoblast
+differentiation, myoblast fusion, positive regulation of muscle cell
+differentiation and negative regulation of muscle cell differentiation. Retain
+the already-defined 410 dynamic peaks near those genes. This combines two
+external criteria: biological function and temporal accessibility dynamics.
+
+The four sets contain 17, 12, 14 and four genes, respectively; their union is
+30 genes, of which 22 have retained dynamic regions. There are 54 distinct
+peaks: 24 early, five middle, zero late and 25 closing. All four functional
+sets are retained; none is selected because of its observed COQ8A P value.
+Full memberships, source URLs and hashes are in `results/functional/`.
+
+This step does not require MRF motifs or MYOD binding. Those are different
+questions. The CSRP3, CAV3 and MYOD1 loci discussed subsequently are early
+regions under the external timing definition.
+
+## 9. Target association tests and adjustment families
+
+For a peak, binary accessibility is 1 if the author count matrix contains a
+positive entry and 0 otherwise. Open fraction is open nuclei / evaluated
+nuclei. FC is the high-group open fraction divided by the low-group fraction;
+absolute differences are also reported in percentage points.
+
+For each matched pair, record whether only high or only low is open. The
+two-sided exact binomial test of these discordant counts against probability
+0.5 is the paired single-peak test. Unchanged pairs do not enter the discordant
+count. All preselected dynamic peaks remain in the 410/54-peak screens; no
+nominal-significance or favorable-direction filter is applied before BH.
+
+Module scores are the fraction of distinct member peaks accessible per
+nucleus. A paired t test evaluates the mean high-minus-low score, with a 95%
+t interval. Module FC is the ratio of group mean scores. The gene-averaged programme score in the broad 221-gene screen instead
+weights genes equally; these endpoints are reported separately.
+
+| Endpoint | BH family in a fixed QC/count setting |
+|---|---|
+| Dynamic individual peaks | All 410 opening/closing peaks |
+| Functional individual peaks | All 54 distinct functional dynamic peaks |
+| Functional modules | Eight function-by-opening/closing modules |
+| Temporal programmes | Ten programme tests per fixed external/QC/count setting |
+| Original gene RNA comparisons | All 221 genes |
+| Expanded dynamic peak-RNA links | All evaluable links; 1,022 in main setting |
+
+Full temporal programme analyses and phase-specific peak families remain
+available with their own explicit labels. Sensitivity settings are not pooled
+into one BH family. These are nucleus-level tests; separate library directions
+are reported, and four libraries do not constitute four independent donors.
+
+RNA uses log1p(10,000 * raw count / total RNA UMI). Test the paired difference
+under the same nucleus IDs, gate and COQ8A definition. A difference on this
+log1p scale is not a raw-expression FC and is not labelled as one.
+
+## 10. Peak-to-gene associations and candidate nomination
+
+Test potential cis genes with a protein-coding transcript TSS within 500 kb of
+each dynamic peak midpoint. For each library, residualize binary ATAC and
+normalized RNA on intercept, COQ8A group, log RNA depth and log ATAC depth.
+Correlate residuals. Eligibility requires >=10 accessible nuclei and >=20
+RNA-positive nuclei per library; at least three eligible libraries are needed.
+The implemented Fisher-z combination weights libraries by n_nuclei - 5.
+`30_middle_cis_links.py --region-family opening-closing` evaluates this expanded
+screen. This custom partial-correlation method is not Signac LinkPeaks and does
+not model GC-matched background peaks.
+
+Nearby position, high/low RNA difference and within-nucleus peak-RNA
+correlation are separately reported. None is silently substituted for another.
+Complete outputs include all directions and all eligible targets. CSRP3/CAV3/
+MYOD1 are exploratory follow-up priorities based on these measurements,
+independent passage/time RNA patterns and function; no implemented automatic
+filter has been shown to leave exactly those three genes.
+
+### Existing private C2C12 RNA comparison
+
+The supplied expression workbook contains P11, P22 and P33 at differentiation
+days 0, 1, 2 and 6, with three sample columns per passage/day: 36 samples in
+total. Existing contrast outputs are joined by case-insensitive human/mouse
+gene symbols, not by mapping human ATAC peaks onto the mouse genome.
+The archived RNA analysis used an expression filter of normalized count >=10
+in at least three samples and limma on log2(DESeq-normalized count + 1).
+We retain its contrast estimates and original transcriptome-wide FDRs without
+refitting or recalculating FDR only for nominated genes. Model FC is 2^log2FC.
+P11 D2/D0, P22/P11 at D2 and P33/P11 at D2 address different comparisons and are
+not substituted for each other. Sample-column replicates must be described
+according to the original experimental records; they are not human donors.
+Reproduction of this private comparison requires the owner's existing RNA
+results and `35_crosscheck_existing_rna.py`, with output directed outside the
+public repository. Raw RNA values and private comparison figures are not
+published here.
+
+## 11. Visualization and source data
+
+Figure 1 combines the selection workflow, external temporal heatmap, mean
+time profiles and target COQ8A module comparisons. Figure 2 shows all 54
+functional regions as peak-centered insertion heatmaps, per-library open
+fraction differences and pooled fold changes. Figure 3 shows four candidate
+loci with fragment tracks, gene models, library-level accessibility and RNA.
+
+ATAC profiles use deduplicated deposited fragments, counting each start/end
+once without read-multiplicity weighting or an additional Tn5 offset. Counts
+are normalized per 100 nuclei per 100 bp; low and high share the same scale
+and row order. Gaussian smoothing (standard deviation 100 bp) is for display
+only. Peak matrices span midpoint +/-2 kb. Locus windows span the tested peak
+and nearest annotated transcript TSS, with 5-kb flanks. Transcript selection
+uses distance followed by transcript ID; exon models are clipped to the window.
+
+The 221-gene TSS supplement spans +/-5 kb and 100-bp bins, with strand reversal,
+a shared absolute scale and row order based on pooled signal. TSS-window
+plots do not define candidate peak membership. Exact panel units, color-scale
+limits, ordering and correction families are in [Figure legends](FIGURE_LEGENDS.md).
+Source data are indexed in [Data availability](DATA_AVAILABILITY.md).
+
+## 12. Reproduction from deposited processed inputs
+
+Use Python 3.13 and the versions in `requirements.txt`. From the repository root:
+
+```bash
+python -m pip install -r requirements.txt
+python run_paper.py --mode figures
 ```
 
-Repeat the fragment command for the remaining three ATAC GSMs and all three modes. The full downstream pipeline uses the existing fixed reference tables to keep the reproduction command short. All parameter choices above are recorded retrospectively; they should not be described in a manuscript as prospective preregistration.
+For complete numerical analysis from author-deposited processed H5 matrices,
+barcode metrics, versioned references and GENCODE v48:
+
+```bash
+python run_paper.py --mode analysis --h5-root /data/GSE208248 --gtf /data/gencode.v48.annotation.gtf.gz --external-raw /data/GSE109828 --external-work /work/GSE109828
+```
+
+`19_fetch_temporal_reference.py` downloads the external data and liftOver chain.
+The pipeline computes both external experiments, temporal definitions, target
+associations, functional membership/tests, same-setting links and figures.
+`--reuse-external` skips external preparation only when the prepared files
+already exist with the intended source data and parameters.
+
+The default analysis uses versioned per-nucleus fragment-QC tables and cached
+figure profiles. Barcode/window hashes must agree with current figure sources;
+validation fails if the figure profiles belong to different matched nuclei.
+To regenerate all figure profiles, install `pysam` and add
+`--fragments /data/fragments` to the analysis command. On Windows, indexed
+fragment processing can be run with Python/pysam under WSL. Frozen source
+files allow figure reproduction without fragment processing.
+
+### Regenerating fragment QC
+
+After downloading indexed fragments, regenerate reference inputs and the three
+QC measurements for each ATAC library:
+
+```bash
+python -m pip install -r requirements_reference.txt
+python scripts/01_extract_nuclei.py --h5-root /data/GSE208248 --out results/tables/nuclei.tsv.gz
+python scripts/00_prepare_reference.py --nuclei results/tables/nuclei.tsv.gz --gtf /data/gencode.v48.annotation.gtf.gz --out reference
+python scripts/00_fragment_qc_reference.py GSM6339598 tss --reference-root reference --fragment-root /data/fragments --out-root reference/fragment_qc
+python scripts/00_fragment_qc_reference.py GSM6339598 nuc --reference-root reference --fragment-root /data/fragments --out-root reference/fragment_qc
+python scripts/00_fragment_qc_reference.py GSM6339598 blacklist --reference-root reference --fragment-root /data/fragments --out-root reference/fragment_qc
+```
+
+Repeat the last three commands for GSM6339600, GSM6339602 and GSM6339604,
+then execute the analysis command. All threshold values are defined in the
+QC section; using a different TSS implementation requires a separate analysis.
+
+### Optional RNA-quality sensitivity
+
+```bash
+python scripts/scrublet_provenance.py --h5-root /data/GSE208248 --barcodes reference/gse208248_qc_barcodes.tsv --out reference/rna_scrublet_qc.tsv.gz
+python scripts/25_temporal_rna_qc.py --h5-root /data/GSE208248 --tables results/tables --temporal results/temporal --scrublet reference/rna_scrublet_qc.tsv.gz
+```
+
+The [code map](CODE_AVAILABILITY.md) identifies the responsible script for each
+step. Source hashes are recorded in `docs/input_sha256.csv`,
+`results/temporal/download_manifest.json` and
+`results/functional/analysis_manifest.json`. Membership hashes are checked
+before functional testing. Validation recomputes single-peak p/q and temporal
+programme statistics from stored paired observations.

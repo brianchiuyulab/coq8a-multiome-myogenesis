@@ -1,6 +1,5 @@
-# Optional: regenerate fragment, motif and RNA doublet-score reference tables.
+# Optional dependencies for fragment QC and RNA doublet-score references.
 -r requirements.txt
 pysam>=0.22,<0.25
 numba==0.63.1
-twobitreader==4.0.2
 scrublet==0.2.3

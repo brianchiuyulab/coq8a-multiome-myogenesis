@@ -1,43 +1,64 @@
-# Results: parallel COQ8A ≥2 and ≥3 versus 1 UMI screens
+# Results
 
-## Main 201-pair comparison
+## Analysis population
 
-Both contrasts use within-library depth-matched pairs at ATAC TSS enrichment ≥3 and the same fixed Hallmark/Reactome myogenesis union of 221 measured genes. The broader COQ8A ≥2 versus 1 contrast has 958 pairs and 6,871 of 7,132 candidate peaks passing the pooled prevalence floor. The stronger ≥3 versus 1 contrast has 201 pairs (46/74/58/23 across four libraries) and 3,731 eligible peaks. The biological source-line count is two.
+The main comparison uses COQ8A RNA ≥3 versus 1 UMI, TSS enrichment ≥3, and
+201 pairs matched within four libraries from two source lines. The biological
+universe, external temporal sets and functional membership are fixed across
+all four sensitivity settings.
 
-Under ≥3 versus 1, RNA programme scores rise with higher COQ8A: Hallmark Myogenesis +0.03519 log1p(CP10K) per gene (four-programme BH q=0.00990; 4/4 library directions), Reactome Myogenesis +0.02257 (q=0.03158; 3/4), and four MRF loci +0.05899 (q=0.00779; 4/4). The corresponding ATAC programme summaries do not have q<0.05. Among all 221 ATAC gene regions, the minimum q is 0.30246 at ≥2 and 0.14537 at ≥3; among eligible peaks, the minimum q is 0.11899 at ≥2 and 0.58398 at ≥3. Neither complete contrast identifies an FDR-positive ATAC region or peak.
+## Temporal modules
 
-## Candidate ranking and MYOD1 locus
+| External class | Peaks | Accessibility FC, high/low | Paired p |
+|---|---:|---:|---:|
+| Early | 191 | 1.064 | 0.0683 |
+| Middle | 34 | 1.223 | 0.00178 |
+| Late | 4 | 1.034 | 0.740 |
+| Closing | 181 | 0.961 | 0.0699 |
 
-The exploratory ranking combines positive peak–RNA links learned from the more numerous COQ8A ≥2-versus-1 nuclei with ATAC effect direction **separately for each contrast**. MYOD1 ranks first under ≥2 versus 1 (five qualifying links). Under ≥3 versus 1, CKB ranks first (four), and MYOD1 second (three). MYOD1 is followed as a myogenic transcriptional regulator, not because it ranks first under every setting. The rankings use overlapping nuclei and are not independent validation.
+The middle module has BH q = 0.0178 within the ten temporal programme tests.
+The module effect is an average across all 34 member regions; it does not
+mean that each region individually passes FDR. Figure 1 shows the external
+definition and the matched target comparison. Supplementary Figure S2 shows
+every TSS/count setting.
 
-For all 19 four-library-common peaks near MYOD1, the ≥2-versus-1 result is **1.0688** (12.801% versus 11.977%; 958 pairs; 221-gene BH q=0.6354). The ≥3-versus-1 result is **1.0934** (13.485% versus 12.333%; 201 pairs; nominal paired p=0.1625; 3/4 positive library directions; 221-gene BH q=0.9210). Both are MYOD1 gene-region results within their respective complete 221-gene screens.
+## Functional dynamic regions
 
-The six MYOD1 peaks with positive RNA links learned at the TSS≥2 link-discovery gate and exploratory MRF PWM score <0.95 give 13.267% versus 10.365% open in the **same main 201 pairs**: +2.902 percentage points, ratio **1.2800**, 4/4 positive directions and nominal paired p=0.02558. The six peaks were chosen using overlapping data, so this p value describes the observed subset and is not a fresh confirmatory test. The 20 region/count/TSS settings are sensitivity checks; no BH q value is calculated across them.
+External differentiation, fusion and positive/negative regulation annotations
+define 54 distinct regions: 24 early, five middle and 25 closing. These contain
+both positive and negative COQ8A associations. None of the eight aggregate
+functional modules has nominal p < 0.05 in the four evaluated settings.
+Figure 2 displays the entire set without target-effect filtering.
 
-Across the displayed 20-setting grid, **1.2800 is the largest fold ratio**. The smallest nominal p occurs under a different setting: 10 positive-linked peaks at TSS≥2 with COQ8A ≥2 versus 1 (ratio 1.1055, p=0.01248, 1,020 pairs). Thus the setting with the largest estimated effect is not the one with the smallest p value. Neither is an independent confirmation of the peak set selected from the same data.
+## Follow-up loci
 
-Using TSS≥3 during link discovery leaves five such peaks. Their open fraction in the same 201 pairs is 13.831% versus 11.144%, ratio **1.2411**, with 3/4 positive library directions. The extra sixth peak is open in 21 high versus 13 low nuclei in those pairs. Under the broader ≥2-versus-1 COQ8A contrast, the six-peak ratio is **1.1097** in 958 pairs, with 3/4 positive directions. Excluding pairs that touch the highest 2.5% RNA Scrublet-score tail lowers the main six-peak ratio to **1.192** in 187 pairs (nominal p≈0.12). The complete settings and pair-level records are in `results/tables/`.
+ATAC p values are exact paired tests and q values are BH adjusted across 54
+functional peaks. RNA p values are paired t tests and q values are BH adjusted
+across 221 genes. RNA Δ is on the loge(1 + CP10k) scale.
 
-## TSS-aligned fragment context
+| Nearby gene | ATAC FC | ATAC p | ATAC q | RNA Δ | RNA p | RNA q |
+|---|---:|---:|---:|---:|---:|---:|
+| CSRP3 | 2.429 | 0.0309 | 0.711 | +0.0716 | 0.0121 | 0.0743 |
+| CAV3 | 1.765 | 0.0533 | 0.711 | +0.0838 | 0.0432 | 0.163 |
+| MYOD1 | 1.706 | 0.0730 | 0.711 | +0.0782 | 0.0510 | 0.185 |
+| CACNA1H | 0.227 | 0.000911 | 0.0492 | +0.00316 | 0.196 | 0.402 |
 
-Figure 1 uses the **same 201 main-contrast pairs** at all 221 gene TSSs. Within ±5 kb, high nuclei have 57,558 Tn5-adjusted endpoints and low nuclei 56,634, a descriptive ratio of **1.0163**. This nearly overlapping mean profile does not select the MYOD1 peaks. It is a different readout from the six-peak open-nucleus ratio of 1.280.
+CSRP3, CAV3 and MYOD1 have positive pooled ATAC and RNA directions, with
+different consistency across libraries. Their displayed ATAC peaks do not
+pass the 54-peak FDR threshold. CACNA1H has decreased accessibility in all four
+libraries and passes that threshold in the main setting. These observations
+nominate locus-specific follow-up; they are not four confirmed regulatory links.
+
+The expanded peak–RNA analysis yields no FDR-supported link to these four
+genes in the main setting. CAV3 and MYOD1 have eligible positive but
+nonsignificant partial correlations; CSRP3 and CACNA1H lack sufficient RNA
+detection for the required per-library link tests. Genomic neighborhood labels
+in figures therefore remain candidate assignments.
 
 ## Interpretation
 
-The data support an RNA myogenesis association and an exploratory, localized MYOD1 accessibility signal under the stronger COQ8A contrast. **Both** complete ATAC screens are negative at their stated FDR thresholds, and the local effect weakens under the RNA doublet-score challenge. These observations support a target hypothesis for independent testing; they do not establish COQ8A-driven chromatin opening. Figure 2 shows both full 221-gene screens and explicitly contrasts candidate rankings; Figure 3 shows the locus and sensitivity settings.
-
-
-## External temporal extension
-
-The completed GSE109828-defined temporal region analysis is reported separately in [Temporal Results](TEMPORAL_RESULTS.md), with [Temporal Methods](TEMPORAL_METHODS.md) and figures under `figures/temporal/`. It evaluates a fixed external region selection and does not replace or reinterpret the full 221-gene screen above.
-
-## Functional subset extension
-
-[Functional subsets](FUNCTIONAL_SUBSETS.md) reports the completed external-GO
-differentiation/fusion analysis. The four annotations cover 30 distinct genes
-within the 221-gene universe and 54 distinct external dynamic peaks. No module
-has nominal P <0.05 across the four fixed sensitivity settings. In the main
-comparison, the CACNA1H-proximal peak has decreased accessibility (FC 0.2273,
-P 0.0009105, q 0.04917 within the 54-peak family). CSRP3 and CAV3 remain increased
-local candidates without passing that correction. Existing temporal and broad
-results are unchanged.
+The results support a positive COQ8A association with the externally defined
+middle-opening module and heterogeneous changes at individual myogenic
+regions. They do not show uniform opening of the functional set. The public
+comparison supplies association evidence for a metabolism–chromatin hypothesis;
+it does not measure the intervening metabolites or perturb COQ8A.

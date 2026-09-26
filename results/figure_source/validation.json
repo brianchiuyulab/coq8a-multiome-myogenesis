@@ -1,0 +1,9 @@
+{
+  "status": "passed",
+  "functional_peaks": 54,
+  "single_peak_tests_checked": 216,
+  "main_matched_pairs": 201,
+  "fragment_windows": 58,
+  "main_figures": 3,
+  "supplement_figures": 2
+}

@@ -1,0 +1,6 @@
+{
+  "paired_barcode_sha256": "30c7398432ef2ffb20a63fca4a16267ad5c2e4ae7ce2c5a79532813d7620713e",
+  "windows_sha256": "54e3de02c83412d20a6d13fd54a14a481b067f7abcb4eb0253f41835dfcc06a2",
+  "endpoint_convention": "Cell Ranger adjusted start and end; no additional Tn5 shift",
+  "fragment_counting": "Each deduplicated fragment row contributes one insertion per endpoint"
+}
