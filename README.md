@@ -10,14 +10,14 @@ The subsequent peak–RNA linkage and MYOD1 analyses are exploratory. Link disco
 
 ## Reproduction
 
-Use Python 3.13 and install [`requirements.txt`](requirements.txt). Download the four `filtered_feature_bc_matrix.h5` and four `per_barcode_metrics.csv.gz` files for GSM6339597, GSM6339599, GSM6339601 and GSM6339603 from GSE208248. Download GENCODE v48 hg38 `annotation.gtf.gz`. Exact source-file checksums are in [`docs/input_sha256.csv`](docs/input_sha256.csv).
+Use Python 3.13 and install [`requirements.txt`](requirements.txt). Download the four `filtered_feature_bc_matrix.h5` and four `per_barcode_metrics.csv.gz` files for GSM6339597, GSM6339599, GSM6339601 and GSM6339603 from GSE208248. Download GENCODE v48 hg38 `annotation.gtf.gz`. Exact source-file checksums are in [`docs/input_sha256.csv`](docs/input_sha256.csv). With the versioned reference tables present, the command below rebuilds every analysis table, all three main figures and the QC supplement from those downloaded inputs.
 
 ```powershell
 python -m pip install -r requirements.txt
 python run_all.py --h5-root "C:\path\to\GSE208248_processed" --gtf "C:\path\to\gencode.v48.annotation.gtf.gz"
 ```
 
-The command writes tables to `results/tables/` and vector PDF plus PNG figures to `figures/`. The versioned `reference/` tables and the committed 221-gene TSS fragment profile permit figure reproduction without downloading the large ATAC fragment files. To rebuild that profile from indexed GSE208248 fragments, use [`scripts/14_tss_fragment_profiles.py`](scripts/14_tss_fragment_profiles.py) with `--fragments-dir`, `--gtf`, `--genes`, `--pairs` and `--out` (see [Methods](docs/METHODS.md)); `pysam` in [`requirements_reference.txt`](requirements_reference.txt) is needed. The other reference inputs are also documented in Methods. [`docs/SELECTION_AUDIT.md`](docs/SELECTION_AUDIT.md) enumerates every gene, peak and exploratory-locus selection. [`docs/FIGURE_LEGENDS.md`](docs/FIGURE_LEGENDS.md) defines each panel; [`docs/RESULTS.md`](docs/RESULTS.md) records the results and their statistical scope.
+The command writes tables to `results/tables/` and vector PDF plus PNG figures to `figures/`. The versioned `reference/` tables and the committed 221-gene TSS fragment profile permit figure reproduction without downloading the large ATAC fragment files. With `--out-root`, the versioned profile is copied into the new output tree automatically. To rebuild that profile from indexed GSE208248 fragments in the same run, add `--fragments-dir` and install `pysam` from [`requirements_reference.txt`](requirements_reference.txt). The other reference inputs are documented in Methods. [`docs/SELECTION_AUDIT.md`](docs/SELECTION_AUDIT.md) enumerates every gene, peak and exploratory-locus selection. [`docs/FIGURE_LEGENDS.md`](docs/FIGURE_LEGENDS.md) defines each panel; [`docs/RESULTS.md`](docs/RESULTS.md) records the results and their statistical scope.
 
 To regenerate the TSS profile on a Linux or macOS Python environment with `pysam`, after producing `matched_pairs.tsv.gz`:
 
@@ -35,9 +35,9 @@ python scripts/12_make_figures.py --tables results/tables --figures figures
 
 | Figure | Purpose |
 |---|---|
-| [Figure 1](figures/main/Figure_1_global_discovery.pdf) | Fixed 221-gene search, TSS-aligned ATAC fragment heatmap, and exploratory MYOD1 nomination |
-| [Figure 2](figures/main/Figure_2_Global_ATAC_Scan.pdf) | Complete primary peak and gene-region ATAC test families |
-| [Supplementary MYOD1](figures/supplement/Supplementary_Figure_MYOD1_Exploratory.pdf) | Locus-level link discovery, threshold sensitivity and library effects |
+| [Figure 1](figures/main/Figure_1_Multiome_and_TSS.pdf) | Four-library comparison and TSS-aligned ATAC fragment profiles for all 221 genes |
+| [Figure 2](figures/main/Figure_2_Global_Screen_and_Ranking.pdf) | Complete peak and gene-region tests, joint RNA/ATAC effects, and same-data candidate ranking |
+| [Figure 3](figures/main/Figure_3_MYOD1_Locus_and_Sensitivity.pdf) | MYOD1 locus, region-set and contrast sensitivity, library effects and doublet-score challenge |
 | [Supplementary QC](figures/supplement/Supplementary_Figure_QC.pdf) | TSS enrichment and matched-depth balance |
 
 The primary analysis shows an RNA myogenesis association, but no ATAC gene region or candidate peak passes its full-family BH q < 0.05 threshold. This observational dataset contains two independent source lines; paired-nucleus p values describe within-dataset associations and do not establish COQ8A-driven chromatin opening.

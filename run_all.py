@@ -7,6 +7,7 @@ primary ATAC test families are written before any candidate ranking.
 
 import argparse
 from pathlib import Path
+import shutil
 import subprocess
 import sys
 
@@ -45,6 +46,11 @@ def main() -> None:
         type=Path,
         default=ROOT,
         help="Output repository root; default is this directory",
+    )
+    p.add_argument(
+        "--fragments-dir",
+        type=Path,
+        help="Optional indexed ATAC fragments; rebuild the 221-gene TSS profile instead of copying the versioned profile",
     )
     args = p.parse_args()
     t = args.out_root / "results" / "tables"
@@ -131,6 +137,32 @@ def main() -> None:
     ]:
         print(f"\n{section}", flush=True)
         for name, *arguments in steps:
+            if name == "12_make_figures.py":
+                profile = t / "tss_fragment_profile_221.tsv.gz"
+                if args.fragments_dir:
+                    cmd = [
+                        sys.executable,
+                        str(ROOT / "scripts" / "14_tss_fragment_profiles.py"),
+                        "--fragments-dir",
+                        str(args.fragments_dir.resolve()),
+                        "--gtf",
+                        str(g),
+                        "--genes",
+                        str(r / "myogenesis_221_gene_sources.tsv"),
+                        "--pairs",
+                        str(t / "matched_pairs.tsv.gz"),
+                        "--out",
+                        str(profile),
+                    ]
+                    print("RUN 14_tss_fragment_profiles.py", flush=True)
+                    subprocess.run(cmd, check=True)
+                elif not profile.is_file():
+                    source = ROOT / "results" / "tables" / profile.name
+                    if not source.is_file():
+                        raise FileNotFoundError(
+                            f"Versioned TSS profile not found: {source}"
+                        )
+                    shutil.copyfile(source, profile)
             cmd = [sys.executable, str(ROOT / "scripts" / name), *map(str, arguments)]
             print("RUN", name, flush=True)
             subprocess.run(cmd, check=True)

@@ -117,6 +117,14 @@ def check_tss_profile(tables: Path) -> float:
     return profile.high_cuts.sum() / profile.low_cuts.sum()
 
 
+def check_ranking(tables: Path) -> None:
+    ranking = pd.read_csv(tables / "candidate_gene_ranking.tsv", sep="\t")
+    if len(ranking) != 221 or ranking.gene.duplicated().any():
+        raise ValueError("Exploratory ranking must contain each of the 221 genes once")
+    if ranking.iloc[0].gene != "MYOD1" or int(ranking.iloc[0].n_linked_coq_3of4) != 5:
+        raise ValueError("MYOD1 nomination differs from the versioned analysis")
+
+
 def main() -> None:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--tables", type=Path, required=True)
@@ -126,10 +134,11 @@ def main() -> None:
     n_genes, n_peaks, n_significant = check_primary(args.tables)
     n_extreme, fold = check_six_region_effect(args.tables)
     tss_ratio = check_tss_profile(args.tables)
+    check_ranking(args.tables)
     figures = [
-        args.figures / "main/Figure_1_global_discovery.pdf",
-        args.figures / "main/Figure_2_Global_ATAC_Scan.pdf",
-        args.figures / "supplement/Supplementary_Figure_MYOD1_Exploratory.pdf",
+        args.figures / "main/Figure_1_Multiome_and_TSS.pdf",
+        args.figures / "main/Figure_2_Global_Screen_and_Ranking.pdf",
+        args.figures / "main/Figure_3_MYOD1_Locus_and_Sensitivity.pdf",
         args.figures / "supplement/Supplementary_Figure_QC.pdf",
     ]
     missing = [str(path) for path in figures if not path.is_file()]
