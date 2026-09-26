@@ -4,6 +4,8 @@ Reproducible reanalysis of [GSE208248](https://www.ncbi.nlm.nih.gov/geo/query/ac
 
 ## Analysis sequence
 
+The [extended exploratory screen](docs/EXTENDED_EXPLORATION.md) evaluates both link-discovery contrasts across the full gene set, promoter/distal and linked-peak definitions, and seven TSS windows. Add `--extended-exploration` to the reproduction command to generate its complete tables and [six-panel figure](figures/exploration/Figure_exploratory_route.png).
+
 The biological search space is the measured union of MSigDB Hallmark and Reactome Myogenesis (**221 genes**). Two COQ8A count contrasts are analysed **in parallel through the complete 221-gene screen**, each matching nuclei within library on RNA and ATAC depth after joint QC at TSS enrichment ≥3: ≥2 versus 1 RNA UMI has 958 pairs and 6,871 eligible peaks; ≥3 versus 1 has 201 pairs and 3,731. The stronger contrast is used for the focal six-peak MYOD1 effect, with its full-screen result displayed beside the broader contrast.
 
 The subsequent peak–RNA linkage and MYOD1 analyses are exploratory. Links are learned in the more numerous ≥2-versus-1 nuclei at TSS≥3 and TSS≥2; their ATAC direction is assessed **separately at both count thresholds** in two labelled full 221-gene rankings. MYOD1 ranks first under ≥2; under ≥3, CKB ranks first and MYOD1 second. The six-peak MYOD1 ratio of **1.280** uses TSS≥2 link discovery and ≥3-versus-1 effect testing at TSS≥3. Region/count thresholds and RNA doublet-score exclusions are sensitivity analyses, with no BH correction across those settings.

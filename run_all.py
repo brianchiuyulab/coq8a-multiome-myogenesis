@@ -52,6 +52,10 @@ def main() -> None:
         type=Path,
         help="Optional indexed ATAC fragments; rebuild the 221-gene TSS profile instead of copying the versioned profile",
     )
+    p.add_argument(
+        "--extended-exploration", action="store_true",
+        help="Also evaluate both link-discovery contrasts, programme/region grids and TSS windows",
+    )
     args = p.parse_args()
     t = args.out_root / "results" / "tables"
     f = args.out_root / "figures"
@@ -166,6 +170,32 @@ def main() -> None:
             cmd = [sys.executable, str(ROOT / "scripts" / name), *map(str, arguments)]
             print("RUN", name, flush=True)
             subprocess.run(cmd, check=True)
+
+    if args.extended_exploration:
+        for gate in ("TSS_ge_2", "TSS_ge_3"):
+            subprocess.run([
+                sys.executable, str(ROOT / "scripts" / "07_peak_gene_links.py"),
+                "--h5-root", str(h), "--tables", str(t),
+                "--motif-scores", str(r / "jaspar2024_peak_scores.tsv.gz"),
+                "--gate", gate, "--contrast", "3plus_vs_1",
+            ], check=True)
+        exploration = args.out_root / "results" / "exploration"
+        subprocess.run([
+            sys.executable, str(ROOT / "scripts" / "15_exploratory_screen.py"),
+            "--h5-root", str(h), "--tables", str(t),
+            "--genes", str(r / "myogenesis_221_gene_sources.tsv"),
+            "--extra-gene-sets", str(r / "muscle_subprogrammes.json"),
+            "--out", str(exploration),
+        ], check=True)
+        subprocess.run([
+            sys.executable, str(ROOT / "scripts" / "16_plot_exploratory_screen.py"),
+            "--tables", str(t), "--exploration", str(exploration),
+            "--out", str(f / "exploration"),
+        ], check=True)
+        subprocess.run([
+            sys.executable, str(ROOT / "scripts" / "18_plot_subprogrammes.py"),
+            "--exploration", str(exploration), "--out", str(f / "exploration"),
+        ], check=True)
 
 
 if __name__ == "__main__":

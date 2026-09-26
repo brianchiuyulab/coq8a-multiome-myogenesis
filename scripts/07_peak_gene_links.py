@@ -1,6 +1,6 @@
 """Explore all candidate peak–gene RNA links within the 221-gene search space.
 
-Primary gate/contrast only. Links are conditioned on COQ8A group and both
+Links are estimated within the requested QC gate and COQ8A contrast, conditioned on group and both
 depths, then combined across libraries. Same-data links are exploratory.
 """
 
@@ -26,10 +26,13 @@ def main():
     p.add_argument("--tables", type=Path, required=True)
     p.add_argument("--motif-scores", type=Path)
     p.add_argument("--gate", choices=["TSS_ge_2", "TSS_ge_3"], default="TSS_ge_3")
+    p.add_argument("--contrast", choices=["2plus_vs_1", "3plus_vs_1"], default="2plus_vs_1")
     a = p.parse_args()
     suffix = "_tss2" if a.gate == "TSS_ge_2" else ""
+    if a.contrast != "2plus_vs_1":
+        suffix += "_" + a.contrast
     pairs = pd.read_csv(a.tables / "matched_pairs.tsv.gz", sep="\t")
-    pairs = pairs[(pairs.gate == a.gate) & (pairs.contrast == "2plus_vs_1")]
+    pairs = pairs[(pairs.gate == a.gate) & (pairs.contrast == a.contrast)]
     cells = pd.read_csv(a.tables / "qc_nuclei.tsv.gz", sep="\t")
     candidates = pd.read_csv(a.tables / "candidate_peak_gene.tsv.gz", sep="\t")
     consensus = pd.read_csv(a.tables / "consensus_peak_map.tsv.gz", sep="\t").set_index("peak")
