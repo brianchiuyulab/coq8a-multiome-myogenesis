@@ -1,0 +1,28 @@
+{
+  "status": "retrospective provenance audit, not a new confirmatory screen",
+  "fixed_contrast": "TSS>=3; COQ8A>=3 versus 1 UMI; 201 pairs",
+  "source_of_focal_choice": "Prior focal gene list in script 50; lowest ATAC p among eligible original CAV3 pairs; displayed explicitly in scripts 51 and 58",
+  "gates": "Descriptive cumulative intersections; no combined p value and no new FDR guarantee",
+  "external_RNA_time": "48h retained from prior reference comparison; 24h and 96h also supplied",
+  "independent_replication": "GSE240061 outcomes not inspected before this audit",
+  "independent_replication_secondary_scope": {
+    "definition": "GO myoblast fusion genes within the existing 221-gene universe; peak midpoint within 2 kb of an annotated transcript TSS; no target-effect filter",
+    "genes": [
+      "ADAM12",
+      "CACNA1H",
+      "CAV3",
+      "CDON",
+      "ITGB1",
+      "KCNH1",
+      "MAPK14",
+      "MYH9",
+      "MYOD1",
+      "MYOG",
+      "NEO1",
+      "NOS1"
+    ],
+    "n_genes": 12,
+    "n_peaks": 31,
+    "use": "Secondary function-based replication family; neither a redefinition of the original discovery scope nor evidence that every promoter responds to COQ8A"
+  }
+}

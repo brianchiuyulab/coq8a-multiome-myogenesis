@@ -1,0 +1,335 @@
+Sample	celltype	contrast	donor	time	n_pairs
+E_M1	Dendritic Cells	2plus_vs_1	Ex-1	Pre	0
+E_M1	Dendritic Cells	3plus_vs_1	Ex-1	Pre	0
+E_M1	Endothelial Cells	2plus_vs_1	Ex-1	Pre	1
+E_M1	Endothelial Cells	3plus_vs_1	Ex-1	Pre	0
+E_M1	FBN1+ FAP Cells	2plus_vs_1	Ex-1	Pre	0
+E_M1	FBN1+ FAP Cells	3plus_vs_1	Ex-1	Pre	0
+E_M1	Fast	2plus_vs_1	Ex-1	Pre	275
+E_M1	Fast	3plus_vs_1	Ex-1	Pre	124
+E_M1	Intermediate	2plus_vs_1	Ex-1	Pre	38
+E_M1	Intermediate	3plus_vs_1	Ex-1	Pre	18
+E_M1	LUM+ FAP Cells	2plus_vs_1	Ex-1	Pre	7
+E_M1	LUM+ FAP Cells	3plus_vs_1	Ex-1	Pre	3
+E_M1	Macrophages	2plus_vs_1	Ex-1	Pre	0
+E_M1	Macrophages	3plus_vs_1	Ex-1	Pre	0
+E_M1	Mast Cells	2plus_vs_1	Ex-1	Pre	0
+E_M1	Mast Cells	3plus_vs_1	Ex-1	Pre	0
+E_M1	NK Cells	2plus_vs_1	Ex-1	Pre	0
+E_M1	NK Cells	3plus_vs_1	Ex-1	Pre	0
+E_M1	Pericytes	2plus_vs_1	Ex-1	Pre	1
+E_M1	Pericytes	3plus_vs_1	Ex-1	Pre	0
+E_M1	Satellite Cells	2plus_vs_1	Ex-1	Pre	0
+E_M1	Satellite Cells	3plus_vs_1	Ex-1	Pre	0
+E_M1	Slow	2plus_vs_1	Ex-1	Pre	554
+E_M1	Slow	3plus_vs_1	Ex-1	Pre	247
+E_M1	T Cells	2plus_vs_1	Ex-1	Pre	0
+E_M1	T Cells	3plus_vs_1	Ex-1	Pre	0
+E_M2	B Cells	2plus_vs_1	Ex-1	Post	0
+E_M2	B Cells	3plus_vs_1	Ex-1	Post	0
+E_M2	Dendritic Cells	2plus_vs_1	Ex-1	Post	0
+E_M2	Dendritic Cells	3plus_vs_1	Ex-1	Post	0
+E_M2	Endothelial Cells	2plus_vs_1	Ex-1	Post	0
+E_M2	Endothelial Cells	3plus_vs_1	Ex-1	Post	0
+E_M2	FBN1+ FAP Cells	2plus_vs_1	Ex-1	Post	0
+E_M2	FBN1+ FAP Cells	3plus_vs_1	Ex-1	Post	0
+E_M2	Fast	2plus_vs_1	Ex-1	Post	200
+E_M2	Fast	3plus_vs_1	Ex-1	Post	73
+E_M2	Intermediate	2plus_vs_1	Ex-1	Post	11
+E_M2	Intermediate	3plus_vs_1	Ex-1	Post	5
+E_M2	LUM+ FAP Cells	2plus_vs_1	Ex-1	Post	5
+E_M2	LUM+ FAP Cells	3plus_vs_1	Ex-1	Post	1
+E_M2	Macrophages	2plus_vs_1	Ex-1	Post	0
+E_M2	Macrophages	3plus_vs_1	Ex-1	Post	0
+E_M2	Mast Cells	2plus_vs_1	Ex-1	Post	0
+E_M2	Mast Cells	3plus_vs_1	Ex-1	Post	0
+E_M2	NK Cells	2plus_vs_1	Ex-1	Post	0
+E_M2	NK Cells	3plus_vs_1	Ex-1	Post	0
+E_M2	Pericytes	2plus_vs_1	Ex-1	Post	0
+E_M2	Pericytes	3plus_vs_1	Ex-1	Post	0
+E_M2	Satellite Cells	2plus_vs_1	Ex-1	Post	2
+E_M2	Satellite Cells	3plus_vs_1	Ex-1	Post	0
+E_M2	Slow	2plus_vs_1	Ex-1	Post	149
+E_M2	Slow	3plus_vs_1	Ex-1	Post	84
+E_M2	T Cells	2plus_vs_1	Ex-1	Post	0
+E_M2	T Cells	3plus_vs_1	Ex-1	Post	0
+G_M1	B Cells	2plus_vs_1	Ex-3	Pre	0
+G_M1	B Cells	3plus_vs_1	Ex-3	Pre	0
+G_M1	Dendritic Cells	2plus_vs_1	Ex-3	Pre	0
+G_M1	Dendritic Cells	3plus_vs_1	Ex-3	Pre	0
+G_M1	Endothelial Cells	2plus_vs_1	Ex-3	Pre	1
+G_M1	Endothelial Cells	3plus_vs_1	Ex-3	Pre	1
+G_M1	FBN1+ FAP Cells	2plus_vs_1	Ex-3	Pre	0
+G_M1	FBN1+ FAP Cells	3plus_vs_1	Ex-3	Pre	0
+G_M1	Fast	2plus_vs_1	Ex-3	Pre	108
+G_M1	Fast	3plus_vs_1	Ex-3	Pre	60
+G_M1	Intermediate	2plus_vs_1	Ex-3	Pre	2
+G_M1	Intermediate	3plus_vs_1	Ex-3	Pre	2
+G_M1	LUM+ FAP Cells	2plus_vs_1	Ex-3	Pre	6
+G_M1	LUM+ FAP Cells	3plus_vs_1	Ex-3	Pre	2
+G_M1	Macrophages	2plus_vs_1	Ex-3	Pre	0
+G_M1	Macrophages	3plus_vs_1	Ex-3	Pre	0
+G_M1	Mast Cells	2plus_vs_1	Ex-3	Pre	0
+G_M1	Mast Cells	3plus_vs_1	Ex-3	Pre	0
+G_M1	NK Cells	2plus_vs_1	Ex-3	Pre	0
+G_M1	NK Cells	3plus_vs_1	Ex-3	Pre	0
+G_M1	Pericytes	2plus_vs_1	Ex-3	Pre	0
+G_M1	Pericytes	3plus_vs_1	Ex-3	Pre	0
+G_M1	Satellite Cells	2plus_vs_1	Ex-3	Pre	0
+G_M1	Satellite Cells	3plus_vs_1	Ex-3	Pre	0
+G_M1	Slow	2plus_vs_1	Ex-3	Pre	42
+G_M1	Slow	3plus_vs_1	Ex-3	Pre	30
+G_M1	T Cells	2plus_vs_1	Ex-3	Pre	0
+G_M1	T Cells	3plus_vs_1	Ex-3	Pre	0
+G_M2	B Cells	2plus_vs_1	Ex-3	Post	0
+G_M2	B Cells	3plus_vs_1	Ex-3	Post	0
+G_M2	Dendritic Cells	2plus_vs_1	Ex-3	Post	0
+G_M2	Dendritic Cells	3plus_vs_1	Ex-3	Post	0
+G_M2	Endothelial Cells	2plus_vs_1	Ex-3	Post	6
+G_M2	Endothelial Cells	3plus_vs_1	Ex-3	Post	2
+G_M2	FBN1+ FAP Cells	2plus_vs_1	Ex-3	Post	0
+G_M2	FBN1+ FAP Cells	3plus_vs_1	Ex-3	Post	0
+G_M2	Fast	2plus_vs_1	Ex-3	Post	36
+G_M2	Fast	3plus_vs_1	Ex-3	Post	6
+G_M2	Intermediate	2plus_vs_1	Ex-3	Post	4
+G_M2	Intermediate	3plus_vs_1	Ex-3	Post	1
+G_M2	LUM+ FAP Cells	2plus_vs_1	Ex-3	Post	5
+G_M2	LUM+ FAP Cells	3plus_vs_1	Ex-3	Post	1
+G_M2	Macrophages	2plus_vs_1	Ex-3	Post	1
+G_M2	Macrophages	3plus_vs_1	Ex-3	Post	1
+G_M2	Mast Cells	2plus_vs_1	Ex-3	Post	0
+G_M2	Mast Cells	3plus_vs_1	Ex-3	Post	0
+G_M2	NK Cells	2plus_vs_1	Ex-3	Post	0
+G_M2	NK Cells	3plus_vs_1	Ex-3	Post	0
+G_M2	Pericytes	2plus_vs_1	Ex-3	Post	0
+G_M2	Pericytes	3plus_vs_1	Ex-3	Post	0
+G_M2	Satellite Cells	2plus_vs_1	Ex-3	Post	1
+G_M2	Satellite Cells	3plus_vs_1	Ex-3	Post	0
+G_M2	Slow	2plus_vs_1	Ex-3	Post	136
+G_M2	Slow	3plus_vs_1	Ex-3	Post	54
+G_M2	T Cells	2plus_vs_1	Ex-3	Post	0
+G_M2	T Cells	3plus_vs_1	Ex-3	Post	0
+I_M1	B Cells	2plus_vs_1	Ex-2	Pre	0
+I_M1	B Cells	3plus_vs_1	Ex-2	Pre	0
+I_M1	Dendritic Cells	2plus_vs_1	Ex-2	Pre	0
+I_M1	Dendritic Cells	3plus_vs_1	Ex-2	Pre	0
+I_M1	Endothelial Cells	2plus_vs_1	Ex-2	Pre	0
+I_M1	Endothelial Cells	3plus_vs_1	Ex-2	Pre	0
+I_M1	FBN1+ FAP Cells	2plus_vs_1	Ex-2	Pre	0
+I_M1	FBN1+ FAP Cells	3plus_vs_1	Ex-2	Pre	0
+I_M1	Fast	2plus_vs_1	Ex-2	Pre	426
+I_M1	Fast	3plus_vs_1	Ex-2	Pre	270
+I_M1	Intermediate	2plus_vs_1	Ex-2	Pre	21
+I_M1	Intermediate	3plus_vs_1	Ex-2	Pre	10
+I_M1	LUM+ FAP Cells	2plus_vs_1	Ex-2	Pre	15
+I_M1	LUM+ FAP Cells	3plus_vs_1	Ex-2	Pre	8
+I_M1	Macrophages	2plus_vs_1	Ex-2	Pre	0
+I_M1	Macrophages	3plus_vs_1	Ex-2	Pre	0
+I_M1	Mast Cells	2plus_vs_1	Ex-2	Pre	0
+I_M1	Mast Cells	3plus_vs_1	Ex-2	Pre	0
+I_M1	NK Cells	2plus_vs_1	Ex-2	Pre	0
+I_M1	NK Cells	3plus_vs_1	Ex-2	Pre	0
+I_M1	Pericytes	2plus_vs_1	Ex-2	Pre	0
+I_M1	Pericytes	3plus_vs_1	Ex-2	Pre	0
+I_M1	Satellite Cells	2plus_vs_1	Ex-2	Pre	1
+I_M1	Satellite Cells	3plus_vs_1	Ex-2	Pre	0
+I_M1	Slow	2plus_vs_1	Ex-2	Pre	343
+I_M1	Slow	3plus_vs_1	Ex-2	Pre	284
+I_M1	T Cells	2plus_vs_1	Ex-2	Pre	1
+I_M1	T Cells	3plus_vs_1	Ex-2	Pre	1
+I_M2	B Cells	2plus_vs_1	Ex-2	Post	0
+I_M2	B Cells	3plus_vs_1	Ex-2	Post	0
+I_M2	Dendritic Cells	2plus_vs_1	Ex-2	Post	0
+I_M2	Dendritic Cells	3plus_vs_1	Ex-2	Post	0
+I_M2	Endothelial Cells	2plus_vs_1	Ex-2	Post	1
+I_M2	Endothelial Cells	3plus_vs_1	Ex-2	Post	1
+I_M2	FBN1+ FAP Cells	2plus_vs_1	Ex-2	Post	1
+I_M2	FBN1+ FAP Cells	3plus_vs_1	Ex-2	Post	0
+I_M2	Fast	2plus_vs_1	Ex-2	Post	136
+I_M2	Fast	3plus_vs_1	Ex-2	Post	28
+I_M2	Intermediate	2plus_vs_1	Ex-2	Post	4
+I_M2	Intermediate	3plus_vs_1	Ex-2	Post	1
+I_M2	LUM+ FAP Cells	2plus_vs_1	Ex-2	Post	5
+I_M2	LUM+ FAP Cells	3plus_vs_1	Ex-2	Post	2
+I_M2	Macrophages	2plus_vs_1	Ex-2	Post	0
+I_M2	Macrophages	3plus_vs_1	Ex-2	Post	0
+I_M2	Mast Cells	2plus_vs_1	Ex-2	Post	0
+I_M2	Mast Cells	3plus_vs_1	Ex-2	Post	0
+I_M2	NK Cells	2plus_vs_1	Ex-2	Post	0
+I_M2	NK Cells	3plus_vs_1	Ex-2	Post	0
+I_M2	Pericytes	2plus_vs_1	Ex-2	Post	0
+I_M2	Pericytes	3plus_vs_1	Ex-2	Post	0
+I_M2	Satellite Cells	2plus_vs_1	Ex-2	Post	0
+I_M2	Satellite Cells	3plus_vs_1	Ex-2	Post	0
+I_M2	Slow	2plus_vs_1	Ex-2	Post	152
+I_M2	Slow	3plus_vs_1	Ex-2	Post	74
+I_M2	T Cells	2plus_vs_1	Ex-2	Post	1
+I_M2	T Cells	3plus_vs_1	Ex-2	Post	0
+J_M1	B Cells	2plus_vs_1	Ex-4	Pre	0
+J_M1	B Cells	3plus_vs_1	Ex-4	Pre	0
+J_M1	Dendritic Cells	2plus_vs_1	Ex-4	Pre	0
+J_M1	Dendritic Cells	3plus_vs_1	Ex-4	Pre	0
+J_M1	Endothelial Cells	2plus_vs_1	Ex-4	Pre	3
+J_M1	Endothelial Cells	3plus_vs_1	Ex-4	Pre	0
+J_M1	FBN1+ FAP Cells	2plus_vs_1	Ex-4	Pre	2
+J_M1	FBN1+ FAP Cells	3plus_vs_1	Ex-4	Pre	0
+J_M1	Fast	2plus_vs_1	Ex-4	Pre	620
+J_M1	Fast	3plus_vs_1	Ex-4	Pre	280
+J_M1	Intermediate	2plus_vs_1	Ex-4	Pre	70
+J_M1	Intermediate	3plus_vs_1	Ex-4	Pre	47
+J_M1	LUM+ FAP Cells	2plus_vs_1	Ex-4	Pre	42
+J_M1	LUM+ FAP Cells	3plus_vs_1	Ex-4	Pre	23
+J_M1	Macrophages	2plus_vs_1	Ex-4	Pre	2
+J_M1	Macrophages	3plus_vs_1	Ex-4	Pre	0
+J_M1	Mast Cells	2plus_vs_1	Ex-4	Pre	0
+J_M1	Mast Cells	3plus_vs_1	Ex-4	Pre	0
+J_M1	NK Cells	2plus_vs_1	Ex-4	Pre	0
+J_M1	NK Cells	3plus_vs_1	Ex-4	Pre	0
+J_M1	Pericytes	2plus_vs_1	Ex-4	Pre	2
+J_M1	Pericytes	3plus_vs_1	Ex-4	Pre	2
+J_M1	Satellite Cells	2plus_vs_1	Ex-4	Pre	10
+J_M1	Satellite Cells	3plus_vs_1	Ex-4	Pre	3
+J_M1	Slow	2plus_vs_1	Ex-4	Pre	424
+J_M1	Slow	3plus_vs_1	Ex-4	Pre	301
+J_M1	T Cells	2plus_vs_1	Ex-4	Pre	0
+J_M1	T Cells	3plus_vs_1	Ex-4	Pre	0
+J_M2	B Cells	2plus_vs_1	Ex-4	Post	0
+J_M2	B Cells	3plus_vs_1	Ex-4	Post	0
+J_M2	Dendritic Cells	2plus_vs_1	Ex-4	Post	0
+J_M2	Dendritic Cells	3plus_vs_1	Ex-4	Post	0
+J_M2	Endothelial Cells	2plus_vs_1	Ex-4	Post	0
+J_M2	Endothelial Cells	3plus_vs_1	Ex-4	Post	0
+J_M2	FBN1+ FAP Cells	2plus_vs_1	Ex-4	Post	0
+J_M2	FBN1+ FAP Cells	3plus_vs_1	Ex-4	Post	0
+J_M2	Fast	2plus_vs_1	Ex-4	Post	40
+J_M2	Fast	3plus_vs_1	Ex-4	Post	8
+J_M2	Intermediate	2plus_vs_1	Ex-4	Post	1
+J_M2	Intermediate	3plus_vs_1	Ex-4	Post	1
+J_M2	LUM+ FAP Cells	2plus_vs_1	Ex-4	Post	0
+J_M2	LUM+ FAP Cells	3plus_vs_1	Ex-4	Post	0
+J_M2	Macrophages	2plus_vs_1	Ex-4	Post	1
+J_M2	Macrophages	3plus_vs_1	Ex-4	Post	0
+J_M2	Mast Cells	2plus_vs_1	Ex-4	Post	0
+J_M2	Mast Cells	3plus_vs_1	Ex-4	Post	0
+J_M2	NK Cells	2plus_vs_1	Ex-4	Post	0
+J_M2	NK Cells	3plus_vs_1	Ex-4	Post	0
+J_M2	Pericytes	2plus_vs_1	Ex-4	Post	1
+J_M2	Pericytes	3plus_vs_1	Ex-4	Post	0
+J_M2	Satellite Cells	2plus_vs_1	Ex-4	Post	0
+J_M2	Satellite Cells	3plus_vs_1	Ex-4	Post	0
+J_M2	Slow	2plus_vs_1	Ex-4	Post	130
+J_M2	Slow	3plus_vs_1	Ex-4	Post	64
+J_M2	T Cells	2plus_vs_1	Ex-4	Post	0
+J_M2	T Cells	3plus_vs_1	Ex-4	Post	0
+L_M1	B Cells	2plus_vs_1	Ctrl-2	Pre	0
+L_M1	B Cells	3plus_vs_1	Ctrl-2	Pre	0
+L_M1	Dendritic Cells	2plus_vs_1	Ctrl-2	Pre	0
+L_M1	Dendritic Cells	3plus_vs_1	Ctrl-2	Pre	0
+L_M1	Endothelial Cells	2plus_vs_1	Ctrl-2	Pre	0
+L_M1	Endothelial Cells	3plus_vs_1	Ctrl-2	Pre	0
+L_M1	FBN1+ FAP Cells	2plus_vs_1	Ctrl-2	Pre	0
+L_M1	FBN1+ FAP Cells	3plus_vs_1	Ctrl-2	Pre	0
+L_M1	Fast	2plus_vs_1	Ctrl-2	Pre	5
+L_M1	Fast	3plus_vs_1	Ctrl-2	Pre	3
+L_M1	Intermediate	2plus_vs_1	Ctrl-2	Pre	0
+L_M1	Intermediate	3plus_vs_1	Ctrl-2	Pre	0
+L_M1	LUM+ FAP Cells	2plus_vs_1	Ctrl-2	Pre	1
+L_M1	LUM+ FAP Cells	3plus_vs_1	Ctrl-2	Pre	0
+L_M1	Macrophages	2plus_vs_1	Ctrl-2	Pre	0
+L_M1	Macrophages	3plus_vs_1	Ctrl-2	Pre	0
+L_M1	Mast Cells	2plus_vs_1	Ctrl-2	Pre	0
+L_M1	Mast Cells	3plus_vs_1	Ctrl-2	Pre	0
+L_M1	NK Cells	2plus_vs_1	Ctrl-2	Pre	0
+L_M1	NK Cells	3plus_vs_1	Ctrl-2	Pre	0
+L_M1	Pericytes	2plus_vs_1	Ctrl-2	Pre	0
+L_M1	Pericytes	3plus_vs_1	Ctrl-2	Pre	0
+L_M1	Satellite Cells	2plus_vs_1	Ctrl-2	Pre	0
+L_M1	Satellite Cells	3plus_vs_1	Ctrl-2	Pre	0
+L_M1	Slow	2plus_vs_1	Ctrl-2	Pre	0
+L_M1	Slow	3plus_vs_1	Ctrl-2	Pre	0
+L_M1	T Cells	2plus_vs_1	Ctrl-2	Pre	0
+L_M1	T Cells	3plus_vs_1	Ctrl-2	Pre	0
+L_M2	B Cells	2plus_vs_1	Ctrl-2	Post	0
+L_M2	B Cells	3plus_vs_1	Ctrl-2	Post	0
+L_M2	Dendritic Cells	2plus_vs_1	Ctrl-2	Post	0
+L_M2	Dendritic Cells	3plus_vs_1	Ctrl-2	Post	0
+L_M2	Endothelial Cells	2plus_vs_1	Ctrl-2	Post	0
+L_M2	Endothelial Cells	3plus_vs_1	Ctrl-2	Post	0
+L_M2	FBN1+ FAP Cells	2plus_vs_1	Ctrl-2	Post	0
+L_M2	FBN1+ FAP Cells	3plus_vs_1	Ctrl-2	Post	0
+L_M2	Fast	2plus_vs_1	Ctrl-2	Post	15
+L_M2	Fast	3plus_vs_1	Ctrl-2	Post	12
+L_M2	Intermediate	2plus_vs_1	Ctrl-2	Post	0
+L_M2	Intermediate	3plus_vs_1	Ctrl-2	Post	0
+L_M2	LUM+ FAP Cells	2plus_vs_1	Ctrl-2	Post	2
+L_M2	LUM+ FAP Cells	3plus_vs_1	Ctrl-2	Post	2
+L_M2	Macrophages	2plus_vs_1	Ctrl-2	Post	0
+L_M2	Macrophages	3plus_vs_1	Ctrl-2	Post	0
+L_M2	Mast Cells	2plus_vs_1	Ctrl-2	Post	0
+L_M2	Mast Cells	3plus_vs_1	Ctrl-2	Post	0
+L_M2	NK Cells	2plus_vs_1	Ctrl-2	Post	0
+L_M2	NK Cells	3plus_vs_1	Ctrl-2	Post	0
+L_M2	Pericytes	2plus_vs_1	Ctrl-2	Post	0
+L_M2	Pericytes	3plus_vs_1	Ctrl-2	Post	0
+L_M2	Satellite Cells	2plus_vs_1	Ctrl-2	Post	1
+L_M2	Satellite Cells	3plus_vs_1	Ctrl-2	Post	1
+L_M2	Slow	2plus_vs_1	Ctrl-2	Post	11
+L_M2	Slow	3plus_vs_1	Ctrl-2	Post	8
+L_M2	T Cells	2plus_vs_1	Ctrl-2	Post	0
+L_M2	T Cells	3plus_vs_1	Ctrl-2	Post	0
+N_M1	B Cells	2plus_vs_1	Ctrl-1	Pre	0
+N_M1	B Cells	3plus_vs_1	Ctrl-1	Pre	0
+N_M1	Dendritic Cells	2plus_vs_1	Ctrl-1	Pre	0
+N_M1	Dendritic Cells	3plus_vs_1	Ctrl-1	Pre	0
+N_M1	Endothelial Cells	2plus_vs_1	Ctrl-1	Pre	4
+N_M1	Endothelial Cells	3plus_vs_1	Ctrl-1	Pre	1
+N_M1	FBN1+ FAP Cells	2plus_vs_1	Ctrl-1	Pre	1
+N_M1	FBN1+ FAP Cells	3plus_vs_1	Ctrl-1	Pre	1
+N_M1	Fast	2plus_vs_1	Ctrl-1	Pre	273
+N_M1	Fast	3plus_vs_1	Ctrl-1	Pre	109
+N_M1	Intermediate	2plus_vs_1	Ctrl-1	Pre	20
+N_M1	Intermediate	3plus_vs_1	Ctrl-1	Pre	17
+N_M1	LUM+ FAP Cells	2plus_vs_1	Ctrl-1	Pre	9
+N_M1	LUM+ FAP Cells	3plus_vs_1	Ctrl-1	Pre	3
+N_M1	Macrophages	2plus_vs_1	Ctrl-1	Pre	0
+N_M1	Macrophages	3plus_vs_1	Ctrl-1	Pre	0
+N_M1	Mast Cells	2plus_vs_1	Ctrl-1	Pre	0
+N_M1	Mast Cells	3plus_vs_1	Ctrl-1	Pre	0
+N_M1	NK Cells	2plus_vs_1	Ctrl-1	Pre	0
+N_M1	NK Cells	3plus_vs_1	Ctrl-1	Pre	0
+N_M1	Pericytes	2plus_vs_1	Ctrl-1	Pre	2
+N_M1	Pericytes	3plus_vs_1	Ctrl-1	Pre	1
+N_M1	Satellite Cells	2plus_vs_1	Ctrl-1	Pre	1
+N_M1	Satellite Cells	3plus_vs_1	Ctrl-1	Pre	0
+N_M1	Slow	2plus_vs_1	Ctrl-1	Pre	267
+N_M1	Slow	3plus_vs_1	Ctrl-1	Pre	144
+N_M1	T Cells	2plus_vs_1	Ctrl-1	Pre	1
+N_M1	T Cells	3plus_vs_1	Ctrl-1	Pre	0
+N_M2	B Cells	2plus_vs_1	Ctrl-1	Post	0
+N_M2	B Cells	3plus_vs_1	Ctrl-1	Post	0
+N_M2	Dendritic Cells	2plus_vs_1	Ctrl-1	Post	0
+N_M2	Dendritic Cells	3plus_vs_1	Ctrl-1	Post	0
+N_M2	Endothelial Cells	2plus_vs_1	Ctrl-1	Post	0
+N_M2	Endothelial Cells	3plus_vs_1	Ctrl-1	Post	0
+N_M2	FBN1+ FAP Cells	2plus_vs_1	Ctrl-1	Post	0
+N_M2	FBN1+ FAP Cells	3plus_vs_1	Ctrl-1	Post	0
+N_M2	Fast	2plus_vs_1	Ctrl-1	Post	58
+N_M2	Fast	3plus_vs_1	Ctrl-1	Post	22
+N_M2	Intermediate	2plus_vs_1	Ctrl-1	Post	0
+N_M2	Intermediate	3plus_vs_1	Ctrl-1	Post	0
+N_M2	LUM+ FAP Cells	2plus_vs_1	Ctrl-1	Post	1
+N_M2	LUM+ FAP Cells	3plus_vs_1	Ctrl-1	Post	1
+N_M2	Macrophages	2plus_vs_1	Ctrl-1	Post	0
+N_M2	Macrophages	3plus_vs_1	Ctrl-1	Post	0
+N_M2	Mast Cells	2plus_vs_1	Ctrl-1	Post	0
+N_M2	Mast Cells	3plus_vs_1	Ctrl-1	Post	0
+N_M2	NK Cells	2plus_vs_1	Ctrl-1	Post	0
+N_M2	NK Cells	3plus_vs_1	Ctrl-1	Post	0
+N_M2	Pericytes	2plus_vs_1	Ctrl-1	Post	0
+N_M2	Pericytes	3plus_vs_1	Ctrl-1	Post	0
+N_M2	Satellite Cells	2plus_vs_1	Ctrl-1	Post	0
+N_M2	Satellite Cells	3plus_vs_1	Ctrl-1	Post	0
+N_M2	Slow	2plus_vs_1	Ctrl-1	Post	29
+N_M2	Slow	3plus_vs_1	Ctrl-1	Post	23
+N_M2	T Cells	2plus_vs_1	Ctrl-1	Post	0
+N_M2	T Cells	3plus_vs_1	Ctrl-1	Post	0

@@ -1,0 +1,57 @@
+time	celltype	contrast	n_pairs	n_donors_with_pairs
+Post	B Cells	2plus_vs_1	0	0
+Post	B Cells	3plus_vs_1	0	0
+Post	Dendritic Cells	2plus_vs_1	0	0
+Post	Dendritic Cells	3plus_vs_1	0	0
+Post	Endothelial Cells	2plus_vs_1	7	2
+Post	Endothelial Cells	3plus_vs_1	3	2
+Post	FBN1+ FAP Cells	2plus_vs_1	1	1
+Post	FBN1+ FAP Cells	3plus_vs_1	0	0
+Post	Fast	2plus_vs_1	485	6
+Post	Fast	3plus_vs_1	149	6
+Post	Intermediate	2plus_vs_1	20	4
+Post	Intermediate	3plus_vs_1	8	4
+Post	LUM+ FAP Cells	2plus_vs_1	18	5
+Post	LUM+ FAP Cells	3plus_vs_1	7	5
+Post	Macrophages	2plus_vs_1	2	2
+Post	Macrophages	3plus_vs_1	1	1
+Post	Mast Cells	2plus_vs_1	0	0
+Post	Mast Cells	3plus_vs_1	0	0
+Post	NK Cells	2plus_vs_1	0	0
+Post	NK Cells	3plus_vs_1	0	0
+Post	Pericytes	2plus_vs_1	1	1
+Post	Pericytes	3plus_vs_1	0	0
+Post	Satellite Cells	2plus_vs_1	4	3
+Post	Satellite Cells	3plus_vs_1	1	1
+Post	Slow	2plus_vs_1	607	6
+Post	Slow	3plus_vs_1	307	6
+Post	T Cells	2plus_vs_1	1	1
+Post	T Cells	3plus_vs_1	0	0
+Pre	B Cells	2plus_vs_1	0	0
+Pre	B Cells	3plus_vs_1	0	0
+Pre	Dendritic Cells	2plus_vs_1	0	0
+Pre	Dendritic Cells	3plus_vs_1	0	0
+Pre	Endothelial Cells	2plus_vs_1	9	4
+Pre	Endothelial Cells	3plus_vs_1	2	2
+Pre	FBN1+ FAP Cells	2plus_vs_1	3	2
+Pre	FBN1+ FAP Cells	3plus_vs_1	1	1
+Pre	Fast	2plus_vs_1	1707	6
+Pre	Fast	3plus_vs_1	846	6
+Pre	Intermediate	2plus_vs_1	151	5
+Pre	Intermediate	3plus_vs_1	94	5
+Pre	LUM+ FAP Cells	2plus_vs_1	80	6
+Pre	LUM+ FAP Cells	3plus_vs_1	39	5
+Pre	Macrophages	2plus_vs_1	2	1
+Pre	Macrophages	3plus_vs_1	0	0
+Pre	Mast Cells	2plus_vs_1	0	0
+Pre	Mast Cells	3plus_vs_1	0	0
+Pre	NK Cells	2plus_vs_1	0	0
+Pre	NK Cells	3plus_vs_1	0	0
+Pre	Pericytes	2plus_vs_1	5	3
+Pre	Pericytes	3plus_vs_1	3	2
+Pre	Satellite Cells	2plus_vs_1	12	3
+Pre	Satellite Cells	3plus_vs_1	3	1
+Pre	Slow	2plus_vs_1	1630	5
+Pre	Slow	3plus_vs_1	1006	5
+Pre	T Cells	2plus_vs_1	2	2
+Pre	T Cells	3plus_vs_1	1	1

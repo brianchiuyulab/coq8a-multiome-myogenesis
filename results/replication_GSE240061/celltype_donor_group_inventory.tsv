@@ -1,0 +1,168 @@
+Sample	donor	time	group	celltype	n_nuclei	n_COQ8A_zero	n_COQ8A_eq1	n_COQ8A_ge2	n_COQ8A_ge3	n_CAV3_detected	median_RNA_depth	median_open_peaks
+E_M1	Ex-1	Pre	Exercise	Dendritic Cells	16	13	3	0	0	0	3730.0	2820.0
+E_M1	Ex-1	Pre	Exercise	Endothelial Cells	148	121	19	8	4	3	3118.5	4387.0
+E_M1	Ex-1	Pre	Exercise	FBN1+ FAP Cells	78	70	2	6	3	2	3209.5	6514.0
+E_M1	Ex-1	Pre	Exercise	Fast	1645	805	514	326	153	265	3801.0	7379.0
+E_M1	Ex-1	Pre	Exercise	Intermediate	256	83	82	91	47	59	4876.0	7931.5
+E_M1	Ex-1	Pre	Exercise	LUM+ FAP Cells	546	477	46	23	9	22	3528.0	6926.5
+E_M1	Ex-1	Pre	Exercise	Macrophages	110	95	11	4	1	2	2428.0	3816.0
+E_M1	Ex-1	Pre	Exercise	Mast Cells	5	3	2	0	0	1	1618.0	5762.0
+E_M1	Ex-1	Pre	Exercise	NK Cells	28	27	1	0	0	1	1725.5	3070.0
+E_M1	Ex-1	Pre	Exercise	Pericytes	74	56	9	9	5	3	2417.5	4890.0
+E_M1	Ex-1	Pre	Exercise	Satellite Cells	255	220	29	6	4	15	2053.0	6341.0
+E_M1	Ex-1	Pre	Exercise	Slow	2494	1037	707	750	319	416	4371.0	7843.0
+E_M1	Ex-1	Pre	Exercise	T Cells	25	21	2	2	1	0	1796.0	3331.0
+E_M2	Ex-1	Post	Exercise	B Cells	3	3	0	0	0	0	2953.0	3494.0
+E_M2	Ex-1	Post	Exercise	Dendritic Cells	34	28	5	1	0	0	3878.5	3776.5
+E_M2	Ex-1	Post	Exercise	Endothelial Cells	143	121	15	7	3	5	3238.0	5160.0
+E_M2	Ex-1	Post	Exercise	FBN1+ FAP Cells	163	150	9	4	1	8	3537.0	8228.0
+E_M2	Ex-1	Post	Exercise	Fast	1492	858	392	242	82	375	4139.5	9069.5
+E_M2	Ex-1	Post	Exercise	Intermediate	110	38	26	46	20	26	4422.5	9762.5
+E_M2	Ex-1	Post	Exercise	LUM+ FAP Cells	543	474	55	14	4	16	3929.0	9389.0
+E_M2	Ex-1	Post	Exercise	Macrophages	182	164	15	3	1	3	2285.5	4823.5
+E_M2	Ex-1	Post	Exercise	Mast Cells	28	21	4	3	1	2	2353.0	4766.0
+E_M2	Ex-1	Post	Exercise	NK Cells	61	59	1	1	0	0	2002.0	3131.0
+E_M2	Ex-1	Post	Exercise	Pericytes	65	56	6	3	1	0	2428.0	5784.0
+E_M2	Ex-1	Post	Exercise	Satellite Cells	179	149	22	8	2	10	2247.0	7905.0
+E_M2	Ex-1	Post	Exercise	Slow	684	258	210	216	99	153	4536.5	9390.0
+E_M2	Ex-1	Post	Exercise	T Cells	72	67	2	3	2	2	2237.0	4025.5
+G_M1	Ex-3	Pre	Exercise	B Cells	2	1	1	0	0	0	3016.5	5177.0
+G_M1	Ex-3	Pre	Exercise	Dendritic Cells	27	19	5	3	1	2	4261.0	3763.0
+G_M1	Ex-3	Pre	Exercise	Endothelial Cells	421	370	37	14	6	5	3032.0	6161.0
+G_M1	Ex-3	Pre	Exercise	FBN1+ FAP Cells	25	23	2	0	0	1	4614.0	9994.0
+G_M1	Ex-3	Pre	Exercise	Fast	556	218	156	182	89	106	4454.5	10820.5
+G_M1	Ex-3	Pre	Exercise	Intermediate	44	9	12	23	16	10	5465.5	11917.0
+G_M1	Ex-3	Pre	Exercise	LUM+ FAP Cells	303	250	36	17	5	9	4537.0	10149.0
+G_M1	Ex-3	Pre	Exercise	Macrophages	103	87	11	5	1	3	3537.0	5349.0
+G_M1	Ex-3	Pre	Exercise	Mast Cells	14	11	3	0	0	0	2958.5	7556.0
+G_M1	Ex-3	Pre	Exercise	NK Cells	24	19	4	1	1	0	2467.5	4052.5
+G_M1	Ex-3	Pre	Exercise	Pericytes	34	26	6	2	0	1	3505.5	7083.0
+G_M1	Ex-3	Pre	Exercise	Satellite Cells	49	43	5	1	0	3	3161.0	8163.0
+G_M1	Ex-3	Pre	Exercise	Slow	282	86	74	122	67	50	4532.0	11087.5
+G_M1	Ex-3	Pre	Exercise	T Cells	27	25	2	0	0	0	2888.0	4729.0
+G_M2	Ex-3	Post	Exercise	B Cells	2	2	0	0	0	0	2666.0	3670.5
+G_M2	Ex-3	Post	Exercise	Dendritic Cells	27	21	5	1	1	2	5222.0	4561.0
+G_M2	Ex-3	Post	Exercise	Endothelial Cells	419	350	50	19	6	7	2349.0	4739.0
+G_M2	Ex-3	Post	Exercise	FBN1+ FAP Cells	30	25	4	1	0	4	4358.5	8650.5
+G_M2	Ex-3	Post	Exercise	Fast	779	580	149	50	14	181	3305.0	8693.0
+G_M2	Ex-3	Post	Exercise	Intermediate	64	18	17	29	15	25	4575.5	10405.0
+G_M2	Ex-3	Post	Exercise	LUM+ FAP Cells	303	242	46	15	7	12	3909.0	8252.0
+G_M2	Ex-3	Post	Exercise	Macrophages	84	70	11	3	2	0	3296.5	3461.0
+G_M2	Ex-3	Post	Exercise	Mast Cells	13	12	1	0	0	0	3078.0	4678.0
+G_M2	Ex-3	Post	Exercise	NK Cells	51	46	4	1	0	1	2178.0	2887.0
+G_M2	Ex-3	Post	Exercise	Pericytes	57	52	5	0	0	0	2600.0	4805.0
+G_M2	Ex-3	Post	Exercise	Satellite Cells	116	89	16	11	4	12	2383.5	7954.0
+G_M2	Ex-3	Post	Exercise	Slow	846	416	248	182	68	208	3520.5	8450.0
+G_M2	Ex-3	Post	Exercise	T Cells	69	57	7	5	1	1	2403.0	3316.0
+I_M1	Ex-2	Pre	Exercise	B Cells	5	4	1	0	0	0	2361.0	2280.0
+I_M1	Ex-2	Pre	Exercise	Dendritic Cells	27	19	6	2	1	1	4741.0	3215.0
+I_M1	Ex-2	Pre	Exercise	Endothelial Cells	70	48	9	13	8	7	3315.0	3227.5
+I_M1	Ex-2	Pre	Exercise	FBN1+ FAP Cells	84	72	6	6	4	4	4210.0	5286.0
+I_M1	Ex-2	Pre	Exercise	Fast	1820	677	518	625	321	291	3457.5	4604.5
+I_M1	Ex-2	Pre	Exercise	Intermediate	177	48	42	87	46	45	4180.0	4679.0
+I_M1	Ex-2	Pre	Exercise	LUM+ FAP Cells	542	430	46	66	40	34	3570.5	5351.0
+I_M1	Ex-2	Pre	Exercise	Macrophages	106	92	8	6	2	3	2488.0	2640.0
+I_M1	Ex-2	Pre	Exercise	Mast Cells	27	21	2	4	3	0	1744.0	3378.0
+I_M1	Ex-2	Pre	Exercise	NK Cells	27	22	3	2	1	1	2468.0	2074.0
+I_M1	Ex-2	Pre	Exercise	Pericytes	69	47	12	10	8	4	3261.0	3491.0
+I_M1	Ex-2	Pre	Exercise	Satellite Cells	148	128	14	6	3	8	1973.0	4554.0
+I_M1	Ex-2	Pre	Exercise	Slow	1499	412	376	711	426	239	4277.0	5171.0
+I_M1	Ex-2	Pre	Exercise	T Cells	61	47	9	5	5	3	2353.0	2278.0
+I_M2	Ex-2	Post	Exercise	B Cells	34	29	3	2	1	0	3045.0	1986.0
+I_M2	Ex-2	Post	Exercise	Dendritic Cells	40	37	3	0	0	0	3252.5	2125.0
+I_M2	Ex-2	Post	Exercise	Endothelial Cells	65	48	7	10	5	7	4061.0	2556.0
+I_M2	Ex-2	Post	Exercise	FBN1+ FAP Cells	40	33	4	3	1	3	3973.5	3616.0
+I_M2	Ex-2	Post	Exercise	Fast	1443	908	378	157	35	236	3158.0	3636.0
+I_M2	Ex-2	Post	Exercise	Intermediate	63	21	25	17	4	21	3842.0	3962.0
+I_M2	Ex-2	Post	Exercise	LUM+ FAP Cells	305	254	37	14	5	10	3697.0	3877.0
+I_M2	Ex-2	Post	Exercise	Macrophages	61	48	9	4	1	2	2810.0	2406.0
+I_M2	Ex-2	Post	Exercise	Mast Cells	11	6	3	2	0	0	4816.0	4612.0
+I_M2	Ex-2	Post	Exercise	NK Cells	45	42	3	0	0	2	2375.0	1676.0
+I_M2	Ex-2	Post	Exercise	Pericytes	24	19	3	2	0	2	2517.0	2400.0
+I_M2	Ex-2	Post	Exercise	Satellite Cells	95	81	9	5	2	5	2210.0	3085.0
+I_M2	Ex-2	Post	Exercise	Slow	754	338	221	195	95	130	3861.5	4046.0
+I_M2	Ex-2	Post	Exercise	T Cells	127	114	5	8	2	4	2584.0	1735.0
+J_M1	Ex-4	Pre	Exercise	B Cells	3	1	1	1	0	0	1885.0	2273.0
+J_M1	Ex-4	Pre	Exercise	Dendritic Cells	25	19	5	1	1	0	4127.0	2716.0
+J_M1	Ex-4	Pre	Exercise	Endothelial Cells	106	70	20	16	6	9	2628.5	2598.5
+J_M1	Ex-4	Pre	Exercise	FBN1+ FAP Cells	171	139	18	14	5	9	3312.0	4547.0
+J_M1	Ex-4	Pre	Exercise	Fast	2893	1317	860	716	319	515	3858.0	4905.0
+J_M1	Ex-4	Pre	Exercise	Intermediate	366	94	104	168	108	74	4769.5	5088.0
+J_M1	Ex-4	Pre	Exercise	LUM+ FAP Cells	970	738	155	77	38	42	3260.5	4890.0
+J_M1	Ex-4	Pre	Exercise	Macrophages	177	140	24	13	8	8	2242.0	2867.0
+J_M1	Ex-4	Pre	Exercise	Mast Cells	13	8	3	2	0	2	1888.0	3280.0
+J_M1	Ex-4	Pre	Exercise	NK Cells	28	21	3	4	2	1	2173.0	2029.5
+J_M1	Ex-4	Pre	Exercise	Pericytes	86	70	6	10	4	3	2248.0	3293.5
+J_M1	Ex-4	Pre	Exercise	Satellite Cells	363	288	54	21	7	22	2228.0	4519.0
+J_M1	Ex-4	Pre	Exercise	Slow	1668	468	493	707	401	284	4577.0	5063.5
+J_M1	Ex-4	Pre	Exercise	T Cells	42	29	9	4	2	3	2041.0	2228.0
+J_M2	Ex-4	Post	Exercise	B Cells	7	3	4	0	0	0	1855.0	3869.0
+J_M2	Ex-4	Post	Exercise	Dendritic Cells	22	19	2	1	0	1	4259.0	5068.5
+J_M2	Ex-4	Post	Exercise	Endothelial Cells	39	37	1	1	0	0	2438.0	5828.0
+J_M2	Ex-4	Post	Exercise	FBN1+ FAP Cells	61	51	9	1	0	2	4548.0	9074.0
+J_M2	Ex-4	Post	Exercise	Fast	645	470	121	54	10	111	3858.0	10404.0
+J_M2	Ex-4	Post	Exercise	Intermediate	42	14	15	13	7	8	4946.0	8945.0
+J_M2	Ex-4	Post	Exercise	LUM+ FAP Cells	289	251	34	4	1	6	4237.0	10532.0
+J_M2	Ex-4	Post	Exercise	Macrophages	107	94	10	3	0	0	2589.0	5635.0
+J_M2	Ex-4	Post	Exercise	Mast Cells	11	7	2	2	1	0	1853.0	3701.0
+J_M2	Ex-4	Post	Exercise	NK Cells	46	44	2	0	0	0	1885.0	3567.0
+J_M2	Ex-4	Post	Exercise	Pericytes	28	23	2	3	1	0	2649.0	7201.0
+J_M2	Ex-4	Post	Exercise	Satellite Cells	70	59	9	2	1	1	2457.5	8679.0
+J_M2	Ex-4	Post	Exercise	Slow	590	233	173	184	76	119	4431.0	10502.0
+J_M2	Ex-4	Post	Exercise	T Cells	37	34	3	0	0	0	1988.0	3254.0
+L_M1	Ctrl-2	Pre	Control	B Cells	2	2	0	0	0	0	2110.5	6611.0
+L_M1	Ctrl-2	Pre	Control	Dendritic Cells	13	9	3	1	0	0	6834.0	5866.0
+L_M1	Ctrl-2	Pre	Control	Endothelial Cells	25	21	3	1	0	0	2978.0	5345.0
+L_M1	Ctrl-2	Pre	Control	FBN1+ FAP Cells	28	26	1	1	1	1	6248.0	13206.5
+L_M1	Ctrl-2	Pre	Control	Fast	71	23	17	31	15	9	5399.0	12233.0
+L_M1	Ctrl-2	Pre	Control	Intermediate	4	0	2	2	2	1	7247.0	10191.0
+L_M1	Ctrl-2	Pre	Control	LUM+ FAP Cells	93	71	19	3	0	1	5468.0	13827.0
+L_M1	Ctrl-2	Pre	Control	Macrophages	29	26	2	1	0	1	3893.0	6370.0
+L_M1	Ctrl-2	Pre	Control	Mast Cells	9	7	2	0	0	0	3289.0	6671.0
+L_M1	Ctrl-2	Pre	Control	NK Cells	12	12	0	0	0	0	2813.0	5737.5
+L_M1	Ctrl-2	Pre	Control	Pericytes	7	4	3	0	0	0	3998.0	8664.0
+L_M1	Ctrl-2	Pre	Control	Satellite Cells	12	10	2	0	0	0	2564.5	11513.5
+L_M1	Ctrl-2	Pre	Control	Slow	17	3	3	11	9	3	5757.0	14477.0
+L_M1	Ctrl-2	Pre	Control	T Cells	32	28	2	2	1	1	3136.5	5264.0
+L_M2	Ctrl-2	Post	Control	B Cells	2	2	0	0	0	0	2610.5	3570.0
+L_M2	Ctrl-2	Post	Control	Dendritic Cells	11	10	1	0	0	1	5550.0	3776.0
+L_M2	Ctrl-2	Post	Control	Endothelial Cells	46	38	4	4	1	5	4011.5	6872.0
+L_M2	Ctrl-2	Post	Control	FBN1+ FAP Cells	20	14	4	2	2	0	5342.5	10815.5
+L_M2	Ctrl-2	Post	Control	Fast	111	40	25	46	30	21	5108.0	10908.0
+L_M2	Ctrl-2	Post	Control	Intermediate	7	0	0	7	7	5	14878.0	14124.0
+L_M2	Ctrl-2	Post	Control	LUM+ FAP Cells	86	71	8	7	4	4	4263.5	11926.0
+L_M2	Ctrl-2	Post	Control	Macrophages	17	14	3	0	0	1	3970.0	7023.0
+L_M2	Ctrl-2	Post	Control	Mast Cells	8	4	4	0	0	0	2838.5	2360.5
+L_M2	Ctrl-2	Post	Control	NK Cells	12	12	0	0	0	0	3046.0	4078.5
+L_M2	Ctrl-2	Post	Control	Pericytes	27	19	5	3	1	2	3807.0	7551.0
+L_M2	Ctrl-2	Post	Control	Satellite Cells	20	15	3	2	2	1	2474.0	7963.0
+L_M2	Ctrl-2	Post	Control	Slow	64	7	17	40	31	14	5825.5	11877.5
+L_M2	Ctrl-2	Post	Control	T Cells	20	13	4	3	3	2	3063.0	4196.5
+N_M1	Ctrl-1	Pre	Control	B Cells	4	4	0	0	0	0	1778.5	2134.5
+N_M1	Ctrl-1	Pre	Control	Dendritic Cells	18	10	6	2	1	1	5125.5	2750.0
+N_M1	Ctrl-1	Pre	Control	Endothelial Cells	175	132	24	19	8	9	4218.0	3189.0
+N_M1	Ctrl-1	Pre	Control	FBN1+ FAP Cells	99	79	8	12	8	4	4260.0	5257.0
+N_M1	Ctrl-1	Pre	Control	Fast	1750	906	484	360	148	323	3885.5	5103.0
+N_M1	Ctrl-1	Pre	Control	Intermediate	186	55	42	89	61	41	5429.0	5692.5
+N_M1	Ctrl-1	Pre	Control	LUM+ FAP Cells	494	418	45	31	13	26	3355.0	5234.5
+N_M1	Ctrl-1	Pre	Control	Macrophages	94	79	9	6	1	6	2563.5	3641.0
+N_M1	Ctrl-1	Pre	Control	Mast Cells	5	5	0	0	0	1	1407.0	2070.0
+N_M1	Ctrl-1	Pre	Control	NK Cells	31	29	2	0	0	0	2113.0	1882.0
+N_M1	Ctrl-1	Pre	Control	Pericytes	95	67	17	11	8	10	5096.0	4393.0
+N_M1	Ctrl-1	Pre	Control	Satellite Cells	157	126	27	4	2	17	2390.0	4493.0
+N_M1	Ctrl-1	Pre	Control	Slow	1372	538	391	443	224	235	4820.0	5849.5
+N_M1	Ctrl-1	Pre	Control	T Cells	34	25	5	4	2	5	3897.0	2701.0
+N_M2	Ctrl-1	Post	Control	B Cells	5	4	1	0	0	0	4323.0	6313.0
+N_M2	Ctrl-1	Post	Control	Dendritic Cells	7	6	1	0	0	0	8069.0	2626.0
+N_M2	Ctrl-1	Post	Control	Endothelial Cells	35	26	7	2	0	0	2279.0	4584.0
+N_M2	Ctrl-1	Post	Control	FBN1+ FAP Cells	35	31	3	1	0	2	5321.0	11431.0
+N_M2	Ctrl-1	Post	Control	Fast	359	172	101	86	29	115	5631.0	10319.0
+N_M2	Ctrl-1	Post	Control	Intermediate	26	9	6	11	7	12	4545.5	9768.0
+N_M2	Ctrl-1	Post	Control	LUM+ FAP Cells	144	117	24	3	1	7	5061.5	11220.5
+N_M2	Ctrl-1	Post	Control	Macrophages	51	41	10	0	0	3	3740.0	5179.0
+N_M2	Ctrl-1	Post	Control	Mast Cells	5	5	0	0	0	0	3067.0	5916.0
+N_M2	Ctrl-1	Post	Control	NK Cells	21	18	3	0	0	1	2815.0	4276.0
+N_M2	Ctrl-1	Post	Control	Pericytes	17	15	1	1	1	0	2688.0	6573.0
+N_M2	Ctrl-1	Post	Control	Satellite Cells	38	31	6	1	0	5	2823.0	11171.0
+N_M2	Ctrl-1	Post	Control	Slow	174	57	57	60	39	43	6262.5	11839.0
+N_M2	Ctrl-1	Post	Control	T Cells	34	30	4	0	0	0	3351.0	4767.5

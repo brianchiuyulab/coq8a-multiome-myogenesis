@@ -145,7 +145,7 @@ and are not relabelled as COQ8A OE/KD experiments.
 
 | Dataset | Design | Appropriate role | Work completed |
 |---|---|---|---|
-| GSE240061 | Same-nucleus human RNA/ATAC; 6 participants, 12 biopsies; 4 exercise and 2 resting controls, each pre/post | Independent COQ8A-accessibility assessment within cell type, donor and time | GEO and full-paper design audited; processed 3.5-GB RDS and fragment files located; COQ8A test not yet run |
+| GSE240061 | Same-nucleus human RNA/ATAC; 6 participants, 12 biopsies; 4 exercise and 2 resting controls, each pre/post | Independent COQ8A-accessibility assessment within cell type, donor and time | RDS downloaded; paired counts, cell types, COQ8A groups and matching audited; differential-accessibility test not yet run |
 | GSE224489 | Bulk C2C12 differentiation RNA time course, GM/60h ATAC and Hi-C | Independent differentiation relevance and orthologous-region annotation | RNA analyzed and author ATAC calls intersected as above |
 | GSE191190, subseries GSE191188/191189; GSE145297 | Regeneration scRNA, separate MuSC ATAC after PGE2/aging and bulk RNA | Potential external functional-response reference | Metadata audited; not a same-nucleus COQ8A high/low test |
 | GSE221736 | Muscle denervation, including limited multiome samples | Lower-priority alternative context | GEO reviewed; no new analysis |
@@ -154,8 +154,10 @@ and are not relabelled as COQ8A OE/KD experiments.
 GSE240061's GEO overall-design text mentions PBMCs, but the paper and series
 summary identify vastus lateralis skeletal muscle. The full paper describes
 rare satellite cells and no significant exercise-induced DARs in that population;
-this is not a result about COQ8A. Cell-type counts, COQ8A detection and paired
-matrix availability must be checked before a MuSC replication claim. Twelve
+this is not a result about COQ8A. Actual cell-type counts, COQ8A detection and
+paired matrices are now checked in `GSE240061_FEASIBILITY_RESULTS.md`; the old
+strict high/low matching rule leaves only three baseline satellite pairs from
+one donor. A six-donor MuSC replication claim is therefore not justified. Twelve
 biopsies and multiple sequencing libraries must not be counted as twelve
 independent donors. New cohorts are assessed for relevance and usable design,
 not chosen on the basis of a favorable COQ8A association.

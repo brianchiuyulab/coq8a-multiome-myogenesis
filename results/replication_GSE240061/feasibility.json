@@ -1,0 +1,14 @@
+{
+  "n_nuclei": 37154,
+  "n_donors": 6,
+  "n_samples": 12,
+  "RNA_features": 36601,
+  "ATAC_features": 144663,
+  "author_annotation_column": "refined_annotations_wknn_0.8",
+  "n_celltypes": 14,
+  "same_nucleus_barcodes_verified": true,
+  "QC": "Author-retained nuclei; deposited metadata lack TSS enrichment, FRiP, blacklist and nucleosome metrics; no new TSS>=3 claim",
+  "matching": "Original log1p RNA UMI and detected-peak caliper 0.10; without replacement, within sample and cell type",
+  "status": "Feasibility and coordinate audit; differential-accessibility p/q not yet calculated",
+  "matching_scope": "No additional old-library depth caps or reconstructed fragment QC imposed at this feasibility stage"
+}

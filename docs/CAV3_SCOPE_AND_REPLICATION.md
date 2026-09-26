@@ -19,6 +19,10 @@ a myogenic regulatory element can also function in another cell type.
 
 Within these scopes, COQ8A-associated accessibility, effect direction across
 sources, RNA coupling and independent differentiation evidence are inspected.
+The named CAV3 candidate predates the 401-peak scope; it was retained as a
+previously discussed focal gene, not selected automatically from that scope.
+The complete code-level provenance and uniform candidate comparison are in
+`CANDIDATE_PROVENANCE_AND_REPLICATION_PLAN.md`.
 This is exploratory prioritization rather than a sequence of FDR-positive gates.
 CAV3 is prioritized because multiple types of evidence support a differentiation
 relationship, not because it passed the accessibility FDR threshold.
@@ -69,21 +73,20 @@ kept outside this repository and are not COQ8A perturbation contrasts.
 | Nuclei | 32,977 after the current analysis QC | 37,154 after author QC |
 | Cell composition | Cultured myogenic populations | 14 annotated cell types, including fibers and rare satellite cells |
 | Processed inputs | RNA/peak matrices, barcode metrics, fragments | Approximately 3.5-GB compressed RDS; approximately 21-GiB fragment archive |
-| COQ8A analysis status | Current matched comparison completed | Metadata reviewed; paired matrices and COQ8A associations not yet inspected |
+| COQ8A analysis status | Current matched comparison completed | Author object inspected; raw paired matrices and group/matching feasibility verified; differential accessibility not yet tested |
 
 Counts after different QC procedures are descriptive and are not a direct
 comparison of cell recovery. Technical assay accessions and repeated biopsies
 must not be counted as additional independent participants. GSE240061 is an
 exercise/tissue study, not another cultured differentiation time course.
 
-The next feasibility step is to inspect the RDS RNA counts, ATAC assay and
-barcode metadata while preserving author cell-type labels. Report counts and
-COQ8A/CAV3 detection by participant, time and cell type before selecting an
-analysis population. Baseline samples can provide a six-participant replication
-context if enough usable nuclei exist; pre/post changes require repeated-measure
-handling. The focal CAV3 interval and additional existing candidates can be
-evaluated as an explicitly defined replication family. No favorable result is
-assumed. Rare MuSC recovery may limit the usable biological sample count.
+The RDS inspection now verifies matching RNA/ATAC barcode sets and author labels.
+Baseline satellite cells yield only three pairs from one donor under the old
+>=3 versus 1 matching rule, while Fast and Slow myonuclear subtypes yield 846
+and 1,006 pairs from six and five donors. These different cell contexts must not
+be substituted for one another. The object lacks per-nucleus TSS/FRiP metrics;
+full old QC has not been copied. Details are in `GSE240061_FEASIBILITY_RESULTS.md`.
+No favorable differential-accessibility result is assumed.
 
 ## Reproduction
 

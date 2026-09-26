@@ -72,3 +72,13 @@ Reproduction instructions are in `docs/CANDIDATE_EXPANSION_AND_EXTERNAL_DATA.md`
 
 The GitHub Actions workflow regenerates figures and runs these checks. This
 does not execute the full multi-gigabyte input pipeline on every commit.
+
+Candidate selection provenance and independent replication preparation use
+`59_candidate_fdr_scope.py`, `60_audit_candidate_provenance.py`,
+`61_inspect_replication_multiome.R`, and `62_fetch_replication_design.py`.
+`63_replication_feasibility.py` reconciles the sample manifest, inventories
+COQ8A groups and reuses the original depth matcher within sample and cell type.
+The uniform evidence table includes every original peak-gene neighborhood pair;
+the R inspector preserves author labels and checks same-nucleus barcode identity.
+Commands and proposed inference units are specified in
+`docs/CANDIDATE_PROVENANCE_AND_REPLICATION_PLAN.md`.

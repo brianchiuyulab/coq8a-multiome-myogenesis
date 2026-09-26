@@ -81,6 +81,13 @@ definitions are in [Methods](docs/METHODS.md).
 
 ## Documentation and source data
 
+- [Candidate provenance and independent replication](docs/CANDIDATE_PROVENANCE_AND_REPLICATION_PLAN.md):
+  how CAV3 entered follow-up, identical evidence columns for every candidate,
+  and the GSE240061 replication design.
+  [Complete candidate audit](results/candidate_provenance).
+  [GSE240061 measured feasibility](docs/GSE240061_FEASIBILITY_RESULTS.md)
+  reports actual group sizes, matching and regional coverage.
+
 - [Independent enhancer intersections](docs/EXTERNAL_ENHANCER_INTERSECTION.md):
   human HSMM strong-enhancer annotation, MYOD1 ChIP and core MRF neighborhoods.
   [Coordinate/time-course figure](figures/external_enhancers/MYOD1_external_annotation_and_time.png)

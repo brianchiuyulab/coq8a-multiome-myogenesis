@@ -1,0 +1,29 @@
+time	celltype	n_nuclei	n_COQ8A_zero	n_COQ8A_eq1	n_COQ8A_ge2	n_COQ8A_ge3	n_CAV3_detected
+Post	B Cells	53	43	8	2	1	0
+Post	Dendritic Cells	141	121	17	3	1	4
+Post	Endothelial Cells	747	620	84	43	15	24
+Post	FBN1+ FAP Cells	349	304	33	12	4	19
+Post	Fast	4829	3028	1166	635	200	1039
+Post	Intermediate	312	100	89	123	60	97
+Post	LUM+ FAP Cells	1670	1409	204	57	22	55
+Post	Macrophages	502	431	58	13	4	9
+Post	Mast Cells	76	55	14	7	2	2
+Post	NK Cells	236	221	13	2	0	4
+Post	Pericytes	218	184	22	12	4	4
+Post	Satellite Cells	518	424	65	29	11	34
+Post	Slow	3112	1309	926	877	408	667
+Post	T Cells	359	315	25	19	8	9
+Pre	B Cells	16	12	3	1	0	0
+Pre	Dendritic Cells	126	89	28	9	4	4
+Pre	Endothelial Cells	945	762	112	71	32	33
+Pre	FBN1+ FAP Cells	485	409	37	39	21	21
+Pre	Fast	8735	3946	2549	2240	1045	1509
+Pre	Intermediate	1033	289	284	460	280	230
+Pre	LUM+ FAP Cells	2948	2384	347	217	105	134
+Pre	Macrophages	619	519	65	35	13	23
+Pre	Mast Cells	73	55	12	6	3	4
+Pre	NK Cells	150	130	13	7	4	3
+Pre	Pericytes	365	270	53	42	25	21
+Pre	Satellite Cells	984	815	131	38	16	65
+Pre	Slow	7332	2544	2044	2744	1446	1227
+Pre	T Cells	221	175	29	17	11	12
