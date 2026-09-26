@@ -1,5 +1,9 @@
 # Results: externally timed myogenic accessibility
 
+## Individual sites across all opening phases
+
+The [complete single-peak screen](TEMPORAL_SINGLE_PEAKS.md) tests all 191 early, 34 middle and 4 late peaks together. At COQ8A>=3 versus 1 UMI/TSS>=3, an early GNAO1-neighborhood site is 2.087-fold more accessible (exact paired p=0.000346), and a middle COL15A1-neighborhood site is 2.091-fold (p=0.000936). Both increase in all four libraries. Across all 229 peaks, both have BH q=0.0715; no site reaches q<0.05. An early CACNA1H-neighborhood site decreases to 0.227-fold (p=0.000911, q=0.0715). Thus the modest early-module average conceals larger local changes of both directions. The module summaries below are unchanged.
+
 ## Main result
 
 Within the fixed 221-gene universe, independent external differentiation timing defines a **34-peak, 30-gene middle-opening module**. In GSE208248, COQ8A>=3 versus exactly 1 UMI at TSS>=3 gives **1.222930-fold accessibility**, from **6.8920% to 8.4284%** open peaks per nucleus (+1.5364 percentage points), paired **p=0.001785**, within-setting programme **BH q=0.017848**. There are 201 matched pairs, four libraries and two source lines; three libraries have positive effects.

@@ -21,3 +21,5 @@ jobs:
         run: python scripts/13_validate_release.py --tables results/tables --figures figures
       - name: Validate external temporal memberships and effects
         run: python scripts/26_validate_temporal.py --tables results/tables --temporal results/temporal
+      - name: Recompute complete temporal single-peak screen
+        run: python scripts/27_temporal_single_peaks.py --tables results/tables --temporal results/temporal

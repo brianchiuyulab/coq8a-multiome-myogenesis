@@ -1,0 +1,11 @@
+{
+  "status": "passed",
+  "family_size": 229,
+  "settings": 4,
+  "peak_tests": 916,
+  "by_library_counts": 3664,
+  "module_reconciliations": 16,
+  "target_count_filter": "none",
+  "test": "two-sided exact paired binomial",
+  "adjustment": "BH across all 229 peaks separately in each setting"
+}

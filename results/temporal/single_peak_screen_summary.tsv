@@ -1,0 +1,13 @@
+gate	contrast	phase	n_peaks	nominal_p_lt_005	nominal_positive	q_lt_005	q_lt_010
+TSS_ge_2	2plus_vs_1	Early	191	12	8	0	0
+TSS_ge_2	2plus_vs_1	Middle	34	3	3	0	0
+TSS_ge_2	2plus_vs_1	Late	4	0	0	0	0
+TSS_ge_2	3plus_vs_1	Early	191	8	6	0	0
+TSS_ge_2	3plus_vs_1	Middle	34	1	1	0	0
+TSS_ge_2	3plus_vs_1	Late	4	0	0	0	0
+TSS_ge_3	2plus_vs_1	Early	191	16	8	0	0
+TSS_ge_3	2plus_vs_1	Middle	34	0	0	0	0
+TSS_ge_3	2plus_vs_1	Late	4	0	0	0	0
+TSS_ge_3	3plus_vs_1	Early	191	8	5	0	2
+TSS_ge_3	3plus_vs_1	Middle	34	2	2	0	1
+TSS_ge_3	3plus_vs_1	Late	4	0	0	0	0
