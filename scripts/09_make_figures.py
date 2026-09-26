@@ -123,7 +123,7 @@ def figure_two(t, out):
     sample = pd.read_csv(t / 'myod1_locus_by_library.tsv', sep='\t')
     peak = pd.read_csv(t / 'candidate_peak_effects_pooled.tsv.gz', sep='\t')
     peak = peak[(peak.gate == 'TSS_ge_3') & (peak.contrast == '2plus_vs_1')]
-    links = pd.read_csv(t / 'peak_gene_links.tsv', sep='\t')
+    links = pd.read_csv(t / 'peak_gene_links_tss2.tsv', sep='\t')
     region = pd.read_csv(t / 'candidate_peak_gene.tsv.gz', sep='\t')
     region = region[(region.gene == 'MYOD1') & (region.n_libraries == 4)]
     d = region.merge(peak[['peak', 'delta_pp']], on='peak')
@@ -150,26 +150,28 @@ def figure_two(t, out):
             ha='right', va='top', fontsize=8, color=GREEN)
     ax.set_xlabel('chr11 coordinate (kb, hg38)')
     ax.set_ylabel('COQ8A ≥2 vs 1 UMI\nopen-fraction difference (pp)')
-    ax.text(.01, .02, 'Outline: positive peak–RNA link  •  Star: linked peak without strong MRF motif',
+    ax.text(.01, .02, 'Outline: TSS≥2 peak–RNA link  •  Star: linked peak without strong MRF motif',
             transform=ax.transAxes, fontsize=8, color=GRAY)
     ax = fig.add_subplot(gs[1, 0]); label(ax, 'B', 'Region sets and COQ8A count sensitivity')
     x = locus[locus.gate == 'TSS_ge_3']
-    names = ['all_candidate_32', 'common_all4_19', 'positive_link_10', 'positive_link_nonMRF_5']
-    pretty = ['All 32 nearby', '19 shared', '10 peak–RNA linked', '5 linked, weak MRF motif']
+    names = ['all_candidate_32', 'common_all4_19', 'positive_link_10',
+             'positive_link_nonMRF_5', 'positive_link_nonMRF_tss2_6']
+    pretty = ['All 32 nearby', '19 shared', '10 linked (TSS≥3)',
+              '5 weak-MRF (TSS≥3 links)', '6 weak-MRF (TSS≥2 links)']
     for j, contrast in enumerate(['2plus_vs_1', '3plus_vs_1']):
         z = x[x.contrast == contrast].set_index('region_set').loc[names]
-        y = np.arange(4) + (j - .5) * .18
+        y = np.arange(len(names)) + (j - .5) * .18
         ax.scatter(z.fold_open, y, s=46, color=[BLUE, RED][j], label=['COQ ≥2 vs 1', 'COQ ≥3 vs 1'][j])
         for k, r in enumerate(z.itertuples()):
             ax.text(r.fold_open + .008, y[k], f'p={r.p_pair:.3f}', fontsize=7.5, va='center', color=GRAY)
     ax.axvline(1, color=GRAY, lw=.8, linestyle='--')
-    ax.set_yticks(range(4), pretty); ax.invert_yaxis()
+    ax.set_yticks(range(len(names)), pretty); ax.invert_yaxis()
     ax.set_xlabel('High / low mean open fraction')
     ax.set_xlim(.98, 1.37); ax.legend(frameon=False, fontsize=8, loc='upper right')
     ax.grid(axis='x', color=LIGHT, lw=.5)
     ax = fig.add_subplot(gs[1, 1]); label(ax, 'C', 'Extreme contrast by library')
     s = sample[(sample.gate == 'TSS_ge_3') & (sample.contrast == '3plus_vs_1') &
-               (sample.region_set == 'positive_link_nonMRF_5')].set_index('gsm').loc[LIBRARIES]
+               (sample.region_set == 'positive_link_nonMRF_tss2_6')].set_index('gsm').loc[LIBRARIES]
     xx = np.arange(4)
     ax.errorbar(xx, s.delta_pp, yerr=[s.delta_pp - 100 * s.ci_low,
                                      100 * s.ci_high - s.delta_pp],
@@ -177,7 +179,7 @@ def figure_two(t, out):
     ax.axhline(0, color=GRAY, lw=.8)
     ax.set_xticks(xx, [f'{s.loc[gsm, "source"].replace("line", "L")} {s.loc[gsm, "stage"][:4]}\n'
                        f'{s.loc[gsm, "n_pairs"]} pairs' for gsm in LIBRARIES], fontsize=7)
-    ax.set_ylabel('5-region difference (percentage points)')
+    ax.set_ylabel('6-region difference (percentage points)')
     fig.suptitle('MYOD1 regulatory-region discovery and sensitivity', fontsize=15,
                  fontweight='bold', y=1.01)
     fig.text(.5, -.015, 'Linked sets were learned in the same nuclei; all significance is exploratory at nucleus level.',
@@ -213,6 +215,51 @@ def supplementary_qc(t, out):
     save(fig, out / 'Supplementary_Figure_QC')
 
 
+def supplementary_global_scan(t, out):
+    peaks = pd.read_csv(t / 'candidate_peak_effects_pooled.tsv.gz', sep='\t')
+    peaks = peaks[(peaks.gate == 'TSS_ge_3') &
+                  (peaks.contrast == '2plus_vs_1') & peaks.q_candidate_peaks.notna()]
+    candidate = pd.read_csv(t / 'candidate_peak_gene.tsv.gz', sep='\t')
+    myod_peaks = set(candidate[candidate.gene == 'MYOD1'].peak)
+    genes = pd.read_csv(t / 'gene_effects_pooled.tsv', sep='\t')
+    genes = genes[(genes.gate == 'TSS_ge_3') & (genes.contrast == '2plus_vs_1') &
+                  (genes.modality == 'ATAC')]
+    fig, axes = plt.subplots(1, 2, figsize=(12.8, 4.6))
+    ax = axes[0]
+    other = peaks[~peaks.peak.isin(myod_peaks)]
+    selected = peaks[peaks.peak.isin(myod_peaks)]
+    ax.scatter(other.delta_pp, -np.log10(np.maximum(other.p_pair_binomial, 1e-300)),
+               color='#aeb9c5', s=7, alpha=.45, label='Other candidate peaks')
+    ax.scatter(selected.delta_pp, -np.log10(np.maximum(selected.p_pair_binomial, 1e-300)),
+               color=RED, s=23, alpha=.85, label='MYOD1-nearby peaks')
+    ax.axvline(0, color=GRAY, lw=.8)
+    ax.set_xlabel('COQ8A high − low open fraction (percentage points)')
+    ax.set_ylabel('−log10 paired peak p')
+    ax.legend(frameon=False, fontsize=7)
+    ax.text(.02, .97, f'{len(peaks):,} peaks tested; minimum BH q={peaks.q_candidate_peaks.min():.3f}',
+            transform=ax.transAxes, fontsize=8, va='top', color=GRAY)
+    label(ax, 'A', 'All eligible candidate peaks')
+    ax = axes[1]
+    other = genes[genes.gene != 'MYOD1']
+    selected = genes[genes.gene == 'MYOD1']
+    ax.scatter(100 * other.difference, -np.log10(np.maximum(other.p_pair, 1e-300)),
+               color='#aeb9c5', s=18, alpha=.65)
+    ax.scatter(100 * selected.difference, -np.log10(selected.p_pair), color=RED, s=65)
+    if len(selected):
+        r = selected.iloc[0]
+        ax.annotate('MYOD1', (100 * r.difference, -np.log10(r.p_pair)),
+                    xytext=(5, 4), textcoords='offset points', fontsize=8, color=RED)
+    ax.axvline(0, color=GRAY, lw=.8)
+    ax.set_xlabel('COQ8A high − low nearby-peak mean (percentage points)')
+    ax.set_ylabel('−log10 paired gene-region p')
+    ax.text(.02, .97, f'{len(genes)} genes tested; minimum BH q={genes.q_221.min():.3f}',
+            transform=ax.transAxes, fontsize=8, va='top', color=GRAY)
+    label(ax, 'B', 'All 221 gene regions')
+    fig.suptitle('Complete primary ATAC search space (TSS≥3, COQ8A≥2 vs 1 UMI)',
+                 fontsize=13, fontweight='bold', y=1.05)
+    save(fig, out / 'Supplementary_Figure_Global_ATAC_Scan')
+
+
 def main():
     p = argparse.ArgumentParser()
     p.add_argument('--tables', type=Path, required=True)
@@ -222,7 +269,8 @@ def main():
     figure_one(a.tables, a.figures / 'main')
     figure_two(a.tables, a.figures / 'main')
     supplementary_qc(a.tables, a.figures / 'supplement')
-    print('Wrote two main figures and one QC supplement', flush=True)
+    supplementary_global_scan(a.tables, a.figures / 'supplement')
+    print('Wrote two main figures and two supplements', flush=True)
 
 
 if __name__ == '__main__':

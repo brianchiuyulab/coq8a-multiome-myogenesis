@@ -24,11 +24,15 @@ def main():
     links = pd.read_csv(a.tables / 'peak_gene_links.tsv', sep='\t')
     links = links[(links.gene == 'MYOD1') & (links.q_all_links < .05) &
                   (links.partial_r > 0) & (links.n_libraries == 4)]
+    links_tss2 = pd.read_csv(a.tables / 'peak_gene_links_tss2.tsv', sep='\t')
+    links_tss2 = links_tss2[(links_tss2.gene == 'MYOD1') & (links_tss2.q_all_links < .05) &
+                            (links_tss2.partial_r > 0) & (links_tss2.n_libraries == 4)]
     region_sets = {'all_candidate_32': set(myod.peak),
                    'common_all4_19': set(myod.loc[myod.n_libraries == 4, 'peak']),
                    'positive_link_10': set(links.peak),
-                   'positive_link_nonMRF_5': set(links.loc[links.mrf_max_score < .95, 'peak'])}
-    assert list(map(len, region_sets.values())) == [32, 19, 10, 5]
+                   'positive_link_nonMRF_5': set(links.loc[links.mrf_max_score < .95, 'peak']),
+                   'positive_link_nonMRF_tss2_6': set(links_tss2.loc[links_tss2.mrf_max_score < .95, 'peak'])}
+    assert list(map(len, region_sets.values())) == [32, 19, 10, 5, 6]
     mapping = pd.read_csv(a.tables / 'consensus_peak_map.tsv.gz', sep='\t').set_index('peak')
     pairs = pd.read_csv(a.tables / 'matched_pairs.tsv.gz', sep='\t')
     rows, raw = [], []
@@ -86,7 +90,7 @@ def main():
                         'positive_libraries': int((ss.delta_pp > 0).sum()),
                         **paired_stats(sub.difference)})
     summary = pd.DataFrame(summary)
-    summary['q_16_exploratory'] = multipletests(summary.p_pair, method='fdr_bh')[1]
+    summary['q_20_exploratory'] = multipletests(summary.p_pair, method='fdr_bh')[1]
     summary.to_csv(a.tables / 'myod1_locus_summary.tsv', sep='\t', index=False)
     print(summary.to_string(index=False))
 

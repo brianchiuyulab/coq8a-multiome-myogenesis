@@ -24,9 +24,11 @@ def main():
     p.add_argument('--h5-root', type=Path, required=True)
     p.add_argument('--tables', type=Path, required=True)
     p.add_argument('--motif-scores', type=Path)
+    p.add_argument('--gate', choices=['TSS_ge_2', 'TSS_ge_3'], default='TSS_ge_3')
     a = p.parse_args()
+    suffix = '_tss2' if a.gate == 'TSS_ge_2' else ''
     pairs = pd.read_csv(a.tables / 'matched_pairs.tsv.gz', sep='\t')
-    pairs = pairs[(pairs.gate == 'TSS_ge_3') & (pairs.contrast == '2plus_vs_1')]
+    pairs = pairs[(pairs.gate == a.gate) & (pairs.contrast == '2plus_vs_1')]
     cells = pd.read_csv(a.tables / 'qc_nuclei.tsv.gz', sep='\t')
     candidates = pd.read_csv(a.tables / 'candidate_peak_gene.tsv.gz', sep='\t')
     consensus = pd.read_csv(a.tables / 'consensus_peak_map.tsv.gz', sep='\t').set_index('peak')
@@ -77,7 +79,8 @@ def main():
                                  'n_peak_open', 'n_gene_detected', 'partial_r']])
         print(gsm, 'tested', int(q.partial_r.notna().sum()), 'of', len(q), flush=True)
     by_library = pd.concat(candidate_rows, ignore_index=True)
-    by_library.to_csv(a.tables / 'peak_gene_links_by_library.tsv.gz', sep='\t', index=False, compression='gzip')
+    by_library.to_csv(a.tables / f'peak_gene_links_by_library{suffix}.tsv.gz',
+                      sep='\t', index=False, compression='gzip')
     rows = []
     for (peak, gene), sub in by_library.groupby(['peak', 'gene']):
         s = sub.dropna(subset=['partial_r'])
@@ -99,7 +102,11 @@ def main():
         cols = ['MYOD1_score', 'MYOG_score', 'MYF5_score', 'MYF6_score']
         scores['mrf_max_score'] = scores[cols].max(axis=1)
         links = links.merge(scores[['peak', 'mrf_max_score']], on='peak', how='left', validate='many_to_one')
-    links.sort_values('q_all_links').to_csv(a.tables / 'peak_gene_links.tsv', sep='\t', index=False)
+    links.sort_values('q_all_links').to_csv(a.tables / f'peak_gene_links{suffix}.tsv', sep='\t', index=False)
+    if a.gate == 'TSS_ge_2':
+        print('TSS>=2 links tested', len(links), 'positive q<.05',
+              int(((links.q_all_links < .05) & (links.partial_r > 0)).sum()), flush=True)
+        return
     summary = links.assign(positive_link=(links.q_all_links < .05) & (links.partial_r > 0)).groupby('gene').agg(
         n_tested_links=('peak', 'size'), n_positive_links=('positive_link', 'sum'),
         strongest_link_r=('partial_r', 'max')).reset_index()

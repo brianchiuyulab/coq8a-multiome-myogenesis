@@ -38,7 +38,8 @@ def main():
                          'p_pair': paired_stats(sub.difference)['p_pair']})
     out = pd.DataFrame(rows)
     out.to_csv(a.tables / 'doublet_tail_sensitivity.tsv', sep='\t', index=False)
-    print(out[out.region_set.isin(['common_all4_19', 'positive_link_nonMRF_5'])].to_string(index=False))
+    print(out[out.region_set.isin(['common_all4_19', 'positive_link_nonMRF_5',
+                                  'positive_link_nonMRF_tss2_6'])].to_string(index=False))
 
 
 if __name__ == '__main__':

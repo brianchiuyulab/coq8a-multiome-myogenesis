@@ -5,6 +5,11 @@ human muscle source lines, each sampled in a stem and differentiated state.
 The data set is **not** the young/old HMA donor atlas and does not inherit its
 cell type annotations, BI comparisons, or donor-level estimates.
 
+For the fixed, non-targeted main analysis and its actual decision, start with
+[`docs/PRIMARY_ANALYSIS_zh-TW.md`](docs/PRIMARY_ANALYSIS_zh-TW.md). The
+six-peak 1.280 MYOD1 result is reproduced separately as an exploratory
+sensitivity, not used to define the main search.
+
 ## Question and analysis order
 
 1. Start with independently named MSigDB Hallmark Myogenesis and Reactome
@@ -16,8 +21,8 @@ cell type annotations, BI comparisons, or donor-level estimates.
    Define candidate ATAC regions by genome position and peak recurrence before
    examining the COQ8A effect. Test all eligible peaks, not only MRF motifs.
 4. Link candidate peaks to RNA of their nearby genes with depth/group-adjusted
-   within-library association, then rank exploratory loci. Show the full search
-   and the resulting MYOD1 example.
+   within-library association at TSS≥3 and, separately, TSS≥2; then rank
+   exploratory loci. Show the full search and the resulting MYOD1 example.
 5. Challenge the locus with region-set, COQ8A count, TSS, and RNA doublet-score
    sensitivity analyses. The peak-to-gene-linked subset is learned in the same
    nuclei, so its apparent effect is **discovery**, not independent validation.
@@ -64,12 +69,15 @@ region or candidate ATAC peak survives its full multiple-testing family at
 
 MYOD1's 19 four-library common nearby peaks show a modest high/low open
 fraction ratio of 1.069 (absolute +0.824 percentage points; pair-level
-`p=0.0395`, 221-gene `q=0.635`). A same-data linked five-peak subset gives
-1.241 under COQ8A 3+ versus 1 UMI and TSS≥3 (+2.69 percentage points,
-201 pairs, pair-level `p=0.0529`, 3/4 libraries in the same direction,
-16-setting exploratory `q=0.0847`). Its fold drops to ~1.18–1.20 when the
-highest RNA doublet-score nuclei are removed. This is a **candidate locus
-signal**, not robust genome-wide evidence for COQ8A-driven accessibility.
+`p=0.0395`, 221-gene `q=0.635`). A six-peak subset nominated with TSS≥2
+peak–RNA links reproduces the earlier **1.280** ratio under COQ8A 3+ versus
+1 UMI and TSS≥3 (+2.90 percentage points, 201 pairs, 4/4 libraries positive,
+pair-level `p=0.02558`, 20-setting exploratory `q=0.0755`). Requiring TSS≥3
+already at the link-discovery stage removes one low-support peak, leaving five
+peaks and a **1.241** ratio (`p=0.05295`, 3/4 positive). The six-peak ratio
+drops to ~1.19 after removing the highest 2.5–5% RNA doublet-score nuclei.
+This is a **candidate locus signal**, not robust evidence for a programme-wide
+COQ8A-associated accessibility increase.
 
 `docs/RESULTS.md` gives the full interpretation and sensitivity summary.
 The superseded exploratory GSE208248 files were moved, without deletion, to
@@ -81,11 +89,11 @@ of the pending-deletion area first.
 
 | Directory | Contents |
 |---|---|
-| `scripts/` | 00–09 numbered analysis and plotting code plus shared methods |
+| `scripts/` | Numbered analysis, reconciliation and plotting code plus shared methods |
 | `reference/` | Fixed gene list, QC, motif and blacklist inputs |
 | `results/tables/` | All nucleus, region, link, effect and sensitivity tables |
 | `figures/main/` | Figure 1: discovery funnel and full-gene results; Figure 2: MYOD1 locus and sensitivity |
-| `figures/supplement/` | RNA/ATAC QC and matching diagnostics |
+| `figures/supplement/` | RNA/ATAC QC, matching diagnostics and complete peak-level primary scan |
 | `docs/` | Methods, results, figure legends and source provenance |
 
 The key sources for figure and method conventions are the
