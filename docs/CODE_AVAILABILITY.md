@@ -33,6 +33,8 @@ requires `pysam`, supplied in `requirements_reference.txt`.
 | Numerical validation | 26_validate_temporal, 42_validate_submission |
 | Optional RNA-quality sensitivity | 25_temporal_rna_qc, scrublet_provenance |
 | Private passage/time RNA comparison | 35_crosscheck_existing_rna, 43_plot_private_rna |
+| Expanded middle-region target associations | 44_expand_middle_links, 45_middle_count_models.R |
+| Independent MYOD1 annotation and follow-up figure | 46_middle_myod_annotation, 47_report_middle_links |
 
 Numeric prefixes identify scripts and do not imply that every optional script
 is executed in the standard pipeline. Private RNA scripts require owner-supplied

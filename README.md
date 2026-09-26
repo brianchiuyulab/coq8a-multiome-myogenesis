@@ -81,6 +81,11 @@ definitions are in [Methods](docs/METHODS.md).
 
 ## Documentation and source data
 
+- [Middle-region target-link follow-up](docs/MIDDLE_LINK_REASSESSMENT.md): expanded
+  nucleus population, count models, stratified bootstrap and independent MYOD1
+  annotation. [Follow-up figure](figures/link_followup/Middle_peak_RNA_associations.png)
+  and [source tables](results/link_followup) are separate from the main high/low tests.
+
 - [Methods](docs/METHODS.md): samples, preprocessing, thresholds, matching, statistics and provenance.
 - [Figure legends](docs/FIGURE_LEGENDS.md): panel definitions, signal units and statistical families.
 - [Results](docs/RESULTS.md): current numerical findings.

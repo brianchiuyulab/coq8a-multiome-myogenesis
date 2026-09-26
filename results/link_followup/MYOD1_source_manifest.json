@@ -1,0 +1,18 @@
+[
+  {
+    "gsm": "GSM1218849",
+    "stage": "myoblast",
+    "url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM1218nnn/GSM1218849/suppl/GSM1218849_MB135GMMD.peak.txt.gz",
+    "assembly": "hg19",
+    "sha256": "b59af738f4a0d13c70316211fd031f96da6c24665f26f44060d2740b7ee501d9",
+    "n_chip_peaks": 44364
+  },
+  {
+    "gsm": "GSM1218850",
+    "stage": "myotube_72h",
+    "url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM1218nnn/GSM1218850/suppl/GSM1218850_MB135DMMD.peak.txt.gz",
+    "assembly": "hg19",
+    "sha256": "63b6d5f70e4dc9960f41764ba0a9fe35c805d21c6914136c7f14cdf99d569a91",
+    "n_chip_peaks": 58449
+  }
+]
