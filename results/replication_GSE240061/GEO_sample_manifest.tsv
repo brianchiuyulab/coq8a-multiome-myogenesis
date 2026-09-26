@@ -1,161 +1,41 @@
 gsm	title	source	organism	tissue	Sex	group	time	subject_id	sample_id	supplementary_files
-GSM7680724	8035073276-N, Circadian control (Pre), GEX, bio rep 1	PBMC	Homo sapiens	PBMC	Female	Circadian control	Pre	Ctrl-1	8035073276-N-M1_GEX_tr1	"
-NONE
-    "
-GSM7680725	8035073276-N, Circadian control (Pre), GEX, bio rep 2	PBMC	Homo sapiens	PBMC	Female	Circadian control	Pre	Ctrl-1	8035073276-N-M1_GEX_tr2	"
-NONE
-    "
-GSM7680726	8035073605-N, Circadian control (Post), GEX, bio rep 1	PBMC	Homo sapiens	PBMC	Female	Circadian control	Post	Ctrl-1	8035073605-N-M2_GEX_tr1	"
-NONE
-    "
-GSM7680727	8035073605-N, Circadian control (Post), GEX, bio rep 2	PBMC	Homo sapiens	PBMC	Female	Circadian control	Post	Ctrl-1	8035073605-N-M2_GEX_tr2	"
-NONE
-    "
-GSM7680728	8035074040-J, Exercise Response (Pre), GEX	PBMC	Homo sapiens	PBMC	Male	Exercise Response	Pre	Ex-4	8035074040-J-M1_GEX	"
-NONE
-    "
-GSM7680729	8035073524-J, Exercise Response (Post), GEX	PBMC	Homo sapiens	PBMC	Male	Exercise Response	Post	Ex-4	8035073524-J-M2_GEX	"
-NONE
-    "
-GSM7680730	8035073530-L, Circadian control (Pre), GEX, bio rep 1	PBMC	Homo sapiens	PBMC	Male	Circadian control	Pre	Ctrl-2	8035073530-L-M1_GEX_tr1	"
-NONE
-    "
-GSM7680731	8035073530-L, Circadian control (Pre), GEX, bio rep 2	PBMC	Homo sapiens	PBMC	Male	Circadian control	Pre	Ctrl-2	8035073530-L-M1_GEX_tr2	"
-NONE
-    "
-GSM7680732	8035073603-L, Circadian control (Post), GEX, bio rep 1	PBMC	Homo sapiens	PBMC	Male	Circadian control	Post	Ctrl-2	8035073603-L-M2_GEX_tr1	"
-NONE
-    "
-GSM7680733	8035073603-L, Circadian control (Post), GEX, bio rep 2	PBMC	Homo sapiens	PBMC	Male	Circadian control	Post	Ctrl-2	8035073603-L-M2_GEX_tr2	"
-NONE
-    "
-GSM7680734	8035074016-I, Exercise Response (Pre), GEX	PBMC	Homo sapiens	PBMC	Female	Exercise Response	Pre	Ex-2	8035074016-I-M1_GEX	"
-NONE
-    "
-GSM7680735	8035073722-I, Exercise Response (Post), GEX	PBMC	Homo sapiens	PBMC	Female	Exercise Response	Post	Ex-2	8035073722-I-M2_GEX	"
-NONE
-    "
-GSM7680736	8035073800-E, Exercise Response (Pre), GEX, bio rep 1	PBMC	Homo sapiens	PBMC	Female	Exercise Response	Pre	Ex-1	8035073800-E-M1_GEX_tr1	"
-NONE
-    "
-GSM7680737	8035073800-E, Exercise Response (Pre), GEX, bio rep 2	PBMC	Homo sapiens	PBMC	Female	Exercise Response	Pre	Ex-1	8035073800-E-M1_GEX_tr2	"
-NONE
-    "
-GSM7680738	8035073790-E, Exercise Response (Post), GEX, bio rep 1	PBMC	Homo sapiens	PBMC	Female	Exercise Response	Post	Ex-1	8035073790-E-M2_GEX_tr1	"
-NONE
-    "
-GSM7680739	8035073790-E, Exercise Response (Post), GEX, bio rep 2	PBMC	Homo sapiens	PBMC	Female	Exercise Response	Post	Ex-1	8035073790-E-M2_GEX_tr2	"
-NONE
-    "
-GSM7680740	8035073981-G, Exercise Response (Pre), GEX, bio rep 1	PBMC	Homo sapiens	PBMC	Male	Exercise Response	Pre	Ex-3	8035073981-G-M1_GEX_tr1	"
-NONE
-    "
-GSM7680741	8035073981-G, Exercise Response (Pre), GEX, bio rep 2	PBMC	Homo sapiens	PBMC	Male	Exercise Response	Pre	Ex-3	8035073981-G-M1_GEX_tr2	"
-NONE
-    "
-GSM7680742	8035073962-G, Exercise Response (Post), GEX, bio rep 1	PBMC	Homo sapiens	PBMC	Male	Exercise Response	Post	Ex-3	8035073962-G-M2_GEX_tr1	"
-NONE
-    "
-GSM7680743	8035073962-G, Exercise Response (Post), GEX, bio rep 2	PBMC	Homo sapiens	PBMC	Male	Exercise Response	Post	Ex-3	8035073962-G-M2_GEX_tr2	"
-NONE
-    "
-GSM7680744	8035073276-N, Circadian control (Pre), ATAC, bio rep 1	PBMC	Homo sapiens	PBMC	Female	Circadian control	Pre	Ctrl-1	8035073276-N-M1_ATAC_tr1	"
-ftp://ftp.ncbi.nlm.nih.gov/geo/samples/GSM7680nnn/GSM7680744/suppl/GSM7680744_atac_fragments.tsv.gz
-    ;
-ftp://ftp.ncbi.nlm.nih.gov/geo/samples/GSM7680nnn/GSM7680744/suppl/GSM7680744_atac_fragments.tsv.gz.tbi.gz
-    "
-GSM7680745	8035073276-N, Circadian control (Pre), ATAC, bio rep 2	PBMC	Homo sapiens	PBMC	Female	Circadian control	Pre	Ctrl-1	8035073276-N-M1_ATAC_tr2	"
-ftp://ftp.ncbi.nlm.nih.gov/geo/samples/GSM7680nnn/GSM7680745/suppl/GSM7680745_atac_fragments.tsv.gz
-    ;
-ftp://ftp.ncbi.nlm.nih.gov/geo/samples/GSM7680nnn/GSM7680745/suppl/GSM7680745_atac_fragments.tsv.gz.tbi.gz
-    "
-GSM7680746	8035073605-N, Circadian control (Post), ATAC, bio rep 1	PBMC	Homo sapiens	PBMC	Female	Circadian control	Post	Ctrl-1	8035073605-N-M2_ATAC_tr1	"
-ftp://ftp.ncbi.nlm.nih.gov/geo/samples/GSM7680nnn/GSM7680746/suppl/GSM7680746_atac_fragments.tsv.gz
-    ;
-ftp://ftp.ncbi.nlm.nih.gov/geo/samples/GSM7680nnn/GSM7680746/suppl/GSM7680746_atac_fragments.tsv.gz.tbi.gz
-    "
-GSM7680747	8035073605-N, Circadian control (Post), ATAC, bio rep 2	PBMC	Homo sapiens	PBMC	Female	Circadian control	Post	Ctrl-1	8035073605-N-M2_ATAC_tr2	"
-ftp://ftp.ncbi.nlm.nih.gov/geo/samples/GSM7680nnn/GSM7680747/suppl/GSM7680747_atac_fragments.tsv.gz
-    ;
-ftp://ftp.ncbi.nlm.nih.gov/geo/samples/GSM7680nnn/GSM7680747/suppl/GSM7680747_atac_fragments.tsv.gz.tbi.gz
-    "
-GSM7680748	8035074040-J, Exercise Response (Pre), ATAC	PBMC	Homo sapiens	PBMC	Male	Exercise Response	Pre	Ex-4	8035074040-J-M1_ATAC	"
-ftp://ftp.ncbi.nlm.nih.gov/geo/samples/GSM7680nnn/GSM7680748/suppl/GSM7680748_atac_fragments.tsv.gz
-    ;
-ftp://ftp.ncbi.nlm.nih.gov/geo/samples/GSM7680nnn/GSM7680748/suppl/GSM7680748_atac_fragments.tsv.gz.tbi.gz
-    "
-GSM7680749	8035073524-J, Exercise Response (Post), ATAC	PBMC	Homo sapiens	PBMC	Male	Exercise Response	Post	Ex-4	8035073524-J-M2_ATAC	"
-ftp://ftp.ncbi.nlm.nih.gov/geo/samples/GSM7680nnn/GSM7680749/suppl/GSM7680749_atac_fragments.tsv.gz
-    ;
-ftp://ftp.ncbi.nlm.nih.gov/geo/samples/GSM7680nnn/GSM7680749/suppl/GSM7680749_atac_fragments.tsv.gz.tbi.gz
-    "
-GSM7680750	8035073530-L, Circadian control (Pre), ATAC, bio rep 1	PBMC	Homo sapiens	PBMC	Male	Circadian control	Pre	Ctrl-2	8035073530-L-M1_ATAC_tr1	"
-ftp://ftp.ncbi.nlm.nih.gov/geo/samples/GSM7680nnn/GSM7680750/suppl/GSM7680750_atac_fragments.tsv.gz
-    ;
-ftp://ftp.ncbi.nlm.nih.gov/geo/samples/GSM7680nnn/GSM7680750/suppl/GSM7680750_atac_fragments.tsv.gz.tbi.gz
-    "
-GSM7680751	8035073530-L, Circadian control (Pre), ATAC, bio rep 2	PBMC	Homo sapiens	PBMC	Male	Circadian control	Pre	Ctrl-2	8035073530-L-M1_ATAC_tr2	"
-ftp://ftp.ncbi.nlm.nih.gov/geo/samples/GSM7680nnn/GSM7680751/suppl/GSM7680751_atac_fragments.tsv.gz
-    ;
-ftp://ftp.ncbi.nlm.nih.gov/geo/samples/GSM7680nnn/GSM7680751/suppl/GSM7680751_atac_fragments.tsv.gz.tbi.gz
-    "
-GSM7680752	8035073603-L, Circadian control (Post), ATAC, bio rep 1	PBMC	Homo sapiens	PBMC	Male	Circadian control	Post	Ctrl-2	8035073603-L-M2_ATAC_tr1	"
-ftp://ftp.ncbi.nlm.nih.gov/geo/samples/GSM7680nnn/GSM7680752/suppl/GSM7680752_atac_fragments.tsv.gz
-    ;
-ftp://ftp.ncbi.nlm.nih.gov/geo/samples/GSM7680nnn/GSM7680752/suppl/GSM7680752_atac_fragments.tsv.gz.tbi.gz
-    "
-GSM7680753	8035073603-L, Circadian control (Post), ATAC, bio rep 2	PBMC	Homo sapiens	PBMC	Male	Circadian control	Post	Ctrl-2	8035073603-L-M2_ATAC_tr2	"
-ftp://ftp.ncbi.nlm.nih.gov/geo/samples/GSM7680nnn/GSM7680753/suppl/GSM7680753_atac_fragments.tsv.gz
-    ;
-ftp://ftp.ncbi.nlm.nih.gov/geo/samples/GSM7680nnn/GSM7680753/suppl/GSM7680753_atac_fragments.tsv.gz.tbi.gz
-    "
-GSM7680754	8035074016-I, Exercise Response (Pre), ATAC	PBMC	Homo sapiens	PBMC	Female	Exercise Response	Pre	Ex-2	8035074016-I-M1_ATAC	"
-ftp://ftp.ncbi.nlm.nih.gov/geo/samples/GSM7680nnn/GSM7680754/suppl/GSM7680754_atac_fragments.tsv.gz
-    ;
-ftp://ftp.ncbi.nlm.nih.gov/geo/samples/GSM7680nnn/GSM7680754/suppl/GSM7680754_atac_fragments.tsv.gz.tbi.gz
-    "
-GSM7680755	8035073722-I, Exercise Response (Post), ATAC	PBMC	Homo sapiens	PBMC	Female	Exercise Response	Post	Ex-2	8035073722-I-M2_ATAC	"
-ftp://ftp.ncbi.nlm.nih.gov/geo/samples/GSM7680nnn/GSM7680755/suppl/GSM7680755_atac_fragments.tsv.gz
-    ;
-ftp://ftp.ncbi.nlm.nih.gov/geo/samples/GSM7680nnn/GSM7680755/suppl/GSM7680755_atac_fragments.tsv.gz.tbi.gz
-    "
-GSM7680756	8035073800-E, Exercise Response (Pre), ATAC, bio rep 1	PBMC	Homo sapiens	PBMC	Female	Exercise Response	Pre	Ex-1	8035073800-E-M1_ATAC_tr1	"
-ftp://ftp.ncbi.nlm.nih.gov/geo/samples/GSM7680nnn/GSM7680756/suppl/GSM7680756_atac_fragments.tsv.gz
-    ;
-ftp://ftp.ncbi.nlm.nih.gov/geo/samples/GSM7680nnn/GSM7680756/suppl/GSM7680756_atac_fragments.tsv.gz.tbi.gz
-    "
-GSM7680757	8035073800-E, Exercise Response (Pre), ATAC, bio rep 2	PBMC	Homo sapiens	PBMC	Female	Exercise Response	Pre	Ex-1	8035073800-E-M1_ATAC_tr2	"
-ftp://ftp.ncbi.nlm.nih.gov/geo/samples/GSM7680nnn/GSM7680757/suppl/GSM7680757_atac_fragments.tsv.gz
-    ;
-ftp://ftp.ncbi.nlm.nih.gov/geo/samples/GSM7680nnn/GSM7680757/suppl/GSM7680757_atac_fragments.tsv.gz.tbi.gz
-    "
-GSM7680758	8035073790-E, Exercise Response (Post), ATAC, bio rep 1	PBMC	Homo sapiens	PBMC	Female	Exercise Response	Post	Ex-1	8035073790-E-M2_ATAC_tr1	"
-ftp://ftp.ncbi.nlm.nih.gov/geo/samples/GSM7680nnn/GSM7680758/suppl/GSM7680758_atac_fragments.tsv.gz
-    ;
-ftp://ftp.ncbi.nlm.nih.gov/geo/samples/GSM7680nnn/GSM7680758/suppl/GSM7680758_atac_fragments.tsv.gz.tbi.gz
-    "
-GSM7680759	8035073790-E, Exercise Response (Post), ATAC, bio rep 2	PBMC	Homo sapiens	PBMC	Female	Exercise Response	Post	Ex-1	8035073790-E-M2_ATAC_tr2	"
-ftp://ftp.ncbi.nlm.nih.gov/geo/samples/GSM7680nnn/GSM7680759/suppl/GSM7680759_atac_fragments.tsv.gz
-    ;
-ftp://ftp.ncbi.nlm.nih.gov/geo/samples/GSM7680nnn/GSM7680759/suppl/GSM7680759_atac_fragments.tsv.gz.tbi.gz
-    "
-GSM7680760	8035073981-G, Exercise Response (Pre), ATAC, bio rep 1	PBMC	Homo sapiens	PBMC	Male	Exercise Response	Pre	Ex-3	8035073981-G-M1_ATAC_tr1	"
-ftp://ftp.ncbi.nlm.nih.gov/geo/samples/GSM7680nnn/GSM7680760/suppl/GSM7680760_atac_fragments.tsv.gz
-    ;
-ftp://ftp.ncbi.nlm.nih.gov/geo/samples/GSM7680nnn/GSM7680760/suppl/GSM7680760_atac_fragments.tsv.gz.tbi.gz
-    "
-GSM7680761	8035073981-G, Exercise Response (Pre), ATAC, bio rep 2	PBMC	Homo sapiens	PBMC	Male	Exercise Response	Pre	Ex-3	8035073981-G-M1_ATAC_tr2	"
-ftp://ftp.ncbi.nlm.nih.gov/geo/samples/GSM7680nnn/GSM7680761/suppl/GSM7680761_atac_fragments.tsv.gz
-    ;
-ftp://ftp.ncbi.nlm.nih.gov/geo/samples/GSM7680nnn/GSM7680761/suppl/GSM7680761_atac_fragments.tsv.gz.tbi.gz
-    "
-GSM7680762	8035073962-G, Exercise Response (Post), ATAC, bio rep 1	PBMC	Homo sapiens	PBMC	Male	Exercise Response	Post	Ex-3	8035073962-G-M2_ATAC_tr1	"
-ftp://ftp.ncbi.nlm.nih.gov/geo/samples/GSM7680nnn/GSM7680762/suppl/GSM7680762_atac_fragments.tsv.gz
-    ;
-ftp://ftp.ncbi.nlm.nih.gov/geo/samples/GSM7680nnn/GSM7680762/suppl/GSM7680762_atac_fragments.tsv.gz.tbi.gz
-    "
-GSM7680763	8035073962-G, Exercise Response (Post), ATAC, bio rep 2	PBMC	Homo sapiens	PBMC	Male	Exercise Response	Post	Ex-3	8035073962-G-M2_ATAC_tr2	"
-ftp://ftp.ncbi.nlm.nih.gov/geo/samples/GSM7680nnn/GSM7680763/suppl/GSM7680763_atac_fragments.tsv.gz
-    ;
-ftp://ftp.ncbi.nlm.nih.gov/geo/samples/GSM7680nnn/GSM7680763/suppl/GSM7680763_atac_fragments.tsv.gz.tbi.gz
-    "
+GSM7680724	8035073276-N, Circadian control (Pre), GEX, bio rep 1	PBMC	Homo sapiens	PBMC	Female	Circadian control	Pre	Ctrl-1	8035073276-N-M1_GEX_tr1	NONE
+GSM7680725	8035073276-N, Circadian control (Pre), GEX, bio rep 2	PBMC	Homo sapiens	PBMC	Female	Circadian control	Pre	Ctrl-1	8035073276-N-M1_GEX_tr2	NONE
+GSM7680726	8035073605-N, Circadian control (Post), GEX, bio rep 1	PBMC	Homo sapiens	PBMC	Female	Circadian control	Post	Ctrl-1	8035073605-N-M2_GEX_tr1	NONE
+GSM7680727	8035073605-N, Circadian control (Post), GEX, bio rep 2	PBMC	Homo sapiens	PBMC	Female	Circadian control	Post	Ctrl-1	8035073605-N-M2_GEX_tr2	NONE
+GSM7680728	8035074040-J, Exercise Response (Pre), GEX	PBMC	Homo sapiens	PBMC	Male	Exercise Response	Pre	Ex-4	8035074040-J-M1_GEX	NONE
+GSM7680729	8035073524-J, Exercise Response (Post), GEX	PBMC	Homo sapiens	PBMC	Male	Exercise Response	Post	Ex-4	8035073524-J-M2_GEX	NONE
+GSM7680730	8035073530-L, Circadian control (Pre), GEX, bio rep 1	PBMC	Homo sapiens	PBMC	Male	Circadian control	Pre	Ctrl-2	8035073530-L-M1_GEX_tr1	NONE
+GSM7680731	8035073530-L, Circadian control (Pre), GEX, bio rep 2	PBMC	Homo sapiens	PBMC	Male	Circadian control	Pre	Ctrl-2	8035073530-L-M1_GEX_tr2	NONE
+GSM7680732	8035073603-L, Circadian control (Post), GEX, bio rep 1	PBMC	Homo sapiens	PBMC	Male	Circadian control	Post	Ctrl-2	8035073603-L-M2_GEX_tr1	NONE
+GSM7680733	8035073603-L, Circadian control (Post), GEX, bio rep 2	PBMC	Homo sapiens	PBMC	Male	Circadian control	Post	Ctrl-2	8035073603-L-M2_GEX_tr2	NONE
+GSM7680734	8035074016-I, Exercise Response (Pre), GEX	PBMC	Homo sapiens	PBMC	Female	Exercise Response	Pre	Ex-2	8035074016-I-M1_GEX	NONE
+GSM7680735	8035073722-I, Exercise Response (Post), GEX	PBMC	Homo sapiens	PBMC	Female	Exercise Response	Post	Ex-2	8035073722-I-M2_GEX	NONE
+GSM7680736	8035073800-E, Exercise Response (Pre), GEX, bio rep 1	PBMC	Homo sapiens	PBMC	Female	Exercise Response	Pre	Ex-1	8035073800-E-M1_GEX_tr1	NONE
+GSM7680737	8035073800-E, Exercise Response (Pre), GEX, bio rep 2	PBMC	Homo sapiens	PBMC	Female	Exercise Response	Pre	Ex-1	8035073800-E-M1_GEX_tr2	NONE
+GSM7680738	8035073790-E, Exercise Response (Post), GEX, bio rep 1	PBMC	Homo sapiens	PBMC	Female	Exercise Response	Post	Ex-1	8035073790-E-M2_GEX_tr1	NONE
+GSM7680739	8035073790-E, Exercise Response (Post), GEX, bio rep 2	PBMC	Homo sapiens	PBMC	Female	Exercise Response	Post	Ex-1	8035073790-E-M2_GEX_tr2	NONE
+GSM7680740	8035073981-G, Exercise Response (Pre), GEX, bio rep 1	PBMC	Homo sapiens	PBMC	Male	Exercise Response	Pre	Ex-3	8035073981-G-M1_GEX_tr1	NONE
+GSM7680741	8035073981-G, Exercise Response (Pre), GEX, bio rep 2	PBMC	Homo sapiens	PBMC	Male	Exercise Response	Pre	Ex-3	8035073981-G-M1_GEX_tr2	NONE
+GSM7680742	8035073962-G, Exercise Response (Post), GEX, bio rep 1	PBMC	Homo sapiens	PBMC	Male	Exercise Response	Post	Ex-3	8035073962-G-M2_GEX_tr1	NONE
+GSM7680743	8035073962-G, Exercise Response (Post), GEX, bio rep 2	PBMC	Homo sapiens	PBMC	Male	Exercise Response	Post	Ex-3	8035073962-G-M2_GEX_tr2	NONE
+GSM7680744	8035073276-N, Circadian control (Pre), ATAC, bio rep 1	PBMC	Homo sapiens	PBMC	Female	Circadian control	Pre	Ctrl-1	8035073276-N-M1_ATAC_tr1	ftp://ftp.ncbi.nlm.nih.gov/geo/samples/GSM7680nnn/GSM7680744/suppl/GSM7680744_atac_fragments.tsv.gz;ftp://ftp.ncbi.nlm.nih.gov/geo/samples/GSM7680nnn/GSM7680744/suppl/GSM7680744_atac_fragments.tsv.gz.tbi.gz
+GSM7680745	8035073276-N, Circadian control (Pre), ATAC, bio rep 2	PBMC	Homo sapiens	PBMC	Female	Circadian control	Pre	Ctrl-1	8035073276-N-M1_ATAC_tr2	ftp://ftp.ncbi.nlm.nih.gov/geo/samples/GSM7680nnn/GSM7680745/suppl/GSM7680745_atac_fragments.tsv.gz;ftp://ftp.ncbi.nlm.nih.gov/geo/samples/GSM7680nnn/GSM7680745/suppl/GSM7680745_atac_fragments.tsv.gz.tbi.gz
+GSM7680746	8035073605-N, Circadian control (Post), ATAC, bio rep 1	PBMC	Homo sapiens	PBMC	Female	Circadian control	Post	Ctrl-1	8035073605-N-M2_ATAC_tr1	ftp://ftp.ncbi.nlm.nih.gov/geo/samples/GSM7680nnn/GSM7680746/suppl/GSM7680746_atac_fragments.tsv.gz;ftp://ftp.ncbi.nlm.nih.gov/geo/samples/GSM7680nnn/GSM7680746/suppl/GSM7680746_atac_fragments.tsv.gz.tbi.gz
+GSM7680747	8035073605-N, Circadian control (Post), ATAC, bio rep 2	PBMC	Homo sapiens	PBMC	Female	Circadian control	Post	Ctrl-1	8035073605-N-M2_ATAC_tr2	ftp://ftp.ncbi.nlm.nih.gov/geo/samples/GSM7680nnn/GSM7680747/suppl/GSM7680747_atac_fragments.tsv.gz;ftp://ftp.ncbi.nlm.nih.gov/geo/samples/GSM7680nnn/GSM7680747/suppl/GSM7680747_atac_fragments.tsv.gz.tbi.gz
+GSM7680748	8035074040-J, Exercise Response (Pre), ATAC	PBMC	Homo sapiens	PBMC	Male	Exercise Response	Pre	Ex-4	8035074040-J-M1_ATAC	ftp://ftp.ncbi.nlm.nih.gov/geo/samples/GSM7680nnn/GSM7680748/suppl/GSM7680748_atac_fragments.tsv.gz;ftp://ftp.ncbi.nlm.nih.gov/geo/samples/GSM7680nnn/GSM7680748/suppl/GSM7680748_atac_fragments.tsv.gz.tbi.gz
+GSM7680749	8035073524-J, Exercise Response (Post), ATAC	PBMC	Homo sapiens	PBMC	Male	Exercise Response	Post	Ex-4	8035073524-J-M2_ATAC	ftp://ftp.ncbi.nlm.nih.gov/geo/samples/GSM7680nnn/GSM7680749/suppl/GSM7680749_atac_fragments.tsv.gz;ftp://ftp.ncbi.nlm.nih.gov/geo/samples/GSM7680nnn/GSM7680749/suppl/GSM7680749_atac_fragments.tsv.gz.tbi.gz
+GSM7680750	8035073530-L, Circadian control (Pre), ATAC, bio rep 1	PBMC	Homo sapiens	PBMC	Male	Circadian control	Pre	Ctrl-2	8035073530-L-M1_ATAC_tr1	ftp://ftp.ncbi.nlm.nih.gov/geo/samples/GSM7680nnn/GSM7680750/suppl/GSM7680750_atac_fragments.tsv.gz;ftp://ftp.ncbi.nlm.nih.gov/geo/samples/GSM7680nnn/GSM7680750/suppl/GSM7680750_atac_fragments.tsv.gz.tbi.gz
+GSM7680751	8035073530-L, Circadian control (Pre), ATAC, bio rep 2	PBMC	Homo sapiens	PBMC	Male	Circadian control	Pre	Ctrl-2	8035073530-L-M1_ATAC_tr2	ftp://ftp.ncbi.nlm.nih.gov/geo/samples/GSM7680nnn/GSM7680751/suppl/GSM7680751_atac_fragments.tsv.gz;ftp://ftp.ncbi.nlm.nih.gov/geo/samples/GSM7680nnn/GSM7680751/suppl/GSM7680751_atac_fragments.tsv.gz.tbi.gz
+GSM7680752	8035073603-L, Circadian control (Post), ATAC, bio rep 1	PBMC	Homo sapiens	PBMC	Male	Circadian control	Post	Ctrl-2	8035073603-L-M2_ATAC_tr1	ftp://ftp.ncbi.nlm.nih.gov/geo/samples/GSM7680nnn/GSM7680752/suppl/GSM7680752_atac_fragments.tsv.gz;ftp://ftp.ncbi.nlm.nih.gov/geo/samples/GSM7680nnn/GSM7680752/suppl/GSM7680752_atac_fragments.tsv.gz.tbi.gz
+GSM7680753	8035073603-L, Circadian control (Post), ATAC, bio rep 2	PBMC	Homo sapiens	PBMC	Male	Circadian control	Post	Ctrl-2	8035073603-L-M2_ATAC_tr2	ftp://ftp.ncbi.nlm.nih.gov/geo/samples/GSM7680nnn/GSM7680753/suppl/GSM7680753_atac_fragments.tsv.gz;ftp://ftp.ncbi.nlm.nih.gov/geo/samples/GSM7680nnn/GSM7680753/suppl/GSM7680753_atac_fragments.tsv.gz.tbi.gz
+GSM7680754	8035074016-I, Exercise Response (Pre), ATAC	PBMC	Homo sapiens	PBMC	Female	Exercise Response	Pre	Ex-2	8035074016-I-M1_ATAC	ftp://ftp.ncbi.nlm.nih.gov/geo/samples/GSM7680nnn/GSM7680754/suppl/GSM7680754_atac_fragments.tsv.gz;ftp://ftp.ncbi.nlm.nih.gov/geo/samples/GSM7680nnn/GSM7680754/suppl/GSM7680754_atac_fragments.tsv.gz.tbi.gz
+GSM7680755	8035073722-I, Exercise Response (Post), ATAC	PBMC	Homo sapiens	PBMC	Female	Exercise Response	Post	Ex-2	8035073722-I-M2_ATAC	ftp://ftp.ncbi.nlm.nih.gov/geo/samples/GSM7680nnn/GSM7680755/suppl/GSM7680755_atac_fragments.tsv.gz;ftp://ftp.ncbi.nlm.nih.gov/geo/samples/GSM7680nnn/GSM7680755/suppl/GSM7680755_atac_fragments.tsv.gz.tbi.gz
+GSM7680756	8035073800-E, Exercise Response (Pre), ATAC, bio rep 1	PBMC	Homo sapiens	PBMC	Female	Exercise Response	Pre	Ex-1	8035073800-E-M1_ATAC_tr1	ftp://ftp.ncbi.nlm.nih.gov/geo/samples/GSM7680nnn/GSM7680756/suppl/GSM7680756_atac_fragments.tsv.gz;ftp://ftp.ncbi.nlm.nih.gov/geo/samples/GSM7680nnn/GSM7680756/suppl/GSM7680756_atac_fragments.tsv.gz.tbi.gz
+GSM7680757	8035073800-E, Exercise Response (Pre), ATAC, bio rep 2	PBMC	Homo sapiens	PBMC	Female	Exercise Response	Pre	Ex-1	8035073800-E-M1_ATAC_tr2	ftp://ftp.ncbi.nlm.nih.gov/geo/samples/GSM7680nnn/GSM7680757/suppl/GSM7680757_atac_fragments.tsv.gz;ftp://ftp.ncbi.nlm.nih.gov/geo/samples/GSM7680nnn/GSM7680757/suppl/GSM7680757_atac_fragments.tsv.gz.tbi.gz
+GSM7680758	8035073790-E, Exercise Response (Post), ATAC, bio rep 1	PBMC	Homo sapiens	PBMC	Female	Exercise Response	Post	Ex-1	8035073790-E-M2_ATAC_tr1	ftp://ftp.ncbi.nlm.nih.gov/geo/samples/GSM7680nnn/GSM7680758/suppl/GSM7680758_atac_fragments.tsv.gz;ftp://ftp.ncbi.nlm.nih.gov/geo/samples/GSM7680nnn/GSM7680758/suppl/GSM7680758_atac_fragments.tsv.gz.tbi.gz
+GSM7680759	8035073790-E, Exercise Response (Post), ATAC, bio rep 2	PBMC	Homo sapiens	PBMC	Female	Exercise Response	Post	Ex-1	8035073790-E-M2_ATAC_tr2	ftp://ftp.ncbi.nlm.nih.gov/geo/samples/GSM7680nnn/GSM7680759/suppl/GSM7680759_atac_fragments.tsv.gz;ftp://ftp.ncbi.nlm.nih.gov/geo/samples/GSM7680nnn/GSM7680759/suppl/GSM7680759_atac_fragments.tsv.gz.tbi.gz
+GSM7680760	8035073981-G, Exercise Response (Pre), ATAC, bio rep 1	PBMC	Homo sapiens	PBMC	Male	Exercise Response	Pre	Ex-3	8035073981-G-M1_ATAC_tr1	ftp://ftp.ncbi.nlm.nih.gov/geo/samples/GSM7680nnn/GSM7680760/suppl/GSM7680760_atac_fragments.tsv.gz;ftp://ftp.ncbi.nlm.nih.gov/geo/samples/GSM7680nnn/GSM7680760/suppl/GSM7680760_atac_fragments.tsv.gz.tbi.gz
+GSM7680761	8035073981-G, Exercise Response (Pre), ATAC, bio rep 2	PBMC	Homo sapiens	PBMC	Male	Exercise Response	Pre	Ex-3	8035073981-G-M1_ATAC_tr2	ftp://ftp.ncbi.nlm.nih.gov/geo/samples/GSM7680nnn/GSM7680761/suppl/GSM7680761_atac_fragments.tsv.gz;ftp://ftp.ncbi.nlm.nih.gov/geo/samples/GSM7680nnn/GSM7680761/suppl/GSM7680761_atac_fragments.tsv.gz.tbi.gz
+GSM7680762	8035073962-G, Exercise Response (Post), ATAC, bio rep 1	PBMC	Homo sapiens	PBMC	Male	Exercise Response	Post	Ex-3	8035073962-G-M2_ATAC_tr1	ftp://ftp.ncbi.nlm.nih.gov/geo/samples/GSM7680nnn/GSM7680762/suppl/GSM7680762_atac_fragments.tsv.gz;ftp://ftp.ncbi.nlm.nih.gov/geo/samples/GSM7680nnn/GSM7680762/suppl/GSM7680762_atac_fragments.tsv.gz.tbi.gz
+GSM7680763	8035073962-G, Exercise Response (Post), ATAC, bio rep 2	PBMC	Homo sapiens	PBMC	Male	Exercise Response	Post	Ex-3	8035073962-G-M2_ATAC_tr2	ftp://ftp.ncbi.nlm.nih.gov/geo/samples/GSM7680nnn/GSM7680763/suppl/GSM7680763_atac_fragments.tsv.gz;ftp://ftp.ncbi.nlm.nih.gov/geo/samples/GSM7680nnn/GSM7680763/suppl/GSM7680763_atac_fragments.tsv.gz.tbi.gz

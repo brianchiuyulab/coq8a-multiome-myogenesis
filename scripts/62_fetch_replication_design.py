@@ -34,7 +34,7 @@ for sample in tree.findall("g:Sample", ns):
     for item in sample.findall("g:Channel/g:Characteristics", ns):
         row[item.attrib.get("tag", "characteristic")] = (item.text or "").strip()
     row["supplementary_files"] = ";".join(
-        x.text for x in sample.findall("g:Supplementary-Data", ns) if x.text
+        x.text.strip() for x in sample.findall("g:Supplementary-Data", ns) if x.text
     )
     rows.append(row)
 pd.DataFrame(rows).to_csv(

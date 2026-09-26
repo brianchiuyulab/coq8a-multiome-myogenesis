@@ -162,7 +162,7 @@ def main(root):
                     n_peaks=sub.peak.nunique(),
                     n_pairs=len(sub),
                     n_genes=sub.gene.nunique(),
-                    genes=";".join(sorted(sub.gene.unique())),
+                    genes=";".join(sorted(sub.gene.unique())) or "NA",
                 )
             )
         sub.to_csv(
