@@ -1,0 +1,4 @@
+set_id	peak	gene	nearest_tss_bp	n_libraries_x	gate	contrast	n_libraries_y	n_pairs	high_open	low_open	high_only	low_only	delta_pp	positive_libraries	p_pair_binomial	q_candidate_peaks	fold_open	q_all_5097
+P2_O50_Early_by24h	chr11:17696914-17697783	MYOD1	22223	4	TSS_ge_3	3plus_vs_1	4	201	29	17	25	13	5.970149253731344	3	0.0729513885162305	1.0	1.7058823529411764	1.0
+P2_O50_Early_by24h	chr11:17714073-17714965	MYOD1	5052	4	TSS_ge_3	3plus_vs_1	4	201	22	28	17	23	-2.985074626865672	1	0.4295905078433861	1.0	0.7857142857142857	1.0
+P2_O50_Early_by24h	chr11:17806817-17807701	MYOD1	87688	4	TSS_ge_3	3plus_vs_1	4	201	13	8	13	8	2.487562189054726	3	0.383310317993164	1.0	1.625	1.0

@@ -81,6 +81,11 @@ definitions are in [Methods](docs/METHODS.md).
 
 ## Documentation and source data
 
+- [Independent enhancer intersections](docs/EXTERNAL_ENHANCER_INTERSECTION.md):
+  human HSMM strong-enhancer annotation, MYOD1 ChIP and core MRF neighborhoods.
+  [Coordinate/time-course figure](figures/external_enhancers/MYOD1_external_annotation_and_time.png)
+  and [source tables](results/external_enhancers).
+
 - [Temporally unstratified exploration](docs/UNSTRATIFIED_LINK_EXPLORATION.md): all
   5,097 shared candidate peaks, nominal effects and peak–RNA count-model follow-up.
   [Exploration figure](figures/unstratified/Unstratified_peak_RNA_exploration.png)

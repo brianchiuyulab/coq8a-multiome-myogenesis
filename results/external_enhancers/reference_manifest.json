@@ -1,0 +1,20 @@
+{
+  "hmm_url": "https://hgdownload.soe.ucsc.edu/goldenPath/hg19/encodeDCC/wgEncodeBroadHmm/wgEncodeBroadHmmHsmmHMM.bed.gz",
+  "hmm_sha256": "4bca9486a4d8cfafe0cc173fcca36e6dcca27b0bef5a5354f19ad5b82645f515",
+  "assembly": "hg19",
+  "strong_states": [
+    "4_Strong_Enhancer",
+    "5_Strong_Enhancer"
+  ],
+  "overlap_rule": "Any positive overlap; fractions reported; no target effect filter",
+  "MYOD_ChIP_sources": [
+    {
+      "file": "GSM1218849_MB135GMMD.peak.txt.gz",
+      "sha256": "b59af738f4a0d13c70316211fd031f96da6c24665f26f44060d2740b7ee501d9"
+    },
+    {
+      "file": "GSM1218850_MB135DMMD.peak.txt.gz",
+      "sha256": "63b6d5f70e4dc9960f41764ba0a9fe35c805d21c6914136c7f14cdf99d569a91"
+    }
+  ]
+}
