@@ -17,7 +17,7 @@ python -m pip install -r requirements.txt
 python run_all.py --h5-root "C:\path\to\GSE208248_processed" --gtf "C:\path\to\gencode.v48.annotation.gtf.gz"
 ```
 
-The command writes tables to `results/tables/` and vector PDF plus PNG figures to `figures/`. The versioned `reference/` tables permit reproduction without reprocessing the large ATAC fragment files. [`docs/METHODS.md`](docs/METHODS.md) describes how to regenerate these inputs from fragments, genome sequence and the public matrices. [`docs/FIGURE_LEGENDS.md`](docs/FIGURE_LEGENDS.md) defines each panel; [`docs/RESULTS.md`](docs/RESULTS.md) records the results and their statistical scope.
+The command writes tables to `results/tables/` and vector PDF plus PNG figures to `figures/`. The versioned `reference/` tables permit reproduction without reprocessing the large ATAC fragment files. [`docs/METHODS.md`](docs/METHODS.md) describes how to regenerate these inputs from fragments, genome sequence and the public matrices. [`docs/SELECTION_AUDIT.md`](docs/SELECTION_AUDIT.md) enumerates every gene, peak and exploratory-locus selection. [`docs/FIGURE_LEGENDS.md`](docs/FIGURE_LEGENDS.md) defines each panel; [`docs/RESULTS.md`](docs/RESULTS.md) records the results and their statistical scope.
 
 `scripts/13_validate_release.py` checks pair identities and gates, the full primary test-family summary, and the six-region fold directly against pair-level data. GitHub Actions runs these checks on the released tables.
 

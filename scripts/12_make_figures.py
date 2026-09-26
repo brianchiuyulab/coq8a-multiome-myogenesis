@@ -63,20 +63,30 @@ def save(fig, path):
 
 def label(ax, letter, title):
     ax.text(
-        -0.08, 1.08, letter, transform=ax.transAxes, fontsize=12, fontweight="bold", va="bottom"
+        -0.08,
+        1.08,
+        letter,
+        transform=ax.transAxes,
+        fontsize=12,
+        fontweight="bold",
+        va="bottom",
     )
     ax.set_title(title, loc="left", fontsize=10, pad=12, fontweight="bold")
 
 
 def programme_panel(ax, table, modality):
     x = table[
-        (table.gate == "TSS_ge_3") & (table.contrast == "2plus_vs_1") & (table.modality == modality)
+        (table.gate == "TSS_ge_3")
+        & (table.contrast == "2plus_vs_1")
+        & (table.modality == modality)
     ].copy()
     order = ["Hallmark_myogenesis", "Reactome_myogenesis", "MRF_loci", "MEF2_loci"]
     x = x.set_index("programme").loc[order].reset_index()
     scale = 100 if modality == "ATAC" else 1
     for i, row in x.iterrows():
-        effect, low, high = [scale * row[c] for c in ["difference", "ci_low", "ci_high"]]
+        effect, low, high = [
+            scale * row[c] for c in ["difference", "ci_low", "ci_high"]
+        ]
         color = RED if modality == "RNA" else BLUE
         ax.plot([low, high], [i, i], color=color, lw=1.4)
         ax.scatter(effect, i, s=48, color=color, zorder=3)
@@ -110,7 +120,7 @@ def figure_one(t, out):
     gs = fig.add_gridspec(2, 2, height_ratios=[0.95, 1.1], hspace=0.38, wspace=0.38)
     ax = fig.add_subplot(gs[0, 0])
     ax.axis("off")
-    label(ax, "A", "Study design and outcome-independent search space")
+    label(ax, "A", "Study design and knowledge-based search space")
     boxes = [
         (
             0.02,
@@ -168,7 +178,9 @@ def figure_one(t, out):
             )
         )
     qctext = "  |  ".join(f"{r.gsm[-2:]}: {r.n_tss3:,} nuclei" for r in qc.itertuples())
-    ax.text(0.5, 0.04, qctext, ha="center", transform=ax.transAxes, fontsize=7.5, color=GRAY)
+    ax.text(
+        0.5, 0.04, qctext, ha="center", transform=ax.transAxes, fontsize=7.5, color=GRAY
+    )
     ax = fig.add_subplot(gs[0, 1])
     label(ax, "B", "RNA programme differences: COQ8A high vs low")
     programme_panel(ax, pr, "RNA")
@@ -192,7 +204,13 @@ def figure_one(t, out):
         if gene in wide.index:
             row = wide.loc[gene]
             ax.scatter(
-                row.RNA, 100 * row.ATAC, s=57, facecolor=color, edgecolor="white", lw=0.8, zorder=4
+                row.RNA,
+                100 * row.ATAC,
+                s=57,
+                facecolor=color,
+                edgecolor="white",
+                lw=0.8,
+                zorder=4,
             )
             ax.annotate(
                 gene,
@@ -296,7 +314,7 @@ def supplementary_myod1(t, out):
     ax.text(
         0.01,
         0.02,
-        "Outline: TSS≥2 peak–RNA link  •  Star: linked peak without strong MRF motif",
+        "Outline: TSS≥2 peak–RNA link  •  Star: maximum MRF PWM score <0.95",
         transform=ax.transAxes,
         fontsize=8,
         color=GRAY,
@@ -315,14 +333,18 @@ def supplementary_myod1(t, out):
         "All 32 nearby",
         "19 shared",
         "10 linked (TSS≥3)",
-        "5 weak-MRF (TSS≥3 links)",
-        "6 weak-MRF (TSS≥2 links)",
+        "5 MRF score<0.95 (TSS≥3 links)",
+        "6 MRF score<0.95 (TSS≥2 links)",
     ]
     for j, contrast in enumerate(["2plus_vs_1", "3plus_vs_1"]):
         z = x[x.contrast == contrast].set_index("region_set").loc[names]
         y = np.arange(len(names)) + (j - 0.5) * 0.18
         ax.scatter(
-            z.fold_open, y, s=46, color=[BLUE, RED][j], label=["COQ ≥2 vs 1", "COQ ≥3 vs 1"][j]
+            z.fold_open,
+            y,
+            s=46,
+            color=[BLUE, RED][j],
+            label=["COQ ≥2 vs 1", "COQ ≥3 vs 1"][j],
         )
         for k, r in enumerate(z.itertuples()):
             ax.text(
@@ -374,7 +396,10 @@ def supplementary_myod1(t, out):
     )
     ax.set_ylabel("6-region difference (percentage points)")
     fig.suptitle(
-        "Exploratory MYOD1 locus and threshold sensitivity", fontsize=15, fontweight="bold", y=1.01
+        "Exploratory MYOD1 locus and threshold sensitivity",
+        fontsize=15,
+        fontweight="bold",
+        y=1.01,
     )
     fig.text(
         0.5,
@@ -396,7 +421,12 @@ def supplementary_qc(t, out):
     for i, gsm in enumerate(LIBRARIES):
         vals = qc[qc.gsm == gsm].tss_enrichment.to_numpy()
         axes[0].hist(
-            vals, bins=np.linspace(0, 12, 61), density=True, histtype="step", lw=1.4, label=gsm[-2:]
+            vals,
+            bins=np.linspace(0, 12, 61),
+            density=True,
+            histtype="step",
+            lw=1.4,
+            label=gsm[-2:],
         )
     axes[0].axvline(3, color=INK, linestyle="--", lw=1)
     axes[0].set_xlabel("TSS enrichment")
@@ -411,7 +441,9 @@ def supplementary_qc(t, out):
         high = np.log1p(
             np.array([d.at[(g, b), col] for g, b in zip(pairs.gsm, pairs.high_barcode)])
         )
-        low = np.log1p(np.array([d.at[(g, b), col] for g, b in zip(pairs.gsm, pairs.low_barcode)]))
+        low = np.log1p(
+            np.array([d.at[(g, b), col] for g, b in zip(pairs.gsm, pairs.low_barcode)])
+        )
         ax.scatter(low, high, s=3, alpha=0.20, color=BLUE)
         bounds = [min(low.min(), high.min()), max(low.max(), high.max())]
         ax.plot(bounds, bounds, "--", color=GRAY, lw=0.9)
@@ -419,7 +451,10 @@ def supplementary_qc(t, out):
         ax.set_ylabel("High COQ8A: log1p depth")
         label(ax, letter, title)
     fig.suptitle(
-        "Joint RNA/ATAC quality and paired-depth balance", fontsize=13, fontweight="bold", y=1.05
+        "Joint RNA/ATAC quality and paired-depth balance",
+        fontsize=13,
+        fontweight="bold",
+        y=1.05,
     )
     save(fig, out / "Supplementary_Figure_QC")
 
@@ -435,7 +470,9 @@ def figure_two(t, out):
     myod_peaks = set(candidate[candidate.gene == "MYOD1"].peak)
     genes = pd.read_csv(t / "gene_effects_pooled.tsv", sep="\t")
     genes = genes[
-        (genes.gate == "TSS_ge_3") & (genes.contrast == "2plus_vs_1") & (genes.modality == "ATAC")
+        (genes.gate == "TSS_ge_3")
+        & (genes.contrast == "2plus_vs_1")
+        & (genes.modality == "ATAC")
     ]
     fig, axes = plt.subplots(1, 2, figsize=(12.8, 4.6))
     ax = axes[0]

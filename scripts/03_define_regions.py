@@ -28,32 +28,51 @@ def read_peaks(root, gsm):
 
 
 def map_one(ref, target):
+    """Find the maximum reciprocal-overlap target for every anchor peak.
+
+    Candidate intervals are bounded by the largest target width on each
+    chromosome, so all overlapping targets are considered without scanning
+    the entire chromosome for every anchor peak.
+    """
     rc, rs, re_ = coordinates(ref)
     tc, ts, te = coordinates(target)
     match = np.full(len(ref), -1, dtype=np.int32)
     match_score = np.zeros(len(ref), dtype=np.float32)
     for chrom in sorted(set(rc) & set(tc)):
-        r = np.flatnonzero(rc == chrom)
-        t = np.flatnonzero(tc == chrom)
-        mid = (ts[t] + te[t]) / 2
-        order = np.argsort(mid)
-        t, mid = t[order], mid[order]
-        pos = np.searchsorted(mid, (rs[r] + re_[r]) / 2)
-        for offset in [-3, -2, -1, 0, 1, 2]:
-            ix = np.clip(pos + offset, 0, len(t) - 1)
-            cand = t[ix]
-            overlap = np.maximum(0, np.minimum(re_[r], te[cand]) - np.maximum(rs[r], ts[cand]))
-            reciprocal = np.minimum(overlap / (re_[r] - rs[r]), overlap / (te[cand] - ts[cand]))
-            better = reciprocal > match_score[r]
-            match[r[better]] = cand[better]
-            match_score[r[better]] = reciprocal[better]
+        anchors = np.flatnonzero(rc == chrom)
+        candidates = np.flatnonzero(tc == chrom)
+        candidates = candidates[np.argsort(ts[candidates])]
+        candidate_starts = ts[candidates]
+        max_width = int((te[candidates] - ts[candidates]).max())
+        for anchor in anchors:
+            left = np.searchsorted(
+                candidate_starts, rs[anchor] - max_width, side="left"
+            )
+            right = np.searchsorted(candidate_starts, re_[anchor], side="left")
+            nearby = candidates[left:right]
+            if len(nearby) == 0:
+                continue
+            overlap = np.maximum(
+                0,
+                np.minimum(re_[anchor], te[nearby])
+                - np.maximum(rs[anchor], ts[nearby]),
+            )
+            reciprocal = np.minimum(
+                overlap / (re_[anchor] - rs[anchor]),
+                overlap / (te[nearby] - ts[nearby]),
+            )
+            best = int(np.argmax(reciprocal))
+            match[anchor] = nearby[best]
+            match_score[anchor] = reciprocal[best]
     match[match_score < 0.5] = -1
     # A target peak cannot serve two anchor peaks in one library.
     mapped = np.flatnonzero(match >= 0)
-    candidate = pd.DataFrame({"ref": mapped, "target": match[mapped], "score": match_score[mapped]})
-    candidate = candidate.sort_values(["score", "ref"], ascending=[False, True]).drop_duplicates(
-        "target"
+    candidate = pd.DataFrame(
+        {"ref": mapped, "target": match[mapped], "score": match_score[mapped]}
     )
+    candidate = candidate.sort_values(
+        ["score", "ref"], ascending=[False, True]
+    ).drop_duplicates("target")
     keep = np.full(len(ref), -1, dtype=np.int32)
     keep[candidate.ref.to_numpy()] = candidate.target.to_numpy()
     return keep
@@ -108,9 +127,13 @@ def main():
     mapping = pd.DataFrame({"peak": anchor})
     for gsm in SAMPLES[1:]:
         match = map_one(anchor, peaks[gsm])
-        mapping[gsm + "_peak"] = np.where(match >= 0, peaks[gsm][np.maximum(match, 0)], "")
+        mapping[gsm + "_peak"] = np.where(
+            match >= 0, peaks[gsm][np.maximum(match, 0)], ""
+        )
         print(gsm, "reciprocal one-to-one matches", int((match >= 0).sum()), flush=True)
-    mapping["n_libraries"] = 1 + (mapping[[g + "_peak" for g in SAMPLES[1:]]] != "").sum(axis=1)
+    mapping["n_libraries"] = 1 + (
+        mapping[[g + "_peak" for g in SAMPLES[1:]]] != ""
+    ).sum(axis=1)
     chrom, start, end = coordinates(anchor)
     mapping["chrom"] = chrom
     mapping["start"] = start
@@ -118,7 +141,9 @@ def main():
     mapping["width"] = end - start
     mapping["blacklisted"] = blacklist_flags(chrom, start, end, a.blacklist)
     mapping["coordinate_qc"] = (
-        mapping.chrom.isin(CHR) & mapping.width.between(200, 2000) & ~mapping.blacklisted
+        mapping.chrom.isin(CHR)
+        & mapping.width.between(200, 2000)
+        & ~mapping.blacklisted
     )
     mapping.to_csv(
         a.out / "consensus_peak_map.tsv.gz",
@@ -139,8 +164,12 @@ def main():
             distance = abs(site - midpoint)
             if distance <= 100_000:
                 rows.append((p.peak, gene, distance, p.n_libraries))
-    candidates = pd.DataFrame(rows, columns=["peak", "gene", "nearest_tss_bp", "n_libraries"])
-    candidates = candidates.sort_values("nearest_tss_bp").drop_duplicates(["peak", "gene"])
+    candidates = pd.DataFrame(
+        rows, columns=["peak", "gene", "nearest_tss_bp", "n_libraries"]
+    )
+    candidates = candidates.sort_values("nearest_tss_bp").drop_duplicates(
+        ["peak", "gene"]
+    )
     candidates.to_csv(
         a.out / "candidate_peak_gene.tsv.gz",
         sep="\t",
