@@ -5,8 +5,3 @@ h5py==3.15.1
 matplotlib==3.10.8
 statsmodels==0.14.6
 scikit-learn==1.8.0
-# Only for regenerating reference inputs:
-pysam
-numba
-twobitreader
-scrublet

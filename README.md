@@ -1,103 +1,31 @@
-# COQ8A and myogenesis in GSE208248 same-nucleus RNA + ATAC
+# COQ8A-associated myogenesis in a public same-nucleus multiome
 
-Exploratory, fully scripted reanalysis of four 10x Multiome libraries from two
-human muscle source lines, each sampled in a stem and differentiated state.
-The data set is **not** the young/old HMA donor atlas and does not inherit its
-cell type annotations, BI comparisons, or donor-level estimates.
+Reproducible reanalysis of [GSE208248](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE208248): four RNA/ATAC libraries from two human muscle source lines, each in a stem and differentiated state. This dataset is separate from the young/old HMA atlas. Its nuclei do not inherit HMA cell-type labels or Barthel Index values.
 
-For the fixed, non-targeted main analysis and its actual decision, start with
-[`docs/PRIMARY_ANALYSIS_zh-TW.md`](docs/PRIMARY_ANALYSIS_zh-TW.md). The
-six-peak 1.280 MYOD1 result is reproduced separately as an exploratory
-sensitivity, not used to define the main search.
+## Analysis sequence
 
-## Question and analysis order
+The biological search space is the measured union of MSigDB Hallmark and Reactome Myogenesis (**221 genes**). The pipeline first applies joint nucleus QC, matches COQ8A ≥2 UMI nuclei to 1 UMI nuclei within each library on RNA and ATAC depth, and tests every eligible gene region and candidate peak. The primary gate is TSS enrichment ≥3. The complete primary test families are saved before any locus is ranked.
 
-1. Start with independently named MSigDB Hallmark Myogenesis and Reactome
-   Myogenesis sets (`reference/myogenesis_221_gene_sources.tsv`). Their union
-   contains 221 measured genes, including MYOD1, MYOG, MYF5, and MYF6.
-2. Apply joint RNA/ATAC nucleus QC and match each COQ8A-high nucleus to one
-   COQ8A-low nucleus within its original library on RNA and ATAC depth.
-3. Test RNA programmes and nearby ATAC accessibility across **all 221 genes**.
-   Define candidate ATAC regions by genome position and peak recurrence before
-   examining the COQ8A effect. Test all eligible peaks, not only MRF motifs.
-4. Link candidate peaks to RNA of their nearby genes with depth/group-adjusted
-   within-library association at TSS≥3 and, separately, TSS≥2; then rank
-   exploratory loci. Show the full search and the resulting MYOD1 example.
-5. Challenge the locus with region-set, COQ8A count, TSS, and RNA doublet-score
-   sensitivity analyses. The peak-to-gene-linked subset is learned in the same
-   nuclei, so its apparent effect is **discovery**, not independent validation.
+The subsequent peak–RNA linkage and MYOD1 analyses are exploratory. Link discovery at TSS≥2 and TSS≥3, stronger COQ8A-count contrasts, and RNA doublet-score exclusions are reported as sensitivity analyses. The six-peak MYOD1 ratio of **1.280** is reproducible under its stated TSS≥2 link-discovery / TSS≥3 effect-test setting; it is not the result of the primary 221-gene ATAC scan.
 
-No fold-change cutoff was used to select a result. `fold_open` is the high/low
-ratio of the **fraction of nuclei with an open region**. The accompanying
-`delta_pp` is the absolute percentage-point difference.
+## Reproduction
 
-## Reproduce
-
-Python 3.13 was used with versions recorded in `requirements.txt`. Obtain the
-four GEO filtered feature-barcode H5 files and matching per-barcode-metrics
-files for GSM6339597, GSM6339599, GSM6339601, GSM6339603 from
-[GSE208248](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE208248).
-Provide the directory that contains those eight files. Download GENCODE v48
-hg38 `annotation.gtf.gz` and provide its path.
-`docs/input_sha256.csv` records the exact nine input files used in this run.
-In this workspace they are preserved under `data/public/`, outside the
-pending-manual-deletion directory.
+Use Python 3.13 and install [`requirements.txt`](requirements.txt). Download the four `filtered_feature_bc_matrix.h5` and four `per_barcode_metrics.csv.gz` files for GSM6339597, GSM6339599, GSM6339601 and GSM6339603 from GSE208248. Download GENCODE v48 hg38 `annotation.gtf.gz`. Exact source-file checksums are in [`docs/input_sha256.csv`](docs/input_sha256.csv).
 
 ```powershell
 python -m pip install -r requirements.txt
 python run_all.py --h5-root "C:\path\to\GSE208248_processed" --gtf "C:\path\to\gencode.v48.annotation.gtf.gz"
 ```
 
-The run uses the committed, barcode-indexed reference QC tables and motif
-scores in `reference/`. The larger raw H5, fragments, 2bit genome and GTF are
-not in Git. `scripts/00_fragment_qc_reference.py` reproduces the fragment
-quality tables from indexed ATAC fragments; `scripts/motif_score_provenance.py`
-reproduces JASPAR scores with an hg38 2bit genome; and
-`scripts/scrublet_provenance.py` regenerates RNA doublet scores. The exact
-commands and source links are in `docs/METHODS.md`.
+The command writes tables to `results/tables/` and vector PDF plus PNG figures to `figures/`. The versioned `reference/` tables permit reproduction without reprocessing the large ATAC fragment files. [`docs/METHODS.md`](docs/METHODS.md) describes how to regenerate these inputs from fragments, genome sequence and the public matrices. [`docs/FIGURE_LEGENDS.md`](docs/FIGURE_LEGENDS.md) defines each panel; [`docs/RESULTS.md`](docs/RESULTS.md) records the results and their statistical scope.
 
-## Results at a glance
+`scripts/13_validate_release.py` checks pair identities and gates, the full primary test-family summary, and the six-region fold directly against pair-level data. GitHub Actions runs these checks on the released tables.
 
-Primary comparison: TSS enrichment ≥3, COQ8A 2+ versus 1 UMI, depth matched
-within each library, 958 pairs. RNA Hallmark Myogenesis rises in all four
-libraries (paired difference +0.0107 log1p(CP10K), exploratory `p=0.0268`,
-four-programme `q=0.0358`). RNA MRF loci rise similarly (`p=0.00185`,
-`q=0.00738`). Nearby ATAC across the full Hallmark set has no consistent
-effect (two of four libraries; `p=0.0519`, `q=0.207`). No individual gene
-region or candidate ATAC peak survives its full multiple-testing family at
-`q<0.05`.
-
-MYOD1's 19 four-library common nearby peaks show a modest high/low open
-fraction ratio of 1.069 (absolute +0.824 percentage points; pair-level
-`p=0.0395`, 221-gene `q=0.635`). A six-peak subset nominated with TSS≥2
-peak–RNA links reproduces the earlier **1.280** ratio under COQ8A 3+ versus
-1 UMI and TSS≥3 (+2.90 percentage points, 201 pairs, 4/4 libraries positive,
-pair-level `p=0.02558`, 20-setting exploratory `q=0.0755`). Requiring TSS≥3
-already at the link-discovery stage removes one low-support peak, leaving five
-peaks and a **1.241** ratio (`p=0.05295`, 3/4 positive). The six-peak ratio
-drops to ~1.19 after removing the highest 2.5–5% RNA doublet-score nuclei.
-This is a **candidate locus signal**, not robust evidence for a programme-wide
-COQ8A-associated accessibility increase.
-
-`docs/RESULTS.md` gives the full interpretation and sensitivity summary.
-The superseded exploratory GSE208248 files were moved, without deletion, to
-`tmp/COQ8A_unused_sensitivity_pending_manual_delete_20260926/prior_GSE208248_exploratory_files/`;
-that directory contains a file manifest. Raw H5 and GTF inputs were moved out
-of the pending-deletion area first.
-
-## Layout
-
-| Directory | Contents |
+| Figure | Purpose |
 |---|---|
-| `scripts/` | Numbered analysis, reconciliation and plotting code plus shared methods |
-| `reference/` | Fixed gene list, QC, motif and blacklist inputs |
-| `results/tables/` | All nucleus, region, link, effect and sensitivity tables |
-| `figures/main/` | Figure 1: discovery funnel and full-gene results; Figure 2: MYOD1 locus and sensitivity |
-| `figures/supplement/` | RNA/ATAC QC, matching diagnostics and complete peak-level primary scan |
-| `docs/` | Methods, results, figure legends and source provenance |
+| [Figure 1](figures/main/Figure_1_global_discovery.pdf) | Study design, RNA and ATAC programmes, all 221 gene effects |
+| [Figure 2](figures/main/Figure_2_Global_ATAC_Scan.pdf) | Complete primary peak and gene-region ATAC test families |
+| [Supplementary MYOD1](figures/supplement/Supplementary_Figure_MYOD1_Exploratory.pdf) | Locus-level link discovery, threshold sensitivity and library effects |
+| [Supplementary QC](figures/supplement/Supplementary_Figure_QC.pdf) | TSS enrichment and matched-depth balance |
 
-The key sources for figure and method conventions are the
-[GSE208248 article](https://pmc.ncbi.nlm.nih.gov/articles/PMC10123345/),
-[Signac QC/visualization](https://stuartlab.org/signac/1.13.0/articles/pbmc_vignette),
-[ArchR peak-to-gene linkage](https://www.archrproject.com/bookdown/peak2genelinkage-with-archr.html),
-and [single-cell ATAC differential-analysis best practices](https://www.nature.com/articles/s41467-024-53089-5).
+The primary analysis shows an RNA myogenesis association, but no ATAC gene region or candidate peak passes its full-family BH q < 0.05 threshold. This observational dataset contains two independent source lines; paired-nucleus p values describe within-dataset associations and do not establish COQ8A-driven chromatin opening.

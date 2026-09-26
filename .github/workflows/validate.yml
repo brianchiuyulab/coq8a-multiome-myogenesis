@@ -1,0 +1,21 @@
+name: Validate released analysis tables
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+          cache: pip
+      - name: Install analysis dependencies
+        run: python -m pip install -r requirements.txt
+      - name: Check script syntax
+        run: python -m compileall -q run_all.py scripts
+      - name: Validate released tables and figures
+        run: python scripts/13_validate_release.py --tables results/tables --figures figures

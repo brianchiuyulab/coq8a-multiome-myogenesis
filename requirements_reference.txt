@@ -1,0 +1,6 @@
+# Optional: regenerate fragment, motif and RNA doublet-score reference tables.
+-r requirements.txt
+pysam>=0.22,<0.24
+numba==0.63.1
+twobitreader==4.0.2
+scrublet==0.2.3

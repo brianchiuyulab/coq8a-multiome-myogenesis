@@ -1,0 +1,10 @@
+*.py text eol=lf
+*.md text eol=lf
+*.txt text eol=lf
+*.tsv text eol=lf
+*.csv text eol=lf
+*.yml text eol=lf
+.gitattributes text eol=lf
+*.png binary
+*.pdf binary
+*.gz binary
