@@ -55,3 +55,12 @@ python scripts/12_make_figures.py --tables results/tables --figures figures
 | [Supplementary QC](figures/supplement/Supplementary_Figure_QC.pdf) | TSS enrichment and matched-depth balance |
 
 Both complete contrasts show an RNA myogenesis association, but no ATAC gene region or candidate peak passes its corresponding full-family BH q < 0.05 threshold. This observational dataset contains two independent source lines; paired-nucleus p values describe within-dataset associations and do not establish COQ8A-driven chromatin opening.
+
+### Bidirectional temporal follow-up
+
+[Peak-to-RNA results and reproduction](docs/BIDIRECTIONAL_RESULTS.md) cover all
+410 externally defined opening/closing peaks, including CSRP3 and CAV3 as
+phenotype-relevant exploratory candidates. Scripts 32, 30 and 33 generate the
+public evidence tables. Scripts 35 and 34 optionally cross-check existing private
+RNA contrasts and plot the comparison; private RNA values and figures are not
+included in this repository.

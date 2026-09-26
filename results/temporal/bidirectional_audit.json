@@ -1,0 +1,8 @@
+{
+  "peaks": 410,
+  "comparisons": 4,
+  "opening_tests_reconciled": 916,
+  "module_reconciliations": 16,
+  "test": "two-sided exact paired binomial",
+  "correction": "BH within each comparison; 410 total and phase-specific families reported"
+}

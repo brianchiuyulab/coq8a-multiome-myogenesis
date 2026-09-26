@@ -1,5 +1,9 @@
 # Results: externally timed myogenic accessibility
 
+The subsequent [bidirectional peak-to-RNA exploration](BIDIRECTIONAL_RESULTS.md)
+includes early, middle and closing regions, all nearby cis targets, and explicit
+functional prioritization. The original results below remain unchanged.
+
 ## Individual sites across all opening phases
 
 The [complete single-peak screen](TEMPORAL_SINGLE_PEAKS.md) tests all 191 early, 34 middle and 4 late peaks together. At COQ8A>=3 versus 1 UMI/TSS>=3, an early GNAO1-neighborhood site is 2.087-fold more accessible (exact paired p=0.000346), and a middle COL15A1-neighborhood site is 2.091-fold (p=0.000936). Both increase in all four libraries. Across all 229 peaks, both have BH q=0.0715; no site reaches q<0.05. An early CACNA1H-neighborhood site decreases to 0.227-fold (p=0.000911, q=0.0715). Thus the modest early-module average conceals larger local changes of both directions. The module summaries below are unchanged.
