@@ -22,6 +22,14 @@ The completed [external temporal analysis](docs/TEMPORAL_RESULTS.md) defines reg
 
 [Temporal Methods](docs/TEMPORAL_METHODS.md) describes the complete processing and `run_temporal.py` command. See [external timing](figures/temporal/Figure_external_timing.png), [COQ8A/TSS sensitivity](figures/temporal/Figure_COQ8A_temporal_sensitivity.png), and [states and genes](figures/temporal/Figure_temporal_states_and_genes.png). Source data are in `results/temporal/`. This result is separate from the earlier six-peak MYOD1 selection.
 
+### Functional differentiation and fusion subsets
+
+The [functional subset analysis](docs/FUNCTIONAL_SUBSETS.md) intersects four
+external GO annotations with the 221-gene universe and fixed external dynamic
+regions. It tests 54 distinct peaks and eight opening/closing modules using the
+unchanged matched nuclei. Complete memberships and all four sensitivity
+settings are in [results/functional](results/functional/).
+
 ### Original target-data preprocessing
 
 Use Python 3.13 and install [`requirements.txt`](requirements.txt). Download the four `filtered_feature_bc_matrix.h5` and four `per_barcode_metrics.csv.gz` files for GSM6339597, GSM6339599, GSM6339601 and GSM6339603 from GSE208248. Download GENCODE v48 hg38 `annotation.gtf.gz`. Exact source-file checksums are in [`docs/input_sha256.csv`](docs/input_sha256.csv). With the versioned reference tables present, the command below rebuilds every analysis table, all three main figures and the QC supplement from those downloaded inputs.

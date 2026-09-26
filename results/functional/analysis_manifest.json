@@ -1,0 +1,94 @@
+{
+  "sources": {
+    "Differentiation": {
+      "name": "GOBP_MYOBLAST_DIFFERENTIATION",
+      "genes_in_221": [
+        "ANKRD2",
+        "BOC",
+        "CSRP3",
+        "IFRD1",
+        "IGF1",
+        "IGFBP3",
+        "ITGB1",
+        "MAPK12",
+        "MAPK14",
+        "MEF2C",
+        "MYF5",
+        "MYF6",
+        "MYOD1",
+        "MYOG",
+        "NOTCH1",
+        "RB1",
+        "TGFB1"
+      ],
+      "source_url": "https://www.gsea-msigdb.org/gsea/msigdb/human/download_geneset.jsp?geneSetName=GOBP_MYOBLAST_DIFFERENTIATION&fileType=json",
+      "source_sha256": "d0483cac87b4ca67842d6de3d82cca20593e419d153652528822d25b28552f5f",
+      "exact_source": "GO:0045445",
+      "retrieved_utc": "2026-09-26T12:07:56.156453+00:00"
+    },
+    "Fusion": {
+      "name": "GOBP_MYOBLAST_FUSION",
+      "genes_in_221": [
+        "ADAM12",
+        "CACNA1H",
+        "CAV3",
+        "CDON",
+        "ITGB1",
+        "KCNH1",
+        "MAPK14",
+        "MYH9",
+        "MYOD1",
+        "MYOG",
+        "NEO1",
+        "NOS1"
+      ],
+      "source_url": "https://www.gsea-msigdb.org/gsea/msigdb/human/download_geneset.jsp?geneSetName=GOBP_MYOBLAST_FUSION&fileType=json",
+      "source_sha256": "d113f1a2fb3918f945f7aefae606c079ca4b51da9594365cd4ec6f531fc9f501",
+      "exact_source": "GO:0007520",
+      "retrieved_utc": "2026-09-26T12:07:56.608607+00:00"
+    },
+    "Positive_regulation": {
+      "name": "GOBP_POSITIVE_REGULATION_OF_MUSCLE_CELL_DIFFERENTIATION",
+      "genes_in_221": [
+        "ACTN3",
+        "CAV3",
+        "IGF1",
+        "LAMA2",
+        "MAPK11",
+        "MAPK12",
+        "MAPK14",
+        "MEF2C",
+        "MYF5",
+        "MYF6",
+        "MYOD1",
+        "MYOG",
+        "NOTCH1",
+        "TGFB1"
+      ],
+      "source_url": "https://www.gsea-msigdb.org/gsea/msigdb/human/download_geneset.jsp?geneSetName=GOBP_POSITIVE_REGULATION_OF_MUSCLE_CELL_DIFFERENTIATION&fileType=json",
+      "source_sha256": "cedc325621ec49146062f24f4efb95199124c323997a0107075e3eef504f50e2",
+      "exact_source": "GO:0051149",
+      "retrieved_utc": "2026-09-26T12:07:56.164081+00:00"
+    },
+    "Negative_regulation": {
+      "name": "GOBP_NEGATIVE_REGULATION_OF_MUSCLE_CELL_DIFFERENTIATION",
+      "genes_in_221": [
+        "CAV3",
+        "FOXO4",
+        "HDAC5",
+        "NOTCH1"
+      ],
+      "source_url": "https://www.gsea-msigdb.org/gsea/msigdb/human/download_geneset.jsp?geneSetName=GOBP_NEGATIVE_REGULATION_OF_MUSCLE_CELL_DIFFERENTIATION&fileType=json",
+      "source_sha256": "ebf6710347ec5aeaf17f3cd5edb8e040f9324b731dff28cc9572c4152d88f412",
+      "exact_source": "GO:0051148",
+      "retrieved_utc": "2026-09-26T17:03:33.518000+00:00"
+    }
+  },
+  "status": "exploratory external-annotation subset analysis",
+  "primary_gate": "TSS_ge_3",
+  "primary_contrast": "3plus_vs_1",
+  "module_family": "all nonempty function-by-opening/closing modules within each QC/contrast",
+  "peak_family": "union of distinct peaks in all four functions, opening and closing together",
+  "membership_sha256": "81215fc6960a56c0608dc05809cc3ac93e3ac1b93660a129721588f6223189b5",
+  "membership_hash_encoding": "UTF-8 with LF newlines"
+}

@@ -30,3 +30,14 @@ The data support an RNA myogenesis association and an exploratory, localized MYO
 ## External temporal extension
 
 The completed GSE109828-defined temporal region analysis is reported separately in [Temporal Results](TEMPORAL_RESULTS.md), with [Temporal Methods](TEMPORAL_METHODS.md) and figures under `figures/temporal/`. It evaluates a fixed external region selection and does not replace or reinterpret the full 221-gene screen above.
+
+## Functional subset extension
+
+[Functional subsets](FUNCTIONAL_SUBSETS.md) reports the completed external-GO
+differentiation/fusion analysis. The four annotations cover 30 distinct genes
+within the 221-gene universe and 54 distinct external dynamic peaks. No module
+has nominal P <0.05 across the four fixed sensitivity settings. In the main
+comparison, the CACNA1H-proximal peak has decreased accessibility (FC 0.2273,
+P 0.0009105, q 0.04917 within the 54-peak family). CSRP3 and CAV3 remain increased
+local candidates without passing that correction. Existing temporal and broad
+results are unchanged.
