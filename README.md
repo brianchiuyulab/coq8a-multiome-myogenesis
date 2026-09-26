@@ -24,6 +24,11 @@ The completed [external temporal analysis](docs/TEMPORAL_RESULTS.md) defines reg
 
 ### Functional differentiation and fusion subsets
 
+The [complete current analysis design](docs/CURRENT_ANALYSIS_DESIGN.md) details
+both GEO cohorts, sample sizes, union/intersection membership, coordinate
+mapping, temporal classes, QC, statistical families and reproduction commands.
+Machine-readable [sample and scope inventories](results/design/) accompany it.
+
 The [functional subset analysis](docs/FUNCTIONAL_SUBSETS.md) intersects four
 external GO annotations with the 221-gene universe and fixed external dynamic
 regions. It tests 54 distinct peaks and eight opening/closing modules using the

@@ -1,0 +1,3 @@
+scope	n_genes	n_common_peaks	n_early	n_middle	n_late	n_closing
+union	221	5097	191	34	4	181
+intersection	6	146	8	0	0	6

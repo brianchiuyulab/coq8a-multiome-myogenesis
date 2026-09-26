@@ -1,5 +1,10 @@
 # Methods and provenance
 
+For the complete current temporal/functional workflow, including sample-size
+inventories and the distinction between union and intersection, see
+[Current analysis design](CURRENT_ANALYSIS_DESIGN.md). The sections below also
+document the original broad and six-peak exploratory analyses.
+
 ## Study and inputs
 
 This is a retrospective, exploratory analysis of [GSE208248](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE208248), following the [source publication](https://pmc.ncbi.nlm.nih.gov/articles/PMC10123345/). Four same-nucleus RNA/ATAC libraries were used: GSM6339597 (line 1 stem), GSM6339599 (line 1 differentiated), GSM6339601 (line 2 stem), GSM6339603 (line 2 differentiated). The matching ATAC fragment accessions are GSM6339598, GSM6339600, GSM6339602, GSM6339604. Libraries are conditions from **two** source lines; they are not four independent human donors. This analysis never merges nuclei across libraries for matching.

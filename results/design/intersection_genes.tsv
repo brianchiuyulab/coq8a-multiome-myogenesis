@@ -1,0 +1,7 @@
+gene	Hallmark_Myogenesis	Reactome_Myogenesis	named_core_TF	n_candidate_peaks	n_common4
+MAPK12	True	True	False	33	27
+MEF2A	True	True	True	36	26
+MEF2C	True	True	True	41	27
+MEF2D	True	True	True	39	24
+MYF6	True	True	True	30	17
+MYOG	True	True	True	38	25
