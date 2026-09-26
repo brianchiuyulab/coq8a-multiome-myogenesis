@@ -109,9 +109,10 @@ def main() -> None:
                     group = barcodes[gsm].get(fields[3])
                     if group is None:
                         continue
-                    # One row is one PCR-deduplicated fragment. Use its two
-                    # Tn5 insertion sites rather than its reported read support.
-                    for cut in (int(fields[1]) + 4, int(fields[2]) - 5):
+                    # Cell Ranger ARC fragment endpoints already carry the
+                    # Tn5 offset. Do not apply the BAM +4/-5 shift a second time.
+                    # Count each deduplicated fragment once, not read support.
+                    for cut in (int(fields[1]), int(fields[2])):
                         relative = cut - site if strand == "+" else site - cut
                         if -HALF_WINDOW <= relative < HALF_WINDOW:
                             index = (relative + HALF_WINDOW) // BIN_WIDTH

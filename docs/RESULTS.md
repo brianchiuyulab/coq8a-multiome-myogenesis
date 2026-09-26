@@ -20,7 +20,7 @@ Using TSS≥3 during link discovery leaves five such peaks. Their open fraction 
 
 ## TSS-aligned fragment context
 
-Figure 1 uses the **same 201 main-contrast pairs** at all 221 gene TSSs. Within ±5 kb, high nuclei have 57,556 Tn5 cuts and low nuclei 56,638, a descriptive ratio of **1.0162**. This nearly overlapping mean profile does not select the MYOD1 peaks. It is a different readout from the six-peak open-nucleus ratio of 1.280.
+Figure 1 uses the **same 201 main-contrast pairs** at all 221 gene TSSs. Within ±5 kb, high nuclei have 57,558 Tn5-adjusted endpoints and low nuclei 56,634, a descriptive ratio of **1.0163**. This nearly overlapping mean profile does not select the MYOD1 peaks. It is a different readout from the six-peak open-nucleus ratio of 1.280.
 
 ## Interpretation
 
