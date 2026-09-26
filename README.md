@@ -17,15 +17,14 @@ python -m pip install -r requirements.txt
 python run_all.py --h5-root "C:\path\to\GSE208248_processed" --gtf "C:\path\to\gencode.v48.annotation.gtf.gz"
 ```
 
-The command writes tables to `results/tables/` and vector PDF plus PNG figures to `figures/`. The versioned `reference/` tables permit reproduction without reprocessing the large ATAC fragment files. [`docs/METHODS.md`](docs/METHODS.md) describes how to regenerate these inputs from fragments, genome sequence and the public matrices. [`docs/SELECTION_AUDIT.md`](docs/SELECTION_AUDIT.md) enumerates every gene, peak and exploratory-locus selection. [`docs/FIGURE_LEGENDS.md`](docs/FIGURE_LEGENDS.md) defines each panel; [`docs/RESULTS.md`](docs/RESULTS.md) records the results and their statistical scope. Figure 3 adds a same-nucleus visual display inspired by the multiome presentation of [Martini et al. (Nature, 2026)](https://doi.org/10.1038/s41586-026-10791-2); it uses this dataset's actual RNA and ATAC measurements, without implying that an observational COQ8A comparison is a perturbation experiment.
+The command writes tables to `results/tables/` and vector PDF plus PNG figures to `figures/`. The versioned `reference/` tables permit reproduction without reprocessing the large ATAC fragment files. [`docs/METHODS.md`](docs/METHODS.md) describes how to regenerate these inputs from fragments, genome sequence and the public matrices. [`docs/SELECTION_AUDIT.md`](docs/SELECTION_AUDIT.md) enumerates every gene, peak and exploratory-locus selection. [`docs/FIGURE_LEGENDS.md`](docs/FIGURE_LEGENDS.md) defines each panel; [`docs/RESULTS.md`](docs/RESULTS.md) records the results and their statistical scope.
 
-`scripts/13_validate_release.py` checks pair identities and gates, the full primary test-family summary, the six-region fold, and Figure 3's displayed RNA/ATAC scores against pair-level data. GitHub Actions runs these checks on the released tables.
+`scripts/13_validate_release.py` checks pair identities and gates, the full primary test-family summary, and the six-region fold against pair-level data. GitHub Actions runs these checks on the released tables.
 
 | Figure | Purpose |
 |---|---|
-| [Figure 1](figures/main/Figure_1_global_discovery.pdf) | Study design, RNA and ATAC programmes, all 221 gene effects |
+| [Figure 1](figures/main/Figure_1_global_discovery.pdf) | Four-library paired design and directly aligned Hallmark RNA/ATAC effects |
 | [Figure 2](figures/main/Figure_2_Global_ATAC_Scan.pdf) | Complete primary peak and gene-region ATAC test families |
-| [Figure 3](figures/main/Figure_3_Same_Nucleus_View.pdf) | Matched-nucleus joint RNA/ATAC UMAP, programme distributions, regulator dot plot and MYOD1 peak display |
 | [Supplementary MYOD1](figures/supplement/Supplementary_Figure_MYOD1_Exploratory.pdf) | Locus-level link discovery, threshold sensitivity and library effects |
 | [Supplementary QC](figures/supplement/Supplementary_Figure_QC.pdf) | TSS enrichment and matched-depth balance |
 

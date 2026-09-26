@@ -12,7 +12,7 @@ The analysis starts from two independent knowledge-based gene sets: [MSigDB Hall
 | Genes shared by the two measured sets | 6 |
 | Unique genes entering the analysis | **221** |
 
-The two Hallmark genes absent from the input matrix are **DENND2B** and **MYL11**. The six genes shared by the measured sets are MAPK12, MEF2A, MEF2C, MEF2D, MYF6 and MYOG. The `named_core_TF` column labels seven familiar regulators (MYOD1, MYOG, MYF5, MYF6, MEF2A, MEF2C and MEF2D); it does **not** filter the 221-gene search. The four-MRF and three-MEF2 summaries in Figure 1 are contextual views. In particular, MYF5 enters through Reactome and is part of the complete search even though it is absent from the Hallmark set.
+The two Hallmark genes absent from the input matrix are **DENND2B** and **MYL11**. The six genes shared by the measured sets are MAPK12, MEF2A, MEF2C, MEF2D, MYF6 and MYOG. The `named_core_TF` column labels seven familiar regulators (MYOD1, MYOG, MYF5, MYF6, MEF2A, MEF2C and MEF2D); it does **not** filter the 221-gene search. MRF and MEF2 summaries are secondary contextual results in the tables. In particular, MYF5 enters through Reactome and is part of the complete search even though it is absent from the Hallmark set.
 
 ## Primary ATAC test family
 

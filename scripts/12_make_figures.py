@@ -7,8 +7,7 @@ import matplotlib
 
 matplotlib.use("Agg")
 import matplotlib.pyplot as plt
-from matplotlib.colors import TwoSlopeNorm
-from matplotlib.patches import FancyArrowPatch, FancyBboxPatch
+from matplotlib.patches import Rectangle
 import numpy as np
 import pandas as pd
 
@@ -24,12 +23,6 @@ LIB_LABEL = {
     "GSM6339599": "Line 1 · differentiated",
     "GSM6339601": "Line 2 · stem",
     "GSM6339603": "Line 2 · differentiated",
-}
-PROGRAMME = {
-    "Hallmark_myogenesis": "Hallmark myogenesis",
-    "Reactome_myogenesis": "Reactome myogenesis",
-    "MRF_loci": "MRF genes",
-    "MEF2_loci": "MEF2 genes",
 }
 
 
@@ -74,174 +67,140 @@ def label(ax, letter, title):
     ax.set_title(title, loc="left", fontsize=10, pad=12, fontweight="bold")
 
 
-def programme_panel(ax, table, modality):
-    x = table[
-        (table.gate == "TSS_ge_3")
-        & (table.contrast == "2plus_vs_1")
-        & (table.modality == modality)
-    ].copy()
-    order = ["Hallmark_myogenesis", "Reactome_myogenesis", "MRF_loci", "MEF2_loci"]
-    x = x.set_index("programme").loc[order].reset_index()
-    scale = 100 if modality == "ATAC" else 1
-    for i, row in x.iterrows():
-        effect, low, high = [
-            scale * row[c] for c in ["difference", "ci_low", "ci_high"]
-        ]
-        color = RED if modality == "RNA" else BLUE
-        ax.plot([low, high], [i, i], color=color, lw=1.4)
-        ax.scatter(effect, i, s=48, color=color, zorder=3)
-    ax.axvline(0, color=GRAY, lw=0.8, linestyle="--")
-    ax.set_yticks(range(len(order)), [PROGRAMME[p] for p in order])
-    ax.invert_yaxis()
-    ax.set_xlabel(
-        "Mean paired difference"
-        + (" (percentage points)" if modality == "ATAC" else " (log-normalized RNA)")
-    )
-    ax.set_xlim((-0.012, 0.13) if modality == "RNA" else (-0.42, 0.95))
-    ax.grid(axis="x", color=LIGHT, lw=0.5)
-    for i, row in x.iterrows():
-        ax.text(
-            0.98,
-            i,
-            f"q={row.q_4_programmes:.3g}; {row.positive_libraries}/4",
-            transform=ax.get_yaxis_transform(),
-            ha="right",
-            va="center",
-            fontsize=7.5,
-            color=GRAY,
-        )
-
-
 def figure_one(t, out):
-    qc = pd.read_csv(t / "qc_by_library.tsv", sep="\t")
-    pr = pd.read_csv(t / "programme_effects_pooled.tsv", sep="\t")
-    g = pd.read_csv(t / "gene_effects_pooled.tsv", sep="\t")
-    fig = plt.figure(figsize=(13.2, 10.2))
-    gs = fig.add_gridspec(2, 2, height_ratios=[0.95, 1.1], hspace=0.38, wspace=0.38)
-    ax = fig.add_subplot(gs[0, 0])
+    """One question per axis: is the high/low programme shift in RNA and ATAC?"""
+    by_library = pd.read_csv(t / "programme_effects_by_library.tsv", sep="\t")
+    pooled = pd.read_csv(t / "programme_effects_pooled.tsv", sep="\t")
+    pairs = pd.read_csv(t / "matched_pairs.tsv.gz", sep="\t")
+    pairs = pairs[(pairs.gate == "TSS_ge_3") & (pairs.contrast == "2plus_vs_1")]
+    sizes = pairs.groupby("gsm").size()
+    fig = plt.figure(figsize=(11.8, 7.5))
+    grid = fig.add_gridspec(2, 2, height_ratios=[0.72, 1.28], hspace=0.35, wspace=0.35)
+    ax = fig.add_subplot(grid[0, :])
     ax.axis("off")
-    label(ax, "A", "Study design and knowledge-based search space")
-    boxes = [
-        (
-            0.02,
-            0.72,
-            0.96,
-            0.19,
-            "2 source lines × stem / differentiated\n4 same-nucleus RNA + ATAC libraries",
-        ),
-        (
-            0.02,
-            0.45,
-            0.96,
-            0.19,
-            "Joint RNA / ATAC QC → depth-matched nuclei\n958 pairs (COQ8A ≥2 vs 1 UMI; TSS ≥3)",
-        ),
-        (
-            0.02,
-            0.18,
-            0.96,
-            0.19,
-            "Hallmark ∪ Reactome: 221 measured genes\n±100 kb candidate regions; all motifs allowed",
-        ),
-    ]
-    for i, (x, y, w, h, content) in enumerate(boxes):
+    label(ax, "A", "Four libraries, paired within each library")
+    for index, gsm in enumerate(LIBRARIES):
+        left = 0.01 + index * 0.25
         ax.add_patch(
-            FancyBboxPatch(
-                (x, y),
-                w,
-                h,
-                boxstyle="round,pad=0.02",
+            Rectangle(
+                (left, 0.38),
+                0.235,
+                0.37,
                 transform=ax.transAxes,
-                facecolor=["#edf2f7", "#eaf2ea", "#fff3e9"][i],
+                facecolor=["#e9eef4", "#f5ebdf", "#eaf1e9", "#f1e9f0"][index],
                 edgecolor=LIGHT,
-                lw=0.8,
             )
         )
+        stage = "stem" if index % 2 == 0 else "differentiated"
+        line = "Line 1" if index < 2 else "Line 2"
         ax.text(
-            x + w / 2,
-            y + h / 2,
-            content,
+            left + 0.117,
+            0.565,
+            f"{line} · {stage}\n{sizes[gsm]} matched pairs",
             ha="center",
             va="center",
             transform=ax.transAxes,
             fontsize=9,
         )
-    for y in [0.685, 0.415]:
-        ax.add_patch(
-            FancyArrowPatch(
-                (0.5, y),
-                (0.5, y - 0.035),
-                arrowstyle="-|>",
-                mutation_scale=13,
-                color=GRAY,
-                transform=ax.transAxes,
-            )
-        )
-    qctext = "  |  ".join(f"{r.gsm[-2:]}: {r.n_tss3:,} nuclei" for r in qc.itertuples())
     ax.text(
-        0.5, 0.04, qctext, ha="center", transform=ax.transAxes, fontsize=7.5, color=GRAY
-    )
-    ax = fig.add_subplot(gs[0, 1])
-    label(ax, "B", "RNA programme differences: COQ8A high vs low")
-    programme_panel(ax, pr, "RNA")
-    ax = fig.add_subplot(gs[1, 0])
-    label(ax, "C", "No broad ATAC programme shift")
-    programme_panel(ax, pr, "ATAC")
-    ax = fig.add_subplot(gs[1, 1])
-    label(ax, "D", "Gene-centric ATAC and RNA effects (221 genes)")
-    x = g[(g.gate == "TSS_ge_3") & (g.contrast == "2plus_vs_1")]
-    wide = x.pivot(index="gene", columns="modality", values="difference").dropna()
-    ax.scatter(wide.RNA, 100 * wide.ATAC, s=16, color="#b0b9c3", alpha=0.75)
-    ax.axhline(0, color=LIGHT, lw=0.8)
-    ax.axvline(0, color=LIGHT, lw=0.8)
-    for gene, color, offset in [
-        ("MYOD1", RED, (5, 5)),
-        ("MYOG", GREEN, (6, -14)),
-        ("MYF5", BLUE, (6, 16)),
-        ("MEF2C", "#8c6bb1", (-49, -10)),
-        ("MEF2D", "#ce8430", (5, 5)),
-    ]:
-        if gene in wide.index:
-            row = wide.loc[gene]
-            ax.scatter(
-                row.RNA,
-                100 * row.ATAC,
-                s=57,
-                facecolor=color,
-                edgecolor="white",
-                lw=0.8,
-                zorder=4,
-            )
-            ax.annotate(
-                gene,
-                (row.RNA, 100 * row.ATAC),
-                xytext=offset,
-                textcoords="offset points",
-                fontsize=8,
-                color=color,
-            )
-    ax.set_xlabel("RNA paired effect (log-normalized)")
-    ax.set_ylabel("Nearby common-peak effect (percentage points)")
-    ax.grid(color=LIGHT, lw=0.4)
-    ax.text(
-        0.02,
-        0.02,
-        "No gene-region ATAC q < 0.05",
+        0.5,
+        0.14,
+        "Same nucleus: RNA + ATAC  |  COQ8A ≥2 versus 1 UMI  |  TSS enrichment ≥3",
         transform=ax.transAxes,
-        fontsize=8,
+        ha="center",
+        va="center",
+        fontsize=9,
         color=GRAY,
-        va="bottom",
     )
+
+    for panel, modality, color, scale in [
+        (fig.add_subplot(grid[1, 0]), "RNA", RED, 1),
+        (fig.add_subplot(grid[1, 1]), "ATAC", BLUE, 100),
+    ]:
+        subset = (
+            by_library[
+                (by_library.gate == "TSS_ge_3")
+                & (by_library.contrast == "2plus_vs_1")
+                & (by_library.modality == modality)
+                & (by_library.programme == "Hallmark_myogenesis")
+            ]
+            .set_index("gsm")
+            .loc[LIBRARIES]
+        )
+        all_row = pooled[
+            (pooled.gate == "TSS_ge_3")
+            & (pooled.contrast == "2plus_vs_1")
+            & (pooled.modality == modality)
+            & (pooled.programme == "Hallmark_myogenesis")
+        ].iloc[0]
+        for index, row in enumerate(subset.itertuples()):
+            y = 4 - index
+            panel.plot(
+                [scale * row.ci_low, scale * row.ci_high], [y, y], color=color, lw=1.7
+            )
+            panel.scatter(scale * row.difference, y, s=42, color=color, zorder=3)
+        panel.axhline(0.5, color=LIGHT, lw=0.8)
+        panel.plot(
+            [scale * all_row.ci_low, scale * all_row.ci_high],
+            [0, 0],
+            color=INK,
+            lw=2.3,
+        )
+        panel.scatter(
+            scale * all_row.difference, 0, s=68, marker="D", color=INK, zorder=4
+        )
+        panel.axvline(0, color=GRAY, ls="--", lw=0.9)
+        panel.set_yticks(
+            [4, 3, 2, 1, 0],
+            [
+                f"L1 stem · {sizes[LIBRARIES[0]]}",
+                f"L1 diff · {sizes[LIBRARIES[1]]}",
+                f"L2 stem · {sizes[LIBRARIES[2]]}",
+                f"L2 diff · {sizes[LIBRARIES[3]]}",
+                "All pairs · 958",
+            ],
+            fontsize=8,
+        )
+        panel.set_ylim(-0.65, 4.7)
+        panel.grid(axis="x", color=LIGHT, lw=0.5)
+        panel.set_axisbelow(True)
+        panel.set_xlabel(
+            "High − low: mean log-normalized RNA"
+            if modality == "RNA"
+            else "High − low: open fraction (percentage points)"
+        )
+        panel.set_title(
+            (
+                "B  Muscle programme RNA"
+                if modality == "RNA"
+                else "C  Nearby chromatin accessibility"
+            ),
+            loc="left",
+            fontweight="bold",
+            fontsize=11,
+        )
+        panel.text(
+            0.98,
+            0.97,
+            f"Hallmark Myogenesis · 198 genes\npooled q={all_row.q_4_programmes:.3f}; "
+            f"{all_row.positive_libraries}/4 libraries positive",
+            transform=panel.transAxes,
+            ha="right",
+            va="top",
+            fontsize=8,
+            color=GRAY,
+        )
     fig.suptitle(
-        "COQ8A and myogenesis in public same-nucleus multiome",
+        "Does higher COQ8A accompany a more open myogenesis programme?",
         fontsize=15,
         fontweight="bold",
-        y=1.01,
+        y=1.02,
     )
     fig.text(
         0.5,
-        -0.015,
-        "GSE208248  •  Pair-level intervals and q values are exploratory; biological sources n=2",
+        -0.02,
+        "221 Hallmark + Reactome genes define the complete nearby-region search in Figure 2. "
+        "Intervals and q values describe nucleus pairs; biological sources n=2.",
         ha="center",
         fontsize=8,
         color=GRAY,
@@ -466,8 +425,6 @@ def figure_two(t, out):
         & (peaks.contrast == "2plus_vs_1")
         & peaks.q_candidate_peaks.notna()
     ]
-    candidate = pd.read_csv(t / "candidate_peak_gene.tsv.gz", sep="\t")
-    myod_peaks = set(candidate[candidate.gene == "MYOD1"].peak)
     genes = pd.read_csv(t / "gene_effects_pooled.tsv", sep="\t")
     genes = genes[
         (genes.gate == "TSS_ge_3")
@@ -476,28 +433,16 @@ def figure_two(t, out):
     ]
     fig, axes = plt.subplots(1, 2, figsize=(12.8, 4.6))
     ax = axes[0]
-    other = peaks[~peaks.peak.isin(myod_peaks)]
-    selected = peaks[peaks.peak.isin(myod_peaks)]
     ax.scatter(
-        other.delta_pp,
-        -np.log10(np.maximum(other.p_pair_binomial, 1e-300)),
+        peaks.delta_pp,
+        -np.log10(np.maximum(peaks.p_pair_binomial, 1e-300)),
         color="#aeb9c5",
         s=7,
         alpha=0.45,
-        label="Other candidate peaks",
-    )
-    ax.scatter(
-        selected.delta_pp,
-        -np.log10(np.maximum(selected.p_pair_binomial, 1e-300)),
-        color=RED,
-        s=23,
-        alpha=0.85,
-        label="MYOD1-nearby peaks",
     )
     ax.axvline(0, color=GRAY, lw=0.8)
     ax.set_xlabel("COQ8A high − low open fraction (percentage points)")
     ax.set_ylabel("−log10 paired peak p")
-    ax.legend(frameon=False, fontsize=7)
     ax.text(
         0.02,
         0.97,
@@ -509,26 +454,13 @@ def figure_two(t, out):
     )
     label(ax, "A", "All eligible candidate peaks")
     ax = axes[1]
-    other = genes[genes.gene != "MYOD1"]
-    selected = genes[genes.gene == "MYOD1"]
     ax.scatter(
-        100 * other.difference,
-        -np.log10(np.maximum(other.p_pair, 1e-300)),
+        100 * genes.difference,
+        -np.log10(np.maximum(genes.p_pair, 1e-300)),
         color="#aeb9c5",
         s=18,
         alpha=0.65,
     )
-    ax.scatter(100 * selected.difference, -np.log10(selected.p_pair), color=RED, s=65)
-    if len(selected):
-        r = selected.iloc[0]
-        ax.annotate(
-            "MYOD1",
-            (100 * r.difference, -np.log10(r.p_pair)),
-            xytext=(5, 4),
-            textcoords="offset points",
-            fontsize=8,
-            color=RED,
-        )
     ax.axvline(0, color=GRAY, lw=0.8)
     ax.set_xlabel("COQ8A high − low nearby-peak mean (percentage points)")
     ax.set_ylabel("−log10 paired gene-region p")

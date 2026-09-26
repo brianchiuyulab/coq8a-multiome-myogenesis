@@ -101,47 +101,6 @@ def check_six_region_effect(tables: Path) -> tuple[int, float]:
     return len(detail), fold
 
 
-def check_same_nucleus_display(tables: Path, n_pairs: int) -> None:
-    display = pd.read_csv(tables / "same_nucleus_display.tsv.gz", sep="\t")
-    if len(display) != 2 * n_pairs or display.duplicated(["gsm", "barcode"]).any():
-        raise ValueError(
-            "Same-nucleus display must contain each primary matched nucleus once"
-        )
-    grouped = display.groupby(["gsm", "pair"])
-    if not grouped.size().eq(2).all():
-        raise ValueError("Same-nucleus display does not preserve primary pairs")
-    if not grouped.coq_group.apply(lambda values: set(values) == {"High", "Low"}).all():
-        raise ValueError("Same-nucleus display has incomplete high/low pairs")
-    if (
-        not np.isfinite(display[["UMAP1", "UMAP2", "rna_hallmark", "atac_hallmark"]])
-        .all()
-        .all()
-    ):
-        raise ValueError("Same-nucleus display contains non-finite values")
-    scores = display.pivot(
-        index=["gsm", "pair"],
-        columns="coq_group",
-        values=["rna_hallmark", "atac_hallmark"],
-    )
-    programme = pd.read_csv(tables / "programme_effects_pooled.tsv", sep="\t")
-    programme = programme[
-        (programme.gate == PRIMARY_GATE)
-        & (programme.contrast == PRIMARY_CONTRAST)
-        & (programme.programme == "Hallmark_myogenesis")
-    ].set_index("modality")
-    for modality, field in (("RNA", "rna_hallmark"), ("ATAC", "atac_hallmark")):
-        paired_difference = (scores[(field, "High")] - scores[(field, "Low")]).mean()
-        if not np.isclose(
-            paired_difference, programme.at[modality, "difference"], atol=1e-10
-        ):
-            raise ValueError(
-                f"Same-nucleus {modality} display differs from primary programme"
-            )
-    peaks = pd.read_csv(tables / "myod1_peak_display.tsv", sep="\t")
-    if len(peaks) != 19 or peaks.peak.duplicated().any():
-        raise ValueError("MYOD1 display must show all 19 common peaks")
-
-
 def main() -> None:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--tables", type=Path, required=True)
@@ -150,11 +109,9 @@ def main() -> None:
     n_pairs = check_pairs(args.tables)
     n_genes, n_peaks, n_significant = check_primary(args.tables)
     n_extreme, fold = check_six_region_effect(args.tables)
-    check_same_nucleus_display(args.tables, n_pairs)
     figures = [
         args.figures / "main/Figure_1_global_discovery.pdf",
         args.figures / "main/Figure_2_Global_ATAC_Scan.pdf",
-        args.figures / "main/Figure_3_Same_Nucleus_View.pdf",
         args.figures / "supplement/Supplementary_Figure_MYOD1_Exploratory.pdf",
         args.figures / "supplement/Supplementary_Figure_QC.pdf",
     ]

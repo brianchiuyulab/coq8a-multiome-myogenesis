@@ -123,17 +123,6 @@ def main() -> None:
             r / "rna_scrublet_qc.tsv.gz",
         ),
         ("12_make_figures.py", "--tables", t, "--figures", f),
-        (
-            "14_same_nucleus_view.py",
-            "--h5-root",
-            h,
-            "--tables",
-            t,
-            "--genes",
-            r / "myogenesis_221_gene_sources.tsv",
-            "--out",
-            f / "main" / "Figure_3_Same_Nucleus_View",
-        ),
         ("13_validate_release.py", "--tables", t, "--figures", f),
     ]
     for section, steps in [
