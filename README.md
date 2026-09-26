@@ -14,6 +14,8 @@ The subsequent peak–RNA linkage and MYOD1 analyses are exploratory. Links are 
 
 ### External differentiation timing
 
+The [middle-region follow-up](docs/MIDDLE_FOLLOWUP.md) presents the [three phase panels](figures/temporal/Figure_three_temporal_phases.png) followed by an [all-34-peak heatmap](figures/temporal/Figure_middle_34_peak_heatmap.png). COL15A1 is the leading middle-region site (2.091-fold, p=0.000936, exploratory middle-only q=0.0318); the analysis record retains the full opening-region correction and explains the distinct families.
+
 The [single-peak follow-up](docs/TEMPORAL_SINGLE_PEAKS.md) screens **all 191 early + 34 middle + 4 late sites together**, with the same membership in all four COQ8A/TSS settings. At >=3 vs 1 UMI/TSS>=3, early GNAO1 and middle COL15A1 neighborhood peaks each show about 2.09-fold accessibility (raw paired p=0.000346 and 0.000936; both BH q=0.0715 across 229 peaks). See the [complete peak-screen figure](figures/temporal/Figure_temporal_single_peaks.png). These local results and their common test family are separate from the module and gene-neighborhood summaries.
 
 The completed [external temporal analysis](docs/TEMPORAL_RESULTS.md) defines region timing using GSE109828 before testing COQ8A. Of the 221-gene candidate space, a **34-peak middle-opening module (24-48 h half-rise)** has a **1.223** high/low accessibility ratio (paired p=0.001785; ten-module q=0.01785) at COQ8A>=3 versus 1 UMI and TSS>=3. The same module is 1.344 in undifferentiated libraries; the earliest-opening subsets are much weaker. All four COQ8A/TSS settings, external-definition sensitivities and RNA/doublet QC challenges are retained.

@@ -121,6 +121,7 @@ def main():
     run("23_plot_temporal_accessibility.py", "--temporal", a.out, "--out", a.figures)
     run("27_temporal_single_peaks.py", "--tables", a.tables, "--temporal", a.out)
     run("28_plot_temporal_single_peaks.py", "--temporal", a.out, "--out", a.figures)
+    run("29_plot_middle_followup.py", "--temporal", a.out, "--figures", a.figures)
     run(
         "26_validate_temporal.py",
         "--h5-root",
