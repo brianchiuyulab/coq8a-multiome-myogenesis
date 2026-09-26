@@ -1,0 +1,30 @@
+{
+  "peaks": 5097,
+  "candidate_pairs": 94296,
+  "middle_correlations_reproduced": 2080,
+  "count_followup_pairs": 284,
+  "all_qc_nuclei": 32977,
+  "detection_families": {
+    "('technical', 0.01)": 61939,
+    "('technical', 0.05)": 27720,
+    "('technical_coq', 0.01)": 61939,
+    "('technical_coq', 0.05)": 27720,
+    "('technical_state', 0.01)": 61939,
+    "('technical_state', 0.05)": 27720,
+    "('technical_state_coq', 0.01)": 61939,
+    "('technical_state_coq', 0.05)": 27720
+  },
+  "bootstrap_targets": [
+    {
+      "gene": "MYOD1",
+      "peak": "chr11:17649919-17650798"
+    },
+    {
+      "gene": "CAV3",
+      "peak": "chr3:8733438-8733968"
+    }
+  ],
+  "ATAC_peaks_reproduced": 5097,
+  "RNA_gene_effects_reproduced": 221,
+  "RNA_high_low_genes": 4008
+}

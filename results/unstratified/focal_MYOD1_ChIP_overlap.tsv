@@ -1,0 +1,7 @@
+gene	peak	stage	overlap_peak_calls
+MYOD1	chr11:17649919-17650798	myoblast	1
+CSRP3	chr11:19201752-19202603	myoblast	1
+CAV3	chr3:8733438-8733968	myoblast	1
+MYOD1	chr11:17649919-17650798	myotube_72h	2
+CSRP3	chr11:19201752-19202603	myotube_72h	1
+CAV3	chr3:8733438-8733968	myotube_72h	1

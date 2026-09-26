@@ -81,6 +81,11 @@ definitions are in [Methods](docs/METHODS.md).
 
 ## Documentation and source data
 
+- [Temporally unstratified exploration](docs/UNSTRATIFIED_LINK_EXPLORATION.md): all
+  5,097 shared candidate peaks, nominal effects and peak–RNA count-model follow-up.
+  [Exploration figure](figures/unstratified/Unstratified_peak_RNA_exploration.png)
+  and [complete source tables](results/unstratified).
+
 - [Middle-region target-link follow-up](docs/MIDDLE_LINK_REASSESSMENT.md): expanded
   nucleus population, count models, stratified bootstrap and independent MYOD1
   annotation. [Follow-up figure](figures/link_followup/Middle_peak_RNA_associations.png)

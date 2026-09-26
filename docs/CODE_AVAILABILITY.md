@@ -35,6 +35,8 @@ requires `pysam`, supplied in `requirements_reference.txt`.
 | Private passage/time RNA comparison | 35_crosscheck_existing_rna, 43_plot_private_rna |
 | Expanded middle-region target associations | 44_expand_middle_links, 45_middle_count_models.R |
 | Independent MYOD1 annotation and follow-up figure | 46_middle_myod_annotation, 47_report_middle_links |
+| Unstratified candidate screen and count models | 48_unstratified_links, 49_unstratified_count_models.R, 50_select_unstratified_followup |
+| Unstratified validation and visualization | 51_report_unstratified_links |
 
 Numeric prefixes identify scripts and do not imply that every optional script
 is executed in the standard pipeline. Private RNA scripts require owner-supplied
