@@ -25,3 +25,8 @@ Figure 1 uses the **same 201 main-contrast pairs** at all 221 gene TSSs. Within 
 ## Interpretation
 
 The data support an RNA myogenesis association and an exploratory, localized MYOD1 accessibility signal under the stronger COQ8A contrast. **Both** complete ATAC screens are negative at their stated FDR thresholds, and the local effect weakens under the RNA doublet-score challenge. These observations support a target hypothesis for independent testing; they do not establish COQ8A-driven chromatin opening. Figure 2 shows both full 221-gene screens and explicitly contrasts candidate rankings; Figure 3 shows the locus and sensitivity settings.
+
+
+## External temporal extension
+
+The completed GSE109828-defined temporal region analysis is reported separately in [Temporal Results](TEMPORAL_RESULTS.md), with [Temporal Methods](TEMPORAL_METHODS.md) and figures under `figures/temporal/`. It evaluates a fixed external region selection and does not replace or reinterpret the full 221-gene screen above.

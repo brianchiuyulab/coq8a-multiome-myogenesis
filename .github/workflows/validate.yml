@@ -16,6 +16,8 @@ jobs:
       - name: Install analysis dependencies
         run: python -m pip install -r requirements.txt
       - name: Check script syntax
-        run: python -m compileall -q run_all.py scripts
+        run: python -m compileall -q run_all.py run_temporal.py scripts
       - name: Validate released tables and figures
         run: python scripts/13_validate_release.py --tables results/tables --figures figures
+      - name: Validate external temporal memberships and effects
+        run: python scripts/26_validate_temporal.py --tables results/tables --temporal results/temporal

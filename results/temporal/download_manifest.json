@@ -1,0 +1,32 @@
+[
+  {
+    "file": "GSM2970930_sciATAC_HSMM1_indextable.txt.gz",
+    "url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM2970nnn/GSM2970930/suppl/GSM2970930_sciATAC_HSMM1_indextable.txt.gz",
+    "bytes": 26987,
+    "sha256": "aecf5585fd8a88e18c7c372f61cb3683746b9245637074d184df8dd4590b8c9b"
+  },
+  {
+    "file": "GSM2970930_sciATAC_HSMM1_counts.txt.gz",
+    "url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM2970nnn/GSM2970930/suppl/GSM2970930_sciATAC_HSMM1_counts.txt.gz",
+    "bytes": 1040373183,
+    "sha256": "47333c5969b16acf266de616f1885873357e0e26dff4eab87f7497355c479542"
+  },
+  {
+    "file": "GSM2970931_sciATAC_HSMM2_indextable.txt.gz",
+    "url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM2970nnn/GSM2970931/suppl/GSM2970931_sciATAC_HSMM2_indextable.txt.gz",
+    "bytes": 26411,
+    "sha256": "25c6fa6add6439a3271f96c7660c0d8d77a593581c74054fd26cf309fbdae3dd"
+  },
+  {
+    "file": "GSM2970931_sciATAC_HSMM2_counts.txt.gz",
+    "url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM2970nnn/GSM2970931/suppl/GSM2970931_sciATAC_HSMM2_counts.txt.gz",
+    "bytes": 1100720674,
+    "sha256": "f62e7121ca2e094434d7afbec8af64eb4e8272ee658a300b0001aff53a873740"
+  },
+  {
+    "file": "hg38ToHg19.over.chain.gz",
+    "url": "https://hgdownload.soe.ucsc.edu/goldenPath/hg38/liftOver/hg38ToHg19.over.chain.gz",
+    "bytes": 1246411,
+    "sha256": "14a712e8e147d9fc8e9d87d51977b46f6f8ddb93efbe5d0843d86b6205f587b1"
+  }
+]

@@ -12,6 +12,14 @@ The subsequent peak–RNA linkage and MYOD1 analyses are exploratory. Links are 
 
 ## Reproduction
 
+### External differentiation timing
+
+The completed [external temporal analysis](docs/TEMPORAL_RESULTS.md) defines region timing using GSE109828 before testing COQ8A. Of the 221-gene candidate space, a **34-peak middle-opening module (24-48 h half-rise)** has a **1.223** high/low accessibility ratio (paired p=0.001785; ten-module q=0.01785) at COQ8A>=3 versus 1 UMI and TSS>=3. The same module is 1.344 in undifferentiated libraries; the earliest-opening subsets are much weaker. All four COQ8A/TSS settings, external-definition sensitivities and RNA/doublet QC challenges are retained.
+
+[Temporal Methods](docs/TEMPORAL_METHODS.md) describes the complete processing and `run_temporal.py` command. See [external timing](figures/temporal/Figure_external_timing.png), [COQ8A/TSS sensitivity](figures/temporal/Figure_COQ8A_temporal_sensitivity.png), and [states and genes](figures/temporal/Figure_temporal_states_and_genes.png). Source data are in `results/temporal/`. This result is separate from the earlier six-peak MYOD1 selection.
+
+### Original target-data preprocessing
+
 Use Python 3.13 and install [`requirements.txt`](requirements.txt). Download the four `filtered_feature_bc_matrix.h5` and four `per_barcode_metrics.csv.gz` files for GSM6339597, GSM6339599, GSM6339601 and GSM6339603 from GSE208248. Download GENCODE v48 hg38 `annotation.gtf.gz`. Exact source-file checksums are in [`docs/input_sha256.csv`](docs/input_sha256.csv). With the versioned reference tables present, the command below rebuilds every analysis table, all three main figures and the QC supplement from those downloaded inputs.
 
 ```powershell
