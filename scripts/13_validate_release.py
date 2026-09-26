@@ -19,7 +19,10 @@ def check_pairs(tables: Path) -> int:
         raise ValueError("QC nucleus identifiers are not unique")
     nucleus_index = nuclei.set_index(["gsm", "barcode"])
     for (gate, contrast, gsm), group in pairs.groupby(["gate", "contrast", "gsm"]):
-        if group.high_barcode.duplicated().any() or group.low_barcode.duplicated().any():
+        if (
+            group.high_barcode.duplicated().any()
+            or group.low_barcode.duplicated().any()
+        ):
             raise ValueError(f"Nucleus reused within {gsm} {gate} {contrast}")
         if set(group.high_barcode) & set(group.low_barcode):
             raise ValueError(f"High/low nucleus overlap in {gsm} {gate} {contrast}")
@@ -28,8 +31,13 @@ def check_pairs(tables: Path) -> int:
         threshold = 3 if contrast == "3plus_vs_1" else 2
         tss_gate = 3 if gate == PRIMARY_GATE else 2
         if not (high.COQ8A_umi.ge(threshold).all() and low.COQ8A_umi.eq(1).all()):
-            raise ValueError(f"COQ8A group definition failed for {gsm} {gate} {contrast}")
-        if not (high.tss_enrichment.ge(tss_gate).all() and low.tss_enrichment.ge(tss_gate).all()):
+            raise ValueError(
+                f"COQ8A group definition failed for {gsm} {gate} {contrast}"
+            )
+        if not (
+            high.tss_enrichment.ge(tss_gate).all()
+            and low.tss_enrichment.ge(tss_gate).all()
+        ):
             raise ValueError(f"TSS gate failed for {gsm} {gate} {contrast}")
         for field in ("abs_log_rna_depth_difference", "abs_log_atac_depth_difference"):
             if group[field].gt(0.1000001).any():
@@ -44,11 +52,15 @@ def check_primary(tables: Path) -> tuple[int, int, int]:
     atac_genes = genes[genes.modality == "ATAC"]
     rna_genes = genes[genes.modality == "RNA"]
     if not (len(atac_genes) == len(rna_genes) == 221):
-        raise ValueError("Primary RNA and ATAC gene families must each have 221 members")
+        raise ValueError(
+            "Primary RNA and ATAC gene families must each have 221 members"
+        )
     peaks = pd.read_csv(tables / "candidate_peak_effects_pooled.tsv.gz", sep="\t")
     peaks = peaks[(peaks.gate == PRIMARY_GATE) & (peaks.contrast == PRIMARY_CONTRAST)]
     tested = peaks[peaks.q_candidate_peaks.notna()]
-    summary = pd.read_csv(tables / "primary_decision_summary.tsv", sep="\t").set_index("metric")
+    summary = pd.read_csv(tables / "primary_decision_summary.tsv", sep="\t").set_index(
+        "metric"
+    )
     expected = {
         "n_candidate_genes": len(atac_genes),
         "n_tested_candidate_peaks": len(tested),
@@ -57,7 +69,9 @@ def check_primary(tables: Path) -> tuple[int, int, int]:
     }
     for metric, observed in expected.items():
         if int(summary.at[metric, "value"]) != observed:
-            raise ValueError(f"Primary summary disagrees with complete test family: {metric}")
+            raise ValueError(
+                f"Primary summary disagrees with complete test family: {metric}"
+            )
     return len(atac_genes), len(tested), expected["n_candidate_peaks_q_lt_0_05"]
 
 
@@ -81,8 +95,51 @@ def check_six_region_effect(tables: Path) -> tuple[int, float]:
     if not np.isclose(fold, row.fold_open, atol=1e-10):
         raise ValueError("Six-region fold differs from pair-level data")
     if not np.isclose(delta, row.delta_pp, atol=1e-10):
-        raise ValueError("Six-region percentage-point effect differs from pair-level data")
+        raise ValueError(
+            "Six-region percentage-point effect differs from pair-level data"
+        )
     return len(detail), fold
+
+
+def check_same_nucleus_display(tables: Path, n_pairs: int) -> None:
+    display = pd.read_csv(tables / "same_nucleus_display.tsv.gz", sep="\t")
+    if len(display) != 2 * n_pairs or display.duplicated(["gsm", "barcode"]).any():
+        raise ValueError(
+            "Same-nucleus display must contain each primary matched nucleus once"
+        )
+    grouped = display.groupby(["gsm", "pair"])
+    if not grouped.size().eq(2).all():
+        raise ValueError("Same-nucleus display does not preserve primary pairs")
+    if not grouped.coq_group.apply(lambda values: set(values) == {"High", "Low"}).all():
+        raise ValueError("Same-nucleus display has incomplete high/low pairs")
+    if (
+        not np.isfinite(display[["UMAP1", "UMAP2", "rna_hallmark", "atac_hallmark"]])
+        .all()
+        .all()
+    ):
+        raise ValueError("Same-nucleus display contains non-finite values")
+    scores = display.pivot(
+        index=["gsm", "pair"],
+        columns="coq_group",
+        values=["rna_hallmark", "atac_hallmark"],
+    )
+    programme = pd.read_csv(tables / "programme_effects_pooled.tsv", sep="\t")
+    programme = programme[
+        (programme.gate == PRIMARY_GATE)
+        & (programme.contrast == PRIMARY_CONTRAST)
+        & (programme.programme == "Hallmark_myogenesis")
+    ].set_index("modality")
+    for modality, field in (("RNA", "rna_hallmark"), ("ATAC", "atac_hallmark")):
+        paired_difference = (scores[(field, "High")] - scores[(field, "Low")]).mean()
+        if not np.isclose(
+            paired_difference, programme.at[modality, "difference"], atol=1e-10
+        ):
+            raise ValueError(
+                f"Same-nucleus {modality} display differs from primary programme"
+            )
+    peaks = pd.read_csv(tables / "myod1_peak_display.tsv", sep="\t")
+    if len(peaks) != 19 or peaks.peak.duplicated().any():
+        raise ValueError("MYOD1 display must show all 19 common peaks")
 
 
 def main() -> None:
@@ -93,9 +150,11 @@ def main() -> None:
     n_pairs = check_pairs(args.tables)
     n_genes, n_peaks, n_significant = check_primary(args.tables)
     n_extreme, fold = check_six_region_effect(args.tables)
+    check_same_nucleus_display(args.tables, n_pairs)
     figures = [
         args.figures / "main/Figure_1_global_discovery.pdf",
         args.figures / "main/Figure_2_Global_ATAC_Scan.pdf",
+        args.figures / "main/Figure_3_Same_Nucleus_View.pdf",
         args.figures / "supplement/Supplementary_Figure_MYOD1_Exploratory.pdf",
         args.figures / "supplement/Supplementary_Figure_QC.pdf",
     ]

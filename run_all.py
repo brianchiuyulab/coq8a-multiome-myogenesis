@@ -37,7 +37,9 @@ def main() -> None:
         required=True,
         help="Directory with four GEO filtered_feature_bc_matrix.h5 files and barcode metrics",
     )
-    p.add_argument("--gtf", type=Path, required=True, help="GENCODE v48 hg38 annotation.gtf.gz")
+    p.add_argument(
+        "--gtf", type=Path, required=True, help="GENCODE v48 hg38 annotation.gtf.gz"
+    )
     p.add_argument(
         "--out-root",
         type=Path,
@@ -113,8 +115,25 @@ def main() -> None:
         ("08_candidate_ranking.py", "--tables", t),
         ("09_link_gate_reconciliation.py", "--tables", t),
         ("10_locus_sensitivity.py", "--h5-root", h, "--tables", t),
-        ("11_doublet_sensitivity.py", "--tables", t, "--scrublet", r / "rna_scrublet_qc.tsv.gz"),
+        (
+            "11_doublet_sensitivity.py",
+            "--tables",
+            t,
+            "--scrublet",
+            r / "rna_scrublet_qc.tsv.gz",
+        ),
         ("12_make_figures.py", "--tables", t, "--figures", f),
+        (
+            "14_same_nucleus_view.py",
+            "--h5-root",
+            h,
+            "--tables",
+            t,
+            "--genes",
+            r / "myogenesis_221_gene_sources.tsv",
+            "--out",
+            f / "main" / "Figure_3_Same_Nucleus_View",
+        ),
         ("13_validate_release.py", "--tables", t, "--figures", f),
     ]
     for section, steps in [
