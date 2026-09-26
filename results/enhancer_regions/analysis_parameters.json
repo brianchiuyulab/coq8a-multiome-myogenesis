@@ -1,0 +1,14 @@
+{
+  "gate": "TSS_ge_3",
+  "contrast": "3plus_vs_1",
+  "n_pairs": 201,
+  "n_sources": 2,
+  "n_libraries": 4,
+  "start_peaks": 1777,
+  "merge_rule": "Overlapping or directly touching external states 4/5; zero gap",
+  "assignment": "Largest overlap with external block; genomic-start tie break",
+  "test": "Exact two-sided paired sign-flip of summed binary accessibility; dynamic programming",
+  "inference": "Conditional matched-nucleus association; not donor-population inference",
+  "correction": "BH separately for each region definition and endpoint; no best-method selection",
+  "gene_assignment": "Original candidate neighborhoods, not established enhancer targets"
+}

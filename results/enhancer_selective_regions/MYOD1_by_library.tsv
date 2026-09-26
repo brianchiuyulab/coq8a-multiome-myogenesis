@@ -1,0 +1,5 @@
+gsm	source	stage	n_pairs	high_open	low_open	high_only	low_only	FC	p
+GSM6339597	line1	stem	46	11	8	9	6	1.375	0.6072387695312499
+GSM6339599	line1	differentiated	74	11	4	11	4	2.75	0.11846923828124999
+GSM6339601	line2	stem	58	21	14	12	5	1.5	0.143463134765625
+GSM6339603	line2	differentiated	23	1	1	1	1	1.0	1.0

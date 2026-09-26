@@ -96,6 +96,10 @@ definitions are in [Methods](docs/METHODS.md).
   annotation. [Follow-up figure](figures/link_followup/Middle_peak_RNA_associations.png)
   and [source tables](results/link_followup) are separate from the main high/low tests.
 
+- [Enhancer-region exploration](docs/ENHANCER_REGION_EXPLORATION.md): sample-size
+  audit, external cell-context selectivity, and region-level tests without a MYOD
+  occupancy filter. [Broad results](results/enhancer_regions) and
+  [selective-region results](results/enhancer_selective_regions).
 - [Methods](docs/METHODS.md): samples, preprocessing, thresholds, matching, statistics and provenance.
 - [Figure legends](docs/FIGURE_LEGENDS.md): panel definitions, signal units and statistical families.
 - [Results](docs/RESULTS.md): current numerical findings.

@@ -57,5 +57,12 @@ hashes with the current analysis. The temporal validator recomputes programme
 statistics from matched-pair scores. Supplying `--h5-root` to that validator
 also checks example scores directly against the deposited count matrices.
 
+The external enhancer-region exploration is implemented in
+`scripts/54_enhancer_region_tests.py` (external block assignment, exact paired
+regional tests, and source-level summaries) and
+`scripts/55_external_enhancer_selectivity.py` (eight-reference download,
+independent selectivity annotation, and fixed-set tests). Reproduction commands
+and inference scopes are in `docs/ENHANCER_REGION_EXPLORATION.md`.
+
 The GitHub Actions workflow regenerates figures and runs these checks. This
 does not execute the full multi-gigabyte input pipeline on every commit.

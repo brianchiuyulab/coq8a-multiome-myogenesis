@@ -1,0 +1,42 @@
+[
+  {
+    "name": "Gm12878",
+    "url": "https://hgdownload.soe.ucsc.edu/goldenPath/hg19/encodeDCC/wgEncodeBroadHmm/wgEncodeBroadHmmGm12878HMM.bed.gz",
+    "sha256": "69f1c18955ea6fe3ebe2e6223708d870b46c24f3400bc4d826a23e47472d9e30"
+  },
+  {
+    "name": "H1hesc",
+    "url": "https://hgdownload.soe.ucsc.edu/goldenPath/hg19/encodeDCC/wgEncodeBroadHmm/wgEncodeBroadHmmH1hescHMM.bed.gz",
+    "sha256": "1b3282cf978485edd8c27181e22c5189e108193a3723f5b167be52c9fc3aabdf"
+  },
+  {
+    "name": "Hepg2",
+    "url": "https://hgdownload.soe.ucsc.edu/goldenPath/hg19/encodeDCC/wgEncodeBroadHmm/wgEncodeBroadHmmHepg2HMM.bed.gz",
+    "sha256": "9ef556ff03dd5dbeb13724fff05d0cfda428516609500984ccbfdc645d9a0577"
+  },
+  {
+    "name": "Hmec",
+    "url": "https://hgdownload.soe.ucsc.edu/goldenPath/hg19/encodeDCC/wgEncodeBroadHmm/wgEncodeBroadHmmHmecHMM.bed.gz",
+    "sha256": "a2cb512bf0aaa8bab20cd49e0dd6ea4a316b81ade724487b86723f5aa4a49509"
+  },
+  {
+    "name": "Huvec",
+    "url": "https://hgdownload.soe.ucsc.edu/goldenPath/hg19/encodeDCC/wgEncodeBroadHmm/wgEncodeBroadHmmHuvecHMM.bed.gz",
+    "sha256": "c9757c7aaf4ba024b96e5c455d95dd74ac86e5874a2ffc97561825baa2732a3e"
+  },
+  {
+    "name": "K562",
+    "url": "https://hgdownload.soe.ucsc.edu/goldenPath/hg19/encodeDCC/wgEncodeBroadHmm/wgEncodeBroadHmmK562HMM.bed.gz",
+    "sha256": "9cec92958735391924b8cbdca0e595f064ff5448d9008aeddd5540fdfe355552"
+  },
+  {
+    "name": "Nhek",
+    "url": "https://hgdownload.soe.ucsc.edu/goldenPath/hg19/encodeDCC/wgEncodeBroadHmm/wgEncodeBroadHmmNhekHMM.bed.gz",
+    "sha256": "a538ad96a436f867439a7cbd247469dd101657bbe790220594be4d217d877844"
+  },
+  {
+    "name": "Nhlf",
+    "url": "https://hgdownload.soe.ucsc.edu/goldenPath/hg19/encodeDCC/wgEncodeBroadHmm/wgEncodeBroadHmmNhlfHMM.bed.gz",
+    "sha256": "a632ffce08e81cced83fda139d61102d913c522cb1f2bf9da952a7c88d610a26"
+  }
+]
