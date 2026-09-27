@@ -1,0 +1,6 @@
+gene	in_221	functions	n_common_peaks	minimum_candidate_TSS_distance_bp	fusion_500_peaks	fusion_500_selective_peaks
+MYOD1	True	Differentiation;Fusion;Positive_regulation	19	96	1	0
+MYOG	True	Differentiation;Fusion;Positive_regulation	25	3758	0	0
+MYF5	True	Differentiation;Positive_regulation	17	29	0	0
+CAV3	True	Fusion;Positive_regulation;Negative_regulation	19	99	2	1
+CACNA1H	True	Fusion	31	121	3	0

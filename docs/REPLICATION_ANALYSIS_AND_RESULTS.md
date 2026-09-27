@@ -20,8 +20,10 @@ inventory or the previously reported GSE208248 calculations.
    q=0.3678。換寬鬆配對又降到約 1.05–1.06 倍。
 5. **目前沒有得到跨設定穩定、且 RNA 同步增加的 CAV3 機制鏈。**可列為
    探索候選，尚不值得只憑「3 倍」把整個驗證計畫押在 CAV3。
-6. 另有不同的 **CACNA1H 鄰近遠端位點**，在配對後 FC≈3、完整候選範圍
-   q≈0.02，但缺少可評估的 CACNA1H RNA 連結；應以座標保存為另一條線索。
+6. 另有 **chr16:1311478–1312392**，在配對後 FC≈3、完整候選範圍
+   q≈0.02。它因落在 CACNA1H 的100-kb窗口進入候選，但補查全基因註記後，
+   實際落在 **UBE2I 基因內並覆蓋一個 UBE2I transcript TSS**。不能將其
+   當作已配對 CACNA1H 的調控位點；target RNA 尚未確立。
 
 這次共完成舊資料 **288 組候選範圍／設定比較**、新資料 **448 組設定**。
 新資料 393 組可估 ATAC/RNA 計數模型；55 組因 donor、設計自由度或計數不足
@@ -83,6 +85,7 @@ CAV3 focal midpoint 距最近註記 TSS 99 bp，區間包含該 TSS。這個 pro
 對應 [原研究](https://pmc.ncbi.nlm.nih.gov/articles/PMC12212352/)：
 6 位受試者，4 位 exercise（E/G/I/J）、2 位 rest（L/N），每人前後採樣，
 12 biopsies。exercise 為 40-min cycling，post biopsy 為其後 3.5 h。
+原文 Discussion 明述六人皆為 young healthy adults；沒有 young/old 分組。
 每顆核同時有 RNA/ATAC；作者保留 37,154 nuclei、144,663 ATAC peaks。
 保留原作者 14 類 `refined_annotations_wknn_0.8` 註記。
 
@@ -244,10 +247,26 @@ p=0.00125，深度已相近。這說明平均開放幅度小不妨礙少数個�
   兩種結果均保留，不依顯著與否挑選共變項。另存的 design condition
   number 受共變項尺度影響，不能單憑數值較高判定模型不可用。
 
-原始候選註記將該位點分配為 CACNA1H 附近，最近相關 TSS 距離約99 kb。
+原始候選註記將該位點分配為 CACNA1H 附近，到 CACNA1H 註記 TSS 距離約99 kb。
 **它不是先前下降的 CACNA1H promoter peak。**此資料的 CACNA1H RNA
 沒有通過相應計數/偵測支持條件，沒有可用的 cis RNA-link 結果。
-因此目前稱為 distal candidate interval；不直接寫「CACNA1H 被活化」。
+補查不限制221基因的 GENCODE v48 後，此 peak 位於 UBE2I gene body，
+並覆蓋 UBE2I-207 / ENST00000406620.6 的 TSS（0-based 1311870；
+距 peak midpoint 65 bp）。這是更直接的 positional annotation，但仍非
+已驗證 peak–RNA link。原來的99-kb是「到候選集合內CACNA1H的距離」，
+**不是到全基因組最近gene的距離**。ATAC FC/p/q與檢驗範圍不變；
+基因歸屬解釋以此修正為準。輸出在 `results/candidate_identity/`，
+可用 `python scripts/72_candidate_identity_audit.py --gtf GENCODE_GTF_GZ` 重現。
+
+### Fusion scope does not replace the myogenesis universe
+
+12 genes 為 MSigDB 的 `GOBP_MYOBLAST_FUSION`（GO:0007520）與221全集交集，
+不是完整 GO 集合只有12，也不是依ATAC顯著性選出的12。MYOD1/MYOG在此交集；
+MYF5在 differentiation/positive-regulation scopes。MYOD1的一根500-bp
+promoter未通過外部muscle-selectivity；MYOG共同候選peaks最近midpoint距TSS
+3,758 bp，故沒有進500-bp promoter子集。三者仍在完整候選分析中。
+其GSE208248共同peaks分別19/25/17；映射新GSE240061後分別11/12/11。
+在新chr16 peak的C198設定，這三者鄰近可檢驗peaks沒有q<0.1。
 
 ## 5. 第二階段評級
 
