@@ -1,0 +1,449 @@
+config	n_peaks	nominal_open	nominal_closed	q10_open	q10_closed	q05_open	q05_closed	min_p	min_q	celltype	time	qc	rule	caliper	n_donors	n_high	n_low	primary	status
+C000	165.0	0.0	1.0	0.0	0.0	0.0	0.0	0.015200488100508	1.0	Satellite Cells	Pre	author	2plus_vs_1	none	5	38	129	False	ok
+C001	6.0	0.0	0.0	0.0	0.0	0.0	0.0	0.3280344585032	0.870171095585825	Satellite Cells	Pre	author	2plus_vs_1	0.1	3	12	12	False	ok
+C002	13.0	0.0	0.0	0.0	0.0	0.0	0.0	0.200572645592728	0.867493314823745	Satellite Cells	Pre	author	2plus_vs_1	0.2	4	17	17	False	ok
+C003	29.0	1.0	0.0	0.0	0.0	0.0	0.0	0.0182163922041229	0.528275373919565	Satellite Cells	Pre	author	2plus_vs_1	0.3	4	21	21	False	ok
+C004	145.0	1.0	2.0	0.0	0.0	0.0	0.0	0.0098287430929906	0.943900344535064	Satellite Cells	Pre	author	3plus_vs_1	none	4	16	124	False	ok
+C005	NA	NA	NA	NA	NA	NA	NA	NA	NA	Satellite Cells	Pre	author	3plus_vs_1	0.1	1	3	3	True	fewer_than_two_usable_donors
+C006	NA	NA	NA	NA	NA	NA	NA	NA	NA	Satellite Cells	Pre	author	3plus_vs_1	0.2	1	4	4	False	fewer_than_two_usable_donors
+C007	4.0	0.0	0.0	0.0	0.0	0.0	0.0	0.432087061312264	0.805037283849117	Satellite Cells	Pre	author	3plus_vs_1	0.3	3	6	6	False	ok
+C008	101.0	0.0	0.0	0.0	0.0	0.0	0.0	0.415225767192358	1.0	Satellite Cells	Pre	author	4plus_vs_1	none	3	4	97	False	ok
+C009	NA	NA	NA	NA	NA	NA	NA	NA	NA	Satellite Cells	Pre	author	4plus_vs_1	0.1	1	1	1	False	fewer_than_two_usable_donors
+C010	NA	NA	NA	NA	NA	NA	NA	NA	NA	Satellite Cells	Pre	author	4plus_vs_1	0.2	1	1	1	False	fewer_than_two_usable_donors
+C011	NA	NA	NA	NA	NA	NA	NA	NA	NA	Satellite Cells	Pre	author	4plus_vs_1	0.3	1	1	1	False	fewer_than_two_usable_donors
+C012	162.0	1.0	2.0	0.0	0.0	0.0	0.0	0.0067508617869653	0.936454573693787	Satellite Cells	Pre	author	3plus_vs_1to2	none	4	16	145	False	ok
+C013	NA	NA	NA	NA	NA	NA	NA	NA	NA	Satellite Cells	Pre	author	3plus_vs_1to2	0.1	1	3	3	False	fewer_than_two_usable_donors
+C014	NA	NA	NA	NA	NA	NA	NA	NA	NA	Satellite Cells	Pre	author	3plus_vs_1to2	0.2	1	4	4	False	fewer_than_two_usable_donors
+C015	4.0	0.0	0.0	0.0	0.0	0.0	0.0	0.372639711019491	0.971915355538278	Satellite Cells	Pre	author	3plus_vs_1to2	0.3	3	7	7	False	ok
+C016	93.0	0.0	5.0	0.0	0.0	0.0	0.0	0.023674897731436	0.829989549770161	Satellite Cells	Pre	author	positive_q25	none	6	44	44	False	ok
+C017	NA	NA	NA	NA	NA	NA	NA	NA	NA	Satellite Cells	Pre	author	positive_q25	0.1	1	2	2	False	fewer_than_two_usable_donors
+C018	NA	NA	NA	NA	NA	NA	NA	NA	NA	Satellite Cells	Pre	author	positive_q25	0.2	1	3	3	False	fewer_than_two_usable_donors
+C019	NA	NA	NA	NA	NA	NA	NA	NA	NA	Satellite Cells	Pre	author	positive_q25	0.3	1	5	5	False	fewer_than_two_usable_donors
+C020	124.0	1.0	4.0	0.0	0.0	0.0	0.0	0.0107886647914499	0.941455122316446	Satellite Cells	Pre	author	positive_q33	none	6	57	58	False	ok
+C021	NA	NA	NA	NA	NA	NA	NA	NA	NA	Satellite Cells	Pre	author	positive_q33	0.1	1	4	4	False	fewer_than_two_usable_donors
+C022	NA	NA	NA	NA	NA	NA	NA	NA	NA	Satellite Cells	Pre	author	positive_q33	0.2	1	6	6	False	fewer_than_two_usable_donors
+C023	14.0	0.0	1.0	0.0	0.0	0.0	0.0	0.0410076357500599	0.574106900500839	Satellite Cells	Pre	author	positive_q33	0.3	3	11	11	False	ok
+C024	417.0	1.0	11.0	0.0	0.0	0.0	0.0	0.0016971129080192	0.602118433499519	Satellite Cells	Pre	author	detected_vs_zero	none	6	169	815	False	ok
+C025	212.0	3.0	0.0	0.0	0.0	0.0	0.0	0.0246915006174646	0.947896833764544	Satellite Cells	Pre	author	detected_vs_zero	0.1	6	112	112	False	ok
+C026	242.0	2.0	5.0	0.0	0.0	0.0	0.0	0.0142567266110528	0.971876561863054	Satellite Cells	Pre	author	detected_vs_zero	0.2	6	137	137	False	ok
+C027	248.0	5.0	3.0	0.0	0.0	0.0	0.0	0.0134494049574445	0.987543948734808	Satellite Cells	Pre	author	detected_vs_zero	0.3	6	145	145	False	ok
+C028	62.0	1.0	2.0	0.0	0.0	0.0	0.0	0.0234487323168042	0.849851273672069	Satellite Cells	Pre	trim95	2plus_vs_1	none	3	20	77	False	ok
+C029	5.0	0.0	0.0	0.0	0.0	0.0	0.0	0.584968923866559	0.687948420686784	Satellite Cells	Pre	trim95	2plus_vs_1	0.1	3	10	10	False	ok
+C030	7.0	0.0	0.0	0.0	0.0	0.0	0.0	0.346323059092233	0.812982089230493	Satellite Cells	Pre	trim95	2plus_vs_1	0.2	3	13	13	False	ok
+C031	9.0	0.0	0.0	0.0	0.0	0.0	0.0	0.267007612657681	0.960632328504731	Satellite Cells	Pre	trim95	2plus_vs_1	0.3	3	15	15	False	ok
+C032	45.0	0.0	0.0	0.0	0.0	0.0	0.0	0.0618733970353783	0.979014287145002	Satellite Cells	Pre	trim95	3plus_vs_1	none	3	5	77	False	ok
+C033	NA	NA	NA	NA	NA	NA	NA	NA	NA	Satellite Cells	Pre	trim95	3plus_vs_1	0.1	1	1	1	False	fewer_than_two_usable_donors
+C034	NA	NA	NA	NA	NA	NA	NA	NA	NA	Satellite Cells	Pre	trim95	3plus_vs_1	0.2	1	2	2	False	fewer_than_two_usable_donors
+C035	NA	NA	NA	NA	NA	NA	NA	NA	NA	Satellite Cells	Pre	trim95	3plus_vs_1	0.3	1	2	2	False	fewer_than_two_usable_donors
+C036	NA	NA	NA	NA	NA	NA	NA	NA	NA	Satellite Cells	Pre	trim95	4plus_vs_1	none	1	1	45	False	fewer_than_two_usable_donors
+C037	NA	NA	NA	NA	NA	NA	NA	NA	NA	Satellite Cells	Pre	trim95	4plus_vs_1	0.1	0	0	0	False	fewer_than_two_usable_donors
+C038	NA	NA	NA	NA	NA	NA	NA	NA	NA	Satellite Cells	Pre	trim95	4plus_vs_1	0.2	1	1	1	False	fewer_than_two_usable_donors
+C039	NA	NA	NA	NA	NA	NA	NA	NA	NA	Satellite Cells	Pre	trim95	4plus_vs_1	0.3	1	1	1	False	fewer_than_two_usable_donors
+C040	62.0	0.0	4.0	0.0	0.0	0.0	0.0	0.0209368224688311	0.748785725079583	Satellite Cells	Pre	trim95	3plus_vs_1to2	none	3	5	92	False	ok
+C041	NA	NA	NA	NA	NA	NA	NA	NA	NA	Satellite Cells	Pre	trim95	3plus_vs_1to2	0.1	1	1	1	False	fewer_than_two_usable_donors
+C042	NA	NA	NA	NA	NA	NA	NA	NA	NA	Satellite Cells	Pre	trim95	3plus_vs_1to2	0.2	1	2	2	False	fewer_than_two_usable_donors
+C043	NA	NA	NA	NA	NA	NA	NA	NA	NA	Satellite Cells	Pre	trim95	3plus_vs_1to2	0.3	1	2	2	False	fewer_than_two_usable_donors
+C044	53.0	1.0	1.0	0.0	0.0	0.0	0.0	0.0166802282422613	0.658751172545265	Satellite Cells	Pre	trim95	positive_q25	none	6	34	34	False	ok
+C045	NA	NA	NA	NA	NA	NA	NA	NA	NA	Satellite Cells	Pre	trim95	positive_q25	0.1	1	2	2	False	fewer_than_two_usable_donors
+C046	NA	NA	NA	NA	NA	NA	NA	NA	NA	Satellite Cells	Pre	trim95	positive_q25	0.2	1	4	4	False	fewer_than_two_usable_donors
+C047	NA	NA	NA	NA	NA	NA	NA	NA	NA	Satellite Cells	Pre	trim95	positive_q25	0.3	2	6	6	False	error: Fewer than 10 count-supported background features
+C048	81.0	1.0	1.0	0.0	0.0	0.0	0.0	0.0206922959567225	0.979246464065348	Satellite Cells	Pre	trim95	positive_q33	none	6	44	44	False	ok
+C049	NA	NA	NA	NA	NA	NA	NA	NA	NA	Satellite Cells	Pre	trim95	positive_q33	0.1	2	4	4	False	error: Fewer than 10 count-supported background features
+C050	NA	NA	NA	NA	NA	NA	NA	NA	NA	Satellite Cells	Pre	trim95	positive_q33	0.2	2	7	7	False	error: Problem with covariate
+C051	7.0	0.0	0.0	0.0	0.0	0.0	0.0	0.195993526874844	0.925355794349241	Satellite Cells	Pre	trim95	positive_q33	0.3	3	11	11	False	ok
+C052	383.0	7.0	11.0	0.0	0.0	0.0	0.0	0.0027343994972097	0.794172736874711	Satellite Cells	Pre	trim95	detected_vs_zero	none	6	125	774	False	ok
+C053	181.0	1.0	1.0	0.0	0.0	0.0	0.0	0.0361137461143948	1.0	Satellite Cells	Pre	trim95	detected_vs_zero	0.1	6	102	102	False	ok
+C054	203.0	2.0	3.0	0.0	0.0	0.0	0.0	0.0276637813558215	0.998112779379152	Satellite Cells	Pre	trim95	detected_vs_zero	0.2	6	119	119	False	ok
+C055	204.0	2.0	3.0	0.0	0.0	0.0	0.0	0.0076433782626524	0.999447423047159	Satellite Cells	Pre	trim95	detected_vs_zero	0.3	6	122	122	False	ok
+C056	144.0	0.0	3.0	0.0	0.0	0.0	0.0	0.0115956939496538	0.893948927527933	Satellite Cells	Post	author	2plus_vs_1	none	6	29	65	False	ok
+C057	1.0	0.0	0.0	1.0	0.0	0.0	0.0	0.0653943903762058	0.0653943903762058	Satellite Cells	Post	author	2plus_vs_1	0.1	3	4	4	False	ok
+C058	25.0	1.0	0.0	1.0	0.0	1.0	0.0	0.0015059013598176	0.0376475339954419	Satellite Cells	Post	author	2plus_vs_1	0.2	4	11	11	False	ok
+C059	63.0	3.0	1.0	0.0	0.0	0.0	0.0	0.0034294310317257	0.216054154998721	Satellite Cells	Post	author	2plus_vs_1	0.3	6	16	16	False	ok
+C060	103.0	0.0	5.0	0.0	0.0	0.0	0.0	0.0082149288276443	0.432936217746234	Satellite Cells	Post	author	3plus_vs_1	none	5	11	59	False	ok
+C061	NA	NA	NA	NA	NA	NA	NA	NA	NA	Satellite Cells	Post	author	3plus_vs_1	0.1	1	1	1	True	fewer_than_two_usable_donors
+C062	NA	NA	NA	NA	NA	NA	NA	NA	NA	Satellite Cells	Post	author	3plus_vs_1	0.2	3	4	4	False	error: Fewer than 10 count-supported background features
+C063	4.0	0.0	0.0	0.0	0.0	0.0	0.0	0.266505869258781	0.584812872164853	Satellite Cells	Post	author	3plus_vs_1	0.3	5	6	6	False	ok
+C064	66.0	0.0	0.0	0.0	0.0	0.0	0.0	0.438225020744385	1.0	Satellite Cells	Post	author	4plus_vs_1	none	3	4	41	False	ok
+C065	NA	NA	NA	NA	NA	NA	NA	NA	NA	Satellite Cells	Post	author	4plus_vs_1	0.1	1	1	1	False	fewer_than_two_usable_donors
+C066	NA	NA	NA	NA	NA	NA	NA	NA	NA	Satellite Cells	Post	author	4plus_vs_1	0.2	1	1	1	False	fewer_than_two_usable_donors
+C067	NA	NA	NA	NA	NA	NA	NA	NA	NA	Satellite Cells	Post	author	4plus_vs_1	0.3	1	1	1	False	fewer_than_two_usable_donors
+C068	137.0	0.0	15.0	0.0	0.0	0.0	0.0	0.0038235014160238	0.428933891291723	Satellite Cells	Post	author	3plus_vs_1to2	none	5	11	76	False	ok
+C069	NA	NA	NA	NA	NA	NA	NA	NA	NA	Satellite Cells	Post	author	3plus_vs_1to2	0.1	1	1	1	False	fewer_than_two_usable_donors
+C070	NA	NA	NA	NA	NA	NA	NA	NA	NA	Satellite Cells	Post	author	3plus_vs_1to2	0.2	3	4	4	False	error: Fewer than 10 count-supported background features
+C071	5.0	0.0	0.0	0.0	0.0	0.0	0.0	0.190548736949404	0.57091398564611	Satellite Cells	Post	author	3plus_vs_1to2	0.3	5	6	6	False	ok
+C072	82.0	0.0	0.0	0.0	0.0	0.0	0.0	0.0588100442804504	0.922775300711142	Satellite Cells	Post	author	positive_q25	none	6	26	26	False	ok
+C073	NA	NA	NA	NA	NA	NA	NA	NA	NA	Satellite Cells	Post	author	positive_q25	0.1	1	1	1	False	fewer_than_two_usable_donors
+C074	NA	NA	NA	NA	NA	NA	NA	NA	NA	Satellite Cells	Post	author	positive_q25	0.2	1	1	1	False	fewer_than_two_usable_donors
+C075	NA	NA	NA	NA	NA	NA	NA	NA	NA	Satellite Cells	Post	author	positive_q25	0.3	2	2	2	False	error: Fewer than 10 count-supported background features
+C076	101.0	0.0	3.0	0.0	0.0	0.0	0.0	0.0353764716393807	0.732813572281633	Satellite Cells	Post	author	positive_q33	none	6	33	33	False	ok
+C077	NA	NA	NA	NA	NA	NA	NA	NA	NA	Satellite Cells	Post	author	positive_q33	0.1	2	2	2	False	error: Fewer than 10 count-supported background features
+C078	6.0	0.0	0.0	0.0	0.0	0.0	0.0	0.0688038726559678	0.412823235935807	Satellite Cells	Post	author	positive_q33	0.2	4	5	5	False	ok
+C079	23.0	1.0	1.0	0.0	0.0	0.0	0.0	0.0125942223744402	0.279292167965284	Satellite Cells	Post	author	positive_q33	0.3	6	8	8	False	ok
+C080	380.0	3.0	7.0	0.0	0.0	0.0	0.0	0.0021265412441936	0.808085672793573	Satellite Cells	Post	author	detected_vs_zero	none	6	94	424	False	ok
+C081	133.0	3.0	1.0	0.0	0.0	0.0	0.0	0.0119096104300546	0.841079647639761	Satellite Cells	Post	author	detected_vs_zero	0.1	6	48	48	False	ok
+C082	191.0	5.0	1.0	0.0	0.0	0.0	0.0	0.0046575928060784	0.420338465883347	Satellite Cells	Post	author	detected_vs_zero	0.2	6	70	70	False	ok
+C083	206.0	5.0	4.0	0.0	0.0	0.0	0.0	0.0025802753206248	0.531536716048724	Satellite Cells	Post	author	detected_vs_zero	0.3	6	77	77	False	ok
+C084	101.0	0.0	7.0	0.0	0.0	0.0	0.0	0.0106675818518295	0.505729035995465	Satellite Cells	Post	trim95	2plus_vs_1	none	6	19	54	False	ok
+C085	NA	NA	NA	NA	NA	NA	NA	NA	NA	Satellite Cells	Post	trim95	2plus_vs_1	0.1	3	3	3	False	error: Fewer than 10 count-supported background features
+C086	6.0	0.0	0.0	0.0	0.0	0.0	0.0	0.0798562909779527	0.261308470738334	Satellite Cells	Post	trim95	2plus_vs_1	0.2	3	8	8	False	ok
+C087	22.0	0.0	1.0	0.0	0.0	0.0	0.0	0.0479100263969528	0.564288518781354	Satellite Cells	Post	trim95	2plus_vs_1	0.3	5	11	11	False	ok
+C088	63.0	0.0	7.0	0.0	0.0	0.0	0.0	0.0101197863137838	0.339935572804313	Satellite Cells	Post	trim95	3plus_vs_1	none	5	6	49	False	ok
+C089	NA	NA	NA	NA	NA	NA	NA	NA	NA	Satellite Cells	Post	trim95	3plus_vs_1	0.1	1	1	1	False	fewer_than_two_usable_donors
+C090	NA	NA	NA	NA	NA	NA	NA	NA	NA	Satellite Cells	Post	trim95	3plus_vs_1	0.2	3	3	3	False	error: Fewer than 10 count-supported background features
+C091	NA	NA	NA	NA	NA	NA	NA	NA	NA	Satellite Cells	Post	trim95	3plus_vs_1	0.3	4	4	4	False	error: Fewer than 10 count-supported background features
+C092	NA	NA	NA	NA	NA	NA	NA	NA	NA	Satellite Cells	Post	trim95	4plus_vs_1	none	2	2	15	False	design_not_estimable
+C093	NA	NA	NA	NA	NA	NA	NA	NA	NA	Satellite Cells	Post	trim95	4plus_vs_1	0.1	1	1	1	False	fewer_than_two_usable_donors
+C094	NA	NA	NA	NA	NA	NA	NA	NA	NA	Satellite Cells	Post	trim95	4plus_vs_1	0.2	1	1	1	False	fewer_than_two_usable_donors
+C095	NA	NA	NA	NA	NA	NA	NA	NA	NA	Satellite Cells	Post	trim95	4plus_vs_1	0.3	1	1	1	False	fewer_than_two_usable_donors
+C096	91.0	0.0	10.0	0.0	0.0	0.0	0.0	0.0083418945644521	0.383065615587519	Satellite Cells	Post	trim95	3plus_vs_1to2	none	5	6	61	False	ok
+C097	NA	NA	NA	NA	NA	NA	NA	NA	NA	Satellite Cells	Post	trim95	3plus_vs_1to2	0.1	1	1	1	False	fewer_than_two_usable_donors
+C098	NA	NA	NA	NA	NA	NA	NA	NA	NA	Satellite Cells	Post	trim95	3plus_vs_1to2	0.2	3	3	3	False	error: Fewer than 10 count-supported background features
+C099	NA	NA	NA	NA	NA	NA	NA	NA	NA	Satellite Cells	Post	trim95	3plus_vs_1to2	0.3	4	4	4	False	error: Fewer than 10 count-supported background features
+C100	50.0	0.0	0.0	0.0	0.0	0.0	0.0	0.0574961773187586	0.970159056853314	Satellite Cells	Post	trim95	positive_q25	none	6	21	21	False	ok
+C101	NA	NA	NA	NA	NA	NA	NA	NA	NA	Satellite Cells	Post	trim95	positive_q25	0.1	1	1	1	False	fewer_than_two_usable_donors
+C102	NA	NA	NA	NA	NA	NA	NA	NA	NA	Satellite Cells	Post	trim95	positive_q25	0.2	2	2	2	False	error: Fewer than 10 count-supported background features
+C103	NA	NA	NA	NA	NA	NA	NA	NA	NA	Satellite Cells	Post	trim95	positive_q25	0.3	4	4	4	False	error: Fewer than 10 count-supported background features
+C104	75.0	2.0	2.0	0.0	0.0	0.0	0.0	0.0114808607480939	0.698640380426461	Satellite Cells	Post	trim95	positive_q33	none	6	26	26	False	ok
+C105	NA	NA	NA	NA	NA	NA	NA	NA	NA	Satellite Cells	Post	trim95	positive_q33	0.1	1	1	1	False	fewer_than_two_usable_donors
+C106	NA	NA	NA	NA	NA	NA	NA	NA	NA	Satellite Cells	Post	trim95	positive_q33	0.2	3	4	4	False	error: Fewer than 10 count-supported background features
+C107	7.0	0.0	0.0	0.0	0.0	0.0	0.0	0.0670840674474063	0.326208696621419	Satellite Cells	Post	trim95	positive_q33	0.3	4	7	7	False	ok
+C108	344.0	1.0	10.0	0.0	0.0	0.0	0.0	0.0036999018159837	0.783628527405582	Satellite Cells	Post	trim95	detected_vs_zero	none	6	73	401	False	ok
+C109	129.0	3.0	2.0	0.0	0.0	0.0	0.0	0.0063692166227526	0.476839386375618	Satellite Cells	Post	trim95	detected_vs_zero	0.1	6	47	47	False	ok
+C110	164.0	3.0	3.0	0.0	0.0	0.0	0.0	0.004808268420144	0.398432395374924	Satellite Cells	Post	trim95	detected_vs_zero	0.2	6	64	64	False	ok
+C111	183.0	4.0	4.0	0.0	0.0	0.0	0.0	0.0031720523088361	0.580485572517011	Satellite Cells	Post	trim95	detected_vs_zero	0.3	6	70	70	False	ok
+C112	623.0	16.0	5.0	0.0	0.0	0.0	0.0	0.0026918936852945	0.956842764009316	Fast	Pre	author	2plus_vs_1	none	6	2240	2549	False	ok
+C113	604.0	15.0	9.0	0.0	0.0	0.0	0.0	0.0019355891275845	0.67334946741871	Fast	Pre	author	2plus_vs_1	0.1	6	1707	1707	False	ok
+C114	609.0	13.0	12.0	0.0	0.0	0.0	0.0	0.0010750299382112	0.406336036017143	Fast	Pre	author	2plus_vs_1	0.2	6	1886	1886	False	ok
+C115	613.0	13.0	12.0	0.0	0.0	0.0	0.0	0.0013222960534099	0.456061261274368	Fast	Pre	author	2plus_vs_1	0.3	6	1937	1937	False	ok
+C116	607.0	10.0	15.0	0.0	0.0	0.0	0.0	0.0006796879222448	0.412570568802635	Fast	Pre	author	3plus_vs_1	none	6	1045	2549	False	ok
+C117	548.0	9.0	12.0	0.0	0.0	0.0	0.0	0.0030275261450781	0.979527929504041	Fast	Pre	author	3plus_vs_1	0.1	6	846	846	True	ok
+C118	557.0	11.0	10.0	0.0	0.0	0.0	0.0	0.0012275073039303	0.683721568289229	Fast	Pre	author	3plus_vs_1	0.2	6	945	945	False	ok
+C119	564.0	9.0	7.0	0.0	0.0	0.0	0.0	0.0002851851171309	0.160844406061852	Fast	Pre	author	3plus_vs_1	0.3	6	978	978	False	ok
+C120	593.0	13.0	21.0	0.0	0.0	0.0	0.0	0.0055913524974877	0.861199610430997	Fast	Pre	author	4plus_vs_1	none	6	464	2549	False	ok
+C121	460.0	5.0	8.0	0.0	0.0	0.0	0.0	0.0039562167224043	0.984398071466539	Fast	Pre	author	4plus_vs_1	0.1	6	374	374	False	ok
+C122	476.0	6.0	12.0	0.0	0.0	0.0	0.0	0.0024219406081224	0.977038924587587	Fast	Pre	author	4plus_vs_1	0.2	6	424	424	False	ok
+C123	482.0	9.0	11.0	0.0	0.0	0.0	0.0	0.0026188529355206	0.929444492716942	Fast	Pre	author	4plus_vs_1	0.3	6	446	446	False	ok
+C124	623.0	6.0	15.0	0.0	0.0	0.0	0.0	0.0012882971844043	0.583386957112745	Fast	Pre	author	3plus_vs_1to2	none	6	1045	3744	False	ok
+C125	556.0	4.0	8.0	0.0	0.0	0.0	0.0	0.001587566744751	0.882687110081583	Fast	Pre	author	3plus_vs_1to2	0.1	6	930	930	False	ok
+C126	569.0	8.0	9.0	0.0	0.0	0.0	0.0	0.0021234035491943	0.731813875508784	Fast	Pre	author	3plus_vs_1to2	0.2	6	1004	1004	False	ok
+C127	571.0	10.0	9.0	0.0	0.0	0.0	0.0	0.003797921851278	0.79560173773653	Fast	Pre	author	3plus_vs_1to2	0.3	6	1028	1028	False	ok
+C128	580.0	13.0	11.0	0.0	0.0	0.0	0.0	0.0061326593294846	0.94173976226534	Fast	Pre	author	positive_q25	none	6	1198	1199	False	ok
+C129	476.0	7.0	10.0	0.0	0.0	0.0	0.0	0.0153824215595385	0.995790789369753	Fast	Pre	author	positive_q25	0.1	6	469	469	False	ok
+C130	523.0	8.0	10.0	0.0	0.0	0.0	0.0	0.0087205792653918	0.97072252489552	Fast	Pre	author	positive_q25	0.2	6	658	658	False	ok
+C131	540.0	8.0	9.0	0.0	0.0	0.0	0.0	0.0056916680256978	0.910929545022686	Fast	Pre	author	positive_q25	0.3	6	794	794	False	ok
+C132	605.0	12.0	11.0	0.0	0.0	0.0	0.0	0.0071194338262369	0.981419257319619	Fast	Pre	author	positive_q33	none	6	1597	1598	False	ok
+C133	549.0	9.0	9.0	0.0	0.0	0.0	0.0	0.0032812488724284	0.983041879033377	Fast	Pre	author	positive_q33	0.1	6	888	888	False	ok
+C134	564.0	12.0	9.0	0.0	0.0	0.0	0.0	0.0024375937563458	0.962507893102658	Fast	Pre	author	positive_q33	0.2	6	1083	1083	False	ok
+C135	573.0	14.0	12.0	0.0	0.0	0.0	0.0	0.003087765313881	0.962478600153915	Fast	Pre	author	positive_q33	0.3	6	1168	1168	False	ok
+C136	641.0	19.0	4.0	0.0	0.0	0.0	0.0	0.0005985831469477	0.383691797193484	Fast	Pre	author	detected_vs_zero	none	6	4789	3946	False	ok
+C137	635.0	10.0	14.0	0.0	0.0	0.0	0.0	0.001003207736503	0.511354594736477	Fast	Pre	author	detected_vs_zero	0.1	6	3254	3254	False	ok
+C138	633.0	16.0	10.0	0.0	0.0	0.0	0.0	0.0015972856657499	0.637027136973914	Fast	Pre	author	detected_vs_zero	0.2	6	3417	3417	False	ok
+C139	633.0	15.0	15.0	0.0	0.0	0.0	0.0	0.0005631564114762	0.356478008464479	Fast	Pre	author	detected_vs_zero	0.3	6	3457	3457	False	ok
+C140	614.0	19.0	9.0	0.0	0.0	0.0	0.0	0.0074853873665278	0.994520959692702	Fast	Pre	trim95	2plus_vs_1	none	6	1912	2380	False	ok
+C141	593.0	19.0	11.0	0.0	0.0	0.0	0.0	0.0036969751217598	0.982809552323696	Fast	Pre	trim95	2plus_vs_1	0.1	6	1586	1586	False	ok
+C142	597.0	19.0	10.0	0.0	0.0	0.0	0.0	0.0018299463515703	0.849441451090347	Fast	Pre	trim95	2plus_vs_1	0.2	6	1717	1717	False	ok
+C143	601.0	17.0	15.0	0.0	0.0	0.0	0.0	0.0013881080818155	0.797453655165998	Fast	Pre	trim95	2plus_vs_1	0.3	6	1750	1750	False	ok
+C144	592.0	15.0	12.0	0.0	0.0	0.0	0.0	0.0044222712661907	0.999919992407034	Fast	Pre	trim95	3plus_vs_1	none	6	831	2380	False	ok
+C145	532.0	11.0	7.0	0.0	0.0	0.0	0.0	0.0049365353260308	0.809946077312339	Fast	Pre	trim95	3plus_vs_1	0.1	6	756	756	False	ok
+C146	537.0	11.0	8.0	0.0	0.0	0.0	0.0	0.0022600188859369	1.0	Fast	Pre	trim95	3plus_vs_1	0.2	6	810	810	False	ok
+C147	535.0	11.0	10.0	0.0	0.0	0.0	0.0	0.0006862586466885	0.367148375978349	Fast	Pre	trim95	3plus_vs_1	0.3	6	821	821	False	ok
+C148	577.0	14.0	6.0	1.0	0.0	0.0	0.0	0.0001399215090388	0.0807347107153911	Fast	Pre	trim95	4plus_vs_1	none	6	339	2380	False	ok
+C149	414.0	4.0	5.0	0.0	0.0	0.0	0.0	0.0041310268065323	0.969358712286552	Fast	Pre	trim95	4plus_vs_1	0.1	6	315	315	False	ok
+C150	419.0	3.0	6.0	0.0	0.0	0.0	0.0	0.0075527752265881	0.987115637506958	Fast	Pre	trim95	4plus_vs_1	0.2	6	332	332	False	ok
+C151	421.0	3.0	7.0	0.0	0.0	0.0	0.0	0.0041808746110696	0.984104283135888	Fast	Pre	trim95	4plus_vs_1	0.3	6	336	336	False	ok
+C152	614.0	9.0	10.0	0.0	0.0	0.0	0.0	0.001752023051447	0.999009530569218	Fast	Pre	trim95	3plus_vs_1to2	none	6	831	3461	False	ok
+C153	538.0	6.0	3.0	0.0	0.0	0.0	0.0	0.0078252098825816	1.0	Fast	Pre	trim95	3plus_vs_1to2	0.1	6	796	796	False	ok
+C154	540.0	7.0	4.0	0.0	0.0	0.0	0.0	0.0083467205643131	0.987995564368235	Fast	Pre	trim95	3plus_vs_1to2	0.2	6	821	821	False	ok
+C155	540.0	7.0	4.0	0.0	0.0	0.0	0.0	0.0078275705340923	0.977889269275335	Fast	Pre	trim95	3plus_vs_1to2	0.3	6	828	828	False	ok
+C156	562.0	15.0	9.0	0.0	0.0	0.0	0.0	0.0079272750870668	0.982046308578314	Fast	Pre	trim95	positive_q25	none	6	1078	1077	False	ok
+C157	466.0	7.0	6.0	0.0	0.0	0.0	0.0	0.004793210752331	0.991076095325321	Fast	Pre	trim95	positive_q25	0.1	6	448	448	False	ok
+C158	499.0	7.0	13.0	0.0	0.0	0.0	0.0	0.0014043900682423	0.700790644052938	Fast	Pre	trim95	positive_q25	0.2	6	612	612	False	ok
+C159	527.0	12.0	10.0	0.0	0.0	0.0	0.0	0.0033354462151342	0.984118082840527	Fast	Pre	trim95	positive_q25	0.3	6	734	734	False	ok
+C160	583.0	9.0	9.0	0.0	0.0	0.0	0.0	0.0101458724607993	0.998040953262861	Fast	Pre	trim95	positive_q33	none	6	1431	1432	False	ok
+C161	537.0	11.0	10.0	0.0	0.0	0.0	0.0	0.003996185492157	1.0	Fast	Pre	trim95	positive_q33	0.1	6	837	837	False	ok
+C162	552.0	10.0	9.0	0.0	0.0	0.0	0.0	0.0033358719166792	0.971764559760878	Fast	Pre	trim95	positive_q33	0.2	6	1003	1003	False	ok
+C163	558.0	10.0	12.0	0.0	0.0	0.0	0.0	0.0031018730828381	0.986200448507624	Fast	Pre	trim95	positive_q33	0.3	6	1090	1090	False	ok
+C164	638.0	15.0	9.0	0.0	0.0	0.0	0.0	0.0021591838580505	0.923145862082142	Fast	Pre	trim95	detected_vs_zero	none	6	4292	3781	False	ok
+C165	632.0	8.0	13.0	0.0	0.0	0.0	0.0	0.0016803421122664	0.915025556363622	Fast	Pre	trim95	detected_vs_zero	0.1	6	3113	3113	False	ok
+C166	632.0	8.0	16.0	0.0	0.0	0.0	0.0	0.0032274047961459	0.951551348935665	Fast	Pre	trim95	detected_vs_zero	0.2	6	3261	3261	False	ok
+C167	632.0	9.0	15.0	0.0	0.0	0.0	0.0	0.0025359336161573	0.937387959253339	Fast	Pre	trim95	detected_vs_zero	0.3	6	3298	3298	False	ok
+C168	585.0	15.0	9.0	0.0	0.0	0.0	0.0	0.0066794823900837	0.893819112865429	Fast	Post	author	2plus_vs_1	none	6	635	1166	False	ok
+C169	525.0	12.0	11.0	0.0	0.0	0.0	0.0	0.0004510854376937	0.236819854789195	Fast	Post	author	2plus_vs_1	0.1	6	485	485	False	ok
+C170	547.0	15.0	7.0	0.0	0.0	0.0	0.0	0.0005320304309398	0.283928953817697	Fast	Post	author	2plus_vs_1	0.2	6	567	567	False	ok
+C171	551.0	14.0	11.0	0.0	0.0	0.0	0.0	0.0006463242342318	0.233393974193629	Fast	Post	author	2plus_vs_1	0.3	6	586	586	False	ok
+C172	563.0	11.0	7.0	0.0	0.0	0.0	0.0	0.0078886347063421	0.999945150907063	Fast	Post	author	3plus_vs_1	none	6	200	1166	False	ok
+C173	387.0	7.0	7.0	0.0	0.0	0.0	0.0	0.0037596134048297	0.967527883474359	Fast	Post	author	3plus_vs_1	0.1	6	149	149	True	ok
+C174	409.0	11.0	7.0	0.0	0.0	0.0	0.0	0.0054041389797878	0.782959524911787	Fast	Post	author	3plus_vs_1	0.2	6	175	175	False	ok
+C175	412.0	12.0	6.0	0.0	0.0	0.0	0.0	0.0049220489009211	0.681030242290717	Fast	Post	author	3plus_vs_1	0.3	6	180	180	False	ok
+C176	551.0	5.0	7.0	0.0	0.0	0.0	0.0	0.0056519320291604	1.0	Fast	Post	author	4plus_vs_1	none	6	69	1166	False	ok
+C177	202.0	3.0	5.0	0.0	0.0	0.0	0.0	0.0038119893802744	0.555765035938098	Fast	Post	author	4plus_vs_1	0.1	6	45	45	False	ok
+C178	229.0	4.0	4.0	0.0	0.0	0.0	0.0	0.0051933917894542	0.633021049747053	Fast	Post	author	4plus_vs_1	0.2	6	57	57	False	ok
+C179	244.0	5.0	3.0	0.0	0.0	0.0	0.0	0.0080552335622321	0.999989411831582	Fast	Post	author	4plus_vs_1	0.3	6	61	61	False	ok
+C180	585.0	15.0	11.0	0.0	0.0	0.0	0.0	0.0118798547782936	1.0	Fast	Post	author	3plus_vs_1to2	none	6	200	1601	False	ok
+C181	398.0	6.0	7.0	0.0	0.0	0.0	0.0	0.0074155701942406	0.997499077551834	Fast	Post	author	3plus_vs_1to2	0.1	6	159	159	False	ok
+C182	418.0	9.0	7.0	0.0	0.0	0.0	0.0	0.0087638802032192	0.994821793261968	Fast	Post	author	3plus_vs_1to2	0.2	6	187	187	False	ok
+C183	423.0	11.0	5.0	0.0	0.0	0.0	0.0	0.0064768365196367	0.994799451911259	Fast	Post	author	3plus_vs_1to2	0.3	6	192	192	False	ok
+C184	516.0	15.0	5.0	0.0	0.0	0.0	0.0	0.0004965285969277	0.256208756014731	Fast	Post	author	positive_q25	none	6	452	452	False	ok
+C185	348.0	9.0	7.0	0.0	0.0	0.0	0.0	0.0111849803679078	0.80638359826833	Fast	Post	author	positive_q25	0.1	6	125	125	False	ok
+C186	400.0	9.0	9.0	0.0	0.0	0.0	0.0	0.0042895122381867	0.914099237206637	Fast	Post	author	positive_q25	0.2	6	190	190	False	ok
+C187	436.0	10.0	8.0	0.0	0.0	0.0	0.0	0.0026052569242762	0.654415404491306	Fast	Post	author	positive_q25	0.3	6	251	251	False	ok
+C188	549.0	16.0	8.0	0.0	0.0	0.0	0.0	0.0010289801929591	0.456362540797349	Fast	Post	author	positive_q33	none	6	600	604	False	ok
+C189	447.0	9.0	8.0	0.0	0.0	0.0	0.0	0.0025830184794581	0.679695291576805	Fast	Post	author	positive_q33	0.1	6	237	237	False	ok
+C190	490.0	14.0	8.0	0.0	0.0	0.0	0.0	0.0019131394253185	0.593116514344428	Fast	Post	author	positive_q33	0.2	6	324	324	False	ok
+C191	504.0	14.0	11.0	0.0	0.0	0.0	0.0	0.0017420026712754	0.372505265032646	Fast	Post	author	positive_q33	0.3	6	373	373	False	ok
+C192	635.0	16.0	21.0	0.0	0.0	0.0	0.0	0.000513474741631	0.264401465377598	Fast	Post	author	detected_vs_zero	none	6	1801	3028	False	ok
+C193	606.0	11.0	18.0	0.0	0.0	0.0	0.0	0.0004616687739191	0.279771276995016	Fast	Post	author	detected_vs_zero	0.1	6	1488	1488	False	ok
+C194	613.0	13.0	8.0	0.0	0.0	0.0	0.0	0.0010017632921407	0.614080898082296	Fast	Post	author	detected_vs_zero	0.2	6	1626	1626	False	ok
+C195	617.0	11.0	12.0	0.0	0.0	0.0	0.0	0.0009205345798538	0.567969835769831	Fast	Post	author	detected_vs_zero	0.3	6	1667	1667	False	ok
+C196	571.0	8.0	20.0	0.0	0.0	0.0	0.0	0.0022962573893725	0.669053008891881	Fast	Post	trim95	2plus_vs_1	none	6	536	1048	False	ok
+C197	511.0	11.0	11.0	1.0	0.0	1.0	0.0	1.03880648736337e-05	0.0053083011504268	Fast	Post	trim95	2plus_vs_1	0.1	6	435	435	False	ok
+C198	519.0	11.0	12.0	1.0	0.0	1.0	0.0	1.00624476028595e-05	0.0052224103058841	Fast	Post	trim95	2plus_vs_1	0.2	6	490	490	False	ok
+C199	520.0	11.0	10.0	1.0	0.0	1.0	0.0	3.88003827637319e-05	0.0201761990371406	Fast	Post	trim95	2plus_vs_1	0.3	6	506	506	False	ok
+C200	542.0	2.0	14.0	0.0	0.0	0.0	0.0	0.0073027101386315	0.980104442297407	Fast	Post	trim95	3plus_vs_1	none	6	159	1048	False	ok
+C201	363.0	7.0	4.0	0.0	0.0	0.0	0.0	0.0008077723581406	0.293221366005044	Fast	Post	trim95	3plus_vs_1	0.1	6	135	135	False	ok
+C202	371.0	7.0	4.0	0.0	0.0	0.0	0.0	0.0004577340687437	0.169819339503938	Fast	Post	trim95	3plus_vs_1	0.2	6	146	146	False	ok
+C203	376.0	6.0	4.0	0.0	0.0	0.0	0.0	0.0004541747345613	0.170769700195084	Fast	Post	trim95	3plus_vs_1	0.3	6	150	150	False	ok
+C204	530.0	0.0	50.0	0.0	0.0	0.0	0.0	0.0014061083387869	0.460108323569796	Fast	Post	trim95	4plus_vs_1	none	6	53	1048	False	ok
+C205	180.0	3.0	3.0	0.0	0.0	0.0	0.0	0.0015781297137446	0.284063348474032	Fast	Post	trim95	4plus_vs_1	0.1	6	41	41	False	ok
+C206	197.0	3.0	3.0	0.0	0.0	0.0	0.0	0.0008489526005433	0.167243662307042	Fast	Post	trim95	4plus_vs_1	0.2	6	48	48	False	ok
+C207	197.0	2.0	2.0	0.0	0.0	0.0	0.0	0.0007479930018435	0.147354621363172	Fast	Post	trim95	4plus_vs_1	0.3	6	50	50	False	ok
+C208	571.0	1.0	6.0	0.0	0.0	0.0	0.0	0.0096594542734652	1.0	Fast	Post	trim95	3plus_vs_1to2	none	6	159	1425	False	ok
+C209	369.0	4.0	6.0	0.0	0.0	0.0	0.0	0.0025680633967896	0.947615393415363	Fast	Post	trim95	3plus_vs_1to2	0.1	6	140	140	False	ok
+C210	382.0	4.0	8.0	0.0	0.0	0.0	0.0	0.0005327736309348	0.203519527017125	Fast	Post	trim95	3plus_vs_1to2	0.2	6	155	155	False	ok
+C211	385.0	6.0	7.0	0.0	0.0	0.0	0.0	0.0004911128458968	0.189078445670274	Fast	Post	trim95	3plus_vs_1to2	0.3	6	159	159	False	ok
+C212	493.0	18.0	8.0	0.0	0.0	0.0	0.0	0.0008868530487876	0.258162971820993	Fast	Post	trim95	positive_q25	none	6	399	399	False	ok
+C213	346.0	8.0	8.0	0.0	0.0	0.0	0.0	0.0091671389506738	0.986128900145591	Fast	Post	trim95	positive_q25	0.1	6	123	123	False	ok
+C214	399.0	9.0	7.0	0.0	0.0	0.0	0.0	0.0047541277334754	0.963168993517838	Fast	Post	trim95	positive_q25	0.2	6	190	190	False	ok
+C215	426.0	12.0	11.0	0.0	0.0	0.0	0.0	0.0027853614704042	0.504505294302343	Fast	Post	trim95	positive_q25	0.3	6	241	241	False	ok
+C216	526.0	13.0	11.0	0.0	0.0	0.0	0.0	0.0008662932174644	0.373713968272029	Fast	Post	trim95	positive_q33	none	6	528	530	False	ok
+C217	434.0	13.0	7.0	0.0	0.0	0.0	0.0	0.0005780413858467	0.250869961457505	Fast	Post	trim95	positive_q33	0.1	6	239	239	False	ok
+C218	470.0	10.0	10.0	0.0	0.0	0.0	0.0	0.0026345977192393	0.444615766666529	Fast	Post	trim95	positive_q33	0.2	6	304	304	False	ok
+C219	488.0	10.0	9.0	0.0	0.0	0.0	0.0	0.0025666887830674	0.593122995011412	Fast	Post	trim95	positive_q33	0.3	6	357	357	False	ok
+C220	629.0	18.0	23.0	0.0	2.0	0.0	0.0	0.0001335713297903	0.0827635582004653	Fast	Post	trim95	detected_vs_zero	none	6	1584	2839	False	ok
+C221	599.0	12.0	11.0	0.0	0.0	0.0	0.0	0.0017421717491099	0.99030512619205	Fast	Post	trim95	detected_vs_zero	0.1	6	1394	1394	False	ok
+C222	602.0	14.0	12.0	0.0	0.0	0.0	0.0	0.0018621326603659	0.680720881902876	Fast	Post	trim95	detected_vs_zero	0.2	6	1486	1486	False	ok
+C223	602.0	12.0	10.0	0.0	0.0	0.0	0.0	0.001542639076145	0.548164157775017	Fast	Post	trim95	detected_vs_zero	0.3	6	1501	1501	False	ok
+C224	620.0	7.0	12.0	0.0	0.0	0.0	0.0	0.0060907559596257	0.986254113605353	Slow	Pre	author	2plus_vs_1	none	6	2744	2044	False	ok
+C225	599.0	11.0	18.0	0.0	0.0	0.0	0.0	0.000472748790995	0.283176525806019	Slow	Pre	author	2plus_vs_1	0.1	5	1630	1630	False	ok
+C226	603.0	12.0	21.0	0.0	0.0	0.0	0.0	0.002261319616576	0.678749952644527	Slow	Pre	author	2plus_vs_1	0.2	6	1780	1780	False	ok
+C227	606.0	7.0	20.0	0.0	0.0	0.0	0.0	0.0013769402607196	0.620407131973322	Slow	Pre	author	2plus_vs_1	0.3	6	1832	1832	False	ok
+C228	608.0	9.0	12.0	0.0	0.0	0.0	0.0	0.005857372888673	0.97310506274729	Slow	Pre	author	3plus_vs_1	none	6	1446	2044	False	ok
+C229	568.0	12.0	11.0	0.0	0.0	0.0	0.0	0.0011818547402661	0.671293492471147	Slow	Pre	author	3plus_vs_1	0.1	5	1006	1006	True	ok
+C230	573.0	13.0	13.0	0.0	0.0	0.0	0.0	0.0039686633173102	0.991868100184586	Slow	Pre	author	3plus_vs_1	0.2	5	1129	1129	False	ok
+C231	581.0	13.0	13.0	0.0	0.0	0.0	0.0	0.002564833177991	0.991160143063349	Slow	Pre	author	3plus_vs_1	0.3	6	1188	1188	False	ok
+C232	595.0	4.0	6.0	0.0	0.0	0.0	0.0	0.0029315687430415	0.999920284943941	Slow	Pre	author	4plus_vs_1	none	6	743	2044	False	ok
+C233	504.0	8.0	10.0	0.0	0.0	0.0	0.0	0.0030264376010539	0.938168654188329	Slow	Pre	author	4plus_vs_1	0.1	5	531	531	False	ok
+C234	529.0	10.0	11.0	0.0	0.0	0.0	0.0	0.0021149621542647	0.799147295614966	Slow	Pre	author	4plus_vs_1	0.2	5	612	612	False	ok
+C235	534.0	11.0	14.0	0.0	0.0	0.0	0.0	0.0024457378927315	0.679130002830342	Slow	Pre	author	4plus_vs_1	0.3	5	655	655	False	ok
+C236	620.0	9.0	11.0	0.0	0.0	0.0	0.0	0.0013643261554736	0.845882216393667	Slow	Pre	author	3plus_vs_1to2	none	6	1446	3342	False	ok
+C237	583.0	19.0	10.0	0.0	0.0	0.0	0.0	0.0021455657491866	0.785811721055946	Slow	Pre	author	3plus_vs_1to2	0.1	5	1225	1225	False	ok
+C238	590.0	11.0	15.0	0.0	0.0	0.0	0.0	0.0038421626230116	0.981051043571633	Slow	Pre	author	3plus_vs_1to2	0.2	6	1328	1328	False	ok
+C239	593.0	10.0	12.0	0.0	0.0	0.0	0.0	0.0037995957330412	0.950404690092512	Slow	Pre	author	3plus_vs_1to2	0.3	6	1379	1379	False	ok
+C240	581.0	11.0	10.0	0.0	0.0	0.0	0.0	0.00887429641817	0.996582653853898	Slow	Pre	author	positive_q25	none	6	1199	1199	False	ok
+C241	514.0	5.0	15.0	0.0	0.0	0.0	0.0	0.0105423167418958	0.930982254915358	Slow	Pre	author	positive_q25	0.1	5	577	577	False	ok
+C242	546.0	6.0	13.0	0.0	0.0	0.0	0.0	0.0023746664886826	0.999397655004682	Slow	Pre	author	positive_q25	0.2	6	738	738	False	ok
+C243	559.0	10.0	16.0	0.0	0.0	0.0	0.0	0.0034904112422509	0.998965145393802	Slow	Pre	author	positive_q25	0.3	6	848	848	False	ok
+C244	600.0	8.0	8.0	0.0	0.0	0.0	0.0	0.0032846191636921	0.991933586827438	Slow	Pre	author	positive_q33	none	6	1597	1599	False	ok
+C245	572.0	14.0	16.0	0.0	0.0	0.0	0.0	0.0045442289113667	0.774488785703303	Slow	Pre	author	positive_q33	0.1	5	1007	1007	False	ok
+C246	581.0	9.0	20.0	0.0	0.0	0.0	0.0	0.0010265495420958	0.596425283957678	Slow	Pre	author	positive_q33	0.2	6	1175	1175	False	ok
+C247	585.0	12.0	17.0	0.0	0.0	0.0	0.0	0.0005380627409969	0.314766703483241	Slow	Pre	author	positive_q33	0.3	6	1247	1247	False	ok
+C248	632.0	11.0	11.0	0.0	0.0	0.0	0.0	0.0002364751428227	0.149452290263993	Slow	Pre	author	detected_vs_zero	none	6	4788	2544	False	ok
+C249	614.0	12.0	14.0	0.0	0.0	0.0	0.0	0.0015404157898453	0.627587524290368	Slow	Pre	author	detected_vs_zero	0.1	5	2263	2263	False	ok
+C250	618.0	10.0	11.0	0.0	0.0	0.0	0.0	0.0020748039893828	0.965642663196418	Slow	Pre	author	detected_vs_zero	0.2	6	2380	2380	False	ok
+C251	618.0	10.0	11.0	0.0	0.0	0.0	0.0	0.0026807768103294	0.97351171453512	Slow	Pre	author	detected_vs_zero	0.3	6	2409	2409	False	ok
+C252	610.0	13.0	14.0	0.0	0.0	0.0	0.0	0.0029523205301605	0.930858822892152	Slow	Pre	trim95	2plus_vs_1	none	6	2339	1945	False	ok
+C253	595.0	9.0	17.0	0.0	0.0	0.0	0.0	0.0019774828284106	0.748629794431309	Slow	Pre	trim95	2plus_vs_1	0.1	5	1545	1545	False	ok
+C254	600.0	9.0	15.0	0.0	0.0	0.0	0.0	0.0016861577602617	0.392895416504783	Slow	Pre	trim95	2plus_vs_1	0.2	6	1685	1685	False	ok
+C255	601.0	10.0	16.0	0.0	0.0	0.0	0.0	0.0012379657461475	0.487859233442037	Slow	Pre	trim95	2plus_vs_1	0.3	6	1731	1731	False	ok
+C256	593.0	13.0	11.0	0.0	0.0	0.0	0.0	0.0050783604978969	0.945732297160242	Slow	Pre	trim95	3plus_vs_1	none	6	1154	1945	False	ok
+C257	554.0	13.0	13.0	0.0	0.0	0.0	0.0	0.0074288686957361	0.972970844382835	Slow	Pre	trim95	3plus_vs_1	0.1	5	928	928	False	ok
+C258	560.0	13.0	11.0	0.0	0.0	0.0	0.0	0.0044211666030008	0.881605122871611	Slow	Pre	trim95	3plus_vs_1	0.2	5	1031	1031	False	ok
+C259	563.0	12.0	14.0	0.0	0.0	0.0	0.0	0.0037601672875568	0.839532761917865	Slow	Pre	trim95	3plus_vs_1	0.3	6	1065	1065	False	ok
+C260	579.0	7.0	10.0	0.0	0.0	0.0	0.0	0.0008881117450936	0.514216700409245	Slow	Pre	trim95	4plus_vs_1	none	6	550	1945	False	ok
+C261	475.0	7.0	11.0	0.0	0.0	0.0	0.0	0.0050932773216471	0.946753900882778	Slow	Pre	trim95	4plus_vs_1	0.1	5	472	472	False	ok
+C262	485.0	11.0	9.0	0.0	0.0	0.0	0.0	0.0128120690040661	0.996670714655668	Slow	Pre	trim95	4plus_vs_1	0.2	5	529	529	False	ok
+C263	486.0	10.0	9.0	0.0	0.0	0.0	0.0	0.0098633261810953	0.98758157177736	Slow	Pre	trim95	4plus_vs_1	0.3	5	543	543	False	ok
+C264	610.0	18.0	10.0	0.0	0.0	0.0	0.0	0.0040961604139608	0.945137118858273	Slow	Pre	trim95	3plus_vs_1to2	none	6	1154	3130	False	ok
+C265	563.0	10.0	9.0	0.0	0.0	0.0	0.0	0.0027169991070118	0.93859839849378	Slow	Pre	trim95	3plus_vs_1to2	0.1	5	1068	1068	False	ok
+C266	571.0	8.0	7.0	0.0	0.0	0.0	0.0	0.0049148240594456	0.960842617121869	Slow	Pre	trim95	3plus_vs_1to2	0.2	6	1135	1135	False	ok
+C267	571.0	9.0	8.0	0.0	0.0	0.0	0.0	0.0019210322959958	0.957840076851497	Slow	Pre	trim95	3plus_vs_1to2	0.3	6	1149	1149	False	ok
+C268	568.0	12.0	12.0	0.0	0.0	0.0	0.0	0.0027922106061702	0.970732902312779	Slow	Pre	trim95	positive_q25	none	6	1073	1073	False	ok
+C269	500.0	3.0	13.0	0.0	0.0	0.0	0.0	0.0060378945372133	0.947114990230981	Slow	Pre	trim95	positive_q25	0.1	5	544	544	False	ok
+C270	529.0	4.0	15.0	0.0	0.0	0.0	0.0	0.00487303096854	0.954362725289863	Slow	Pre	trim95	positive_q25	0.2	6	680	680	False	ok
+C271	543.0	12.0	16.0	0.0	0.0	0.0	0.0	0.0012335369347176	0.669810555551665	Slow	Pre	trim95	positive_q25	0.3	6	783	783	False	ok
+C272	586.0	9.0	7.0	0.0	0.0	0.0	0.0	0.0004456053062265	0.261124709448766	Slow	Pre	trim95	positive_q33	none	6	1429	1431	False	ok
+C273	559.0	11.0	15.0	0.0	0.0	0.0	0.0	0.0088594545375106	0.949552077280328	Slow	Pre	trim95	positive_q33	0.1	5	921	921	False	ok
+C274	570.0	11.0	13.0	0.0	0.0	0.0	0.0	0.0048737636957158	0.93521446195185	Slow	Pre	trim95	positive_q33	0.2	6	1081	1081	False	ok
+C275	579.0	7.0	13.0	0.0	0.0	0.0	0.0	0.004174575629105	0.965106558045326	Slow	Pre	trim95	positive_q33	0.3	6	1154	1154	False	ok
+C276	628.0	8.0	12.0	0.0	1.0	0.0	1.0	5.28469226314195e-05	0.0331878674125314	Slow	Pre	trim95	detected_vs_zero	none	6	4284	2461	False	ok
+C277	609.0	14.0	14.0	0.0	0.0	0.0	0.0	0.0006398560892476	0.389672358351793	Slow	Pre	trim95	detected_vs_zero	0.1	5	2190	2190	False	ok
+C278	613.0	11.0	13.0	0.0	0.0	0.0	0.0	0.002012788501532	0.927113989553943	Slow	Pre	trim95	detected_vs_zero	0.2	6	2300	2300	False	ok
+C279	613.0	11.0	9.0	0.0	0.0	0.0	0.0	0.0020195771579375	0.995849052358157	Slow	Pre	trim95	detected_vs_zero	0.3	6	2328	2328	False	ok
+C280	585.0	14.0	7.0	0.0	0.0	0.0	0.0	0.003398663109197	0.983966862244411	Slow	Post	author	2plus_vs_1	none	6	877	926	False	ok
+C281	554.0	14.0	12.0	0.0	0.0	0.0	0.0	0.0018742141065744	0.445025069510109	Slow	Post	author	2plus_vs_1	0.1	6	607	607	False	ok
+C282	564.0	15.0	10.0	0.0	0.0	0.0	0.0	0.0036239389230173	0.690131210529837	Slow	Post	author	2plus_vs_1	0.2	6	730	730	False	ok
+C283	570.0	16.0	5.0	0.0	0.0	0.0	0.0	0.0035087478751064	0.825376221003285	Slow	Post	author	2plus_vs_1	0.3	6	756	756	False	ok
+C284	562.0	6.0	7.0	0.0	0.0	0.0	0.0	0.0045733586048172	0.960660155203352	Slow	Post	author	3plus_vs_1	none	6	408	926	False	ok
+C285	487.0	12.0	10.0	0.0	1.0	0.0	0.0	0.000178914774701	0.0871314952794272	Slow	Post	author	3plus_vs_1	0.1	6	307	307	True	ok
+C286	508.0	12.0	14.0	0.0	0.0	0.0	0.0	0.0013210215368799	0.671078940735035	Slow	Post	author	3plus_vs_1	0.2	6	360	360	False	ok
+C287	509.0	13.0	12.0	0.0	0.0	0.0	0.0	0.0035501006519046	0.889179552794086	Slow	Post	author	3plus_vs_1	0.3	6	372	372	False	ok
+C288	546.0	10.0	16.0	0.0	0.0	0.0	0.0	0.0046462857943115	0.798325331860109	Slow	Post	author	4plus_vs_1	none	6	177	926	False	ok
+C289	358.0	9.0	9.0	0.0	0.0	0.0	0.0	0.0006202295317623	0.222042172370922	Slow	Post	author	4plus_vs_1	0.1	6	130	130	False	ok
+C290	375.0	7.0	11.0	0.0	0.0	0.0	0.0	0.0014092211563765	0.528457933641194	Slow	Post	author	4plus_vs_1	0.2	6	149	149	False	ok
+C291	392.0	5.0	10.0	0.0	0.0	0.0	0.0	0.0042840528342875	0.935178231820897	Slow	Post	author	4plus_vs_1	0.3	6	155	155	False	ok
+C292	585.0	11.0	12.0	0.0	0.0	0.0	0.0	0.0039336798328958	0.988291753455506	Slow	Post	author	3plus_vs_1to2	none	6	408	1395	False	ok
+C293	494.0	8.0	15.0	0.0	0.0	0.0	0.0	0.0056066003998313	0.968709146512001	Slow	Post	author	3plus_vs_1to2	0.1	6	333	333	False	ok
+C294	510.0	9.0	17.0	0.0	0.0	0.0	0.0	0.0031666176987435	0.830811601580754	Slow	Post	author	3plus_vs_1to2	0.2	6	371	371	False	ok
+C295	520.0	11.0	16.0	0.0	0.0	0.0	0.0	0.0034848195198391	0.929034012266154	Slow	Post	author	3plus_vs_1to2	0.3	6	385	385	False	ok
+C296	532.0	18.0	9.0	0.0	0.0	0.0	0.0	0.000862907218128	0.459066640044105	Slow	Post	author	positive_q25	none	6	454	454	False	ok
+C297	401.0	4.0	12.0	0.0	0.0	0.0	0.0	0.0024457677114834	0.669561077148283	Slow	Post	author	positive_q25	0.1	6	176	176	False	ok
+C298	450.0	5.0	11.0	0.0	0.0	0.0	0.0	0.0042668716723388	1.0	Slow	Post	author	positive_q25	0.2	6	257	257	False	ok
+C299	482.0	9.0	5.0	0.0	0.0	0.0	0.0	0.0008390107250317	0.404403169465296	Slow	Post	author	positive_q25	0.3	6	318	318	False	ok
+C300	556.0	12.0	15.0	0.0	0.0	0.0	0.0	0.0032246195038351	0.718479121156465	Slow	Post	author	positive_q33	none	6	601	602	False	ok
+C301	486.0	8.0	8.0	0.0	0.0	0.0	0.0	0.0026111517596994	0.545623030828933	Slow	Post	author	positive_q33	0.1	6	312	312	False	ok
+C302	519.0	11.0	5.0	0.0	0.0	0.0	0.0	0.0007525333488354	0.39056480804558	Slow	Post	author	positive_q33	0.2	6	404	404	False	ok
+C303	527.0	11.0	6.0	0.0	0.0	0.0	0.0	0.004004541346768	0.992071243398647	Slow	Post	author	positive_q33	0.3	6	458	458	False	ok
+C304	613.0	15.0	17.0	0.0	0.0	0.0	0.0	0.000351590384615	0.215524905769035	Slow	Post	author	detected_vs_zero	none	6	1803	1309	False	ok
+C305	585.0	6.0	7.0	0.0	0.0	0.0	0.0	0.0044909415191073	1.0	Slow	Post	author	detected_vs_zero	0.1	6	994	994	False	ok
+C306	592.0	7.0	9.0	0.0	0.0	0.0	0.0	0.0003040472321086	0.179995961408316	Slow	Post	author	detected_vs_zero	0.2	6	1140	1140	False	ok
+C307	594.0	10.0	12.0	0.0	0.0	0.0	0.0	0.0003218970643315	0.191206856212955	Slow	Post	author	detected_vs_zero	0.3	6	1180	1180	False	ok
+C308	574.0	12.0	11.0	0.0	0.0	0.0	0.0	0.0024721299375924	0.977769230417758	Slow	Post	trim95	2plus_vs_1	none	6	752	843	False	ok
+C309	541.0	15.0	8.0	0.0	0.0	0.0	0.0	0.0013811449047775	0.530171620457457	Slow	Post	trim95	2plus_vs_1	0.1	6	557	557	False	ok
+C310	555.0	16.0	8.0	0.0	0.0	0.0	0.0	0.0005401974045096	0.299809559502876	Slow	Post	trim95	2plus_vs_1	0.2	6	662	662	False	ok
+C311	561.0	17.0	5.0	0.0	0.0	0.0	0.0	0.0004622913304567	0.259345436386213	Slow	Post	trim95	2plus_vs_1	0.3	6	680	680	False	ok
+C312	545.0	8.0	4.0	0.0	0.0	0.0	0.0	0.0087552288480899	0.967063991675422	Slow	Post	trim95	3plus_vs_1	none	6	338	843	False	ok
+C313	462.0	9.0	10.0	0.0	0.0	0.0	0.0	0.0006672054631655	0.308248923982502	Slow	Post	trim95	3plus_vs_1	0.1	6	282	282	False	ok
+C314	475.0	9.0	10.0	0.0	0.0	0.0	0.0	0.0021707778589231	0.459926355754863	Slow	Post	trim95	3plus_vs_1	0.2	6	318	318	False	ok
+C315	478.0	11.0	10.0	0.0	0.0	0.0	0.0	0.0014591103542278	0.39219699451547	Slow	Post	trim95	3plus_vs_1	0.3	6	325	325	False	ok
+C316	527.0	8.0	12.0	0.0	0.0	0.0	0.0	0.0017614466287318	0.928282373341678	Slow	Post	trim95	4plus_vs_1	none	6	136	843	False	ok
+C317	324.0	6.0	6.0	0.0	0.0	0.0	0.0	0.0013067444245146	0.423385193542754	Slow	Post	trim95	4plus_vs_1	0.1	6	116	116	False	ok
+C318	334.0	7.0	7.0	0.0	0.0	0.0	0.0	0.0039597893029435	0.74229589645771	Slow	Post	trim95	4plus_vs_1	0.2	6	127	127	False	ok
+C319	340.0	8.0	8.0	0.0	0.0	0.0	0.0	0.0035405390378204	0.730481440369374	Slow	Post	trim95	4plus_vs_1	0.3	6	130	130	False	ok
+C320	574.0	7.0	10.0	0.0	0.0	0.0	0.0	0.0110992354716997	0.979870746393063	Slow	Post	trim95	3plus_vs_1to2	none	6	338	1257	False	ok
+C321	478.0	7.0	14.0	0.0	0.0	0.0	0.0	0.00337926058522	0.968577906749792	Slow	Post	trim95	3plus_vs_1to2	0.1	6	303	303	False	ok
+C322	485.0	10.0	14.0	0.0	0.0	0.0	0.0	0.0031175732546955	0.941910148189049	Slow	Post	trim95	3plus_vs_1to2	0.2	6	325	325	False	ok
+C323	488.0	13.0	12.0	0.0	0.0	0.0	0.0	0.0015636170306112	0.763045110938275	Slow	Post	trim95	3plus_vs_1to2	0.3	6	331	331	False	ok
+C324	504.0	10.0	12.0	0.0	0.0	0.0	0.0	0.001542328832679	0.777333731670227	Slow	Post	trim95	positive_q25	none	6	401	401	False	ok
+C325	385.0	10.0	4.0	0.0	0.0	0.0	0.0	0.0009843425735452	0.331509580917055	Slow	Post	trim95	positive_q25	0.1	6	171	171	False	ok
+C326	430.0	8.0	6.0	0.0	0.0	0.0	0.0	0.0005613788155404	0.241392890682385	Slow	Post	trim95	positive_q25	0.2	6	238	238	False	ok
+C327	460.0	5.0	5.0	0.0	0.0	0.0	0.0	0.0003888907492071	0.178889744635278	Slow	Post	trim95	positive_q25	0.3	6	296	296	False	ok
+C328	538.0	10.0	15.0	0.0	0.0	0.0	0.0	0.0016196027675093	0.871346288920037	Slow	Post	trim95	positive_q33	none	6	532	535	False	ok
+C329	476.0	9.0	11.0	0.0	0.0	0.0	0.0	0.0020123608723026	0.788667845245368	Slow	Post	trim95	positive_q33	0.1	6	314	314	False	ok
+C330	506.0	14.0	6.0	0.0	0.0	0.0	0.0	0.001222942454571	0.618808882012958	Slow	Post	trim95	positive_q33	0.2	6	393	393	False	ok
+C331	520.0	13.0	7.0	0.0	0.0	0.0	0.0	0.0011237442332434	0.584347001286612	Slow	Post	trim95	positive_q33	0.3	6	441	441	False	ok
+C332	600.0	14.0	15.0	0.0	0.0	0.0	0.0	0.0008565050163124	0.287188405603241	Slow	Post	trim95	detected_vs_zero	none	6	1595	1243	False	ok
+C333	580.0	7.0	8.0	0.0	0.0	0.0	0.0	0.0035394239714728	0.967524861761342	Slow	Post	trim95	detected_vs_zero	0.1	6	942	942	False	ok
+C334	586.0	10.0	9.0	0.0	0.0	0.0	0.0	0.0006368672993487	0.373204237418367	Slow	Post	trim95	detected_vs_zero	0.2	6	1077	1077	False	ok
+C335	587.0	8.0	10.0	0.0	0.0	0.0	0.0	0.000587407285325	0.229062593173618	Slow	Post	trim95	detected_vs_zero	0.3	6	1114	1114	False	ok
+C336	482.0	5.0	12.0	0.0	0.0	0.0	0.0	0.0009952315430134	0.479701603732506	Intermediate	Pre	author	2plus_vs_1	none	6	460	284	False	ok
+C337	312.0	5.0	3.0	0.0	0.0	0.0	0.0	0.0070630569884007	0.999906307051358	Intermediate	Pre	author	2plus_vs_1	0.1	5	151	151	False	ok
+C338	372.0	8.0	3.0	0.0	0.0	0.0	0.0	0.0048924285296588	0.996212229082498	Intermediate	Pre	author	2plus_vs_1	0.2	5	210	210	False	ok
+C339	396.0	7.0	4.0	0.0	0.0	0.0	0.0	0.0033672274429891	0.982683381089811	Intermediate	Pre	author	2plus_vs_1	0.3	5	239	239	False	ok
+C340	433.0	4.0	12.0	0.0	0.0	0.0	0.0	0.0027711137546728	0.931376506785399	Intermediate	Pre	author	3plus_vs_1	none	6	280	284	False	ok
+C341	221.0	2.0	4.0	0.0	0.0	0.0	0.0	0.0085638365978438	0.950891575386927	Intermediate	Pre	author	3plus_vs_1	0.1	5	94	94	True	ok
+C342	279.0	4.0	2.0	0.0	0.0	0.0	0.0	0.0034588343223805	0.856595131714632	Intermediate	Pre	author	3plus_vs_1	0.2	5	132	132	False	ok
+C343	319.0	6.0	6.0	0.0	0.0	0.0	0.0	0.0006244892694302	0.19921207694824	Intermediate	Pre	author	3plus_vs_1	0.3	5	156	156	False	ok
+C344	389.0	3.0	18.0	0.0	0.0	0.0	0.0	0.0048126305617852	0.826282032394744	Intermediate	Pre	author	4plus_vs_1	none	6	169	284	False	ok
+C345	141.0	1.0	3.0	0.0	0.0	0.0	0.0	0.0133859296920336	0.974050494999181	Intermediate	Pre	author	4plus_vs_1	0.1	5	54	54	False	ok
+C346	190.0	1.0	5.0	0.0	0.0	0.0	0.0	0.0067075154440562	0.951568901408415	Intermediate	Pre	author	4plus_vs_1	0.2	5	80	80	False	ok
+C347	229.0	4.0	2.0	0.0	0.0	0.0	0.0	0.0039559263080006	0.871463111938108	Intermediate	Pre	author	4plus_vs_1	0.3	5	98	98	False	ok
+C348	482.0	3.0	17.0	0.0	0.0	0.0	0.0	0.005972003814362	0.961526154931557	Intermediate	Pre	author	3plus_vs_1to2	none	6	280	464	False	ok
+C349	295.0	4.0	6.0	0.0	0.0	0.0	0.0	0.0137608897703552	0.902916813682621	Intermediate	Pre	author	3plus_vs_1to2	0.1	5	133	133	False	ok
+C350	349.0	5.0	7.0	0.0	0.0	0.0	0.0	0.0127655230916719	0.947208396994342	Intermediate	Pre	author	3plus_vs_1to2	0.2	5	171	171	False	ok
+C351	384.0	2.0	5.0	0.0	0.0	0.0	0.0	0.01064691900541	0.894560317663937	Intermediate	Pre	author	3plus_vs_1to2	0.3	5	200	200	False	ok
+C352	361.0	3.0	4.0	0.0	0.0	0.0	0.0	0.0117370301866298	0.986122190220262	Intermediate	Pre	author	positive_q25	none	6	188	188	False	ok
+C353	149.0	1.0	1.0	0.0	0.0	0.0	0.0	0.0323923794390915	0.982374124542868	Intermediate	Pre	author	positive_q25	0.1	5	65	65	False	ok
+C354	213.0	2.0	0.0	0.0	0.0	0.0	0.0	0.0179359086717729	0.986435748022958	Intermediate	Pre	author	positive_q25	0.2	5	98	98	False	ok
+C355	274.0	3.0	3.0	0.0	0.0	0.0	0.0	0.0059418861388919	0.972669979455417	Intermediate	Pre	author	positive_q25	0.3	5	126	126	False	ok
+C356	416.0	2.0	5.0	0.0	0.0	0.0	0.0	0.0195604554255574	0.996563934811376	Intermediate	Pre	author	positive_q33	none	6	250	250	False	ok
+C357	230.0	5.0	3.0	0.0	0.0	0.0	0.0	0.0156854610487376	0.999577494256151	Intermediate	Pre	author	positive_q33	0.1	5	100	100	False	ok
+C358	305.0	5.0	3.0	0.0	0.0	0.0	0.0	0.0100873206699811	0.946251963346136	Intermediate	Pre	author	positive_q33	0.2	5	149	149	False	ok
+C359	342.0	1.0	5.0	0.0	0.0	0.0	0.0	0.0143359343247924	0.958255269869927	Intermediate	Pre	author	positive_q33	0.3	5	179	179	False	ok
+C360	517.0	3.0	13.0	0.0	0.0	0.0	0.0	0.0012315339497623	0.471656332955017	Intermediate	Pre	author	detected_vs_zero	none	5	740	289	False	ok
+C361	347.0	6.0	8.0	0.0	0.0	0.0	0.0	0.0016004587155007	0.555359174278768	Intermediate	Pre	author	detected_vs_zero	0.1	5	200	200	False	ok
+C362	390.0	6.0	16.0	0.0	0.0	0.0	0.0	0.0018792675454487	0.732914342725026	Intermediate	Pre	author	detected_vs_zero	0.2	5	247	247	False	ok
+C363	409.0	5.0	17.0	0.0	0.0	0.0	0.0	0.0085250473204026	0.89056470128402	Intermediate	Pre	author	detected_vs_zero	0.3	5	261	261	False	ok
+C364	444.0	7.0	7.0	0.0	0.0	0.0	0.0	0.014573002699314	0.973561089044609	Intermediate	Pre	trim95	2plus_vs_1	none	6	390	270	False	ok
+C365	293.0	5.0	4.0	0.0	0.0	0.0	0.0	0.0082322321708919	0.999547382601091	Intermediate	Pre	trim95	2plus_vs_1	0.1	5	143	143	False	ok
+C366	346.0	10.0	7.0	0.0	0.0	0.0	0.0	0.0112667725257879	0.84876312582067	Intermediate	Pre	trim95	2plus_vs_1	0.2	5	201	201	False	ok
+C367	372.0	6.0	3.0	0.0	0.0	0.0	0.0	0.0028826347412703	0.870113356639278	Intermediate	Pre	trim95	2plus_vs_1	0.3	5	228	228	False	ok
+C368	384.0	1.0	12.0	0.0	0.0	0.0	0.0	0.0024986604905328	0.497981428557766	Intermediate	Pre	trim95	3plus_vs_1	none	6	218	270	False	ok
+C369	189.0	3.0	2.0	0.0	0.0	0.0	0.0	0.0168211921909018	0.990237416533318	Intermediate	Pre	trim95	3plus_vs_1	0.1	5	86	86	False	ok
+C370	254.0	6.0	8.0	0.0	0.0	0.0	0.0	0.0062296458035087	0.795250988993223	Intermediate	Pre	trim95	3plus_vs_1	0.2	5	124	124	False	ok
+C371	276.0	6.0	5.0	0.0	0.0	0.0	0.0	0.000887815626691	0.245037112966729	Intermediate	Pre	trim95	3plus_vs_1	0.3	5	144	144	False	ok
+C372	330.0	1.0	14.0	0.0	0.0	0.0	0.0	0.0011732903953963	0.387185830480803	Intermediate	Pre	trim95	4plus_vs_1	none	6	124	270	False	ok
+C373	124.0	1.0	2.0	0.0	0.0	0.0	0.0	0.0337423050678448	0.991898768702465	Intermediate	Pre	trim95	4plus_vs_1	0.1	5	50	50	False	ok
+C374	164.0	2.0	5.0	0.0	0.0	0.0	0.0	0.0180941321025487	0.894592099405386	Intermediate	Pre	trim95	4plus_vs_1	0.2	5	74	74	False	ok
+C375	188.0	5.0	2.0	0.0	0.0	0.0	0.0	0.0103994837678178	0.963996879492128	Intermediate	Pre	trim95	4plus_vs_1	0.3	5	89	89	False	ok
+C376	444.0	3.0	15.0	0.0	0.0	0.0	0.0	0.002081961164304	0.917805395640647	Intermediate	Pre	trim95	3plus_vs_1to2	none	6	218	442	False	ok
+C377	252.0	5.0	4.0	0.0	0.0	0.0	0.0	0.0171371682384061	0.946411179806063	Intermediate	Pre	trim95	3plus_vs_1to2	0.1	5	120	120	False	ok
+C378	310.0	4.0	4.0	0.0	0.0	0.0	0.0	0.0146904478245006	0.971624922424943	Intermediate	Pre	trim95	3plus_vs_1to2	0.2	5	156	156	False	ok
+C379	336.0	4.0	8.0	0.0	0.0	0.0	0.0	0.0141049272979535	0.973960439552641	Intermediate	Pre	trim95	3plus_vs_1to2	0.3	5	181	181	False	ok
+C380	309.0	1.0	4.0	0.0	0.0	0.0	0.0	0.0077427016229243	0.996584000893235	Intermediate	Pre	trim95	positive_q25	none	6	168	168	False	ok
+C381	130.0	0.0	1.0	0.0	0.0	0.0	0.0	0.0341101434963417	0.919677102221753	Intermediate	Pre	trim95	positive_q25	0.1	5	59	59	False	ok
+C382	182.0	1.0	1.0	0.0	0.0	0.0	0.0	0.017502425618747	0.964988900987509	Intermediate	Pre	trim95	positive_q25	0.2	5	93	93	False	ok
+C383	232.0	1.0	4.0	0.0	0.0	0.0	0.0	0.0113157345286474	0.98888157490596	Intermediate	Pre	trim95	positive_q25	0.3	5	115	115	False	ok
+C384	370.0	4.0	4.0	0.0	0.0	0.0	0.0	0.0213282535520538	0.98487501453341	Intermediate	Pre	trim95	positive_q33	none	6	220	221	False	ok
+C385	197.0	7.0	2.0	0.0	0.0	0.0	0.0	0.0106279890271134	0.981114535635017	Intermediate	Pre	trim95	positive_q33	0.1	5	90	90	False	ok
+C386	278.0	4.0	5.0	0.0	0.0	0.0	0.0	0.0207491216398021	0.930426320351447	Intermediate	Pre	trim95	positive_q33	0.2	5	138	138	False	ok
+C387	303.0	3.0	4.0	0.0	0.0	0.0	0.0	0.0042193464786526	0.931863893064869	Intermediate	Pre	trim95	positive_q33	0.3	5	162	162	False	ok
+C388	496.0	7.0	10.0	0.0	0.0	0.0	0.0	0.0003024101695664	0.149995444104952	Intermediate	Pre	trim95	detected_vs_zero	none	5	657	283	False	ok
+C389	340.0	5.0	7.0	0.0	0.0	0.0	0.0	0.0018471817124705	0.628041782239986	Intermediate	Pre	trim95	detected_vs_zero	0.1	5	195	195	False	ok
+C390	378.0	5.0	12.0	0.0	0.0	0.0	0.0	0.0029173543006263	0.989125773180852	Intermediate	Pre	trim95	detected_vs_zero	0.2	5	241	241	False	ok
+C391	396.0	3.0	11.0	0.0	0.0	0.0	0.0	0.0051654916227954	0.999907236548437	Intermediate	Pre	trim95	detected_vs_zero	0.3	5	255	255	False	ok
+C392	320.0	7.0	4.0	0.0	0.0	0.0	0.0	0.0100928005636298	0.996139593203777	Intermediate	Post	author	2plus_vs_1	none	5	116	89	False	ok
+C393	87.0	1.0	2.0	0.0	0.0	0.0	0.0	0.037412296167101	0.992972010296042	Intermediate	Post	author	2plus_vs_1	0.1	4	20	20	False	ok
+C394	174.0	4.0	2.0	0.0	0.0	0.0	0.0	0.0095490833457986	0.983250144467021	Intermediate	Post	author	2plus_vs_1	0.2	5	45	45	False	ok
+C395	219.0	4.0	2.0	0.0	0.0	0.0	0.0	0.0011450114518061	0.250757507945548	Intermediate	Post	author	2plus_vs_1	0.3	5	60	60	False	ok
+C396	259.0	4.0	5.0	0.0	0.0	0.0	0.0	0.0130080768715835	0.954672457691264	Intermediate	Post	author	3plus_vs_1	none	5	53	89	False	ok
+C397	10.0	0.0	1.0	0.0	0.0	0.0	0.0	0.0435871089140679	0.435871089140679	Intermediate	Post	author	3plus_vs_1	0.1	4	8	8	True	ok
+C398	83.0	0.0	1.0	0.0	0.0	0.0	0.0	0.0499750089074339	0.900957247712943	Intermediate	Post	author	3plus_vs_1	0.2	5	18	18	False	ok
+C399	121.0	1.0	2.0	0.0	0.0	0.0	0.0	0.0400046097254333	0.798040943115845	Intermediate	Post	author	3plus_vs_1	0.3	5	29	29	False	ok
+C400	186.0	1.0	7.0	0.0	0.0	0.0	0.0	0.035666335952533	0.869865652500977	Intermediate	Post	author	4plus_vs_1	none	4	28	64	False	ok
+C401	2.0	0.0	0.0	0.0	0.0	0.0	0.0	0.811658162836958	0.99999961498164	Intermediate	Post	author	4plus_vs_1	0.1	2	4	4	False	ok
+C402	26.0	0.0	0.0	0.0	0.0	0.0	0.0	0.12311159051369	0.981699710396426	Intermediate	Post	author	4plus_vs_1	0.2	3	8	8	False	ok
+C403	63.0	2.0	1.0	0.0	0.0	0.0	0.0	0.0151087012661321	0.516840715408256	Intermediate	Post	author	4plus_vs_1	0.3	4	15	15	False	ok
+C404	320.0	3.0	6.0	0.0	0.0	0.0	0.0	0.0100688670363951	0.932239558934558	Intermediate	Post	author	3plus_vs_1to2	none	5	53	152	False	ok
+C405	29.0	0.0	0.0	0.0	0.0	0.0	0.0	0.0814825609134272	0.86889894171663	Intermediate	Post	author	3plus_vs_1to2	0.1	4	10	10	False	ok
+C406	141.0	3.0	2.0	0.0	0.0	0.0	0.0	0.006666148099105	0.934993020715319	Intermediate	Post	author	3plus_vs_1to2	0.2	5	28	28	False	ok
+C407	163.0	2.0	5.0	0.0	0.0	0.0	0.0	0.0050459907981975	0.775042517088664	Intermediate	Post	author	3plus_vs_1to2	0.3	5	35	35	False	ok
+C408	208.0	1.0	0.0	0.0	0.0	0.0	0.0	0.0402890711693282	0.999934139694426	Intermediate	Post	author	positive_q25	none	6	55	55	False	ok
+C409	NA	NA	NA	NA	NA	NA	NA	NA	NA	Intermediate	Post	author	positive_q25	0.1	3	3	3	False	error: Fewer than 10 count-supported background features
+C410	51.0	0.0	1.0	0.0	0.0	0.0	0.0	0.0093608256574766	0.477402108531309	Intermediate	Post	author	positive_q25	0.2	5	12	12	False	ok
+C411	97.0	0.0	3.0	0.0	0.0	0.0	0.0	0.0313511301008003	0.949765166769677	Intermediate	Post	author	positive_q25	0.3	5	20	20	False	ok
+C412	263.0	2.0	1.0	0.0	0.0	0.0	0.0	0.0416271927605177	0.977222381045529	Intermediate	Post	author	positive_q33	none	6	71	74	False	ok
+C413	11.0	0.0	0.0	0.0	0.0	0.0	0.0	0.0547510825434954	0.602261907978449	Intermediate	Post	author	positive_q33	0.1	4	8	8	False	ok
+C414	90.0	1.0	1.0	0.0	0.0	0.0	0.0	0.0325549855668947	0.94231086367222	Intermediate	Post	author	positive_q33	0.2	5	22	22	False	ok
+C415	142.0	2.0	2.0	0.0	0.0	0.0	0.0	0.0255836789240877	0.950455790307623	Intermediate	Post	author	positive_q33	0.3	6	32	32	False	ok
+C416	383.0	5.0	4.0	0.0	0.0	0.0	0.0	0.0046657917872455	0.976026761393703	Intermediate	Post	author	detected_vs_zero	none	5	205	100	False	ok
+C417	150.0	6.0	3.0	0.0	0.0	0.0	0.0	0.0069606847385288	0.674043805079342	Intermediate	Post	author	detected_vs_zero	0.1	5	38	38	False	ok
+C418	236.0	6.0	2.0	0.0	0.0	0.0	0.0	0.0030232580977433	0.713488911067436	Intermediate	Post	author	detected_vs_zero	0.2	5	68	68	False	ok
+C419	280.0	6.0	4.0	0.0	0.0	0.0	0.0	0.0023774537051458	0.66568703744083	Intermediate	Post	author	detected_vs_zero	0.3	5	83	83	False	ok
+C420	279.0	6.0	1.0	0.0	0.0	0.0	0.0	0.0067445414156572	0.994194017862595	Intermediate	Post	trim95	2plus_vs_1	none	5	94	82	False	ok
+C421	79.0	1.0	2.0	0.0	0.0	0.0	0.0	0.0380973052107004	0.674881888550487	Intermediate	Post	trim95	2plus_vs_1	0.1	3	18	18	False	ok
+C422	162.0	3.0	1.0	0.0	0.0	0.0	0.0	0.0171053821949934	0.94920662427982	Intermediate	Post	trim95	2plus_vs_1	0.2	5	41	41	False	ok
+C423	201.0	4.0	1.0	0.0	0.0	0.0	0.0	0.0049742490426195	0.974085308640542	Intermediate	Post	trim95	2plus_vs_1	0.3	5	54	54	False	ok
+C424	196.0	0.0	7.0	0.0	0.0	0.0	0.0	0.00287769914726	0.564029032862976	Intermediate	Post	trim95	3plus_vs_1	none	5	36	82	False	ok
+C425	9.0	0.0	0.0	0.0	0.0	0.0	0.0	0.0651665375276996	0.561456712336134	Intermediate	Post	trim95	3plus_vs_1	0.1	3	7	7	False	ok
+C426	67.0	0.0	0.0	0.0	0.0	0.0	0.0	0.111380264863388	0.88555349029603	Intermediate	Post	trim95	3plus_vs_1	0.2	5	16	16	False	ok
+C427	98.0	0.0	2.0	0.0	0.0	0.0	0.0	0.0364327547978673	0.904945002399609	Intermediate	Post	trim95	3plus_vs_1	0.3	5	25	25	False	ok
+C428	148.0	0.0	2.0	0.0	0.0	0.0	0.0	0.0270506546939032	0.999288142286202	Intermediate	Post	trim95	4plus_vs_1	none	4	20	59	False	ok
+C429	2.0	0.0	0.0	0.0	0.0	0.0	0.0	0.811658162836958	0.99999961498164	Intermediate	Post	trim95	4plus_vs_1	0.1	2	4	4	False	ok
+C430	26.0	0.0	0.0	0.0	0.0	0.0	0.0	0.12311159051369	0.981699710396426	Intermediate	Post	trim95	4plus_vs_1	0.2	3	8	8	False	ok
+C431	59.0	3.0	1.0	0.0	0.0	0.0	0.0	0.0156706803130358	0.494214297737394	Intermediate	Post	trim95	4plus_vs_1	0.3	4	14	14	False	ok
+C432	279.0	0.0	11.0	0.0	0.0	0.0	0.0	0.0004615413080076	0.128770024934136	Intermediate	Post	trim95	3plus_vs_1to2	none	5	36	140	False	ok
+C433	24.0	1.0	0.0	0.0	0.0	0.0	0.0	0.0212283056780425	0.509479336273021	Intermediate	Post	trim95	3plus_vs_1to2	0.1	3	9	9	False	ok
+C434	118.0	2.0	2.0	0.0	0.0	0.0	0.0	0.0041402127427514	0.488545103644676	Intermediate	Post	trim95	3plus_vs_1to2	0.2	5	24	24	False	ok
+C435	134.0	2.0	4.0	0.0	0.0	0.0	0.0	0.0044598942095566	0.597625824080586	Intermediate	Post	trim95	3plus_vs_1to2	0.3	5	29	29	False	ok
+C436	171.0	2.0	2.0	0.0	0.0	0.0	0.0	0.0163834793212565	0.99976111926802	Intermediate	Post	trim95	positive_q25	none	6	49	50	False	ok
+C437	NA	NA	NA	NA	NA	NA	NA	NA	NA	Intermediate	Post	trim95	positive_q25	0.1	3	4	4	False	error: missing values and NaN's not allowed if 'na.rm' is FALSE
+C438	31.0	0.0	0.0	0.0	0.0	0.0	0.0	0.122741729538772	0.950436618005531	Intermediate	Post	trim95	positive_q25	0.2	4	12	12	False	ok
+C439	69.0	0.0	0.0	0.0	0.0	0.0	0.0	0.0759893692074669	0.969563082161268	Intermediate	Post	trim95	positive_q25	0.3	5	19	19	False	ok
+C440	206.0	4.0	3.0	0.0	0.0	0.0	0.0	0.0074779642750372	0.98106609860967	Intermediate	Post	trim95	positive_q33	none	6	62	63	False	ok
+C441	16.0	0.0	0.0	0.0	0.0	0.0	0.0	0.164449528120075	0.952424405402833	Intermediate	Post	trim95	positive_q33	0.1	3	9	9	False	ok
+C442	71.0	1.0	1.0	0.0	0.0	0.0	0.0	0.0276760203697405	0.965909757607476	Intermediate	Post	trim95	positive_q33	0.2	4	20	20	False	ok
+C443	118.0	1.0	2.0	0.0	0.0	0.0	0.0	0.0132433892830287	0.993592456674546	Intermediate	Post	trim95	positive_q33	0.3	6	30	30	False	ok
+C444	349.0	9.0	3.0	0.0	0.0	0.0	0.0	0.0051660398246408	0.90986014403409	Intermediate	Post	trim95	detected_vs_zero	none	5	176	96	False	ok
+C445	132.0	5.0	2.0	0.0	0.0	0.0	0.0	0.0082457667751487	0.698745572471179	Intermediate	Post	trim95	detected_vs_zero	0.1	5	36	36	False	ok
+C446	217.0	2.0	3.0	0.0	0.0	0.0	0.0	0.0055783430723829	0.958564241947251	Intermediate	Post	trim95	detected_vs_zero	0.2	5	64	64	False	ok
+C447	244.0	7.0	4.0	0.0	0.0	0.0	0.0	0.0029048271155527	0.496598802002727	Intermediate	Post	trim95	detected_vs_zero	0.3	5	78	78	False	ok

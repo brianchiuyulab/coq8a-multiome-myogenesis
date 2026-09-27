@@ -1,0 +1,24 @@
+{
+  "n_genes": 25,
+  "old_peaks": 565,
+  "new_mapped_peaks": 335,
+  "old_primary_pairs": 201,
+  "old_primary_sources": 2,
+  "new_primary_configs": [
+    "C005",
+    "C061",
+    "C117",
+    "C173",
+    "C229",
+    "C285",
+    "C341",
+    "C397"
+  ],
+  "new_estimable_configs": 393,
+  "old_q": "BH over all distinct union peaks including non-discordant peaks; per setting",
+  "new_q": "BH over count-supported mapped union peaks; per cell type/time/configuration",
+  "RNA_q": "BH over measured union genes; per configuration",
+  "links": "Old: all available local targets +/-500kb; new: stored 221-gene-neighborhood pairs only; not all possible targets",
+  "selection": "Union agreed after earlier exploration; prospective for this report, not preregistered or independent confirmation",
+  "computation": "Old p recomputed from paired discordant counts. New fitted coefficients/p retained; union BH recomputed. Dispersion and normalization background unchanged."
+}

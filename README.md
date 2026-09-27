@@ -1,5 +1,13 @@
 # COQ8A-associated chromatin accessibility during myogenesis
 
+## Differentiation + fusion union — completed 2026-09-27
+
+The agreed 25-gene union has now been analyzed in both datasets: 565 GSE208248
+peaks and 645 native GSE240061 peaks (335 mapped plus 310 additional). See the [complete results and methods](docs/DIFFERENTIATION_FUSION25_RESULTS.md),
+[source tables](results/differentiation_fusion25), and [figure](figures/differentiation_fusion25/union_peak_screen.png).
+Scripts 76–82 reproduce this analysis. The preceding temporal and narrower
+fusion analyses below retain their own scopes and are not the new union results.
+
 ## Completed CAV3 and GSE240061 exploration — 2026-09-27
 
 The new [analysis and results](docs/REPLICATION_ANALYSIS_AND_RESULTS.md) include 288 external-scope comparisons,
