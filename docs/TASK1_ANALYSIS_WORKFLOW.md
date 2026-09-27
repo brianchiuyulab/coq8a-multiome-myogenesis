@@ -37,8 +37,8 @@ Within-region max-statistic permutation -> BH over 25 regions
 Rank all regions; inspect constituent peaks and library directions
 CSRP3 ranks first in TSS >=3, COQ8A >=2 vs 1
              |
-Same-pair RNA comparisons for all 25 genes -> RNA BH over 25
-Separate peak-RNA association and transcript annotation
+For nominated peaks: all local RNA candidates -> peak-RNA association
+Separate same-pair RNA response of candidate targets
              |
 Nominate CSRP3 as an exploratory candidate
 ```
@@ -194,6 +194,39 @@ Within-setting q values do not adjust for the preceding choice among analytical
 strategies or COQ8A definitions.
 
 ## 7. Candidate nomination and RNA follow-up
+
+### Separate locus nomination from target identification
+
+The 25 scope genes define where to search for ATAC associations. They do not
+restrict which RNA a nominated peak can regulate. Once a locus is nominated,
+target identification examines all measured local transcripts with an annotated
+TSS within 500 kb, including genes outside the 25-gene scope and lncRNAs. The
+25-gene high/low RNA screen is a separate supplementary expression comparison;
+it does not identify the target of a peak.
+
+For chr11:19218592-19219518, the archived unrestricted map contains 12 RNA
+candidates. At the 5% peak/RNA detection criterion, only NAV2 and ZDHHC13 have
+combined link estimates and neither has a significant association. At the 1%
+sensitivity, CSRP3 and E2F8 additionally become evaluable. With technical and
+COQ8A adjustment, CSRP3 r=0.02259, p=0.000346 and E2F8 r=0.02519, p=0.000066.
+After additional myogenesis-state adjustment, CSRP3 r=0.00248, p=0.695 and
+E2F8 r=0.02298, p=0.000273. These small correlations do not establish a
+regulatory target. E2F8 is an alternative target-association candidate, not a
+replacement proven mechanism.
+
+The source link q values are retained from the complete archived link families
+(61,939 links for each 1% model; 27,720 for each 5% model), not recalculated over
+the four displayed genes. Missing link estimates are not evidence of absence.
+All 12 annotations and existing estimates are exported in
+results/local_signal_decision/CSRP3_neighborhood_focal_all_local_RNA_candidates.tsv
+and CSRP3_neighborhood_focal_existing_RNA_links.tsv. This is a provenance
+extraction from script 48 outputs, not a new 958-pair link fit.
+
+The interpretation sequence is therefore: nominate an ATAC locus, evaluate its
+possible RNA targets, then examine those targets' COQ8A-associated RNA response.
+CSRP3-neighborhood nomination alone does not identify CSRP3 as the regulated RNA.
+
+### Regional ranking and supplementary RNA evidence
 
 At TSS>=3, COQ8A>=2 vs 1, the regional opening ranking begins:
 
