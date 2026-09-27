@@ -1,5 +1,9 @@
 # COQ8A-associated chromatin accessibility during myogenesis
 
+[All 25 neighborhoods across the Day-0 sensitivity grid](docs/DAY0_ALL25_INVENTORY.md)
+reports opening and closing representatives, exact parameter settings, peak and
+regional statistics, and the frequency of signals across evaluated settings.
+
 ## ADAM12-neighborhood RNA follow-up
 
 [The complete selection and local RNA assessment](docs/ADAM12_LOCUS_FOLLOWUP.md)
