@@ -1,5 +1,12 @@
 # COQ8A-associated chromatin accessibility during myogenesis
 
+## ADAM12-neighborhood RNA follow-up
+
+[The complete selection and local RNA assessment](docs/ADAM12_LOCUS_FOLLOWUP.md)
+traces the external 25-gene scope to the D232 opening candidate, then tests all
+six local RNA features. The 4.2857-fold accessibility contrast is reproduced;
+the regulated RNA remains unresolved. Public results and script 90 are included.
+
 ## Expanded Day-0 sensitivity grid
 
 The [336-configuration exploration](docs/DAY0_SENSITIVITY_GRID.md) is complete:
