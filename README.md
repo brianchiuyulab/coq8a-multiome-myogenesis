@@ -1,5 +1,15 @@
 # COQ8A-associated chromatin accessibility during myogenesis
 
+## Completed Day-0 primary analysis
+
+[Stage-specific results and methods](docs/TASK1_DAY0_RESULTS.md) now separate
+undifferentiated cultures (507 matched pairs) from Day 7. The entire frozen
+25-gene / 565-peak scope was retested. CSRP3 ranks first in the primary opening
+screen, but regional q=0.514; the pooled q=0.0956 below is not a Day-0 result.
+Scripts 86–87, complete source tables and new figures are included.
+
+![Day-0 complete screen](figures/task1_stage_specific/Figure_1_Day0_complete_screen.png)
+
 ## Current focus: Task 1, GSE208248
 
 The [Task 1 workflow](docs/TASK1_ANALYSIS_WORKFLOW.md) documents the complete

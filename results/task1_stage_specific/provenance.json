@@ -1,0 +1,18 @@
+{
+  "scope_genes": 25,
+  "distinct_peaks": 565,
+  "primary_stage": "stem",
+  "primary_contrast": "2plus_vs_1",
+  "TSS": 3,
+  "permutations": 2000000,
+  "seed": 20260928,
+  "matching_reproduced": true,
+  "stage_is_culture_condition_not_cell_annotation": true,
+  "candidate_catalog": "four-library common; unchanged from previous scope",
+  "input_sha256": {
+    "reference\\myogenesis_221_gene_sources.tsv": "cbcef91482636f5b0989e045e7d0dfff0bab1286b816ebb568777ebb826f4236",
+    "reference\\muscle_subprogrammes.json": "8ac0d8bde658ea7e21255dd018d7399cc85fbc997742cc363e7fc1f56f8e60fc",
+    "results\\tables\\candidate_peak_gene.tsv.gz": "fe1df568b23d3d0f868f54dc93e109935a15f551ba45947b8481f7a59817ecdb",
+    "results\\tables\\matched_pairs.tsv.gz": "47ed609ccb59148bd679c102950ad47845563d5658776495ebeffe4421620772"
+  }
+}

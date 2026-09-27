@@ -9,6 +9,11 @@ submission; the repository does not currently provide an archival DOI.
 
 ## Entry point
 
+The completed Day-0 primary analysis uses scripts 86–87. See
+[TASK1_DAY0_RESULTS.md](TASK1_DAY0_RESULTS.md) for inputs, commands, validation
+and stage-specific figure legends. It does not require the earlier temporal
+runner or a new download.
+
 The current Task 1 regional follow-up is documented in
 [TASK1_ANALYSIS_WORKFLOW.md](TASK1_ANALYSIS_WORKFLOW.md), including its source-code
 map and script 84 command. It uses the frozen 25-gene membership and archived

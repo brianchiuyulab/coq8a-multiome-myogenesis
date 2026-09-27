@@ -1,5 +1,9 @@
 # Task 1: functional-scope screen of COQ8A-associated accessibility
 
+The subsequently requested Day-0-only primary analysis is complete in
+[TASK1_DAY0_RESULTS.md](TASK1_DAY0_RESULTS.md). The pooled 958-pair results
+documented below retain all four libraries and are not the Day-0 statistics.
+
 ## Study question and analysis status
 
 Do COQ8A-high nuclei show increased accessibility at local regulatory candidates
