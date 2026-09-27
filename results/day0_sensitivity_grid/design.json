@@ -1,0 +1,14 @@
+{
+  "configurations": 336,
+  "screen_permutations": 20000,
+  "refinement_permutations": 2000000,
+  "refinement_rule": "top 3 configs per direction with concordant top-peak library directions; retain fixed primary as well",
+  "seed": 20260928,
+  "scope_genes": 25,
+  "peaks": 565,
+  "stage": "undifferentiated",
+  "marker_subsets": "sensitivity proxies, not validated MuSC annotation",
+  "state_score": "mean log1p CP10k over broad myogenesis genes excluding all 25 scope genes",
+  "state_caliper_SD": 0.25,
+  "correction": "BH25 within direction/config; BH565 for individual peaks; no across-grid FDR"
+}

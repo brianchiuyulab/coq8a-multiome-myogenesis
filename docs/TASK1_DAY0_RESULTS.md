@@ -1,5 +1,10 @@
 # Task 1: undifferentiated-culture analysis
 
+This report covers the restricted two-contrast run. The subsequently requested
+[expanded sensitivity grid](DAY0_SENSITIVITY_GRID.md) identifies additional
+opening and closing candidates under other definitions. The negative opening
+FDR result below must not be generalized to that expanded grid.
+
 ## Main result
 
 The stage-specific analysis is complete. In undifferentiated cultures, CSRP3

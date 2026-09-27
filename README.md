@@ -1,5 +1,17 @@
 # COQ8A-associated chromatin accessibility during myogenesis
 
+## Expanded Day-0 sensitivity grid
+
+The [336-configuration exploration](docs/DAY0_SENSITIVITY_GRID.md) is complete:
+312 configurations are evaluable across two sources. It tests opening and
+closing, seven COQ8A definitions, two TSS thresholds, four matching calipers,
+state matching and three explicitly defined populations. ADAM12-neighborhood
+opening and several closing candidates emerge; their sensitivity and exact
+population definitions are reported. These are selected exploratory results,
+not a claim of across-grid FDR control or purified MuSC annotation.
+
+![Parameter sensitivity](figures/day0_sensitivity_grid/Parameter_sensitivity.png)
+
 ## Completed Day-0 primary analysis
 
 [Stage-specific results and methods](docs/TASK1_DAY0_RESULTS.md) now separate

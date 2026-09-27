@@ -1,0 +1,9 @@
+{
+  "configurations": 336,
+  "evaluated": 312,
+  "unavailable": 24,
+  "baseline_pairs_reproduced": true,
+  "all_exact_p_and_BH_reproduced": true,
+  "regional_BH_reproduced": true,
+  "refined_configs": 9
+}
