@@ -9,6 +9,12 @@ submission; the repository does not currently provide an archival DOI.
 
 ## Entry point
 
+The current Task 1 regional follow-up is documented in
+[TASK1_ANALYSIS_WORKFLOW.md](TASK1_ANALYSIS_WORKFLOW.md), including its source-code
+map and script 84 command. It uses the frozen 25-gene membership and archived
+extractions. The run_paper.py entry point described below remains the earlier
+temporal analysis/figure pipeline; it does not run script 84.
+
 `run_paper.py` is the supported entry point. `--mode figures` regenerates
 three main and two supplementary figure sets from committed data. `--mode analysis`
 recomputes the analysis from author-deposited processed matrices and frozen

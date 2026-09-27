@@ -1,5 +1,11 @@
 # Methods: COQ8A-associated accessibility at myogenic regions
 
+For the current GSE208248 differentiation/fusion regional screen, see
+[Task 1 analysis workflow](TASK1_ANALYSIS_WORKFLOW.md). The sections below
+describe the earlier temporal workflow; its 54-peak scope, >=3-vs-1 contrast
+and temporal figures must not be substituted for the current 565-peak,
+25-region analysis.
+
 ## 1. Objective and design
 
 We ask whether COQ8A-high nuclei exhibit altered accessibility at regions that

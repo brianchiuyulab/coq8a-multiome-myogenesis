@@ -1,5 +1,15 @@
 # COQ8A-associated chromatin accessibility during myogenesis
 
+## Current focus: Task 1, GSE208248
+
+The [Task 1 workflow](docs/TASK1_ANALYSIS_WORKFLOW.md) documents the complete
+functional-scope analysis: 221 myogenesis genes -> 25 differentiation/fusion
+genes -> 565 candidate peaks -> 25 regional tests -> CSRP3 follow-up. It specifies
+joint QC, within-library matching, both multiplicity levels and same-pair RNA
+comparisons. The reported exploratory setting is TSS >=3 and COQ8A >=2 vs 1.
+GSE240061 exploration is retained below but is not the current main evidence.
+Earlier temporal figures are separate analyses, not figures for this regional test.
+
 ## Local-signal follow-up and candidate decision
 
 The [local-signal report](docs/LOCAL_SIGNAL_DECISION.md) tests sparse opening
