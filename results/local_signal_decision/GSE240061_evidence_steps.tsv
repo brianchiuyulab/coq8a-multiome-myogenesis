@@ -1,0 +1,6 @@
+step	setting_peak_gene_rows	distinct_peaks	distinct_genes
+matched_evaluable_peak_gene_settings	108028	639	25
+ATAC_open_p005	1996	310	25
+ATAC_open_p005_and_RNA_up_p005	36	20	10
+ATAC_RNA_p005_and_positive_link_direction	17	9	6
+ATAC_RNA_link_all_p005	0	0	0

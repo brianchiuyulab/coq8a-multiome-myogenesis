@@ -1,5 +1,13 @@
 # COQ8A-associated chromatin accessibility during myogenesis
 
+## Local-signal follow-up and candidate decision
+
+The [local-signal report](docs/LOCAL_SIGNAL_DECISION.md) tests sparse opening
+within each of the 25 gene neighborhoods and compares complete versus partial
+ATAC/RNA evidence. CSRP3 is the closest integrated exploratory route; a regional
+q value is distinguished from individual-peak q. Scripts 84–85 and all candidate
+tables are provided.
+
 ## Differentiation + fusion union — completed 2026-09-27
 
 The agreed 25-gene union has now been analyzed in both datasets: 565 GSE208248
