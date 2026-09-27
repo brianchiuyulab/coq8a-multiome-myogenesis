@@ -4,6 +4,11 @@ Completed analysis, 2026-09-27. This report supersedes the *analysis-status*
 statements in the earlier feasibility report; it does not change its input
 inventory or the previously reported GSE208248 calculations.
 
+The subsequent [local RNA-target follow-up](DIFFERENTIATION_SCOPE_AND_CHR16_RNA.md)
+tested the chr16 interval against available neighboring RNAs. Its UBE2I link
+was near zero and UBE2I RNA did not increase in the matched COQ8A-high group;
+the interval is consequently deprioritized as a differentiation-mechanism lead.
+
 ## 結論先讀
 
 1. **可以用外部功能資料合理地把 CAV3 放進候選名單。**最直接的路線是
