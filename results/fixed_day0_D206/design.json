@@ -1,0 +1,13 @@
+{
+  "config": "D206",
+  "TSS": 3,
+  "population": "all_culture",
+  "contrast": "2plus_vs_zero",
+  "caliper": 0.3,
+  "matching": "depth",
+  "region_discovery_q": 0.05,
+  "region_exploratory_q": 0.1,
+  "local_RNA_window_bp": 500000,
+  "selection_history": "Fixed after sensitivity exploration",
+  "RNA_required_for_ATAC_selection": false
+}

@@ -1,0 +1,12 @@
+{
+  "config": "D206",
+  "pairs": 527,
+  "peak_tests": 565,
+  "regions_per_direction": 25,
+  "selected_regions": 10,
+  "unique_selected_peaks": 9,
+  "local_RNA_pairs": 170,
+  "local_RNAs": 170,
+  "raw_ATAC_counts_reproduced": true,
+  "BH_reproduced": true
+}
