@@ -91,6 +91,10 @@ neighborhood naming is not substituted for RNA target identification.
 - `results/fixed_day0_D206/audit/published_table_validation.json`: source-table checks.
 - `results/fixed_day0_D206/audit/source_table_sha256.tsv`: figure and model source-table hashes.
 
+Text-table hashes normalize CRLF to LF so that Windows and Linux checkouts
+produce the same digest. Gzip tables are hashed as their exact stored bytes;
+the manifest records the convention for each file.
+
 Figures are provided as 400-dpi PNG plus editable PDF/SVG. The
 [Nature figure guide](https://research-figure-guide.nature.com/figures/building-and-exporting-figure-panels/)
 informed the typography and export format. Figure legends specify the signal

@@ -522,7 +522,12 @@ def main(args):
     manifest = [
         {
             "file": p.relative_to(ROOT).as_posix(),
-            "sha256": hashlib.sha256(p.read_bytes()).hexdigest(),
+            "sha256": hashlib.sha256(
+                p.read_bytes()
+                if p.suffix == ".gz"
+                else p.read_bytes().replace(b"\r\n", b"\n")
+            ).hexdigest(),
+            "encoding": "file_bytes" if p.suffix == ".gz" else "LF_normalized_text",
         }
         for p in sorted(files)
     ]
