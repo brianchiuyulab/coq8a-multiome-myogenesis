@@ -1,0 +1,9 @@
+# Functional interpretation of candidate RNAs
+
+Chromatin proximity, peak–RNA correlation, high/low RNA expression and a gene's functional role are separate evidence layers. More accessibility at a positively linked regulatory site can be consistent with greater transcriptional competence; it does not imply every nearby RNA must rise immediately or that every increasing RNA promotes differentiation.
+
+- **CSRP3 / Muscle LIM protein:** direct C2C12 work supports enhancement of MyoD activity and myogenesis; inhibition impairs terminal differentiation. Different protein isoforms may have different effects, so gene-level RNA cannot resolve isoform action. [Original myogenesis study](https://pubmed.ncbi.nlm.nih.gov/9234731/); [isoform study](https://pmc.ncbi.nlm.nih.gov/articles/PMC4416226/).
+- **CAV3:** C2C12 differentiation induces expression, and targeted down-regulation can inhibit myotube formation. Its relationship with fusion is dose/context dependent rather than an unlimited more-is-better response. [Original C2C12 study](https://www.sciencedirect.com/science/article/pii/S0021925819519007); [dose/context study](https://pmc.ncbi.nlm.nih.gov/articles/PMC207001/).
+- **SOX8:** a positive RNA association is not automatically pro-myogenic. Original work identifies Sox8 as a satellite-cell marker and inhibitor of skeletal muscle differentiation. [Original study](https://pubmed.ncbi.nlm.nih.gov/12782625/).
+
+The fixed D206 results support prioritizing MYOD1 for local RNA-link evidence, and CAV3/CSRP3 for concordant accessibility/RNA group directions with their distinct link limitations described in the workflow. Neither a gene symbol match to mouse nor temporal induction alone establishes COQ8A-overexpression causality. Private C2C12 expression results are stored separately and are not part of this public functional-reference document.

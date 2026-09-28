@@ -4,7 +4,7 @@
 
 Test whether COQ8A-high nuclei differ in local accessibility near externally defined myoblast differentiation/fusion genes, then assess possible local RNA targets. The comparison is D206 throughout: GSE208248 undifferentiated cultures only, TSS enrichment >=3, COQ8A >=2 versus 0 raw UMI, within-library RNA/ATAC depth matching, caliper 0.30. No marker-positive population restriction or state matching is imposed in the primary contrast. Zero means undetected RNA, not proven absence of expression. These are cultures derived from human muscle stem cells, not newly annotated pure quiescent MuSC nuclei.
 
-The setting was fixed following sensitivity exploration. External gene membership does not depend on current effect estimates; parameter selection was not blinded or preregistered. Current results never substitute a better setting for an individual gene. GSE240061, Day 7, private C2C12 RNA and prior temporal/motif screens do not determine eligibility here.
+The same setting is applied to every candidate. External gene membership defines the search scope. GSE240061, Day 7, private C2C12 RNA and temporal/motif labels do not determine eligibility here. Parameter comparisons are available in the separate sensitivity analysis report.
 
 ## 1. External scope and peak construction
 
@@ -59,6 +59,8 @@ Separately compare candidate RNA on the exact 527 pairs: FC uses mean linear CP1
 - **Figure 2:** one panel per nominated distinct peak; lines connect source-specific low/high accessibility fractions. Values are proportions of nuclei, not average read coverage. Titles identify regional q, which may differ from peak q.
 - **Figure 3:** local target assessment. Display each neighborhood's named gene(s), plus the two candidates with largest absolute estimable full-population partial r; all 170 tests remain in source tables. A shows effect sizes before/after state control, B the corresponding link q, C RNA high/low FC on the 527 pairs. A colored RNA FC point alone does not signify a significant RNA contrast; full p/q are in the table. The display selection does not redefine correction families.
 - **Figure S1:** opening and closing regional q for all 25 candidates.
+- **Figure 4:** positional profiles based on deduplicated ATAC fragments from the same 527 pairs. Left: the 25 gene-feature TSSs, strand aligned, +/-5 kb in 100-bp bins. Right: all 565 peak midpoints, +/-2 kb in 50-bp bins. Upper panels show average insertion profiles; lower panels use identical row order and color limits for high/low. Rows are sorted by mean signal across both groups. Colors clip at the pooled 99th percentile within each panel family; raw values are retained. Counts are insertions per 100 nuclei per 100 bp, averaged equally over the two sources after source normalization. These are positional profiles, not tests of a genome-wide opening shift. A gene's TSS window need not include its nominated distal peak.
+- **Figure 5:** MYOD1, CSRP3 and CAV3 locus tracks from the same fragment extraction, with common high/low axes at each locus. Gold shading marks the nominated peak; the dotted line marks the gene-feature TSS. Bin width is 100 bp, with one-bin Gaussian smoothing for display only. The tracks show source-normalized insertion density, a different measurement from the accessible-nucleus fraction used for FC tests. The panel structure follows the aggregate-profile, positional heatmap and locus-track organization of Martini et al.'s supplied SASP paper, Figure 3o-p; no ChIP signal is substituted for ATAC.
 
 ## 6. Code and reproduction
 
@@ -67,6 +69,10 @@ Existing input acquisition, common peak construction and fragment QC are documen
 ```powershell
 python scripts/92_fixed_day0_workflow.py --work <day0_sensitivity_grid_cache> --h5 <GSE208248_processed>
 python scripts/93_plot_fixed_day0.py
+python scripts/94_fixed_fragment_profiles.py --root <repository> --fragments <indexed_fragment_directory> --gtf <gencode.v48.annotation.gtf.gz>
+python scripts/96_plot_fragment_panels.py
 ```
 
 Script 92 validates 565/25 test-family sizes and BH values, checks the 527 high/low barcodes, re-extracts all selected ATAC/RNA features, reproduces source counts from raw H5, and writes all target-model and RNA-contrast outputs. Regional permutation results are the validated archived D206 run, not newly permuted in script 92. Figure source tables and model tables are under `results/fixed_day0_D206`; PNG and vector PDF outputs are under `figures/fixed_day0_D206`. No private C2C12 data are included.
+
+Script 94 requires Linux pysam and indexed original fragment files. It counts each deduplicated row's start/end once without multiplying PCR multiplicity or applying another Tn5 shift. Script 95 performs a read-only private C2C12 cross-reference and enforces an output location outside this repository. Same-symbol matches are recorded explicitly and do not constitute a complete cross-species orthology map; unmatched features remain unresolved rather than being labelled absent.

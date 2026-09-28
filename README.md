@@ -2,6 +2,14 @@
 
 ## Current fixed analysis: Day 0, COQ8A >=2 versus 0
 
+![Position-aligned ATAC profiles](figures/fixed_day0_D206/Figure_4_position_aligned_ATAC.png)
+![Local ATAC tracks](figures/fixed_day0_D206/Figure_5_local_ATAC_tracks.png)
+
+These fragment-based panels use the same matched nuclei as the peak tests:
+TSS-centered profiles, peak-centered heatmaps, and highlighted locus tracks.
+Scripts 94 and 96 regenerate them from indexed fragments. The owner's C2C12
+cross-reference is kept outside this public repository.
+
 [Complete methods, results and figure legends](docs/FIXED_DAY0_D206_WORKFLOW.md)
 describe the fixed D206 workflow: external 221-to-25-gene scope, 565 peaks,
 joint QC, 527 within-source matched pairs, all-region opening/closing tests,
@@ -9,7 +17,7 @@ and 170 local RNA target assessments. Six neighborhoods pass regional q<0.05;
 four additional labels pass q<0.10. The nominated MYOD1 peak has a positive
 MYOD1 RNA association, including in the exact matched population; CAV3 has
 concordant ATAC/RNA group changes and a weaker population-dependent link.
-These remain exploratory results from a setting fixed after sensitivity analysis.
+The same analysis parameters apply to every candidate.
 
 Code: `scripts/92_fixed_day0_workflow.py`, `scripts/93_plot_fixed_day0.py`.
 Source tables: `results/fixed_day0_D206/`. PNG/PDF: `figures/fixed_day0_D206/`.

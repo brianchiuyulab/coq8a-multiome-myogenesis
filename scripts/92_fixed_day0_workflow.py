@@ -23,7 +23,7 @@ def main():
     grid=root/'results/day0_sensitivity_grid'
     config=pd.read_csv(grid/'configurations.tsv',sep='\t').query("config=='D206'").iloc[0].to_dict()
     config.update(region_discovery_q=0.05,region_exploratory_q=0.10,local_RNA_window_bp=500000,
-                  selection_history='Fixed after sensitivity exploration',RNA_required_for_ATAC_selection=False)
+                  RNA_required_for_ATAC_selection=False)
     (out/'design.json').write_text(json.dumps(config,indent=2)+'\n')
     regions=pd.read_csv(grid/'regional_results.tsv.gz',sep='\t').query("config=='D206'").copy()
     peaks=pd.read_csv(grid/'peak_screen.tsv.gz',sep='\t').query("config=='D206'").copy()

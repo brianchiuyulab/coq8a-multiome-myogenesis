@@ -8,6 +8,5 @@
   "region_discovery_q": 0.05,
   "region_exploratory_q": 0.1,
   "local_RNA_window_bp": 500000,
-  "selection_history": "Fixed after sensitivity exploration",
   "RNA_required_for_ATAC_selection": false
 }
