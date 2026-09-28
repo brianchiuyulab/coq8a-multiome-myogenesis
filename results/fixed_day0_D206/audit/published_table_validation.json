@@ -1,0 +1,11 @@
+{
+  "passed": true,
+  "peaks": 565,
+  "regions_per_direction": 25,
+  "pairs": 527,
+  "sources": 2,
+  "local_RNA_pairs": 170,
+  "fragment_profile_rows": 274412,
+  "TSS_and_nucleosome_formulas": true,
+  "fragment_normalization": true
+}

@@ -10,7 +10,7 @@ The same setting is applied to every candidate. External gene membership defines
 
 Frozen Hallmark/Reactome myogenesis memberships define 221 measured genes. Intersect with the union of GO myoblast differentiation and GO myoblast fusion: 17 + 12 - 4 shared = 25 genes. These are process annotations, not a list exclusively of positive regulators. All members and provenance are in `results/differentiation_fusion25/genes.tsv` and `reference/myogenesis_221_gene_sources.tsv`.
 
-Start from deposited GRCh38 author-called peaks. Anchor on GSM6339597 and match the other three original catalogs one-to-one with >=50% reciprocal overlap. Retain canonical chromosomes, 200–2,000-bp intervals, no ENCODE hg38 v2 blacklist overlap and peak midpoints within 100 kb of an annotated protein-coding transcript TSS. The broad scope has 5,097 common peaks; restricting neighborhood membership to the 25 genes gives 565 distinct peaks. A peak may belong to more than one neighborhood. Catalog construction uses all four original libraries; effect tests below use only Day 0. No FASTQ alignment or new peak calling is claimed.
+Start from deposited GRCh38 author-called peaks. Anchor on GSM6339597 and match the other three original catalogs one-to-one with >=50% reciprocal overlap. Apply coordinate QC to the anchor intervals: canonical chromosomes, widths 200–2,000 bp, no ENCODE hg38 v2 blacklist overlap, and peak midpoints within 100 kb of an annotated protein-coding transcript TSS. GTF TSS positions are converted to 0-based coordinates before distance calculation. The broad scope has 5,097 common peaks; restricting neighborhood membership to the 25 genes gives 565 distinct peaks. A peak may belong to more than one neighborhood. Catalog construction uses all four original libraries; effect tests below use only Day 0. No FASTQ alignment or new peak calling is claimed.
 
 ## 2. Joint QC and pairing
 
@@ -56,23 +56,42 @@ Separately compare candidate RNA on the exact 527 pairs: FC uses mean linear CP1
 ## 5. Figures and reading guide
 
 - **Figure 1:** A, external scope and sample flow; B, all 565 peaks, four source-by-group columns, one common 0–100% accessibility scale; C, all peak tests with q565<0.05 highlighted. Heatmap rows are peaks, not TSS-centered genomic bins. The volcano uses a 0.5-count offset only to display zero-denominator ratios; test statistics and reported FC remain unmodified.
-- **Figure 2:** one panel per nominated distinct peak; lines connect source-specific low/high accessibility fractions. Values are proportions of nuclei, not average read coverage. Titles identify regional q, which may differ from peak q.
-- **Figure 3:** local target assessment. Display each neighborhood's named gene(s), plus the two candidates with largest absolute estimable full-population partial r; all 170 tests remain in source tables. A shows effect sizes before/after state control, B the corresponding link q, C RNA high/low FC on the 527 pairs. A colored RNA FC point alone does not signify a significant RNA contrast; full p/q are in the table. The display selection does not redefine correction families.
-- **Figure S1:** opening and closing regional q for all 25 candidates.
-- **Figure 4:** positional profiles based on deduplicated ATAC fragments from the same 527 pairs. Left: the 25 gene-feature TSSs, strand aligned, +/-5 kb in 100-bp bins. Right: all 565 peak midpoints, +/-2 kb in 50-bp bins. Upper panels show average insertion profiles; lower panels use identical row order and color limits for high/low. Rows are sorted by mean signal across both groups. Colors clip at the pooled 99th percentile within each panel family; raw values are retained. Counts are insertions per 100 nuclei per 100 bp, averaged equally over the two sources after source normalization. These are positional profiles, not tests of a genome-wide opening shift. A gene's TSS window need not include its nominated distal peak.
+- **Figure 2:** six q<0.05 neighborhoods, one panel per representative peak. Lines connect source-specific low/high accessibility fractions. Blue is source 1 (226 pairs); red is source 2 (301 pairs). Low is 0 COQ8A UMI; high is >=2 UMI. FC is the pooled accessible-nucleus fraction ratio, and q is the regional directional BH25 value. Neighborhood names indicate proximity, not a confirmed target. Secondary neighborhoods are shown separately in Figure S2.
+- **Figure 3:** local target assessment. Display each neighborhood's named gene(s), plus the two candidates with largest absolute estimable full-population partial r; all 170 tests remain in source tables. Row labels mean genomic neighborhood to candidate RNA, not a causal arrow. Panel a uses all 16,881 eligible nuclei; panel b uses the exact 1,054 matched nuclei. Both show partial r before/after state control on the same color scale; an asterisk denotes link q<0.05. NA marks insufficient detection in at least one source. Panel c shows RNA FC on the 527 pairs: filled points denote RNA q<0.05, hollow points q>=0.05. Red/blue indicate increased/decreased RNA. Display selection does not redefine correction families.
+- **Figure S1:** opening and closing regional q for all 25 candidates. **Figure S2:** secondary neighborhoods (0.05<=regional q<0.10); MYF5/MYF6 share a peak.
+- **Figure 4:** positional profiles based on deduplicated ATAC fragments from the same 527 pairs. Left: the 25 gene-feature TSSs, strand aligned, +/-5 kb in 100-bp bins. Right: all 565 peak midpoints, +/-2 kb in 50-bp bins. Upper panels show average insertion profiles at bin centers, using identical high/low y limits; lower panels use identical row order and color limits for high/low. Rows are sorted by mean signal across both groups. Colors clip at the pooled 99th percentile within each panel family; raw values are retained. Counts are insertions per 100 nuclei per 100 bp, averaged equally over the two sources after source normalization. These are positional profiles, not tests of a genome-wide opening shift. A gene's TSS window need not include its nominated distal peak.
 - **Figure 5:** MYOD1, CSRP3 and CAV3 locus tracks from the same fragment extraction, with common high/low axes at each locus. Gold shading marks the nominated peak; the dotted line marks the gene-feature TSS. Bin width is 100 bp, with one-bin Gaussian smoothing for display only. The tracks show source-normalized insertion density, a different measurement from the accessible-nucleus fraction used for FC tests. The panel structure follows the aggregate-profile, positional heatmap and locus-track organization of Martini et al.'s supplied SASP paper, Figure 3o-p; no ChIP signal is substituted for ATAC.
 
 ## 6. Code and reproduction
 
-Existing input acquisition, common peak construction and fragment QC are documented in `TASK1_ANALYSIS_WORKFLOW.md`. The frozen sensitivity grid was generated with scripts 88–89. The current executable workflow consumes those archived outputs and the deposited H5 files; it does not pretend to regenerate upstream alignment/QC.
+The current entry point is `run_fixed_day0.py`. It applies the fixed design to
+all candidates, recomputes the complete peak screen and 2,000,000 regional
+permutations, fits local RNA models, and renders the current figure set.
 
-```powershell
-python scripts/92_fixed_day0_workflow.py --work <day0_sensitivity_grid_cache> --h5 <GSE208248_processed>
-python scripts/93_plot_fixed_day0.py
-python scripts/94_fixed_fragment_profiles.py --root <repository> --fragments <indexed_fragment_directory> --gtf <gencode.v48.annotation.gtf.gz>
-python scripts/96_plot_fragment_panels.py
+```bash
+python run_fixed_day0.py --mode figures
+python run_fixed_day0.py --mode analysis --work /work/day0_cache --h5 /data/GSE208248
+python run_fixed_day0.py --mode audit --work /work/day0_cache --h5 /data/GSE208248 --gtf /data/gencode.v48.annotation.gtf.gz --permutations
 ```
 
-Script 92 validates 565/25 test-family sizes and BH values, checks the 527 high/low barcodes, re-extracts all selected ATAC/RNA features, reproduces source counts from raw H5, and writes all target-model and RNA-contrast outputs. Regional permutation results are the validated archived D206 run, not newly permuted in script 92. Figure source tables and model tables are under `results/fixed_day0_D206`; PNG and vector PDF outputs are under `figures/fixed_day0_D206`. No private C2C12 data are included.
+[Code availability](CODE_AVAILABILITY.md) documents upstream rebuilding and
+fragment extraction. [The computational audit](FIXED_DAY0_AUDIT.md) records
+raw-matrix checks and coordinate corrections. Figure source tables and model
+outputs are in `results/fixed_day0_D206`; figures are in
+`figures/fixed_day0_D206`. The older temporal runner is documented separately.
 
-Script 94 requires Linux pysam and indexed original fragment files. It counts each deduplicated row's start/end once without multiplying PCR multiplicity or applying another Tn5 shift. Script 95 performs a read-only private C2C12 cross-reference and enforces an output location outside this repository. Same-symbol matches are recorded explicitly and do not constitute a complete cross-species orthology map; unmatched features remain unresolved rather than being labelled absent.
+Fragment plots count each deduplicated row's start and end-1 once, respecting
+BED half-open coordinates. PCR multiplicity is not multiplied and no second
+Tn5 shift is added. Minus-strand TSS windows are strand aligned using the same
+relative-bin convention as plus-strand windows. Values are plotted at bin
+centers; a final partial locus bin uses its actual width for normalization.
+
+Figures use sans-serif type at approximately 5.5–7 pt at their saved dimensions,
+with larger panel letters, 400-dpi PNG previews and editable PDF/SVG exports.
+The layout follows the aggregate profile / positional heatmap / locus track
+organization in the supplied Martini et al. SASP Figure 3o-p. Typography and
+export choices follow the [Nature figure guide](https://research-figure-guide.nature.com/figures/building-and-exporting-figure-panels/).
+
+Private C2C12 cross-references use script 95 and an enforced external output
+path. Same-symbol matches are recorded explicitly; unmatched features remain
+unresolved. Private counts and derived figures are not included here.

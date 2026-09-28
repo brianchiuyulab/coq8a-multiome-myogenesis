@@ -1,0 +1,184 @@
+{
+  "passed": true,
+  "checks": [
+    {
+      "check": "external_gene_scope",
+      "passed": true,
+      "detail": "221 intersect (17 differentiation union 12 fusion) = 25"
+    },
+    {
+      "check": "zero_based_TSS_membership",
+      "passed": true,
+      "detail": "Rebuilding with 0-based TSS leaves every candidate peak-gene membership unchanged"
+    },
+    {
+      "check": "peak_scope",
+      "passed": true,
+      "detail": "5097 broad peaks; 565 distinct differentiation/fusion peaks"
+    },
+    {
+      "check": "local_RNA_universe",
+      "passed": true,
+      "detail": "170 peak-RNA pairs rebuilt from all transcript TSSs within 500 kb"
+    },
+    {
+      "check": "peak_coordinate_QC",
+      "passed": true,
+      "detail": "Canonical, 200-2000 bp, blacklist-free anchor peaks shared across 4 libraries"
+    },
+    {
+      "check": "peak_mapping_GSM6339599",
+      "passed": true,
+      "detail": "Reciprocal overlap >=50%; one-to-one"
+    },
+    {
+      "check": "peak_mapping_GSM6339601",
+      "passed": true,
+      "detail": "Reciprocal overlap >=50%; one-to-one"
+    },
+    {
+      "check": "peak_mapping_GSM6339603",
+      "passed": true,
+      "detail": "Reciprocal overlap >=50%; one-to-one"
+    },
+    {
+      "check": "fixed_design",
+      "passed": true,
+      "detail": "Same fixed definition for all 565 peaks and 25 regions"
+    },
+    {
+      "check": "joint_QC_GSM6339597",
+      "passed": true,
+      "detail": "7535 eligible Day-0 nuclei; thresholds reapplied"
+    },
+    {
+      "check": "raw_depth_GSM6339597",
+      "passed": true,
+      "detail": "Complete raw RNA counts and detected-peak depths match metadata"
+    },
+    {
+      "check": "raw_cache_GSM6339597",
+      "passed": true,
+      "detail": "All 565 ATAC peaks and cached RNA features independently re-extracted"
+    },
+    {
+      "check": "pairing_GSM6339597",
+      "passed": true,
+      "detail": "All 226 pairs reproduced; no reused nucleus"
+    },
+    {
+      "check": "pair_definition_GSM6339597",
+      "passed": true,
+      "detail": "Raw COQ8A definition and both depth calipers verified"
+    },
+    {
+      "check": "RNA_model_GSM6339597_eligible_D0_depth_COQ",
+      "passed": true,
+      "detail": "All 170 partial correlations independently reproduced by QR projection"
+    },
+    {
+      "check": "RNA_model_GSM6339597_eligible_D0_depth_COQ_state",
+      "passed": true,
+      "detail": "All 170 partial correlations independently reproduced by QR projection"
+    },
+    {
+      "check": "RNA_model_GSM6339597_matched_depth_COQ",
+      "passed": true,
+      "detail": "All 170 partial correlations independently reproduced by QR projection"
+    },
+    {
+      "check": "RNA_model_GSM6339597_matched_depth_COQ_state",
+      "passed": true,
+      "detail": "All 170 partial correlations independently reproduced by QR projection"
+    },
+    {
+      "check": "joint_QC_GSM6339601",
+      "passed": true,
+      "detail": "9346 eligible Day-0 nuclei; thresholds reapplied"
+    },
+    {
+      "check": "raw_depth_GSM6339601",
+      "passed": true,
+      "detail": "Complete raw RNA counts and detected-peak depths match metadata"
+    },
+    {
+      "check": "raw_cache_GSM6339601",
+      "passed": true,
+      "detail": "All 565 ATAC peaks and cached RNA features independently re-extracted"
+    },
+    {
+      "check": "pairing_GSM6339601",
+      "passed": true,
+      "detail": "All 301 pairs reproduced; no reused nucleus"
+    },
+    {
+      "check": "pair_definition_GSM6339601",
+      "passed": true,
+      "detail": "Raw COQ8A definition and both depth calipers verified"
+    },
+    {
+      "check": "RNA_model_GSM6339601_eligible_D0_depth_COQ",
+      "passed": true,
+      "detail": "All 170 partial correlations independently reproduced by QR projection"
+    },
+    {
+      "check": "RNA_model_GSM6339601_eligible_D0_depth_COQ_state",
+      "passed": true,
+      "detail": "All 170 partial correlations independently reproduced by QR projection"
+    },
+    {
+      "check": "RNA_model_GSM6339601_matched_depth_COQ",
+      "passed": true,
+      "detail": "All 170 partial correlations independently reproduced by QR projection"
+    },
+    {
+      "check": "RNA_model_GSM6339601_matched_depth_COQ_state",
+      "passed": true,
+      "detail": "All 170 partial correlations independently reproduced by QR projection"
+    },
+    {
+      "check": "all_peak_counts_FC_p_q",
+      "passed": true,
+      "detail": "All 565 count contrasts, fold changes, exact p and BH565 reproduced"
+    },
+    {
+      "check": "regional_statistics_opening",
+      "passed": true,
+      "detail": "All 25 maxima, peak identities, permutation p formula and BH25 checked"
+    },
+    {
+      "check": "regional_statistics_closing",
+      "passed": true,
+      "detail": "All 25 maxima, peak identities, permutation p formula and BH25 checked"
+    },
+    {
+      "check": "regional_permutation_rerun",
+      "passed": true,
+      "detail": "2,000,000 swaps; seed 20261134; all 50 exceedance counts exactly reproduced"
+    },
+    {
+      "check": "RNA_contrasts",
+      "passed": true,
+      "detail": "All 170 RNA fold changes, paired p and BH170 reproduced"
+    },
+    {
+      "check": "combined_links",
+      "passed": true,
+      "detail": "680 combined estimates: Fisher z, detection eligibility and four BH170 families checked"
+    }
+  ],
+  "permutation_rerun": true,
+  "sources": 2,
+  "pairs": 527,
+  "environment": {
+    "numpy": "2.3.5",
+    "pandas": "2.3.3",
+    "scipy": "1.16.3",
+    "h5py": "3.15.1",
+    "statsmodels": "0.14.6",
+    "scikit-learn": "1.8.0",
+    "matplotlib": "3.10.8",
+    "threadpoolctl": "3.6.0",
+    "python": "3.13.5 | packaged by Anaconda, Inc. | (main, Jun 12 2025, 16:37:03) [MSC v.1929 64 bit (AMD64)]"
+  }
+}

@@ -1,5 +1,24 @@
 # Data availability and source-data index
 
+## Current Day-0 source data
+
+The current high/low tests use only GSM6339597 and GSM6339601 H5 matrices,
+with fragment files GSM6339598 and GSM6339602. The four original libraries
+contribute to the common peak catalog. No GSE109828 temporal labels or
+GSE240061 measurements enter this fixed comparison.
+
+| Location | Current contents |
+|---|---|
+| `results/fixed_day0_D206/peak_membership.tsv` | 25 gene neighborhoods and 565 distinct peaks |
+| `results/fixed_day0_D206/matched_pairs.tsv` | Exact 527 high/low barcode pairs |
+| `results/fixed_day0_D206/all_peaks.tsv` | Complete 565-peak screen |
+| `results/fixed_day0_D206/all_regions.tsv` | 25 regions in each direction |
+| `results/fixed_day0_D206/local_RNA_candidates.tsv` | Complete 170 local RNA candidates |
+| `results/fixed_day0_D206/links_by_source.tsv`, `links_combined.tsv` | Source-specific and combined models |
+| `results/fixed_day0_D206/RNA_high_low.tsv` | Same-pair RNA contrasts |
+| `results/fixed_day0_D206/fragment_profiles.tsv.gz`, `profile_windows.tsv` | Figure insertion counts and window coordinates |
+| `results/fixed_day0_D206/audit/` | Audit results, software versions and source-table SHA256 |
+
 ## Public source data
 
 | Resource | Data used | Access |

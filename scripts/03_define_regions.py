@@ -108,7 +108,7 @@ def tss_positions(gtf, genes):
             m = re.search(r'gene_name "([^"]+)"', attr)
             if not m or m.group(1) not in genes:
                 continue
-            tss = int(fields[3] if fields[6] == "+" else fields[4])
+            tss = int(fields[3] if fields[6] == "+" else fields[4]) - 1
             positions.setdefault(fields[0], set()).add((tss, m.group(1)))
     return {c: sorted(v) for c, v in positions.items()}
 
